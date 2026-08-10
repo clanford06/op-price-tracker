@@ -12,6 +12,7 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_WATCHLIST = REPO_ROOT / "watchlist.yaml"
 DEFAULT_DATA_FILE = REPO_ROOT / "docs" / "data.json"
+DEFAULT_LEDGER = REPO_ROOT / "ledger.yaml"
 
 
 @dataclass

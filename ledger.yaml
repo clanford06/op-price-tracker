@@ -1,0 +1,90 @@
+# Expense and profit ledger.
+#
+# Three separate lists on purpose. Cards pulled from a box have no individual
+# purchase price -- the box does -- so nothing here tries to invent one.
+#
+#   expenses  money that left your pocket
+#   holdings  what you own now, with an estimated value
+#   sales     money that came back, net of fees
+#
+#   net position = realised + unrealised - spent
+#
+# Seeded with what we established in conversation. Anything marked TODO is a
+# number only you know. Until those are filled in the position is WRONG --
+# missing costs make you look more profitable than you are.
+
+settings:
+  # eBay collectibles final value fee. Applies to item price AND the shipping
+  # you charge, plus a flat per-order fee. Change if your category differs.
+  fee_pct: 13.25
+  fee_flat: 0.40
+
+expenses:
+  - date: 2026-07-01        # TODO: real date
+    item: "OP-16 booster box #1"
+    category: sealed
+    amount: 0.00            # TODO: what did you actually pay?
+
+  - date: 2026-07-01        # TODO: real date
+    item: "OP-16 booster box #2"
+    category: sealed
+    amount: 0.00            # TODO
+
+  - date: 2026-08-01        # TODO: real date
+    item: "PSA grading — Ms. All Sunday SP (incl. shipping/insurance)"
+    category: grading
+    amount: 0.00            # TODO: submission tier + shipping both ways
+
+  # Uncomment once you've actually paid it
+  # - date: 2026-08-23
+  #   item: "OP-17 prerelease entry — Prime Time Gaming"
+  #   category: events
+  #   amount: 30.00
+
+holdings:
+  - id: ms-all-sunday-sp
+    name: "Ms. All Sunday SP OP14-084 (English)"
+    status: grading
+    estimate: 650.00
+    acquired: "2026-07"
+    source: "pulled from OP-16 box"
+    note: "At PSA, expected back Sept-Oct 2026. A 10 is worth a real multiple; a 9 lands near raw."
+    ebay_query: "Ms All Sunday OP14-084 SP English"
+
+  - id: op16-022-luffy-alt
+    name: "Monkey.D.Luffy Leader OP16-022 (Alt Art)"
+    status: owned
+    estimate: 63.00
+    source: "pulled from OP-16 box"
+    ebay_query: "One Piece OP16-022 Luffy Leader Alternate Art"
+
+  - id: op16-065-sakazuki-alt
+    name: "Sakazuki OP16-065 (Alt Art)"
+    status: owned
+    estimate: 15.00
+    source: "pulled from OP-16 box"
+    ebay_query: "One Piece OP16-065 Sakazuki Alternate Art"
+
+  - id: op16-118-ace-sec
+    name: "Portgas.D.Ace OP16-118 (Secret Rare)"
+    status: owned
+    estimate: 11.00
+    source: "pulled from OP-16 box"
+    note: "Assumed base SEC. If it's the Alt Art SEC it's ~$40-55 — check which you have."
+    ebay_query: "One Piece OP16-118 Ace Secret Rare"
+
+  - id: op16-063-kuzan-alt
+    name: "Kuzan OP16-063 (Alt Art)"
+    status: owned
+    estimate: 6.00
+    source: "pulled from OP-16 box"
+    ebay_query: "One Piece OP16-063 Kuzan Alternate Art"
+
+  # The bulk commons/uncommons from two boxes are worth ~nothing individually
+  # but are not zero as a lot. Weigh them in if you ever bother to sell.
+  # - id: op16-bulk
+  #   name: "OP-16 bulk (2 boxes, commons/uncommons)"
+  #   status: owned
+  #   estimate: 20.00
+
+sales: []

@@ -47,6 +47,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Measure thresholds against real listings and suggest values. Writes nothing.",
     )
     p.add_argument(
+        "--portfolio",
+        action="store_true",
+        help="Show expenses, holdings and profit/loss from ledger.yaml.",
+    )
+    p.add_argument("--ledger", type=Path, default=None)
+    p.add_argument(
         "--selftest",
         action="store_true",
         help="Verify the live eBay response shape matches the parsers. Run this first.",
@@ -133,6 +139,17 @@ def pick_winner(
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     settings = load_settings()
+
+    if args.portfolio:
+        from .config import DEFAULT_LEDGER
+        from .portfolio import load_ledger, report
+
+        try:
+            report(load_ledger(args.ledger or DEFAULT_LEDGER))
+        except (FileNotFoundError, ValueError) as exc:
+            print(f"Ledger error: {exc}", file=sys.stderr)
+            return 2
+        return 0
 
     if args.selftest:
         from .selftest import run
