@@ -1,0 +1,64 @@
+name: Check box prices
+
+on:
+  schedule:
+    # Every 2 hours. GitHub cron is UTC and fires late under load -- that is
+    # fine here, since we care about price movement, not exact timing.
+    - cron: "17 */2 * * *"
+  workflow_dispatch:
+    inputs:
+      explain:
+        description: "Print why each listing was kept or rejected"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# Never let two runs write docs/data.json at once.
+concurrency:
+  group: check-prices
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      # Gate the run on the verification tests. If a threshold or phrase list
+      # was edited badly, fail here rather than quietly recommending a fake.
+      - name: Verify safety checks still hold
+        run: python -m pytest tests/ -q
+
+      - name: Check prices
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_SERVER: ${{ vars.NTFY_SERVER || 'https://ntfy.sh' }}
+          ALERT_ON_NEW_LOW: ${{ vars.ALERT_ON_NEW_LOW || 'true' }}
+        run: |
+          python -m tracker ${{ inputs.explain && '--explain' || '' }}
+
+      - name: Commit updated prices
+        run: |
+          git config user.name  "op-price-tracker"
+          git config user.email "actions@github.com"
+          git add docs/data.json
+          if git diff --staged --quiet; then
+            echo "No price change."
+          else
+            git commit -m "prices: $(date -u '+%Y-%m-%d %H:%M UTC')"
+            # Another run may have pushed while we worked; rebase rather than fail.
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push
+          fi

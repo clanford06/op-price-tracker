@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>One Piece Box Prices</title>
+<style>
+  :root {
+    --bg:#f6f7f9; --card:#fff; --ink:#14171a; --muted:#667085; --line:#e3e6ea;
+    --good:#0f7b4f; --warn:#b4530a; --bad:#b42318; --accent:#1f5fd0; --chip:#eef1f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#0e1116; --card:#171b21; --ink:#e8eaed; --muted:#9aa4b2; --line:#262c35;
+      --good:#3ddc97; --warn:#f0a35e; --bad:#ff6b5e; --accent:#6ea8ff; --chip:#212832;
+    }
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; padding:1rem; background:var(--bg); color:var(--ink);
+    font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  header,main,footer { max-width:900px; margin-inline:auto; }
+  h1 { font-size:1.3rem; margin:0 0 .2rem; }
+  .sub { color:var(--muted); font-size:.85rem; }
+  main { display:grid; gap:.85rem; margin-top:1rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:.9rem 1rem; }
+  .row { display:flex; justify-content:space-between; align-items:baseline; gap:.75rem; }
+  .name { font-weight:650; }
+  .price { font:650 1.5rem/1 ui-monospace,SFMono-Regular,Menlo,monospace; white-space:nowrap; }
+  .price.none { font-size:.95rem; color:var(--muted); font-weight:400; }
+  .low { color:var(--good); }
+  .meta { color:var(--muted); font-size:.82rem; margin-top:.35rem; }
+  .meta strong { color:var(--ink); font-weight:600; }
+  a { color:var(--accent); }
+  .title-line { margin-top:.45rem; font-size:.85rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+  .badge {
+    display:inline-flex; align-items:center; gap:.35rem; margin-top:.6rem;
+    padding:.25rem .6rem; border-radius:999px; font-size:.78rem; font-weight:600;
+  }
+  .badge.ok   { background:color-mix(in srgb,var(--good) 15%,transparent); color:var(--good); }
+  .badge.mid  { background:color-mix(in srgb,var(--warn) 15%,transparent); color:var(--warn); }
+
+  .funnel { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.6rem; }
+  .step {
+    background:var(--chip); border-radius:6px; padding:.15rem .5rem;
+    font-size:.72rem; color:var(--muted);
+  }
+  .step b { color:var(--ink); }
+
+  svg.spark { display:block; width:100%; height:44px; margin-top:.6rem; }
+  .stats { display:flex; gap:1rem; flex-wrap:wrap; font-size:.78rem; color:var(--muted); margin-top:.45rem; }
+
+  details { margin-top:.65rem; }
+  summary { cursor:pointer; font-size:.8rem; color:var(--accent); }
+  .sig { display:flex; justify-content:space-between; gap:.75rem; font-size:.78rem; padding:.22rem 0; border-bottom:1px solid var(--line); }
+  .sig:last-child { border-bottom:0; }
+  .sig .d { color:var(--muted); text-align:right; }
+  .sig.no .n::before { content:"✕ "; color:var(--bad); }
+  .sig.yes .n::before { content:"✓ "; color:var(--good); }
+  .pts { font:600 .74rem ui-monospace,Menlo,monospace; color:var(--muted); white-space:nowrap; }
+
+  .rej { margin-top:.5rem; font-size:.78rem; padding:.45rem .6rem; border-radius:8px;
+         background:color-mix(in srgb,var(--bad) 8%,transparent);
+         border:1px solid color-mix(in srgb,var(--bad) 25%,transparent); }
+  .rej .p { font-weight:650; }
+  .rej ul { margin:.2rem 0 0; padding-left:1.1rem; color:var(--muted); }
+  .err { margin-top:.6rem; padding:.5rem .7rem; border-radius:8px; font-size:.8rem; color:var(--bad);
+         background:color-mix(in srgb,var(--bad) 10%,transparent); }
+  footer { margin-top:1.25rem; margin-bottom:2rem; color:var(--muted); font-size:.78rem; }
+  .empty { text-align:center; padding:3rem 1rem; color:var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>One Piece — verified sealed box prices</h1>
+  <div class="sub" id="updated">Loading…</div>
+</header>
+<main id="out"></main>
+<footer>
+  Shows the cheapest <em>delivered</em> price that passed every verification check —
+  never simply the cheapest listing. Cheaper listings that were rejected are shown
+  with the reason. No data source can prove a sealed box is genuine; these checks
+  narrow the field and show their working, they do not guarantee anything.
+  Always open the listing before buying.
+</footer>
+
+<script>
+const fmt = n => '$' + Number(n).toFixed(2);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c =>
+  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function ago(iso) {
+  if (!iso) return 'never';
+  const m = Math.round((Date.now() - new Date(iso)) / 60000);
+  if (m < 2) return 'just now';
+  if (m < 60) return m + ' min ago';
+  const h = Math.round(m / 60);
+  if (h < 24) return h + (h === 1 ? ' hour ago' : ' hours ago');
+  const d = Math.round(h / 24);
+  return d + (d === 1 ? ' day ago' : ' days ago');
+}
+
+function spark(history) {
+  const pts = (history || []).slice(-120).map(p => p.price);
+  if (pts.length < 2) return '';
+  const w = 600, h = 44, pad = 3;
+  const lo = Math.min(...pts), hi = Math.max(...pts), span = (hi - lo) || 1;
+  const coords = pts.map((v, i) =>
+    `${(pad + i / (pts.length - 1) * (w - pad * 2)).toFixed(1)},${(pad + (1 - (v - lo) / span) * (h - pad * 2)).toFixed(1)}`);
+  const stroke = pts[pts.length - 1] <= pts[0] ? 'var(--good)' : 'var(--warn)';
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">
+    <polyline fill="none" stroke="${stroke}" stroke-width="2" stroke-linejoin="round"
+      stroke-linecap="round" points="${coords.join(' ')}"/></svg>`;
+}
+
+function trustBlock(trust, threshold) {
+  if (!trust) return '';
+  const cls = trust.score >= 85 ? 'ok' : 'mid';
+  const sigs = (trust.signals || []).map(s => `
+    <div class="sig ${s.good ? 'yes' : 'no'}">
+      <span class="n">${esc(s.name)}</span>
+      <span class="d">${esc(s.detail)} <span class="pts">${s.earned}/${s.possible}</span></span>
+    </div>`).join('');
+  return `
+    <div class="badge ${cls}">Trust ${trust.score}/100
+      ${trust.verified ? '· item details verified' : '· UNVERIFIED'}
+      ${threshold != null ? '· passes ' + threshold : ''}</div>
+    <details><summary>Show all ${(trust.signals || []).length} checks</summary>${sigs}</details>`;
+}
+
+function rejectedBlock(rejected) {
+  if (!rejected || !rejected.length) return '';
+  return rejected.slice(0, 3).map(r => `
+    <div class="rej">
+      <span class="p">${fmt(r.total)} rejected</span> — ${esc((r.title || '').slice(0, 60))}
+      <ul>${(r.why || []).map(w => `<li>${esc(w)}</li>`).join('')}</ul>
+    </div>`).join('');
+}
+
+function card(id, p) {
+  const cur = p.current, atl = p.all_time_low;
+  const isLow = cur && atl != null && cur.total <= atl;
+
+  let body = cur
+    ? `<div class="meta">${fmt(cur.price)} + ${fmt(cur.shipping)} shipping ·
+        seller <strong>${esc(cur.seller)}</strong>
+        (${Number(cur.seller_score).toLocaleString()} sales, ${cur.seller_pct}%)
+        ${cur.top_rated ? '· Top Rated' : ''}</div>
+       <div class="title-line"><a href="${esc(cur.url)}" target="_blank" rel="noopener noreferrer">${esc(cur.title)}</a></div>
+       ${trustBlock(cur.trust, p.min_trust_score)}`
+    : `<div class="meta">Nothing passed verification this run. Cheaper listings existed —
+        they were rejected for the reasons below.</div>`;
+
+  body += `<div class="funnel">
+      <span class="step"><b>${p.considered ?? 0}</b> found</span>
+      <span class="step"><b>${p.relevant ?? 0}</b> right product</span>
+      <span class="step"><b>${p.verified ?? 0}</b> deep-checked</span>
+      <span class="step"><b>${p.kept ?? 0}</b> passed</span>
+    </div>`;
+
+  body += spark(p.history);
+
+  const stats = [];
+  if (atl != null) stats.push(`low ${fmt(atl)}`);
+  if (p.all_time_high != null) stats.push(`high ${fmt(p.all_time_high)}`);
+  stats.push(`checked ${ago(p.checked_at)}`);
+  body += `<div class="stats">${stats.map(s => `<span>${s}</span>`).join('')}</div>`;
+
+  body += rejectedBlock(p.rejected);
+  if (p.error) body += `<div class="err">Last check failed: ${esc(p.error)}</div>`;
+
+  return `<section class="card">
+    <div class="row"><div class="name">${esc(p.name || id)}</div>
+      ${cur ? `<div class="price ${isLow ? 'low' : ''}">${fmt(cur.total)}</div>`
+            : `<div class="price none">none verified</div>`}</div>
+    ${body}</section>`;
+}
+
+fetch('data.json?t=' + Date.now())
+  .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
+  .then(data => {
+    document.getElementById('updated').textContent =
+      'Updated ' + ago(data.updated_at) +
+      (data.updated_at ? ' · ' + new Date(data.updated_at).toLocaleString() : '');
+    const entries = Object.entries(data.products || {});
+    document.getElementById('out').innerHTML = entries.length
+      ? entries.map(([id, p]) => card(id, p)).join('')
+      : '<div class="empty">No data yet. Run the workflow once to populate prices.</div>';
+  })
+  .catch(err => {
+    document.getElementById('updated').textContent = 'Could not load data.json';
+    document.getElementById('out').innerHTML =
+      `<div class="empty">No price data yet (${esc(err.message)}).<br>
+       Run the <code>Check box prices</code> workflow, then reload.</div>`;
+  });
+</script>
+</body>
+</html>

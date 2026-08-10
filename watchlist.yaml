@@ -1,0 +1,126 @@
+# What to track. Edit freely -- this is the only file you need to touch day to day.
+#
+# Every product inherits `defaults` and can override any key.
+# Matching is done on the normalised listing title: punctuation is stripped and
+# case is ignored, so "OP-17", "OP 17" and "op17" are all compared the same way.
+# Terms match whole words only, so "case" will not fire inside "showcase".
+
+defaults:
+  # Sanity bounds passed to eBay. Anything outside is never even returned.
+  min_price: 35
+  max_price: 500
+
+  # Every listing must be a box.
+  require_all:
+    - box
+
+  # Reject anything that is not a plain sealed English booster box.
+  exclude_any:
+    # Wrong language printing
+    - japanese
+    - japan
+    - jpn
+    - jp
+    - korean
+    - chinese
+    # Not a sealed box
+    - empty
+    - wrapper
+    - wrappers
+    - single
+    - singles
+    - starter deck
+    - deck box
+    - sleeve
+    - sleeves
+    - playmat
+    - binder
+    # Group breaks and gambling formats, not a product you receive
+    - break
+    - breaks
+    - spot
+    - spots
+    - random
+    - repack
+    - repacks
+    - mystery
+    # Counterfeit / not-the-real-thing signals
+    - proxy
+    - proxies
+    - custom
+    - replica
+    - fake
+    # Different unit of sale -- a case is 12 boxes and wrecks price comparison
+    - case
+    - lot
+
+  # ---- VETOES: any one of these disqualifies a listing outright ----------
+
+  min_seller_score: 100        # minimum completed sales
+  min_seller_pct: 98.0         # minimum positive feedback percentage
+  require_returns: true        # reject sellers who explicitly refuse returns
+  require_us_location: true    # reject items shipping from outside the US
+  require_verified_detail: true  # reject anything whose details will not load
+
+  # Hard price floor, applied no matter how few listings came back. A newly
+  # released set often has only two or three listings, and that is exactly when
+  # a counterfeit would otherwise be crowned "cheapest". Set to a price no
+  # genuine sealed box of that set would ever go below (~55-65% of market).
+  implausible_below: null
+
+  # A seller holding this many sealed boxes of a hot set is a distributor or a
+  # problem. Above it, the stock-level signal scores zero (not a veto).
+  max_quantity: 12
+
+  # ---- SCORE: listings must clear this to be recommended -----------------
+
+  # 0-100, weighted across language verification, seller volume and rating,
+  # returns, Top Rated status, price plausibility, item specifics, category,
+  # stock level, eBay programmes and description. Raise it to be stricter;
+  # 85+ will reject most listings, which is a legitimate choice.
+  min_trust_score: 70
+
+  # How many of the cheapest relevant listings get a full detail fetch and
+  # score. Each costs one API call. The cheapest are both the ones you would
+  # buy and the ones most likely to be fake, so checking those is what matters.
+  verify_top_n: 8
+
+  # Sellers you have bought from successfully (bonus points), and sellers you
+  # never want to see again (instant veto). Use exact eBay usernames.
+  trusted_sellers: []
+  blocked_sellers: []
+
+products:
+  - id: op17
+    name: "OP-17 The World's Strongest Warriors"
+    query: "One Piece Card Game OP-17 Booster Box"
+    require_any: ["op 17", "op17", "worlds strongest warriors", "world s strongest warriors"]
+    alert_below: 110          # <-- set to what you'd actually pay
+    implausible_below: 75     # <-- no genuine sealed OP-17 box goes under this
+
+  - id: op16
+    name: "OP-16 The Time of Battle"
+    query: "One Piece Card Game OP-16 Booster Box"
+    require_any: ["op 16", "op16", "time of battle"]
+    alert_below: 100
+    implausible_below: 65
+
+  - id: op14
+    name: "OP-14 The Azure Sea's Seven"
+    query: "One Piece Card Game OP-14 Booster Box"
+    require_any: ["op 14", "op14", "azure sea s seven", "azure seas seven"]
+    alert_below: 95
+    implausible_below: 60
+
+  - id: op01
+    name: "OP-01 Romance Dawn"
+    query: "One Piece Card Game OP-01 Romance Dawn Booster Box"
+    require_any: ["op 01", "op1", "op01", "romance dawn"]
+    min_price: 60
+    max_price: 900
+    alert_below: 250
+    implausible_below: 180
+
+# Add more sets by copying a block above and changing id / name / query /
+# require_any. Set codes are the reliable matcher -- always include both the
+# spaced and unspaced form ("op 15" and "op15"), since eBay sellers write both.
