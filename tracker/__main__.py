@@ -46,6 +46,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="Measure thresholds against real listings and suggest values. Writes nothing.",
     )
+    p.add_argument(
+        "--selftest",
+        action="store_true",
+        help="Verify the live eBay response shape matches the parsers. Run this first.",
+    )
     return p.parse_args(argv)
 
 
@@ -128,6 +133,11 @@ def pick_winner(
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     settings = load_settings()
+
+    if args.selftest:
+        from .selftest import run
+
+        return run(settings)
 
     try:
         products = load_products(args.watchlist)

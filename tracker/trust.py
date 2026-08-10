@@ -97,6 +97,14 @@ class Signal:
     possible: float
     detail: str
     good: bool = True
+    bonus: bool = False
+    """Bonus signals add to the score but not to the denominator.
+
+    Used for evidence that most legitimate listings structurally cannot supply,
+    where counting it against them would dock every listing for nothing. If a
+    signal is unearnable by an honest seller, it is not a fair test -- it is a
+    flat penalty wearing a scoring component's clothes.
+    """
 
 
 @dataclass
@@ -229,9 +237,13 @@ def evaluate(
     report.signals.append(_score_description(detail))
     report.signals.append(_score_trusted_seller(listing, policy))
 
-    earned = sum(s.earned for s in report.signals)
-    possible = sum(s.possible for s in report.signals)
-    score = int(round(100 * earned / possible)) if possible else 0
+    # Bonus signals contribute to the numerator only, so a listing is never
+    # docked for evidence an honest seller could not have provided.
+    earned = sum(s.earned for s in report.signals if not s.bonus)
+    possible = sum(s.possible for s in report.signals if not s.bonus)
+    bonus = sum(s.earned for s in report.signals if s.bonus)
+    score = int(round(100 * (earned + bonus) / possible)) if possible else 0
+    score = min(score, 100)
 
     if not report.verified and score > UNVERIFIED_SCORE_CAP:
         report.signals.append(
@@ -359,10 +371,13 @@ def _score_quantity(detail: Detail | None, policy: TrustPolicy) -> Signal:
 
 
 def _score_programs(listing: Listing) -> Signal:
+    """Bonus only: eBay's Authenticity Guarantee covers graded and raw single
+    cards, not sealed boxes. Scoring its absence would dock every sealed-box
+    listing for failing a test none of them can sit."""
     good = [p for p in listing.programs if "AUTHENTICITY" in p.upper()]
     if good:
-        return Signal("eBay programmes", 3, 3, ", ".join(good))
-    return Signal("eBay programmes", 0, 3, "none", good=False)
+        return Signal("eBay programmes", 5, 5, ", ".join(good), bonus=True)
+    return Signal("eBay programmes", 0, 5, "none (bonus only)", good=False, bonus=True)
 
 
 def _score_description(detail: Detail | None) -> Signal:
@@ -378,6 +393,10 @@ def _score_description(detail: Detail | None) -> Signal:
 
 
 def _score_trusted_seller(listing: Listing, policy: TrustPolicy) -> Signal:
+    """Bonus only: the list starts empty, so counting its absence would dock
+    every listing 6 points on day one for a list you have not built yet."""
     if listing.seller_name.strip().lower() in {s.lower() for s in policy.trusted_sellers}:
-        return Signal("Your trusted list", 6, 6, "seller is on your trusted list")
-    return Signal("Your trusted list", 0, 6, "not on your trusted list", good=False)
+        return Signal("Your trusted list", 8, 8, "seller is on your trusted list", bonus=True)
+    return Signal(
+        "Your trusted list", 0, 8, "not on your trusted list (bonus only)", good=False, bonus=True
+    )

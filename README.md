@@ -65,10 +65,16 @@ A 40,000-feedback Top Rated seller listing a Japanese box is still the wrong box
 | Top Rated Seller | 10 | eBay's own badge |
 | Item specifics | 8 | seller's own fields confirm set and format |
 | eBay category | 6 | listed under trading cards |
-| Your trusted list | 6 | seller you've bought from before |
 | Description | 4 | free of warning phrases |
 | Stock level | 3 | not an implausible pile of a hot set |
-| eBay programmes | 3 | Authenticity Guarantee and similar |
+| *Your trusted list* | *+8* | *bonus — seller you've bought from before* |
+| *eBay programmes* | *+5* | *bonus — Authenticity Guarantee and similar* |
+
+The last two are **bonuses: they add to the score but not the denominator.**
+Your trusted list starts empty, and eBay's Authenticity Guarantee covers graded
+and raw single cards rather than sealed boxes — so counting their absence would
+dock every honest listing for failing tests none of them can sit. A signal an
+honest seller cannot earn is not a test, it's a flat penalty in disguise.
 
 **Unverified listings are capped at 45**, below any sane threshold. Seller
 reputation was otherwise worth ~50 on its own — but reputation says the seller
@@ -187,17 +193,38 @@ That prints every listing with the reason it was kept, flagged, or dropped.
 
 ---
 
+## First run, in order
+
+The moment your eBay keys work, run these two before trusting any output.
+
+```bash
+pip install -r requirements-dev.txt
+set -a && source .env && set +a
+
+python -m tracker --selftest     # 1. does the live API match the parsers?
+python -m tracker --calibrate    # 2. what do real listings actually score?
+```
+
+**`--selftest`** makes three real calls and reports, field by field, whether the
+data the parsers depend on is actually present. Everything else in this project
+was tested against stubs written from an *assumption* about eBay's response
+shape — stubs cannot tell you that assumption is wrong. This can. Run it first.
+
+**`--calibrate`** scores real listings and prints a score histogram, which
+signals commonly come up empty, how many listings pass at each threshold, and
+suggested values for `min_trust_score` and `implausible_below`. The shipped
+thresholds are estimates; this replaces them with measurements.
+
+The most likely failure is that the bar is too high and nothing ever passes —
+which looks identical to "broken" from the dashboard. Calibrate before deciding
+it doesn't work.
+
 ## Running locally
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env          # fill in your keys
-set -a && source .env && set +a
-
-python -m tracker --dry-run   # search and print, write nothing, notify nobody
-python -m tracker --explain   # show all screening decisions
-python -m tracker --only op17 # single set
+python -m tracker --dry-run    # search and print, write nothing, notify nobody
+python -m tracker --explain    # show all screening and scoring decisions
+python -m tracker --only op17  # single set
 ```
 
 `--dry-run` never writes history and never sends a notification, so it's safe to
