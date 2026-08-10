@@ -24,18 +24,23 @@ settings:
 # The totals and net position are already accurate as-is.
 expenses:
   - date: 2026-07-01        # TODO: real date
-    item: "Purchase 1 — TODO label (boxes?)"
+    item: "OP-16 Time of Battle booster box + sleeves + toploader"
     category: sealed
     amount: 209.28
+    # Mixed line: sealed product AND supplies. If you can split out what the
+    # sleeves and toploader cost, move that part to the supplies category --
+    # supplies are a sunk operating cost, not product that can appreciate.
 
   - date: 2026-07-01        # TODO: real date
-    item: "Purchase 2 — TODO label"
+    item: "~16 loose OP-16 packs"
     category: sealed
     amount: 155.33
+    # ~$9.71/pack. A 24-pack box works out materially cheaper per pack --
+    # see the note in the README. Loose packs are the worse buy.
 
   - date: 2026-07-01        # TODO: real date
-    item: "Purchase 3 — TODO label"
-    category: sealed
+    item: "Storage boxes and tape"
+    category: supplies
     amount: 25.33
 
   - date: 2026-08-09
@@ -48,8 +53,8 @@ expenses:
     # graded card exceeds the tier. Return shipping may also still be owed.
 
   - date: 2026-08-01        # TODO: real date
-    item: "Purchase 4 — TODO label (shipping? single?)"
-    category: other
+    item: "Penny sleeves"
+    category: supplies
     amount: 3.24
 
   # Uncomment once you've actually paid it
