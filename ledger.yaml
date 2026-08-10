@@ -65,11 +65,27 @@ expenses:
     category: supplies
     amount: 3.24
 
-  # Uncomment once you've actually paid it
-  # - date: 2026-08-23
-  #   item: "OP-17 prerelease entry — Prime Time Gaming"
-  #   category: events
-  #   amount: 30.00
+  # --- PLANNED: Sunday 2026-08-23, OP-17 prerelease at Prime Time Gaming ---
+  # `planned: true` keeps these OUT of "spent to date" until actually paid.
+  # Flip to false (or delete the flag) once the money leaves your account.
+
+  - date: 2026-08-23
+    item: "OP-17 prerelease entry — Prime Time Gaming"
+    category: events
+    amount: 30.00
+    planned: true
+    # Includes 6 OP-17 packs, 4th Anniversary Tournament Pack, Rainbow Luffy
+    # Leader, World United DON!! cards, and a Monkey.D.Luffy P-110 promo.
+    # 6 packs at retail is ~$30 on its own, so entry is near cost for product.
+
+  - date: 2026-08-23
+    item: "OP-17 booster box (prerelease purchase)"
+    category: sealed
+    amount: 180.00
+    planned: true
+    # ESTIMATE, anchored on Carter's own OP-16 receipt: $209.28 less ~$25-30
+    # of penny sleeves / toploaders / UV toploader implies a ~$180 box.
+    # Replace with the real figure on the day.
 
 holdings:
   - id: ms-all-sunday-sp
@@ -116,5 +132,22 @@ holdings:
   #   name: "OP-16 bulk (2 boxes, commons/uncommons)"
   #   status: owned
   #   estimate: 20.00
+
+  # --- To add on 8/23 once opened ---
+  # Leave estimate blank (null) until you know what you pulled. The report
+  # flags unpriced holdings rather than quietly valuing them at zero.
+  #
+  # - id: op17-prerelease-haul
+  #   name: "OP-17 prerelease haul (6 packs + promos + Rainbow Luffy leader)"
+  #   status: owned
+  #   estimate: null
+  #   acquired: "2026-08-23"
+  #   source: "Prime Time Gaming prerelease entry"
+  #
+  # - id: op17-box-haul
+  #   name: "OP-17 booster box contents"
+  #   status: owned
+  #   estimate: null
+  #   acquired: "2026-08-23"
 
 sales: []

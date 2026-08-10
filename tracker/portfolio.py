@@ -39,6 +39,13 @@ class Expense:
     item: str
     category: str
     amount: float
+    planned: bool = False
+    """Committed but not yet paid.
+
+    Kept out of `spent` deliberately. Mixing money you intend to spend with
+    money that has left your account makes today's position wrong, and today's
+    position is the one you make decisions from.
+    """
 
 
 @dataclass
@@ -78,7 +85,21 @@ class Ledger:
 
     @property
     def spent(self) -> float:
-        return round(sum(e.amount for e in self.expenses), 2)
+        """Money actually paid."""
+        return round(sum(e.amount for e in self.expenses if not e.planned), 2)
+
+    @property
+    def planned(self) -> float:
+        return round(sum(e.amount for e in self.expenses if e.planned), 2)
+
+    @property
+    def committed(self) -> float:
+        return round(self.spent + self.planned, 2)
+
+    @property
+    def position_committed(self) -> float:
+        """Where you land once planned spend happens, before it returns anything."""
+        return round(self.realised + self.unrealised_net - self.committed, 2)
 
     @property
     def realised(self) -> float:
@@ -111,9 +132,11 @@ class Ledger:
     def roi_pct(self) -> float | None:
         return round(100 * self.position_net / self.spent, 1) if self.spent else None
 
-    def by_category(self) -> dict[str, float]:
+    def by_category(self, *, planned: bool = False) -> dict[str, float]:
         out: dict[str, float] = {}
         for e in self.expenses:
+            if e.planned is not planned:
+                continue
             out[e.category] = round(out.get(e.category, 0.0) + e.amount, 2)
         return dict(sorted(out.items(), key=lambda kv: -kv[1]))
 
@@ -126,11 +149,14 @@ class Ledger:
         These matter more than missing estimates: a missing cost inflates the
         position, so the report looks best exactly when it is least complete.
         """
-        return [e for e in self.expenses if e.amount == 0]
+        return [e for e in self.expenses if e.amount == 0 and not e.planned]
 
     def as_dict(self) -> dict[str, Any]:
         return {
             "spent": self.spent,
+            "planned": self.planned,
+            "committed": self.committed,
+            "position_committed": self.position_committed,
             "realised": self.realised,
             "unrealised_gross": self.unrealised_gross,
             "unrealised_net": self.unrealised_net,
@@ -180,6 +206,7 @@ def _req(raw: dict, kind: str, *required: str) -> dict:
         "item": str(raw["item"]),
         "category": str(raw.get("category", "other")),
         "amount": float(raw["amount"]),
+        "planned": bool(raw.get("planned", False)),
     }
 
 
@@ -225,9 +252,15 @@ def report(ledger: Ledger) -> None:
     print("PORTFOLIO")
     print("=" * w)
 
-    print(f"\n  Spent{'':<28}{_money(ledger.spent):>12}")
+    print(f"\n  Spent to date{'':<20}{_money(ledger.spent):>12}")
     for cat, amt in ledger.by_category().items():
         print(f"    {cat:<30}{_money(amt):>12}")
+
+    if ledger.planned:
+        print(f"\n  Planned (committed, not yet paid){'':<1}{_money(ledger.planned):>12}")
+        for cat, amt in ledger.by_category(planned=True).items():
+            print(f"    {cat:<30}{_money(amt):>12}")
+        print(f"    {'COMMITTED TOTAL':<30}{_money(ledger.committed):>12}")
 
     print(f"\n  Realised (sales, net of fees){'':<4}{_money(ledger.realised):>12}")
     print(f"  Holdings at estimate{'':<13}{_money(ledger.unrealised_gross):>12}")
@@ -239,6 +272,9 @@ def report(ledger: Ledger) -> None:
     uncosted = ledger.uncosted()
     verdict = "UP" if pos > 0 else ("DOWN" if pos < 0 else "EVEN")
     print(f"  NET POSITION (if you sold everything today){_money(pos):>17}")
+    if ledger.planned:
+        print(f"  After planned spend, before it returns anything"
+              f"{_money(ledger.position_committed):>14}")
     if uncosted:
         print(f"  ** NOT TRUSTWORTHY — {len(uncosted)} cost(s) still at $0.00 **")
     else:
