@@ -43,14 +43,22 @@ expenses:
     category: supplies
     amount: 25.33
 
-  - date: 2026-08-09
-    item: "PSA submission invoice — Ms. All Sunday SP"
+  - date: 2026-08-06
+    item: "PSA grading — Ms. All Sunday SP (submission #15289898)"
     category: grading
-    amount: 26.49
-    # NOTE: Carter expected ~$110 and was invoiced $26.49. Check which service
-    # level this is and what declared value it carries — PSA's liability is
-    # capped at the declared value, and they can upcharge on return if the
-    # graded card exceeds the tier. Return shipping may also still be owed.
+    amount: 126.47
+    # RESOLVED from the submission PDF. The $26.49 Carter saw was only the
+    # inbound shipping label ($19.99) + Cabrella coverage ($6.50). Full cost:
+    #   service level fee (REGULAR, 1 item)   $79.99
+    #   inbound shipping label (FedEx 2Day)   $19.99
+    #   inbound shipping coverage (Cabrella)   $6.50
+    #   insured return shipping               $19.99
+    #                                        -------
+    #                                        $126.47
+    # Declared max insurance value $1,500 — comfortably above the card's ~$650,
+    # so the earlier under-declaration worry does not apply. Note the INBOUND
+    # transit coverage is only $650 though, not $1,500.
+    # Form expires 9/20/26; turnaround does not start until PSA logs it in.
 
   - date: 2026-08-01        # TODO: real date
     item: "Penny sleeves"
