@@ -114,6 +114,13 @@
   .buy.b00 { background:color-mix(in srgb,var(--bad) 14%,transparent); color:var(--bad); }
   .buynotes { margin:.4rem 0 0; padding-left:1.05rem; font-size:.76rem; color:var(--muted); }
   .cpp { font:650 .8rem ui-monospace,Menlo,monospace; color:var(--ink); }
+  .chase { margin-top:.55rem; }
+  .chase table { width:100%; border-collapse:collapse; font-size:.76rem; }
+  .chase td { padding:.22rem 0; border-bottom:1px solid var(--line); }
+  .chase tr:last-child td { border-bottom:0; }
+  .chase .cn { color:var(--muted); font:600 .72rem ui-monospace,Menlo,monospace; white-space:nowrap; }
+  .chase .vr { color:var(--muted); font-size:.7rem; }
+  .chase .cp { text-align:right; font:650 .76rem ui-monospace,Menlo,monospace; white-space:nowrap; }
 
   .chart { margin-top:.9rem; }
   .chart h3 { font-size:.78rem; margin:0 0 .1rem; color:var(--ink); font-weight:650; }
@@ -367,6 +374,17 @@ function applyView(data) {
       : '<div class="empty">Nothing matches that filter.</div>');
 }
 
+function chaseBlock(id) {
+  const set = (CHASE.sets || {})[id];
+  if (!set || !set.cards || !set.cards.length) return '';
+  const rows = set.cards.map(c => `<tr>
+      <td class="cn">${esc(c.card_id)}</td>
+      <td>${esc(c.name)} <span class="vr">${esc(c.variant)}</span></td>
+      <td class="cp">${money(c.price)}</td></tr>`).join('');
+  return `<details class="chase"><summary>Top ${set.cards.length} chase cards —
+    best ${money(set.cards[0].price)}</summary><table>${rows}</table></details>`;
+}
+
 function card(id, p) {
   const cur = p.current, atl = p.all_time_low;
   const isLow = cur && atl != null && cur.total <= atl;
@@ -397,6 +415,7 @@ function card(id, p) {
   stats.push(`checked ${ago(p.checked_at)}`);
   body += `<div class="stats">${stats.map(s => `<span>${s}</span>`).join('')}</div>`;
 
+  body += chaseBlock(id);
   body += rejectedBlock(p.rejected);
   if (p.error) body += `<div class="err">Last check failed: ${esc(p.error)}</div>`;
 
@@ -408,10 +427,15 @@ function card(id, p) {
 }
 
 let latest = null;
+let CHASE = { sets: {} };
 
 function load() {
   const btn = document.getElementById('refresh');
   if (btn) { btn.disabled = true; btn.textContent = 'Refreshing…'; }
+  fetch('chase.json?t=' + Date.now(), { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : null)
+    .then(c => { if (c) { CHASE = c; if (latest) applyView(latest); } })
+    .catch(() => {});          // chase data is a bonus; never block prices on it
   return fetch('data.json?t=' + Date.now(), { cache: 'no-store' })
   .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
   .then(data => {

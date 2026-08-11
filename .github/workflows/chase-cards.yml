@@ -1,0 +1,48 @@
+name: Refresh chase cards
+
+on:
+  schedule:
+    # Nightly. Roughly 48 page fetches per set across 22 sets, so this takes
+    # 10-20 minutes and has no business running every two hours.
+    - cron: "40 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chase-cards
+  cancel-in-progress: false
+
+jobs:
+  chase:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Refresh chase cards
+        run: python -m tracker --chase
+
+      - name: Commit
+        run: |
+          git config user.name  "op-price-tracker"
+          git config user.email "actions@github.com"
+          # chase.json is generated and lives in its own file, so this run's
+          # output always wins and never collides with the price job.
+          cp docs/chase.json /tmp/chase.json
+          git fetch origin "${GITHUB_REF_NAME}"
+          git reset --hard "origin/${GITHUB_REF_NAME}"
+          cp /tmp/chase.json docs/chase.json
+          git add docs/chase.json
+          if git diff --staged --quiet; then
+            echo "No change."
+          else
+            git commit -m "chase cards: $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

@@ -63,6 +63,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--ship", type=float, default=0.0, help="sale: your shipping cost")
     p.add_argument("--status", default="owned", help="holding: owned|grading|listed")
     p.add_argument(
+        "--chase",
+        action="store_true",
+        help="Refresh top chase cards per set from Limitless. Slow; run nightly.",
+    )
+    p.add_argument(
         "--selftest",
         action="store_true",
         help="Verify the live eBay response shape matches the parsers. Run this first.",
@@ -197,6 +202,27 @@ def main(argv: list[str] | None = None) -> int:
         except (FileNotFoundError, ValueError) as exc:
             print(f"Ledger error: {exc}", file=sys.stderr)
             return 2
+        return 0
+
+    if args.chase:
+        import json
+        from .chase import top_chase
+        from .config import DEFAULT_CHASE_FILE
+        from .storage import utc_now_iso
+
+        out = {"updated_at": utc_now_iso(), "sets": {}}
+        for product in load_products(args.watchlist):
+            if product.unit_kind == "pack":
+                continue                      # packs share their set's chase list
+            code = product.limitless_set or product.id.upper()
+            cards = top_chase(code)
+            out["sets"][product.id] = {"set": code, "name": product.name, "cards": cards}
+            top = f"${cards[0]['price']:,.2f} {cards[0]['name']}" if cards else "nothing found"
+            print(f"  {product.id:<8} {len(cards)} cards · top {top}")
+
+        DEFAULT_CHASE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        DEFAULT_CHASE_FILE.write_text(json.dumps(out, indent=2) + "\n")
+        print(f"\nWrote {DEFAULT_CHASE_FILE}")
         return 0
 
     if args.selftest:

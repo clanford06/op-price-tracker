@@ -13,6 +13,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_WATCHLIST = REPO_ROOT / "watchlist.yaml"
 DEFAULT_DATA_FILE = REPO_ROOT / "docs" / "data.json"
 DEFAULT_LEDGER = REPO_ROOT / "ledger.yaml"
+DEFAULT_CHASE_FILE = REPO_ROOT / "docs" / "chase.json"
 
 
 @dataclass
@@ -41,6 +42,7 @@ class Product:
     packs_in_unit: int = 24       # English booster box = 24 packs
     ev_per_pack: float | None = None   # configured estimate; None disables the EV term
     sp_per_box: float | None = None    # SPs per box; drives the dud-chance figure
+    limitless_set: str = ""            # Limitless set code; defaults to id.upper()
     blocked_sellers: list[str] = field(default_factory=list)
     trusted_sellers: list[str] = field(default_factory=list)
 
@@ -115,6 +117,7 @@ def load_products(path: Path | None = None) -> list[Product]:
                 sp_per_box=(
                     float(merged["sp_per_box"]) if merged.get("sp_per_box") is not None else None
                 ),
+                limitless_set=str(merged.get("limitless_set", "")),
                 blocked_sellers=[str(s) for s in (merged.get("blocked_sellers") or [])],
                 trusted_sellers=[str(s) for s in (merged.get("trusted_sellers") or [])],
             )
