@@ -77,6 +77,15 @@
   footer { margin-top:1.25rem; margin-bottom:2rem; color:var(--muted); font-size:.78rem; }
   .empty { text-align:center; padding:3rem 1rem; color:var(--muted); }
   .acts { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.6rem; }
+  .filters { max-width:900px; margin:.9rem auto 0; display:flex; gap:.75rem;
+             align-items:center; flex-wrap:wrap; background:var(--card);
+             border:1px solid var(--line); border-radius:10px; padding:.55rem .7rem; }
+  .fl { font-size:.78rem; color:var(--muted); display:flex; align-items:center; gap:.4rem; }
+  .fl select { font:inherit; font-size:.78rem; color:var(--ink); background:var(--chip);
+               border:1px solid var(--line); border-radius:6px; padding:.3rem .4rem; }
+  .fl.chk { cursor:pointer; }
+  .fl.chk input { accent-color:var(--accent); width:15px; height:15px; }
+  .count { margin-left:auto; font-size:.74rem; color:var(--muted); }
   .btn { font:600 .8rem/1 -apple-system,system-ui,sans-serif; padding:.5rem .8rem;
          border-radius:8px; border:1px solid var(--line); background:var(--accent);
          color:#fff; cursor:pointer; text-decoration:none; display:inline-block; }
@@ -133,6 +142,23 @@
        href="https://github.com/clanford06/op-price-tracker/issues/new?template=ledger-entry.yml">+ Add expense ↗</a>
   </div>
 </header>
+<div class="filters" id="filters" hidden>
+  <label class="fl">Sort
+    <select id="sort">
+      <option value="buy-desc">Best buy score</option>
+      <option value="buy-asc">Worst buy score</option>
+      <option value="cpp-asc">Cheapest per pack</option>
+      <option value="cpp-desc">Priciest per pack</option>
+      <option value="price-asc">Lowest price</option>
+      <option value="price-desc">Highest price</option>
+      <option value="trust-desc">Most trusted</option>
+      <option value="name-asc">Set A to Z</option>
+      <option value="name-desc">Set Z to A</option>
+    </select>
+  </label>
+  <label class="fl chk"><input type="checkbox" id="onlyVerified"> Only with a price</label>
+  <span class="count" id="count"></span>
+</div>
 <main id="out"></main>
 <footer>
   Shows the cheapest <em>delivered</em> price that passed every verification check —
@@ -293,6 +319,54 @@ function buyBlock(b) {
     <ul class="buynotes">${(b.notes||[]).map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`;
 }
 
+// Every comparator is wrapped so a product with no verified price sinks to the
+// bottom in BOTH directions. Without this, "worst buy score" promotes the
+// things that have no score at all, which is the opposite of useful.
+const sink = cmp => (a, b) => (has(a) !== has(b)) ? (has(a) ? -1 : 1) : cmp(a, b);
+
+const SORTS = {
+  'buy-desc':   sink((a,b) => sc(b) - sc(a)),
+  'buy-asc':    sink((a,b) => sc(a) - sc(b)),
+  'cpp-asc':    sink((a,b) => cpp(a) - cpp(b)),
+  'cpp-desc':   sink((a,b) => cpp(b) - cpp(a)),
+  'price-asc':  sink((a,b) => pr(a) - pr(b)),
+  'price-desc': sink((a,b) => pr(b) - pr(a)),
+  'trust-desc': sink((a,b) => tr(b) - tr(a)),
+  'name-asc':   sink((a,b) => nm(a).localeCompare(nm(b), undefined, {numeric:true})),
+  'name-desc':  sink((a,b) => nm(b).localeCompare(nm(a), undefined, {numeric:true})),
+};
+const has = p => !!(p && p.current);
+const sc  = p => has(p) ? (p.current.purchase?.score ?? -1) : -Infinity;
+const cpp = p => has(p) ? (p.current.purchase?.cost_per_pack ?? Infinity) : Infinity;
+const pr  = p => has(p) ? p.current.total : Infinity;
+const tr  = p => has(p) ? (p.current.trust?.score ?? -1) : -Infinity;
+const nm  = p => String(p?.name || '');
+
+function applyView(data) {
+  const how = document.getElementById('sort').value;
+  const only = document.getElementById('onlyVerified').checked;
+  localStorage.setItem('opSort', how);
+  localStorage.setItem('opOnly', only ? '1' : '0');
+
+  let entries = Object.entries(data.products || {});
+  const total = entries.length;
+  if (only) entries = entries.filter(([, p]) => has(p));
+
+  // Unverified rows keep their natural order at the bottom instead of being
+  // shuffled by a comparator that has nothing to compare.
+  const withPrice = entries.filter(([, p]) => has(p)).sort((x, y) => SORTS[how](x[1], y[1]));
+  const without   = entries.filter(([, p]) => !has(p))
+                           .sort((x, y) => nm(x[1]).localeCompare(nm(y[1]), undefined, {numeric:true}));
+  const ordered = [...withPrice, ...without];
+
+  document.getElementById('count').textContent =
+    `${withPrice.length} priced · ${total} tracked`;
+  document.getElementById('out').innerHTML =
+    portfolio(data.portfolio) + (ordered.length
+      ? ordered.map(([id, p]) => card(id, p)).join('')
+      : '<div class="empty">Nothing matches that filter.</div>');
+}
+
 function card(id, p) {
   const cur = p.current, atl = p.all_time_low;
   const isLow = cur && atl != null && cur.total <= atl;
@@ -333,6 +407,8 @@ function card(id, p) {
     ${body}</section>`;
 }
 
+let latest = null;
+
 function load() {
   const btn = document.getElementById('refresh');
   if (btn) { btn.disabled = true; btn.textContent = 'Refreshing…'; }
@@ -342,11 +418,9 @@ function load() {
     document.getElementById('updated').textContent =
       'Updated ' + ago(data.updated_at) +
       (data.updated_at ? ' · ' + new Date(data.updated_at).toLocaleString() : '');
-    const entries = Object.entries(data.products || {});
-    document.getElementById('out').innerHTML =
-      portfolio(data.portfolio) + (entries.length
-        ? entries.map(([id, p]) => card(id, p)).join('')
-        : '<div class="empty">No price data yet.</div>');
+    document.getElementById('filters').hidden = false;
+    latest = data;
+    applyView(data);
   })
   .catch(err => {
     document.getElementById('updated').textContent = 'Could not load data.json';
@@ -359,6 +433,12 @@ function load() {
   });
 }
 
+// Restore the last chosen view so it survives a reload.
+document.getElementById('sort').value = localStorage.getItem('opSort') || 'buy-desc';
+document.getElementById('onlyVerified').checked = localStorage.getItem('opOnly') === '1';
+// Re-sorting is local -- no refetch needed.
+document.getElementById('sort').addEventListener('change', () => latest && applyView(latest));
+document.getElementById('onlyVerified').addEventListener('change', () => latest && applyView(latest));
 document.getElementById('refresh').addEventListener('click', load);
 // Coming back to the tab after a run finished should show the new numbers.
 document.addEventListener('visibilitychange', () => { if (!document.hidden) load(); });
