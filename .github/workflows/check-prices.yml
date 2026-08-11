@@ -53,12 +53,20 @@ jobs:
         run: |
           git config user.name  "op-price-tracker"
           git config user.email "actions@github.com"
+
+          # docs/data.json is generated output, so this run's freshly computed
+          # prices always win. Rebasing a generated file against a concurrent
+          # run conflicts every time and fails the job; resetting onto the
+          # remote tip and re-laying our file down is deterministic.
+          cp docs/data.json /tmp/data.json
+          git fetch origin "${GITHUB_REF_NAME}"
+          git reset --hard "origin/${GITHUB_REF_NAME}"
+          cp /tmp/data.json docs/data.json
+
           git add docs/data.json
           if git diff --staged --quiet; then
             echo "No price change."
           else
             git commit -m "prices: $(date -u '+%Y-%m-%d %H:%M UTC')"
-            # Another run may have pushed while we worked; rebase rather than fail.
-            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
-            git push
+            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
