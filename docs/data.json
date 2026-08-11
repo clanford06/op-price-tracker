@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-11T21:41:40+00:00",
+  "updated_at": "2026-08-11T21:47:49+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -13,7 +13,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:38:34+00:00"
+      "checked_at": "2026-08-11T21:46:58+00:00"
     },
     "op16": {
       "history": [
@@ -59,6 +59,10 @@
         },
         {
           "t": "2026-08-11T21:38:37+00:00",
+          "price": 209.99
+        },
+        {
+          "t": "2026-08-11T21:47:21+00:00",
           "price": 209.99
         }
       ],
@@ -940,7 +944,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:38:37+00:00",
+      "checked_at": "2026-08-11T21:47:21+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -984,6 +988,10 @@
         },
         {
           "t": "2026-08-11T21:38:40+00:00",
+          "price": 279.99
+        },
+        {
+          "t": "2026-08-11T21:47:34+00:00",
           "price": 279.99
         }
       ],
@@ -1540,7 +1548,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:38:40+00:00",
+      "checked_at": "2026-08-11T21:47:34+00:00",
       "all_time_low": 202.78,
       "all_time_high": 279.99
     },
@@ -1555,7 +1563,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:38:41+00:00"
+      "checked_at": "2026-08-11T21:47:35+00:00"
     },
     "op17-packs": {
       "history": [],
@@ -1568,7 +1576,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:38:41+00:00"
+      "checked_at": "2026-08-11T21:47:37+00:00"
     },
     "op16-packs": {
       "history": [
@@ -1602,6 +1610,10 @@
         },
         {
           "t": "2026-08-11T21:38:45+00:00",
+          "price": 6.99
+        },
+        {
+          "t": "2026-08-11T21:47:49+00:00",
           "price": 6.99
         }
       ],
@@ -1723,7 +1735,7 @@
           ]
         }
       },
-      "considered": 126,
+      "considered": 127,
       "relevant": 42,
       "verified": 8,
       "kept": 1,
@@ -2157,7 +2169,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:38:45+00:00",
+      "checked_at": "2026-08-11T21:47:49+00:00",
       "all_time_low": 6.99,
       "all_time_high": 6.99
     }
