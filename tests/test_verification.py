@@ -247,3 +247,86 @@ def test_peer_median_needs_a_real_sample():
         require_all=["box"], require_any=["op 17", "op17"], exclude_any=[],
     )
     assert peer_median(three) == 110.0
+
+
+# -- phone entry: issue-form parsing ---------------------------------------
+
+from tracker.issue_entry import IssueParseError, parse_entry  # noqa: E402
+
+FORM = """### Type
+
+expense (money out)
+
+### What was it?
+
+OP-17 booster box
+
+### Amount ($)
+
+194.99
+
+### Shipping & handling ($)
+
+7.99
+
+### Selling fees ($) — sales only
+
+_No response_
+
+### Tag
+
+op17
+
+### Category (expenses only)
+
+sealed
+
+### Date (YYYY-MM-DD)
+
+_No response_
+
+### Not paid yet
+
+- [ ] This is committed but the money has not left my account
+"""
+
+
+def test_issue_form_parses():
+    e = parse_entry(FORM, fee_pct=13.25, fee_flat=0.40)
+    assert (e.kind, e.amount, e.shipping, e.tag, e.category) == (
+        "expense", 194.99, 7.99, "op17", "sealed")
+    assert e.when is None and e.planned is False
+
+
+def test_no_response_is_not_treated_as_data():
+    e = parse_entry(FORM, fee_pct=13.25, fee_flat=0.40)
+    assert e.fees == 0.0          # blank fees on an expense, not the literal string
+
+
+def test_sale_without_fees_estimates_ebay_cut():
+    body = FORM.replace("expense (money out)", "sale (money in)")
+    e = parse_entry(body, fee_pct=13.25, fee_flat=0.40)
+    assert e.kind == "sale"
+    assert e.fees == round(194.99 * 0.1325 + 0.40, 2)
+
+
+def test_planned_checkbox_detected():
+    body = FORM.replace("- [ ] This is committed", "- [x] This is committed")
+    assert parse_entry(body, fee_pct=13.25, fee_flat=0.40).planned is True
+
+
+def test_dollar_signs_and_commas_tolerated():
+    body = FORM.replace("194.99", "$1,194.99")
+    assert parse_entry(body, fee_pct=13.25, fee_flat=0.40).amount == 1194.99
+
+
+@pytest.mark.parametrize("bad,msg", [
+    (FORM.replace("194.99", "abc"), "must be a number"),
+    (FORM.replace("op17\n", "_No response_\n"), "Tag is required"),
+    (FORM.replace("2026", "26").replace("_No response_\n\n### Not paid", "26-8-1\n\n### Not paid"),
+     "YYYY-MM-DD"),
+])
+def test_bad_input_is_rejected(bad, msg):
+    with pytest.raises(IssueParseError) as e:
+        parse_entry(bad, fee_pct=13.25, fee_flat=0.40)
+    assert msg in str(e.value)

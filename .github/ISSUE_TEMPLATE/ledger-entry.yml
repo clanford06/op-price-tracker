@@ -1,0 +1,90 @@
+name: Add a ledger entry
+description: Log an expense, sale, or holding from your phone. No terminal needed.
+title: "[ledger] "
+labels: ["ledger"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this in and submit. A bot updates the ledger within a minute, comments
+        with your new position, and closes the issue. If anything is malformed it
+        says so and changes nothing.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options:
+        - expense (money out)
+        - sale (money in)
+        - holding (something you now own)
+    validations:
+      required: true
+
+  - type: input
+    id: description
+    attributes:
+      label: What was it?
+      placeholder: OP-17 booster box
+    validations:
+      required: true
+
+  - type: input
+    id: amount
+    attributes:
+      label: Amount ($)
+      description: For an expense, the item price BEFORE shipping. For a sale, the gross before fees.
+      placeholder: "194.99"
+    validations:
+      required: true
+
+  - type: input
+    id: shipping
+    attributes:
+      label: Shipping & handling ($)
+      description: What you paid to receive it, or what it cost you to ship it out. Blank for none.
+      placeholder: "7.99"
+
+  - type: input
+    id: fees
+    attributes:
+      label: Selling fees ($) — sales only
+      description: Leave blank and it estimates eBay's 13.25% + $0.40 for you.
+      placeholder: "26.50"
+
+  - type: input
+    id: tag
+    attributes:
+      label: Tag
+      description: Your grouping label. Existing ones - op16, op17, msallsunday, supplies.
+      placeholder: op17
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category (expenses only)
+      options:
+        - sealed
+        - singles
+        - grading
+        - supplies
+        - events
+        - shipping
+        - other
+
+  - type: input
+    id: date
+    attributes:
+      label: Date (YYYY-MM-DD)
+      description: Leave blank for today.
+      placeholder: "2026-08-23"
+
+  - type: checkboxes
+    id: planned
+    attributes:
+      label: Not paid yet
+      options:
+        - label: This is committed but the money has not left my account
+          required: false

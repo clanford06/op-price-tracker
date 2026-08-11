@@ -1,0 +1,107 @@
+name: Ledger entry from issue
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: ledger-write
+  cancel-in-progress: false
+
+jobs:
+  add:
+    # Only issues raised through the form, which carries the `ledger` label.
+    if: contains(join(github.event.issue.labels.*.name, ','), 'ledger')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Apply the entry
+        id: apply
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          python - <<'PY' > result.md 2>&1 || echo "FAILED=1" >> "$GITHUB_ENV"
+          import os, sys
+          from pathlib import Path
+          from tracker.config import DEFAULT_LEDGER
+          from tracker.issue_entry import IssueParseError, parse_entry
+          from tracker.ledger_edit import LedgerEditError, add_entry
+          from tracker.portfolio import load_ledger
+
+          led = Path(DEFAULT_LEDGER)
+          before = load_ledger(led)
+          try:
+              e = parse_entry(os.environ["ISSUE_BODY"],
+                              fee_pct=before.fee_pct, fee_flat=before.fee_flat)
+          except IssueParseError as exc:
+              print(f"### Could not add that\n\n**{exc}**\n\nNothing was changed. "
+                    f"Edit the issue and it will retry automatically.")
+              sys.exit(1)
+
+          # Shipping is real money. On a purchase it is part of what the item
+          # cost you; on a sale it comes straight off what you netted.
+          amount = e.amount + (e.shipping if e.kind == "expense" else 0.0)
+          try:
+              add_entry(led, e.kind, e.description, amount,
+                        tag=e.tag, category=e.category, when=e.when,
+                        planned=e.planned, fees=e.fees,
+                        shipping_cost=e.shipping if e.kind == "sale" else 0.0)
+          except LedgerEditError as exc:
+              print(f"### Could not add that\n\n**{exc}**")
+              sys.exit(1)
+
+          after = load_ledger(led)
+          m = lambda v: ("-$" if v < 0 else "$") + f"{abs(v):,.2f}"
+          ship = f" (incl. {m(e.shipping)} shipping)" if e.shipping else ""
+          fee  = f", {m(e.fees)} fees" if e.kind == "sale" and e.fees else ""
+
+          print(f"### Added\n")
+          print(f"**{e.kind}** · {e.description} · {m(amount)}{ship}{fee} · `{e.tag}`\n")
+          print(f"| | before | after |")
+          print(f"|---|---|---|")
+          print(f"| Spent | {m(before.spent)} | {m(after.spent)} |")
+          print(f"| Realised | {m(before.realised)} | {m(after.realised)} |")
+          print(f"| Holdings (net) | {m(before.unrealised_net)} | {m(after.unrealised_net)} |")
+          print(f"| **Net position** | {m(before.position_net)} | **{m(after.position_net)}** |")
+          print(f"\n**`{e.tag}` now:** {m(after.by_tag().get(e.tag, {}).get('net', 0))}\n")
+          print(f"[Dashboard](https://clanford06.github.io/op-price-tracker/) "
+                f"updates on the next 2-hourly run.")
+          PY
+
+      - name: Commit
+        if: env.FAILED != '1'
+        run: |
+          git config user.name  "op-price-tracker"
+          git config user.email "actions@github.com"
+          git add ledger.yaml
+          if git diff --staged --quiet; then
+            echo "nothing changed"
+          else
+            git commit -m "ledger: ${{ github.event.issue.title }} (#${{ github.event.issue.number }})"
+            git pull --rebase --autostash origin main
+            git push
+          fi
+
+      - name: Reply on the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} \
+            -R ${{ github.repository }} --body-file result.md
+          if [ "${FAILED:-0}" != "1" ]; then
+            gh issue close ${{ github.event.issue.number }} -R ${{ github.repository }}
+          fi
