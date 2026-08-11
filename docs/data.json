@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-11T19:46:43+00:00",
+  "updated_at": "2026-08-11T19:56:12+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -13,7 +13,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:46:33+00:00"
+      "checked_at": "2026-08-11T19:56:00+00:00"
     },
     "op16": {
       "history": [
@@ -35,6 +35,10 @@
         },
         {
           "t": "2026-08-11T19:46:36+00:00",
+          "price": 209.99
+        },
+        {
+          "t": "2026-08-11T19:56:03+00:00",
           "price": 209.99
         }
       ],
@@ -914,7 +918,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:46:36+00:00",
+      "checked_at": "2026-08-11T19:56:03+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -931,6 +935,10 @@
         {
           "t": "2026-08-11T19:46:39+00:00",
           "price": 202.78
+        },
+        {
+          "t": "2026-08-11T19:56:07+00:00",
+          "price": 202.78
         }
       ],
       "name": "OP-14 The Azure Sea's Seven",
@@ -941,7 +949,7 @@
         "shipping": 0.0,
         "total": 202.78,
         "seller": "amitr90",
-        "seller_score": 2748,
+        "seller_score": 2749,
         "seller_pct": 99.8,
         "top_rated": false,
         "trust": {
@@ -960,7 +968,7 @@
               "name": "Seller volume",
               "earned": 12.0,
               "possible": 14,
-              "detail": "2,748 completed sales",
+              "detail": "2,749 completed sales",
               "good": true
             },
             {
@@ -1270,7 +1278,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:46:39+00:00",
+      "checked_at": "2026-08-11T19:56:07+00:00",
       "all_time_low": 202.78,
       "all_time_high": 202.78
     },
@@ -1285,7 +1293,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:46:40+00:00"
+      "checked_at": "2026-08-11T19:56:07+00:00"
     },
     "op17-packs": {
       "history": [],
@@ -1298,7 +1306,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:46:40+00:00"
+      "checked_at": "2026-08-11T19:56:08+00:00"
     },
     "op16-packs": {
       "history": [
@@ -1308,6 +1316,10 @@
         },
         {
           "t": "2026-08-11T19:46:43+00:00",
+          "price": 6.99
+        },
+        {
+          "t": "2026-08-11T19:56:12+00:00",
           "price": 6.99
         }
       ],
@@ -1861,7 +1873,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:46:43+00:00",
+      "checked_at": "2026-08-11T19:56:12+00:00",
       "all_time_low": 6.99,
       "all_time_high": 6.99
     }
@@ -1882,6 +1894,36 @@
       "sealed": 364.61,
       "grading": 126.47,
       "supplies": 28.57
+    },
+    "by_tag": {
+      "op16": {
+        "spent": 364.61,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 80.8,
+        "net": -283.81
+      },
+      "supplies": {
+        "spent": 28.57,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 0.0,
+        "net": -28.57
+      },
+      "op17": {
+        "spent": 0.0,
+        "planned": 210.0,
+        "realised": 0.0,
+        "held": 0.0,
+        "net": 0.0
+      },
+      "msallsunday": {
+        "spent": 126.47,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 563.48,
+        "net": 437.01
+      }
     },
     "holdings": [
       {
@@ -1936,6 +1978,7 @@
         "item": "OP-16 Time of Battle booster box + sleeves + toploader",
         "category": "sealed",
         "amount": 209.28,
+        "tag": "op16",
         "planned": false
       },
       {
@@ -1943,6 +1986,7 @@
         "item": "~16 loose OP-16 packs",
         "category": "sealed",
         "amount": 155.33,
+        "tag": "op16",
         "planned": false
       },
       {
@@ -1950,6 +1994,7 @@
         "item": "Storage boxes and tape",
         "category": "supplies",
         "amount": 25.33,
+        "tag": "supplies",
         "planned": false
       },
       {
@@ -1957,6 +2002,7 @@
         "item": "PSA grading \u2014 Ms. All Sunday SP (submission #15289898)",
         "category": "grading",
         "amount": 126.47,
+        "tag": "msallsunday",
         "planned": false
       },
       {
@@ -1964,6 +2010,7 @@
         "item": "Penny sleeves",
         "category": "supplies",
         "amount": 3.24,
+        "tag": "supplies",
         "planned": false
       },
       {
@@ -1971,6 +2018,7 @@
         "item": "OP-17 prerelease entry \u2014 Prime Time Gaming",
         "category": "events",
         "amount": 30.0,
+        "tag": "op17",
         "planned": true
       },
       {
@@ -1978,6 +2026,7 @@
         "item": "OP-17 booster box (prerelease purchase)",
         "category": "sealed",
         "amount": 180.0,
+        "tag": "op17",
         "planned": true
       }
     ],
