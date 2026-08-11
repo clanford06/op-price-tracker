@@ -217,9 +217,12 @@ function portfolio(pf) {
 function buyBlock(b) {
   if (!b) return '';
   const cls = b.score>=80?'b80':b.score>=65?'b65':b.score>=50?'b50':'b00';
-  const dud = b.dud_chance == null ? '' :
-    `<div class="dud">${Math.round(b.dud_chance*100)}% chance of no SP at all —
-     the average payout is carried by the other ${Math.round((1-b.dud_chance)*100)}%</div>`;
+  // Never round the dud chance to a flat 100%: "100% no SP, carried by the
+  // other 1%" is self-contradictory, and a single pack really is ~99.5%.
+  const dudPct = b.dud_chance == null ? null : Math.min(99, Math.round(b.dud_chance*100));
+  const dud = dudPct == null ? '' :
+    `<div class="dud">~${dudPct}% chance of no SP at all —
+     the average payout is carried by the other ${100-dudPct}%</div>`;
   return `<div class="buy ${cls}">BUY ${b.score}/100 · ${esc(b.verdict)}</div>
     <span class="cpp"> ${money(b.cost_per_pack)}/pack</span>${dud}
     <ul class="buynotes">${(b.notes||[]).map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`;

@@ -134,10 +134,6 @@ def evaluate_purchase(
     if sp_per_box and sp_per_box > 0:
         per_unit_sp = sp_per_box if unit_kind != "pack" else sp_per_box / max(packs_per_box, 1)
         dud = max(0.0, min(1.0, 1.0 - per_unit_sp))
-        notes.append(
-            f"~{dud*100:.0f}% chance this {unit_kind} contains no SP at all — "
-            f"the average payout is carried by the rare {(1-dud)*100:.0f}%"
-        )
 
     score = int(round(100 * earned / possible)) if possible else 0
 
