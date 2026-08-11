@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-11T21:38:45+00:00",
+  "updated_at": "2026-08-11T21:41:40+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -2166,13 +2166,13 @@
     "spent": 559.04,
     "planned": 210.0,
     "committed": 769.04,
-    "position_committed": -124.76,
+    "position_committed": -106.72,
     "realised": 0,
-    "unrealised_gross": 745.0,
-    "unrealised_net": 644.28,
-    "position_gross": 185.96,
-    "position_net": 85.24,
-    "roi_pct": 15.2,
+    "unrealised_gross": 766.26,
+    "unrealised_net": 662.32,
+    "position_gross": 207.22,
+    "position_net": 103.28,
+    "roi_pct": 18.5,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 404.0,
@@ -2187,19 +2187,19 @@
         "held": 80.8,
         "net": -283.81
       },
-      "op15": {
-        "spent": 39.39,
-        "planned": 0.0,
-        "realised": 0.0,
-        "held": 0.0,
-        "net": -39.39
-      },
       "supplies": {
         "spent": 28.57,
         "planned": 0.0,
         "realised": 0.0,
         "held": 0.0,
         "net": -28.57
+      },
+      "op15": {
+        "spent": 39.39,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 18.04,
+        "net": -21.35
       },
       "op17": {
         "spent": 0.0,
@@ -2233,6 +2233,15 @@
         "estimate": 63.0,
         "net_if_sold": 54.25,
         "source": "pulled from OP-16 box",
+        "note": ""
+      },
+      {
+        "id": "op15-114-wyper-aa",
+        "name": "OP15-114 Wyper AA",
+        "status": "owned",
+        "estimate": 21.26,
+        "net_if_sold": 18.04,
+        "source": "",
         "note": ""
       },
       {
