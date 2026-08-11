@@ -83,6 +83,7 @@ def policy_for(product: Product) -> TrustPolicy:
         blocked_sellers=tuple(product.blocked_sellers),
         trusted_sellers=tuple(product.trusted_sellers),
         expect_terms=tuple(product.require_any),
+        exclude_terms=tuple(product.exclude_any),
     )
 
 

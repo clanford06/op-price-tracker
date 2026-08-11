@@ -361,3 +361,35 @@ def test_plain_text_planned_flag():
     e = parse_entry("type: expense\nwhat: OP-17 box\namount: 180\ntag: op17\nplanned: yes\n",
                     fee_pct=13.25, fee_flat=0.40)
     assert e.planned is True
+
+
+# -- truncated titles and ambiguous language -------------------------------
+
+TRUNC_POLICY = TrustPolicy(**{**POLICY.__dict__, "exclude_terms": ("japanese", "korean", "case")})
+
+
+def test_truncated_title_caught_by_full_title_from_detail():
+    """eBay caps search titles at 80 chars, chopping '(Japanese)' to '(Jap...'.
+
+    This is a real miss that reached the live dashboard: an OP-14 Japanese box
+    was recommended as the English winner.
+    """
+    d = good_detail(full_title="One Piece Card Game Booster Box (OP-14) (Japanese)")
+    r = evaluate(listing(title="One Piece Card Game Booster Box (OP-14) (Jap...", detail=d),
+                 TRUNC_POLICY, median_price=120.0)
+    assert not r.passed
+    assert any("full title contains 'japanese'" in v for v in r.vetoes), r.vetoes
+
+
+def test_dual_language_specifics_are_vetoed():
+    """'English, Japanese' means you cannot tell which printing arrives."""
+    r = evaluate(listing(detail=good_detail(aspects={"Language": "English, Japanese"})),
+                 TRUNC_POLICY, median_price=120.0)
+    assert not r.passed
+    assert any("more than one language" in v for v in r.vetoes), r.vetoes
+
+
+def test_plain_english_specifics_still_pass():
+    r = evaluate(listing(detail=good_detail(full_title="One Piece OP-17 Booster Box English")),
+                 TRUNC_POLICY, median_price=120.0)
+    assert r.passed, r.vetoes

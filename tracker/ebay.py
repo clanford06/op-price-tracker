@@ -51,6 +51,10 @@ class Detail:
     location_country: str | None = None
     category_path: str = ""
     description_text: str = ""
+    full_title: str = ""
+    """Untruncated title. item_summary/search caps titles at 80 chars, which
+    silently chops trailing words like '(Japanese)' down to '(Jap...' and lets
+    them slip past title screening."""
     fetch_error: str | None = None
 
     def aspect(self, *names: str) -> str | None:
@@ -228,6 +232,7 @@ def _parse_detail(raw: dict[str, Any]) -> Detail:
     desc_text = _re.sub(r"\s+", " ", desc_text).strip()[:4000]
 
     return Detail(
+        full_title=str(raw.get("title") or ""),
         returns_accepted=terms.get("returnsAccepted"),
         return_days=int(period) if isinstance(period, (int, float)) else None,
         aspects=aspects,

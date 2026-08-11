@@ -82,12 +82,33 @@ jobs:
                 f"updates on the next 2-hourly run.")
           PY
 
+      - name: Refresh the portfolio block in docs/data.json
+        if: env.FAILED != '1'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from tracker.config import DEFAULT_DATA_FILE, DEFAULT_LEDGER
+          from tracker.portfolio import load_ledger
+          from tracker.storage import utc_now_iso
+
+          # Only the portfolio section is rewritten. Prices are left exactly as
+          # the last price run left them -- this job has no eBay credentials and
+          # must not blank them out.
+          f = Path(DEFAULT_DATA_FILE)
+          data = json.loads(f.read_text()) if f.exists() else {"schema": 1, "products": {}}
+          data["portfolio"] = load_ledger(Path(DEFAULT_LEDGER)).as_dict()
+          data["updated_at"] = utc_now_iso()
+          f.write_text(json.dumps(data, indent=2) + "\n")
+          print("portfolio refreshed in", f)
+          PY
+
       - name: Commit
         if: env.FAILED != '1'
         run: |
           git config user.name  "op-price-tracker"
           git config user.email "actions@github.com"
-          git add ledger.yaml
+          git add ledger.yaml docs/data.json
           if git diff --staged --quiet; then
             echo "nothing changed"
           else

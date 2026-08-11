@@ -151,6 +151,7 @@ class TrustPolicy:
     blocked_sellers: tuple[str, ...] = ()
     trusted_sellers: tuple[str, ...] = ()
     expect_language: str = "english"
+    exclude_terms: tuple[str, ...] = ()   # re-checked against the UNTRUNCATED title
     expect_terms: tuple[str, ...] = ()      # e.g. set codes, for aspect matching
 
 
@@ -199,14 +200,33 @@ def evaluate(
             report.vetoes.append(f"ships from {country}, not the US")
 
     if detail and not detail.fetch_error:
+        # Search truncates titles at 80 chars. Re-run the exclusions against the
+        # full title from item detail, or "(Japanese)" survives as "(Jap...".
+        if detail.full_title:
+            full = _norm(detail.full_title)
+            for term in policy.exclude_terms:
+                if _has_phrase(full, term):
+                    report.vetoes.append(
+                        f"full title contains '{term}' (search result was truncated)"
+                    )
+                    break
+
         lang = detail.aspect("Language", "Card Language", "Game Language")
         if lang:
             low = _norm(lang)
-            if not _has_phrase(low, policy.expect_language):
-                for bad in NON_ENGLISH_LANGUAGES:
-                    if _has_phrase(low, bad):
-                        report.vetoes.append(f"item specifics say Language: {lang}")
-                        break
+            found_bad = [b for b in NON_ENGLISH_LANGUAGES if _has_phrase(low, b)]
+            has_english = _has_phrase(low, policy.expect_language)
+            if found_bad and has_english:
+                # Dual-tagged. Either the seller stocks both and you cannot tell
+                # which arrives, or it is a non-English product mislabelled.
+                # Ambiguity about the actual product is not something to score
+                # around -- it is a reason to walk away.
+                report.vetoes.append(
+                    f"item specifics list more than one language ({lang}) — "
+                    f"cannot tell which printing you would receive"
+                )
+            elif found_bad:
+                report.vetoes.append(f"item specifics say Language: {lang}")
 
         for phrase in FAKE_PHRASES:
             if _has_phrase(_norm(detail.description_text), phrase):
