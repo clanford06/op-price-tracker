@@ -72,6 +72,14 @@
          background:color-mix(in srgb,var(--bad) 10%,transparent); }
   footer { margin-top:1.25rem; margin-bottom:2rem; color:var(--muted); font-size:.78rem; }
   .empty { text-align:center; padding:3rem 1rem; color:var(--muted); }
+  .acts { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.6rem; }
+  .btn { font:600 .8rem/1 -apple-system,system-ui,sans-serif; padding:.5rem .8rem;
+         border-radius:8px; border:1px solid var(--line); background:var(--accent);
+         color:#fff; cursor:pointer; text-decoration:none; display:inline-block; }
+  .btn.ghost { background:var(--chip); color:var(--ink); }
+  .btn:disabled { opacity:.5; }
+  .dud { margin-top:.45rem; padding:.4rem .6rem; border-radius:8px; font-size:.78rem;
+         background:color-mix(in srgb,var(--warn) 12%,transparent); color:var(--warn); }
 
   .pf { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:.9rem 1rem; margin-bottom:.85rem; }
   .pf h2 { font-size:.95rem; margin:0 0 .6rem; }
@@ -99,6 +107,13 @@
 <header>
   <h1>One Piece — verified sealed box prices</h1>
   <div class="sub" id="updated">Loading…</div>
+  <div class="acts">
+    <button id="refresh" class="btn">Refresh</button>
+    <a class="btn ghost" target="_blank" rel="noopener"
+       href="https://github.com/clanford06/op-price-tracker/actions/workflows/check-prices.yml">Run a new price check ↗</a>
+    <a class="btn ghost" target="_blank" rel="noopener"
+       href="https://github.com/clanford06/op-price-tracker/issues/new?template=ledger-entry.yml">+ Add expense ↗</a>
+  </div>
 </header>
 <main id="out"></main>
 <footer>
@@ -202,8 +217,11 @@ function portfolio(pf) {
 function buyBlock(b) {
   if (!b) return '';
   const cls = b.score>=80?'b80':b.score>=65?'b65':b.score>=50?'b50':'b00';
+  const dud = b.dud_chance == null ? '' :
+    `<div class="dud">${Math.round(b.dud_chance*100)}% chance of no SP at all —
+     the average payout is carried by the other ${Math.round((1-b.dud_chance)*100)}%</div>`;
   return `<div class="buy ${cls}">BUY ${b.score}/100 · ${esc(b.verdict)}</div>
-    <span class="cpp"> ${money(b.cost_per_pack)}/pack</span>
+    <span class="cpp"> ${money(b.cost_per_pack)}/pack</span>${dud}
     <ul class="buynotes">${(b.notes||[]).map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`;
 }
 
@@ -247,7 +265,10 @@ function card(id, p) {
     ${body}</section>`;
 }
 
-fetch('data.json?t=' + Date.now())
+function load() {
+  const btn = document.getElementById('refresh');
+  if (btn) { btn.disabled = true; btn.textContent = 'Refreshing…'; }
+  return fetch('data.json?t=' + Date.now(), { cache: 'no-store' })
   .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
   .then(data => {
     document.getElementById('updated').textContent =
@@ -263,8 +284,17 @@ fetch('data.json?t=' + Date.now())
     document.getElementById('updated').textContent = 'Could not load data.json';
     document.getElementById('out').innerHTML =
       `<div class="empty">No price data yet (${esc(err.message)}).<br>
-       Run the <code>Check box prices</code> workflow, then reload.</div>`;
+       Run the <code>Check box prices</code> workflow, then refresh.</div>`;
+  })
+  .finally(() => {
+    if (btn) { btn.disabled = false; btn.textContent = 'Refresh'; }
   });
+}
+
+document.getElementById('refresh').addEventListener('click', load);
+// Coming back to the tab after a run finished should show the new numbers.
+document.addEventListener('visibilitychange', () => { if (!document.hidden) load(); });
+load();
 </script>
 </body>
 </html>

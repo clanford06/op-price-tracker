@@ -271,6 +271,8 @@ def main(argv: list[str] | None = None) -> int:
                 baseline_cost_per_pack=baseline_cpp(candidates, product),
                 ev_per_pack=product.ev_per_pack,
                 unit_kind=product.unit_kind,
+                sp_per_box=product.sp_per_box,
+                packs_per_box=product.packs_in_unit if product.unit_kind == 'box' else 24,
             )
             print(
                 f"  ${item.total:.2f} verified (trust {report.score}/100) — "

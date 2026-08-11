@@ -114,6 +114,20 @@ defaults:
   # boxes loses money on average. Adjust per set as you learn real numbers.
   ev_per_pack: 4.83
 
+  # SPs per box. Community estimates cluster around 1 per 12-box case (~0.083)
+  # up to 1 per 5-6 boxes (~0.2) depending on set. Using the pessimistic end,
+  # because the point of this number is to show how often a box is a dud.
+  #
+  # NOTE ON "CASE MAPPING": in older Pokemon sets, hits sat in predictable
+  # positions within a case, so a broken case left genuinely worthless boxes.
+  # Community consensus is that this does NOT hold for One Piece -- the
+  # distribution is genuinely variable (people pull 2 SECs in one box then
+  # nothing for three). There is no documented date when Bandai "fixed" it,
+  # because there is no evidence One Piece was ever reliably mappable.
+  # What IS true is the base rate: most boxes contain no SP. That is what
+  # dud_chance shows.
+  sp_per_box: 0.12
+
   # Sellers you have bought from successfully (bonus points), and sellers you
   # never want to see again (instant veto). Use exact eBay usernames.
   trusted_sellers: []

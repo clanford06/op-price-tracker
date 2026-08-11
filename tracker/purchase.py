@@ -36,10 +36,12 @@ class PurchaseVerdict:
     ev_per_pack: float | None
     verdict: str
     notes: list[str]
+    dud_chance: float | None = None   # P(this unit contains no SP at all)
 
     def as_dict(self) -> dict:
         return {
             "score": self.score,
+            "dud_chance": round(self.dud_chance, 3) if self.dud_chance is not None else None,
             "cost_per_pack": round(self.cost_per_pack, 2),
             "baseline_cost_per_pack": (
                 round(self.baseline_cost_per_pack, 2) if self.baseline_cost_per_pack else None
@@ -70,6 +72,8 @@ def evaluate_purchase(
     baseline_cost_per_pack: float | None,
     ev_per_pack: float | None,
     unit_kind: str = "box",
+    sp_per_box: float | None = None,
+    packs_per_box: int = 24,
 ) -> PurchaseVerdict:
     notes: list[str] = []
     cpp = total_price / max(packs_in_unit, 1)
@@ -121,6 +125,20 @@ def evaluate_purchase(
                 f"for fun, not to profit."
             )
 
+    # -- dud chance ---------------------------------------------------------
+    # The average EV above hides the shape of the distribution. At ~1 SP per
+    # 12-box case, the overwhelming majority of boxes contain no SP at all --
+    # a handful carry the entire expected value. Knowing the modal outcome is
+    # "nothing" matters more than knowing the mean.
+    dud = None
+    if sp_per_box and sp_per_box > 0:
+        per_unit_sp = sp_per_box if unit_kind != "pack" else sp_per_box / max(packs_per_box, 1)
+        dud = max(0.0, min(1.0, 1.0 - per_unit_sp))
+        notes.append(
+            f"~{dud*100:.0f}% chance this {unit_kind} contains no SP at all — "
+            f"the average payout is carried by the rare {(1-dud)*100:.0f}%"
+        )
+
     score = int(round(100 * earned / possible)) if possible else 0
 
     if unit_kind == "pack":
@@ -131,6 +149,7 @@ def evaluate_purchase(
 
     return PurchaseVerdict(
         score=score,
+        dud_chance=dud,
         cost_per_pack=cpp,
         baseline_cost_per_pack=baseline_cost_per_pack,
         ev_per_pack=ev_per_pack,

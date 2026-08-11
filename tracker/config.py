@@ -40,6 +40,7 @@ class Product:
     unit_kind: str = "box"        # box | pack | case
     packs_in_unit: int = 24       # English booster box = 24 packs
     ev_per_pack: float | None = None   # configured estimate; None disables the EV term
+    sp_per_box: float | None = None    # SPs per box; drives the dud-chance figure
     blocked_sellers: list[str] = field(default_factory=list)
     trusted_sellers: list[str] = field(default_factory=list)
 
@@ -110,6 +111,9 @@ def load_products(path: Path | None = None) -> list[Product]:
                 packs_in_unit=int(merged.get("packs_in_unit", 24)),
                 ev_per_pack=(
                     float(merged["ev_per_pack"]) if merged.get("ev_per_pack") is not None else None
+                ),
+                sp_per_box=(
+                    float(merged["sp_per_box"]) if merged.get("sp_per_box") is not None else None
                 ),
                 blocked_sellers=[str(s) for s in (merged.get("blocked_sellers") or [])],
                 trusted_sellers=[str(s) for s in (merged.get("trusted_sellers") or [])],
