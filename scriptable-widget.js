@@ -59,11 +59,13 @@ sub.font = Font.systemFont(10);
 sub.textColor = MUTED;
 
 // --- product rows -----------------------------------------------------------
+// 24 products now; a widget can only show a handful, so lead with the best
+// buys rather than an arbitrary slice.
 const products = Object.entries(data.products || {})
   .filter(([, p]) => p.current)
   .sort((a, b) => (b[1].current.purchase?.score || 0) - (a[1].current.purchase?.score || 0));
 
-const rowLimit = size === "small" ? 0 : size === "medium" ? 3 : 6;
+const rowLimit = size === "small" ? 0 : size === "medium" ? 3 : 8;
 
 if (rowLimit && products.length) {
   w.addSpacer(8);
@@ -100,8 +102,13 @@ const foot = w.addText(agoText(data.updated_at));
 foot.font = Font.systemFont(9);
 foot.textColor = MUTED;
 
-// Refresh roughly with the 2-hourly job. iOS decides the real cadence.
-w.refreshAfterDate = new Date(Date.now() + 30 * 60 * 1000);
+// Ask iOS to come back soon after the next likely price run. iOS ultimately
+// decides -- widgets get a limited refresh budget per day and the system
+// throttles based on usage -- so this is a request, not a guarantee. Opening
+// the widget (or the dashboard) always pulls fresh data immediately.
+const stamp = data.updated_at ? new Date(data.updated_at).getTime() : Date.now();
+const nextRun = stamp + 2 * 60 * 60 * 1000;   // the job runs every 2h
+w.refreshAfterDate = new Date(Math.max(Date.now() + 5 * 60 * 1000, nextRun + 60 * 1000));
 
 if (config.runsInWidget) {
   Script.setWidget(w);

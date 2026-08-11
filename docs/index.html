@@ -9,11 +9,15 @@
   :root {
     --bg:#f6f7f9; --card:#fff; --ink:#14171a; --muted:#667085; --line:#e3e6ea;
     --good:#0f7b4f; --warn:#b4530a; --bad:#b42318; --accent:#1f5fd0; --chip:#eef1f5;
+    /* Diverging pair for profit/loss. Validated blue<->red: CVD deltaE 21.6.
+       green/red failed at 4.1 (deutan) -- measured, not guessed. */
+    --pos:#2a78d6; --neg:#e34948; --seq:#2a78d6; --axis:#c9cdd3;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg:#0e1116; --card:#171b21; --ink:#e8eaed; --muted:#9aa4b2; --line:#262c35;
       --good:#3ddc97; --warn:#f0a35e; --bad:#ff6b5e; --accent:#6ea8ff; --chip:#212832;
+      --pos:#3987e5; --neg:#e66767; --seq:#3987e5; --axis:#39404a;
     }
   }
   * { box-sizing:border-box; }
@@ -101,6 +105,20 @@
   .buy.b00 { background:color-mix(in srgb,var(--bad) 14%,transparent); color:var(--bad); }
   .buynotes { margin:.4rem 0 0; padding-left:1.05rem; font-size:.76rem; color:var(--muted); }
   .cpp { font:650 .8rem ui-monospace,Menlo,monospace; color:var(--ink); }
+
+  .chart { margin-top:.9rem; }
+  .chart h3 { font-size:.78rem; margin:0 0 .1rem; color:var(--ink); font-weight:650; }
+  .chart .cap { font-size:.72rem; color:var(--muted); margin-bottom:.5rem; }
+  .brow { display:grid; grid-template-columns:5.5rem 1fr auto; align-items:center;
+          gap:.5rem; margin-bottom:.3rem; font-size:.75rem; }
+  .brow .lab { color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .brow .val { font:650 .75rem ui-monospace,Menlo,monospace; white-space:nowrap; }
+  .track { position:relative; height:16px; }
+  .track .zero { position:absolute; top:-2px; bottom:-2px; width:1px; background:var(--axis); }
+  .bar { position:absolute; top:1px; height:14px; border-radius:3px; }
+  .legend { display:flex; gap:.9rem; font-size:.72rem; color:var(--muted); margin-top:.5rem; }
+  .key { display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:.3rem;
+         vertical-align:middle; }
 </style>
 </head>
 <body>
@@ -191,6 +209,51 @@ function tagTable(byTag) {
   </details>`;
 }
 
+// Diverging bar: polarity around zero. Every bar is directly labelled, so the
+// reading never depends on colour alone.
+function plChart(byTag) {
+  const rows = Object.entries(byTag||{}).filter(([,r]) => r.spent || r.held);
+  if (rows.length < 2) return '';
+  rows.sort((a,b) => b[1].net - a[1].net);
+  const max = Math.max(...rows.map(([,r]) => Math.abs(r.net)), 1);
+  const mid = 50;                                  // zero line, % of track
+  const bars = rows.map(([t,r]) => {
+    const w = Math.abs(r.net) / max * 48;          // never exceeds half the track
+    const pos = r.net >= 0;
+    const left = pos ? mid : mid - w;
+    return `<div class="brow">
+      <span class="lab">${esc(t)}</span>
+      <span class="track"><span class="zero" style="left:${mid}%"></span>
+        <span class="bar" style="left:${left}%;width:${w}%;
+              background:var(--${pos ? 'pos' : 'neg'})"></span></span>
+      <span class="val" style="color:var(--${pos ? 'pos' : 'neg'})">${money(r.net)}</span>
+    </div>`;
+  }).join('');
+  return `<div class="chart"><h3>Profit / loss by tag</h3>
+    <div class="cap">Net of selling fees. Bars run from the zero line.</div>${bars}
+    <div class="legend"><span><i class="key" style="background:var(--pos)"></i>up</span>
+      <span><i class="key" style="background:var(--neg)"></i>down</span></div></div>`;
+}
+
+// Sequential single hue: this is magnitude, not identity.
+function holdingsChart(holdings) {
+  const rows = (holdings||[]).filter(h => h.net_if_sold);
+  if (rows.length < 2) return '';
+  const max = Math.max(...rows.map(h => h.net_if_sold));
+  const bars = rows.map(h => `<div class="brow">
+      <span class="lab">${esc(shortHolding(h.name))}</span>
+      <span class="track"><span class="bar" style="left:0;width:${h.net_if_sold/max*100}%;
+            background:var(--seq);opacity:${0.45 + 0.55*(h.net_if_sold/max)}"></span></span>
+      <span class="val">${money(h.net_if_sold)}</span>
+    </div>`).join('');
+  return `<div class="chart"><h3>What you hold</h3>
+    <div class="cap">Value after selling fees. Darker means a bigger share.</div>${bars}</div>`;
+}
+
+function shortHolding(n) {
+  return String(n||'').replace(/\s*\(.*?\)\s*/g,' ').replace(/OP\d\d-\d+/,'').trim().slice(0,22);
+}
+
 function portfolio(pf) {
   if (!pf) return '';
   const cls = v => v > 0 ? 'pos' : (v < 0 ? 'neg' : '');
@@ -207,6 +270,8 @@ function portfolio(pf) {
       ${pf.planned ? `<div class="stat"><div class="k">Planned spend</div><div class="v">${money(pf.planned)}</div></div>
       <div class="stat"><div class="k">After planned</div><div class="v ${cls(pf.position_committed)}">${money(pf.position_committed)}</div></div>` : ''}
     </div>
+    ${plChart(pf.by_tag)}
+    ${holdingsChart(pf.holdings)}
     ${tagTable(pf.by_tag)}
     <details><summary>Holdings (${(pf.holdings||[]).length})</summary>${holds}</details>
     <div class="pfnote">Values are net of ${pf.fee_pct}% eBay selling fees. Position assumes you

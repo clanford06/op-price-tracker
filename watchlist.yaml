@@ -136,35 +136,233 @@ defaults:
   blocked_sellers: []
 
 products:
-  - id: op17
-    name: "OP-17 The World's Strongest Warriors"
-    query: "One Piece Card Game OP-17 Booster Box"
-    require_any: ["op 17", "op17", "worlds strongest warriors", "world s strongest warriors"]
-    alert_below: 110          # <-- set to what you'd actually pay
-    implausible_below: 75     # <-- no genuine sealed OP-17 box goes under this
+  - id: op01
+    name: "OP-01 Romance Dawn"
+    query: "One Piece Card Game OP-01 Booster Box"
+    require_any: ['op 01', 'op01', 'op1', 'romance dawn']
+    min_price: 120
+    max_price: 1200
+    implausible_below: 180
+    verify_top_n: 5
+    alert_below: null
 
-  - id: op16
-    name: "OP-16 The Time of Battle"
-    query: "One Piece Card Game OP-16 Booster Box"
-    require_any: ["op 16", "op16", "time of battle"]
-    alert_below: 100
-    implausible_below: 100
+  - id: op02
+    name: "OP-02 Paramount War"
+    query: "One Piece Card Game OP-02 Booster Box"
+    require_any: ['op 02', 'op02', 'op2', 'paramount war']
+    min_price: 100
+    max_price: 900
+    implausible_below: 140
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op03
+    name: "OP-03 Pillars of Strength"
+    query: "One Piece Card Game OP-03 Booster Box"
+    require_any: ['op 03', 'op03', 'op3', 'pillars of strength']
+    min_price: 80
+    max_price: 700
+    implausible_below: 110
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op04
+    name: "OP-04 Kingdoms of Intrigue"
+    query: "One Piece Card Game OP-04 Booster Box"
+    require_any: ['kingdoms of intrigue', 'op 04', 'op04', 'op4']
+    min_price: 80
+    max_price: 700
+    implausible_below: 110
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op05
+    name: "OP-05 Awakening of the New Era"
+    query: "One Piece Card Game OP-05 Booster Box"
+    require_any: ['awakening of the new era', 'op 05', 'op05', 'op5']
+    min_price: 80
+    max_price: 700
+    implausible_below: 110
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op06
+    name: "OP-06 Wings of the Captain"
+    query: "One Piece Card Game OP-06 Booster Box"
+    require_any: ['op 06', 'op06', 'op6', 'wings of the captain']
+    min_price: 80
+    max_price: 700
+    implausible_below: 110
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op07
+    name: "OP-07 500 Years Into the Future"
+    query: "One Piece Card Game OP-07 Booster Box"
+    require_any: ['500 years in the future', '500 years into the future', 'op 07', 'op07', 'op7']
+    min_price: 80
+    max_price: 700
+    implausible_below: 110
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op08
+    name: "OP-08 Two Legends"
+    query: "One Piece Card Game OP-08 Booster Box"
+    require_any: ['op 08', 'op08', 'op8', 'two legends']
+    min_price: 80
+    max_price: 700
+    implausible_below: 110
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op09
+    name: "OP-09 Emperors in the New World"
+    query: "One Piece Card Game OP-09 Booster Box"
+    require_any: ['emperors in the new world', 'op 09', 'op09', 'op9']
+    min_price: 70
+    max_price: 600
+    implausible_below: 95
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op10
+    name: "OP-10 Royal Blood"
+    query: "One Piece Card Game OP-10 Booster Box"
+    require_any: ['op 10', 'op10', 'royal blood']
+    min_price: 70
+    max_price: 600
+    implausible_below: 95
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op11
+    name: "OP-11 A Fist of Divine Speed"
+    query: "One Piece Card Game OP-11 Booster Box"
+    require_any: ['a fist of divine speed', 'fist of divine speed', 'op 11', 'op11']
+    min_price: 70
+    max_price: 600
+    implausible_below: 95
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op12
+    name: "OP-12 Legacy of the Master"
+    query: "One Piece Card Game OP-12 Booster Box"
+    require_any: ['legacy of the master', 'op 12', 'op12']
+    min_price: 70
+    max_price: 600
+    implausible_below: 95
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op13
+    name: "OP-13 Carrying On His Will"
+    query: "One Piece Card Game OP-13 Booster Box"
+    require_any: ['carrying on his will', 'op 13', 'op13']
+    min_price: 70
+    max_price: 600
+    implausible_below: 95
+    verify_top_n: 5
+    alert_below: null
 
   - id: op14
     name: "OP-14 The Azure Sea's Seven"
     query: "One Piece Card Game OP-14 Booster Box"
-    require_any: ["op 14", "op14", "azure sea s seven", "azure seas seven"]
-    alert_below: 95
+    require_any: ['azure sea s seven', 'azure seas seven', 'op 14', 'op14']
+    min_price: 70
+    max_price: 600
     implausible_below: 178
+    verify_top_n: 5
+    alert_below: null
 
-  - id: op01
-    name: "OP-01 Romance Dawn"
-    query: "One Piece Card Game OP-01 Romance Dawn Booster Box"
-    require_any: ["op 01", "op1", "op01", "romance dawn"]
+  - id: op15
+    name: "OP-15 The Adventure on God's Island"
+    query: "One Piece Card Game OP-15 Booster Box"
+    require_any: ['op 15', 'op15', 'adventure on god s island', 'adventure on gods island']
+    # A seller labelled a Memorial Collection box "(OP-15)" and it hijacked this
+    # slot at $390 while real OP-15 boxes sat at $95 in the rejections. Memorial
+    # Collection is EB-01 and has its own entry.
+    exclude_any: ['memorial collection', 'japanese', 'japan', 'jpn', 'jp', 'korean', 'chinese',
+                  'empty', 'open', 'opened', 'unsealed', 'resealed', 'bulk', 'illustration box',
+                  'double pack', 'wrapper', 'single', 'singles', 'starter deck', 'deck box',
+                  'sleeve', 'sleeves', 'playmat', 'binder', 'break', 'breaks', 'spot', 'spots',
+                  'random', 'repack', 'mystery', 'proxy', 'custom', 'replica', 'fake', 'case', 'lot']
     min_price: 60
-    max_price: 900
-    alert_below: 250
-    implausible_below: 180
+    max_price: 600
+    implausible_below: 70
+    verify_top_n: 5
+    alert_below: null
+
+  - id: op16
+    name: "OP-16 The Time of Battle"
+    query: "One Piece Card Game OP-16 Booster Box"
+    require_any: ['op 16', 'op16', 'time of battle']
+    min_price: 70
+    max_price: 600
+    implausible_below: 100
+    verify_top_n: 8
+    alert_below: null
+
+  - id: op17
+    name: "OP-17 The World's Strongest Warriors"
+    query: "One Piece Card Game OP-17 Booster Box"
+    require_any: ['op 17', 'op17', 'world s strongest warriors', 'worlds strongest warriors']
+    min_price: 70
+    max_price: 600
+    implausible_below: 75
+    verify_top_n: 8
+    alert_below: null
+
+  - id: eb01
+    name: "EB-01 Memorial Collection"
+    query: "One Piece Card Game EB-01 Booster Box"
+    require_any: ['eb 01', 'eb01', 'eb1', 'memorial collection']
+    min_price: 40
+    max_price: 400
+    implausible_below: 50
+    verify_top_n: 5
+    alert_below: null
+
+  - id: eb02
+    name: "EB-02 Anime 25th Collection"
+    query: "One Piece Card Game EB-02 Booster Box"
+    require_any: ['anime 25th', 'eb 02', 'eb02', 'eb2']
+    min_price: 40
+    max_price: 400
+    implausible_below: 50
+    verify_top_n: 5
+    alert_below: null
+
+  - id: eb03
+    name: "EB-03 Heroines Edition"
+    query: "One Piece Card Game EB-03 Booster Box"
+    require_any: ['eb 03', 'eb03', 'eb3', 'heroines edition']
+    min_price: 40
+    max_price: 400
+    implausible_below: 50
+    verify_top_n: 5
+    alert_below: null
+
+  - id: prb01
+    name: "PRB-01 One Piece Card The Best"
+    query: "One Piece Card Game PRB-01 Booster Box"
+    require_any: ['card the best', 'prb 01', 'prb01', 'prb1']
+    min_price: 40
+    max_price: 500
+    implausible_below: 50
+    verify_top_n: 5
+    alert_below: null
+
+  - id: prb02
+    name: "PRB-02 One Piece Card The Best Vol.2"
+    query: "One Piece Card Game PRB-02 Booster Box"
+    require_any: ['card the best vol 2', 'prb 02', 'prb02', 'prb2']
+    min_price: 40
+    max_price: 500
+    implausible_below: 50
+    verify_top_n: 5
+    alert_below: null
 
   # ---- LOOSE PACKS -------------------------------------------------------
   # Tracked so you can SEE the premium, not because they are a good buy.
@@ -231,6 +429,6 @@ products:
     alert_below: 5
     exclude_any: *pack_excludes
 
-# Add more sets by copying a block above and changing id / name / query /
-# require_any. Set codes are the reliable matcher -- always include both the
-# spaced and unspaced form ("op 15" and "op15"), since eBay sellers write both.
+# Set codes are the reliable matcher; names are a convenience. Always include
+# both the spaced and unspaced form. implausible_below values below are rough
+# floors -- run `python -m tracker --calibrate` and tighten them from real data.
