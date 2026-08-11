@@ -14,8 +14,13 @@ concurrency:
 
 jobs:
   add:
-    # Only issues raised through the form, which carries the `ledger` label.
-    if: contains(join(github.event.issue.labels.*.name, ','), 'ledger')
+    # Either the `ledger` label OR a title starting "[ledger]". The label
+    # requires the issue form, and that form refuses to submit on Carter's
+    # setup for reasons neither of us could pin down -- so a plain issue with
+    # the right title must work on its own.
+    if: >-
+      contains(join(github.event.issue.labels.*.name, ','), 'ledger') ||
+      startsWith(github.event.issue.title, '[ledger]')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
