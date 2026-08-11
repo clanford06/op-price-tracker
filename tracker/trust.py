@@ -305,9 +305,12 @@ def _score_returns(detail: Detail | None) -> Signal:
 
 
 def _score_top_rated(listing: Listing) -> Signal:
+    """Bonus only. Live calibration found 0 of 16 real listings were Top Rated
+    -- at the cheap end of the market almost nobody holds the badge, so scoring
+    its absence was a flat 10-point penalty on every honest listing."""
     if listing.top_rated:
-        return Signal("Top Rated Seller", 10, 10, "eBay Top Rated")
-    return Signal("Top Rated Seller", 0, 10, "not Top Rated", good=False)
+        return Signal("Top Rated Seller", 10, 10, "eBay Top Rated", bonus=True)
+    return Signal("Top Rated Seller", 0, 10, "not Top Rated (bonus only)", good=False, bonus=True)
 
 
 def _score_price_plausibility(listing: Listing, median: float | None) -> Signal:

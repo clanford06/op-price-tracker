@@ -155,11 +155,25 @@ def test_excess_stock_scores_zero():
 
 
 def test_authenticity_programme_is_rewarded():
+    """Base listing is deliberately NOT Top Rated.
+
+    Top Rated is a bonus too, and an otherwise-ideal listing already scores 100
+    with it, so comparing two capped scores would prove nothing.
+    """
     with_prog = evaluate(
-        listing(programs=["EBAY_AUTHENTICITY_GUARANTEE"]), POLICY, median_price=120.0
+        listing(top=False, programs=["EBAY_AUTHENTICITY_GUARANTEE"]), POLICY, median_price=120.0
     )
-    without = evaluate(listing(), POLICY, median_price=120.0)
+    without = evaluate(listing(top=False), POLICY, median_price=120.0)
     assert with_prog.score > without.score
+
+
+def test_bonus_signals_cannot_push_past_100():
+    r = evaluate(
+        listing(programs=["EBAY_AUTHENTICITY_GUARANTEE"]),
+        TrustPolicy(**{**POLICY.__dict__, "trusted_sellers": ("goodseller",)}),
+        median_price=120.0,
+    )
+    assert r.score == 100
 
 
 # -- the property that actually protects the wallet ------------------------
