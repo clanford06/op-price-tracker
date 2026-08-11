@@ -91,6 +91,11 @@
          color:#fff; cursor:pointer; text-decoration:none; display:inline-block; }
   .btn.ghost { background:var(--chip); color:var(--ink); }
   .btn:disabled { opacity:.5; }
+  .profit { margin-top:.45rem; padding:.45rem .6rem; border-radius:8px; font-size:.78rem;
+            background:color-mix(in srgb,var(--pos) 10%,transparent);
+            border:1px solid color-mix(in srgb,var(--pos) 28%,transparent); }
+  .profit b { color:var(--pos); }
+  .profit .m { color:var(--muted); font-size:.72rem; display:block; margin-top:.15rem; }
   .dud { margin-top:.45rem; padding:.4rem .6rem; border-radius:8px; font-size:.78rem;
          background:color-mix(in srgb,var(--warn) 12%,transparent); color:var(--warn); }
 
@@ -154,6 +159,8 @@
     <select id="sort">
       <option value="buy-desc">Best buy score</option>
       <option value="buy-asc">Worst buy score</option>
+      <option value="profit-desc">Best chance of profit</option>
+      <option value="upside-desc">Biggest upside</option>
       <option value="cpp-asc">Cheapest per pack</option>
       <option value="cpp-desc">Priciest per pack</option>
       <option value="price-asc">Lowest price</option>
@@ -321,8 +328,16 @@ function buyBlock(b) {
   const dud = dudPct == null ? '' :
     `<div class="dud">~${dudPct}% chance of no SP at all —
      the average payout is carried by the other ${100-dudPct}%</div>`;
+  const pr = b.profit;
+  const profit = !pr ? '' : `<div class="profit">
+      <b>${pr.profit_chance == null ? '—' : Math.round(pr.profit_chance*100)+'% chance of profit</b>'}
+      · top chase ${money(pr.top_chase)} (${esc(pr.top_chase_name)}) = <b>${pr.upside.toFixed(1)}x</b>
+      · ${pr.chases_above} of ${pr.chase_count} chases would cover it
+      <span class="m">The multiple and the count are arithmetic. The percentage is
+      modelled from an estimated hit rate Bandai has never published — order of
+      magnitude, not a probability.</span></div>`;
   return `<div class="buy ${cls}">BUY ${b.score}/100 · ${esc(b.verdict)}</div>
-    <span class="cpp"> ${money(b.cost_per_pack)}/pack</span>${dud}
+    <span class="cpp"> ${money(b.cost_per_pack)}/pack</span>${profit}${dud}
     <ul class="buynotes">${(b.notes||[]).map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`;
 }
 
@@ -334,6 +349,8 @@ const sink = cmp => (a, b) => (has(a) !== has(b)) ? (has(a) ? -1 : 1) : cmp(a, b
 const SORTS = {
   'buy-desc':   sink((a,b) => sc(b) - sc(a)),
   'buy-asc':    sink((a,b) => sc(a) - sc(b)),
+  'profit-desc': sink((a,b) => chance(b) - chance(a)),
+  'upside-desc': sink((a,b) => upside(b) - upside(a)),
   'cpp-asc':    sink((a,b) => cpp(a) - cpp(b)),
   'cpp-desc':   sink((a,b) => cpp(b) - cpp(a)),
   'price-asc':  sink((a,b) => pr(a) - pr(b)),
@@ -343,6 +360,9 @@ const SORTS = {
   'name-desc':  sink((a,b) => nm(b).localeCompare(nm(a), undefined, {numeric:true})),
 };
 const has = p => !!(p && p.current);
+const pf_ = p => has(p) ? (p.current.purchase?.profit ?? null) : null;
+const chance = p => (pf_(p)?.profit_chance ?? -1);
+const upside = p => (pf_(p)?.upside ?? -1);
 const sc  = p => has(p) ? (p.current.purchase?.score ?? -1) : -Infinity;
 const cpp = p => has(p) ? (p.current.purchase?.cost_per_pack ?? Infinity) : Infinity;
 const pr  = p => has(p) ? p.current.total : Infinity;

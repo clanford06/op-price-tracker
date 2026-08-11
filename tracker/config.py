@@ -43,6 +43,8 @@ class Product:
     ev_per_pack: float | None = None   # configured estimate; None disables the EV term
     sp_per_box: float | None = None    # SPs per box; drives the dud-chance figure
     limitless_set: str = ""            # Limitless set code; defaults to id.upper()
+    chase_from: str = ""               # borrow another product's chase list (packs)
+    chase_hit_rate: float | None = None  # P(pulling any top-8 chase from one unit
     blocked_sellers: list[str] = field(default_factory=list)
     trusted_sellers: list[str] = field(default_factory=list)
 
@@ -118,6 +120,11 @@ def load_products(path: Path | None = None) -> list[Product]:
                     float(merged["sp_per_box"]) if merged.get("sp_per_box") is not None else None
                 ),
                 limitless_set=str(merged.get("limitless_set", "")),
+                chase_from=str(merged.get("chase_from", "")),
+                chase_hit_rate=(
+                    float(merged["chase_hit_rate"])
+                    if merged.get("chase_hit_rate") is not None else None
+                ),
                 blocked_sellers=[str(s) for s in (merged.get("blocked_sellers") or [])],
                 trusted_sellers=[str(s) for s in (merged.get("trusted_sellers") or [])],
             )

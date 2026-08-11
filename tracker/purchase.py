@@ -28,6 +28,68 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 
+def money(v: float) -> str:
+    return f"${v:,.2f}"
+
+
+@dataclass
+class ProfitOutlook:
+    """Can opening this unit plausibly return more than it cost?
+
+    Built from the set's real chase-card prices rather than a flat EV. Three
+    numbers, in decreasing order of how much you should trust them:
+
+      upside          top chase price / unit cost. Pure arithmetic.
+      chases_above    how many of the top 8 would, alone, cover the unit.
+                      Also arithmetic.
+      profit_chance   MODELLED. Multiplies a configured hit rate by the share
+                      of chases that clear the cost. The hit rate is a
+                      community estimate Bandai has never published, so treat
+                      this as an order of magnitude, not a probability.
+    """
+
+    upside: float
+    chases_above: int
+    chase_count: int
+    top_chase: float
+    top_chase_name: str
+    profit_chance: float | None
+
+    def as_dict(self) -> dict:
+        return {
+            "upside": round(self.upside, 1),
+            "chases_above": self.chases_above,
+            "chase_count": self.chase_count,
+            "top_chase": round(self.top_chase, 2),
+            "top_chase_name": self.top_chase_name,
+            "profit_chance": round(self.profit_chance, 4) if self.profit_chance is not None else None,
+        }
+
+
+def profit_outlook(
+    *, unit_cost: float, chase_cards: list[dict], hit_rate: float | None
+) -> ProfitOutlook | None:
+    if not chase_cards or unit_cost <= 0:
+        return None
+    prices = [c.get("price", 0) or 0 for c in chase_cards]
+    top = max(prices)
+    above = sum(1 for pr in prices if pr > unit_cost)
+    chance = None
+    if hit_rate:
+        # P(pull something that covers the box) = P(pull any top-8 chase)
+        # x the share of those chases that clear the cost.
+        chance = max(0.0, min(1.0, hit_rate * (above / len(prices))))
+    top_name = next((c.get("name", "") for c in chase_cards if (c.get("price") or 0) == top), "")
+    return ProfitOutlook(
+        upside=top / unit_cost,
+        chases_above=above,
+        chase_count=len(prices),
+        top_chase=top,
+        top_chase_name=top_name,
+        profit_chance=chance,
+    )
+
+
 @dataclass
 class PurchaseVerdict:
     score: int
@@ -37,6 +99,7 @@ class PurchaseVerdict:
     verdict: str
     notes: list[str]
     dud_chance: float | None = None   # P(this unit contains no SP at all)
+    profit: ProfitOutlook | None = None
 
     def as_dict(self) -> dict:
         return {
@@ -49,6 +112,7 @@ class PurchaseVerdict:
             "ev_per_pack": round(self.ev_per_pack, 2) if self.ev_per_pack else None,
             "verdict": self.verdict,
             "notes": self.notes,
+            "profit": self.profit.as_dict() if self.profit else None,
         }
 
 
@@ -74,6 +138,8 @@ def evaluate_purchase(
     unit_kind: str = "box",
     sp_per_box: float | None = None,
     packs_per_box: int = 24,
+    chase_cards: list[dict] | None = None,
+    chase_hit_rate: float | None = None,
 ) -> PurchaseVerdict:
     notes: list[str] = []
     cpp = total_price / max(packs_in_unit, 1)
@@ -143,8 +209,19 @@ def evaluate_purchase(
             "Compare against the box before buying."
         )
 
+    outlook = profit_outlook(
+        unit_cost=total_price, chase_cards=chase_cards or [], hit_rate=chase_hit_rate
+    )
+    if outlook:
+        notes.append(
+            f"top chase {money(outlook.top_chase)} ({outlook.top_chase_name}) — "
+            f"{outlook.upside:.1f}x this {unit_kind}; "
+            f"{outlook.chases_above} of {outlook.chase_count} chases would cover it"
+        )
+
     return PurchaseVerdict(
         score=score,
+        profit=outlook,
         dud_chance=dud,
         cost_per_pack=cpp,
         baseline_cost_per_pack=baseline_cost_per_pack,

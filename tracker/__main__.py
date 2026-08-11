@@ -254,6 +254,18 @@ def main(argv: list[str] | None = None) -> int:
         calibrate(client, products, policy_for)
         return 0
 
+    # Chase prices come from the nightly job; a missing file just means the
+    # profit outlook is omitted, never that the price run fails.
+    chase_by_set: dict = {}
+    try:
+        import json as _json
+        from .config import DEFAULT_CHASE_FILE
+
+        if DEFAULT_CHASE_FILE.exists():
+            chase_by_set = (_json.loads(DEFAULT_CHASE_FILE.read_text()).get("sets") or {})
+    except Exception as exc:  # noqa: BLE001
+        print(f"  (chase data unavailable: {exc})")
+
     notifier = Notifier(settings.ntfy_server, settings.ntfy_topic, enabled=not args.dry_run)
     data = storage.load(args.data_file)
     alerts: list[str] = []
@@ -298,6 +310,8 @@ def main(argv: list[str] | None = None) -> int:
                 ev_per_pack=product.ev_per_pack,
                 unit_kind=product.unit_kind,
                 sp_per_box=product.sp_per_box,
+                chase_cards=(chase_by_set.get(product.chase_from or product.id) or {}).get("cards"),
+                chase_hit_rate=product.chase_hit_rate,
                 packs_per_box=product.packs_in_unit if product.unit_kind == 'box' else 24,
             )
             print(
@@ -310,6 +324,8 @@ def main(argv: list[str] | None = None) -> int:
             )
             for n in buy.notes:
                 print(f"    - {n}")
+            if buy.profit and buy.profit.profit_chance is not None:
+                print(f"    - modelled profit chance {buy.profit.profit_chance*100:.0f}%")
         else:
             print(
                 f"  no listing passed verification "

@@ -130,6 +130,12 @@ defaults:
   # dud_chance shows.
   sp_per_box: 0.12
 
+  # P(pulling ANY of the set's top-8 chase cards from one box). Alt arts turn
+  # up reasonably often; manga rares are the tail. 0.30 is a community-informed
+  # guess, not a published figure -- it only scales the modelled profit chance,
+  # never the arithmetic upside figures beside it.
+  chase_hit_rate: 0.30
+
   # Sellers you have bought from successfully (bonus points), and sellers you
   # never want to see again (instant veto). Use exact eBay usernames.
   trusted_sellers: []
@@ -375,6 +381,8 @@ products:
     require_any: ["op 17", "op17", "worlds strongest warriors", "world s strongest warriors"]
     unit_kind: pack
     packs_in_unit: 1
+    chase_from: op17
+    chase_hit_rate: 0.0125     # a single pack, not a box
     min_price: 3
     max_price: 60
     implausible_below: 3
@@ -423,6 +431,8 @@ products:
     require_any: ["op 16", "op16", "time of battle"]
     unit_kind: pack
     packs_in_unit: 1
+    chase_from: op16
+    chase_hit_rate: 0.0125     # a single pack, not a box
     min_price: 3
     max_price: 60
     implausible_below: 3

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-11T23:04:00+00:00",
+  "updated_at": "2026-08-11T23:31:48+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -188,6 +188,10 @@
         {
           "t": "2026-08-11T23:03:47+00:00",
           "price": 209.99
+        },
+        {
+          "t": "2026-08-11T23:31:48+00:00",
+          "price": 209.99
         }
       ],
       "name": "OP-16 The Time of Battle",
@@ -302,8 +306,17 @@
           "notes": [
             "$8.75/pack is 9% below the $9.58/pack baseline",
             "estimated $4.83/pack in singles vs $8.75 paid (55% cover) \u2014 estimate, not a measurement",
-            "Opening this is negative EV: you would expect back about 55 cents of singles per dollar spent. Buy it to open for fun, not to profit."
-          ]
+            "Opening this is negative EV: you would expect back about 55 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
+            "top chase $1,224.82 (Sakazuki) \u2014 5.8x this box; 3 of 8 chases would cover it"
+          ],
+          "profit": {
+            "upside": 5.8,
+            "chases_above": 3,
+            "chase_count": 8,
+            "top_chase": 1224.82,
+            "top_chase_name": "Sakazuki",
+            "profit_chance": 0.1125
+          }
         }
       },
       "considered": 80,
@@ -1067,7 +1080,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:03:47+00:00",
+      "checked_at": "2026-08-11T23:31:48+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
