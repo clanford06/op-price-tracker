@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-11T21:47:49+00:00",
+  "updated_at": "2026-08-11T21:50:22+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -2175,19 +2175,20 @@
     }
   },
   "portfolio": {
-    "spent": 559.04,
+    "spent": 809.04,
     "planned": 210.0,
-    "committed": 769.04,
-    "position_committed": -106.72,
+    "committed": 1019.04,
+    "position_committed": -356.72,
     "realised": 0,
     "unrealised_gross": 766.26,
     "unrealised_net": 662.32,
-    "position_gross": 207.22,
-    "position_net": 103.28,
-    "roi_pct": 18.5,
+    "position_gross": -42.78,
+    "position_net": -146.72,
+    "roi_pct": -18.1,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 404.0,
+      "singles": 250.0,
       "grading": 126.47,
       "supplies": 28.57
     },
@@ -2198,6 +2199,13 @@
         "realised": 0.0,
         "held": 80.8,
         "net": -283.81
+      },
+      "psa10kidd": {
+        "spent": 250.0,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 0.0,
+        "net": -250.0
       },
       "supplies": {
         "spent": 28.57,
@@ -2347,6 +2355,14 @@
         "category": "sealed",
         "amount": 39.39,
         "tag": "op15",
+        "planned": false
+      },
+      {
+        "date": "2026-08-11",
+        "item": "PSA 10 Eustass \"Captain\" Kidd SP EB04-039",
+        "category": "singles",
+        "amount": 250.0,
+        "tag": "psa10kidd",
         "planned": false
       }
     ],
