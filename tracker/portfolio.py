@@ -39,6 +39,7 @@ class Expense:
     item: str
     category: str
     amount: float
+    tag: str = ""      # free-form grouping label, e.g. "op16", "op17", "grading"
     planned: bool = False
     """Committed but not yet paid.
 
@@ -58,6 +59,7 @@ class Holding:
     source: str = ""
     note: str = ""
     ebay_query: str = ""      # if set, live pricing can refresh `estimate`
+    tag: str = ""
 
 
 @dataclass
@@ -67,6 +69,7 @@ class Sale:
     gross: float
     fees: float
     shipping_cost: float
+    tag: str = ""
 
     @property
     def net(self) -> float:
@@ -140,6 +143,31 @@ class Ledger:
             out[e.category] = round(out.get(e.category, 0.0) + e.amount, 2)
         return dict(sorted(out.items(), key=lambda kv: -kv[1]))
 
+    def by_tag(self) -> dict[str, dict[str, float]]:
+        """Roll everything up per tag, so each thing you track has its own P/L.
+
+        Untagged entries land under "untagged" rather than being dropped -- a
+        silently missing row is worse than an ugly one.
+        """
+        tags: dict[str, dict[str, float]] = {}
+
+        def slot(t: str) -> dict[str, float]:
+            return tags.setdefault(t or "untagged",
+                                   {"spent": 0.0, "planned": 0.0, "realised": 0.0, "held": 0.0})
+
+        for e in self.expenses:
+            slot(e.tag)["planned" if e.planned else "spent"] += e.amount
+        for s_ in self.sales:
+            slot(s_.tag)["realised"] += s_.net
+        for h in self.holdings:
+            slot(h.tag)["held"] += self.net_if_sold(h.estimate or 0.0)
+
+        for row in tags.values():
+            row["net"] = round(row["realised"] + row["held"] - row["spent"], 2)
+            for k in row:
+                row[k] = round(row[k], 2)
+        return dict(sorted(tags.items(), key=lambda kv: kv[1]["net"]))
+
     def unpriced(self) -> list[Holding]:
         return [h for h in self.holdings if h.estimate is None]
 
@@ -165,6 +193,7 @@ class Ledger:
             "roi_pct": self.roi_pct,
             "fee_pct": self.fee_pct,
             "by_category": self.by_category(),
+            "by_tag": self.by_tag(),
             "holdings": [
                 {
                     "id": h.id,
@@ -207,6 +236,7 @@ def _req(raw: dict, kind: str, *required: str) -> dict:
         "category": str(raw.get("category", "other")),
         "amount": float(raw["amount"]),
         "planned": bool(raw.get("planned", False)),
+        "tag": str(raw.get("tag", "")),
     }
 
 
@@ -223,6 +253,7 @@ def _holding(raw: dict) -> dict:
         "source": str(raw.get("source", "")),
         "note": str(raw.get("note", "")),
         "ebay_query": str(raw.get("ebay_query", "")),
+        "tag": str(raw.get("tag", "")),
     }
 
 
@@ -236,6 +267,7 @@ def _sale(raw: dict) -> dict:
         "gross": float(raw["gross"]),
         "fees": float(raw.get("fees", 0.0)),
         "shipping_cost": float(raw.get("shipping_cost", 0.0)),
+        "tag": str(raw.get("tag", "")),
     }
 
 
@@ -292,6 +324,14 @@ def report(ledger: Ledger) -> None:
         est = _money(h.estimate) if h.estimate is not None else "unpriced"
         net = f"→ {_money(ledger.net_if_sold(h.estimate))} net" if h.estimate else ""
         print(f"    {h.name[:38]:<38} {est:>10} {net:<18} [{h.status}]")
+
+    tags = ledger.by_tag()
+    if len(tags) > 1:
+        print(f"\n  Per tag:")
+        print(f"    {'tag':<16}{'spent':>10}{'realised':>11}{'held':>10}{'net':>11}")
+        for t, r in tags.items():
+            print(f"    {t:<16}{_money(r['spent']):>10}{_money(r['realised']):>11}"
+                  f"{_money(r['held']):>10}{_money(r['net']):>11}")
 
     if (missing := ledger.unpriced()):
         print(f"\n  ! {len(missing)} holding(s) have no estimate — the position is understated:")

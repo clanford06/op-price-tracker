@@ -164,6 +164,18 @@ function rejectedBlock(rejected) {
 
 function money(n){ return (n<0?'-$':'$') + Math.abs(n).toFixed(2); }
 
+function tagTable(byTag) {
+  const rows = Object.entries(byTag||{});
+  if (rows.length < 2) return '';
+  return `<details open><summary>Per tag (${rows.length})</summary>
+    <div class="hold" style="color:var(--muted);font-size:.72rem;text-transform:uppercase">
+      <span>tag</span><span class="hv">spent / held / net</span></div>
+    ${rows.map(([t,r])=>`<div class="hold"><span>${esc(t)}</span>
+      <span class="hv">${money(r.spent)} / ${money(r.held)} /
+      <b style="color:var(--${r.net>=0?'good':'bad'})">${money(r.net)}</b></span></div>`).join('')}
+  </details>`;
+}
+
 function portfolio(pf) {
   if (!pf) return '';
   const cls = v => v > 0 ? 'pos' : (v < 0 ? 'neg' : '');
@@ -180,6 +192,7 @@ function portfolio(pf) {
       ${pf.planned ? `<div class="stat"><div class="k">Planned spend</div><div class="v">${money(pf.planned)}</div></div>
       <div class="stat"><div class="k">After planned</div><div class="v ${cls(pf.position_committed)}">${money(pf.position_committed)}</div></div>` : ''}
     </div>
+    ${tagTable(pf.by_tag)}
     <details><summary>Holdings (${(pf.holdings||[]).length})</summary>${holds}</details>
     <div class="pfnote">Values are net of ${pf.fee_pct}% eBay selling fees. Position assumes you
       sold everything today — nothing here is realised until you actually sell.</div>

@@ -27,6 +27,7 @@ expenses:
     item: "OP-16 Time of Battle booster box + sleeves + toploader"
     category: sealed
     amount: 209.28
+    tag: "op16"
     # Mixed line: sealed product AND supplies. If you can split out what the
     # sleeves and toploader cost, move that part to the supplies category --
     # supplies are a sunk operating cost, not product that can appreciate.
@@ -35,6 +36,7 @@ expenses:
     item: "~16 loose OP-16 packs"
     category: sealed
     amount: 155.33
+    tag: "op16"
     # ~$9.71/pack. A 24-pack box works out materially cheaper per pack --
     # see the note in the README. Loose packs are the worse buy.
 
@@ -42,11 +44,13 @@ expenses:
     item: "Storage boxes and tape"
     category: supplies
     amount: 25.33
+    tag: "supplies"
 
   - date: 2026-08-06
     item: "PSA grading — Ms. All Sunday SP (submission #15289898)"
     category: grading
     amount: 126.47
+    tag: "msallsunday"
     # RESOLVED from the submission PDF. The $26.49 Carter saw was only the
     # inbound shipping label ($19.99) + Cabrella coverage ($6.50). Full cost:
     #   service level fee (REGULAR, 1 item)   $79.99
@@ -64,6 +68,7 @@ expenses:
     item: "Penny sleeves"
     category: supplies
     amount: 3.24
+    tag: "supplies"
 
   # --- PLANNED: Sunday 2026-08-23, OP-17 prerelease at Prime Time Gaming ---
   # `planned: true` keeps these OUT of "spent to date" until actually paid.
@@ -73,6 +78,7 @@ expenses:
     item: "OP-17 prerelease entry — Prime Time Gaming"
     category: events
     amount: 30.00
+    tag: "op17"
     planned: true
     # Includes 6 OP-17 packs, 4th Anniversary Tournament Pack, Rainbow Luffy
     # Leader, World United DON!! cards, and a Monkey.D.Luffy P-110 promo.
@@ -82,13 +88,17 @@ expenses:
     item: "OP-17 booster box (prerelease purchase)"
     category: sealed
     amount: 180.00
+    tag: "op17"
     planned: true
     # ESTIMATE, anchored on Carter's own OP-16 receipt: $209.28 less ~$25-30
     # of penny sleeves / toploaders / UV toploader implies a ~$180 box.
     # Replace with the real figure on the day.
 
+  # <<ADD_EXPENSES_HERE>>
+
 holdings:
   - id: ms-all-sunday-sp
+    tag: "msallsunday"
     name: "Ms. All Sunday SP OP14-084 (English)"
     status: grading
     estimate: 650.00
@@ -98,6 +108,7 @@ holdings:
     ebay_query: "Ms All Sunday OP14-084 SP English"
 
   - id: op16-022-luffy-alt
+    tag: "op16"
     name: "Monkey.D.Luffy Leader OP16-022 (Alt Art)"
     status: owned
     estimate: 63.00
@@ -105,6 +116,7 @@ holdings:
     ebay_query: "One Piece OP16-022 Luffy Leader Alternate Art"
 
   - id: op16-065-sakazuki-alt
+    tag: "op16"
     name: "Sakazuki OP16-065 (Alt Art)"
     status: owned
     estimate: 15.00
@@ -112,6 +124,7 @@ holdings:
     ebay_query: "One Piece OP16-065 Sakazuki Alternate Art"
 
   - id: op16-118-ace-sec
+    tag: "op16"
     name: "Portgas.D.Ace OP16-118 (Secret Rare)"
     status: owned
     estimate: 11.00
@@ -120,6 +133,7 @@ holdings:
     ebay_query: "One Piece OP16-118 Ace Secret Rare"
 
   - id: op16-063-kuzan-alt
+    tag: "op16"
     name: "Kuzan OP16-063 (Alt Art)"
     status: owned
     estimate: 6.00
@@ -150,4 +164,7 @@ holdings:
   #   estimate: null
   #   acquired: "2026-08-23"
 
-sales: []
+  # <<ADD_HOLDINGS_HERE>>
+
+sales:
+  # <<ADD_SALES_HERE>>

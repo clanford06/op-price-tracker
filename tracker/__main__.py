@@ -53,6 +53,15 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Show expenses, holdings and profit/loss from ledger.yaml.",
     )
     p.add_argument("--ledger", type=Path, default=None)
+    p.add_argument("add", nargs="*", default=[], metavar="...",
+                   help='add expense|holding|sale "description" AMOUNT')
+    p.add_argument("--tag", "-t", default="", help="grouping label, e.g. op17")
+    p.add_argument("--category", "-c", default="other", help="expense category")
+    p.add_argument("--date", dest="when", default=None, help="YYYY-MM-DD (default today)")
+    p.add_argument("--planned", action="store_true", help="committed but not yet paid")
+    p.add_argument("--fees", type=float, default=0.0, help="sale: fees charged")
+    p.add_argument("--ship", type=float, default=0.0, help="sale: your shipping cost")
+    p.add_argument("--status", default="owned", help="holding: owned|grading|listed")
     p.add_argument(
         "--selftest",
         action="store_true",
@@ -152,6 +161,31 @@ def pick_winner(
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     settings = load_settings()
+
+    if args.add and args.add[0] == "add":
+        from .config import DEFAULT_LEDGER
+        from .ledger_edit import LedgerEditError, add_entry
+        from .portfolio import load_ledger, report
+
+        rest = args.add[1:]
+        if len(rest) < 3:
+            print('usage: python -m tracker add expense|holding|sale "description" AMOUNT '
+                  '[--tag X] [--category Y] [--planned]', file=sys.stderr)
+            return 2
+        kind, desc, amount = rest[0], " ".join(rest[1:-1]), rest[-1]
+        try:
+            msg = add_entry(
+                args.ledger or DEFAULT_LEDGER, kind, desc, float(amount),
+                tag=args.tag, category=args.category, when=args.when,
+                planned=args.planned, fees=args.fees, shipping_cost=args.ship,
+                status=args.status,
+            )
+        except (LedgerEditError, ValueError) as exc:
+            print(f"{exc}", file=sys.stderr)
+            return 2
+        print(msg + "\n")
+        report(load_ledger(args.ledger or DEFAULT_LEDGER))
+        return 0
 
     if args.portfolio:
         from .config import DEFAULT_LEDGER
