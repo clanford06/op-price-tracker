@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-11T19:44:59+00:00",
+  "updated_at": "2026-08-11T19:46:43+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -13,7 +13,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:42:49+00:00"
+      "checked_at": "2026-08-11T19:46:33+00:00"
     },
     "op16": {
       "history": [
@@ -31,6 +31,10 @@
         },
         {
           "t": "2026-08-11T19:44:59+00:00",
+          "price": 209.99
+        },
+        {
+          "t": "2026-08-11T19:46:36+00:00",
           "price": 209.99
         }
       ],
@@ -149,7 +153,7 @@
           ]
         }
       },
-      "considered": 188,
+      "considered": 189,
       "relevant": 23,
       "verified": 8,
       "kept": 1,
@@ -910,7 +914,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:44:59+00:00",
+      "checked_at": "2026-08-11T19:46:36+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -922,6 +926,10 @@
         },
         {
           "t": "2026-08-11T19:42:56+00:00",
+          "price": 202.78
+        },
+        {
+          "t": "2026-08-11T19:46:39+00:00",
           "price": 202.78
         }
       ],
@@ -1028,14 +1036,15 @@
           ]
         },
         "purchase": {
-          "score": 89,
+          "score": 83,
           "cost_per_pack": 8.45,
-          "baseline_cost_per_pack": 8.45,
+          "baseline_cost_per_pack": 12.4,
           "ev_per_pack": 4.83,
           "verdict": "STRONG BUY",
           "notes": [
-            "$8.45/pack, in line with the market",
-            "estimated $4.83/pack in singles vs $8.45 paid (57% cover) \u2014 estimate, not a measurement"
+            "$8.45/pack is 32% below the $12.40/pack baseline",
+            "estimated $4.83/pack in singles vs $8.45 paid (57% cover) \u2014 estimate, not a measurement",
+            "Opening this is negative EV: you would expect back about 57 cents of singles per dollar spent. Buy it to open for fun, not to profit."
           ]
         }
       },
@@ -1261,7 +1270,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:42:56+00:00",
+      "checked_at": "2026-08-11T19:46:39+00:00",
       "all_time_low": 202.78,
       "all_time_high": 202.78
     },
@@ -1276,7 +1285,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:42:57+00:00"
+      "checked_at": "2026-08-11T19:46:40+00:00"
     },
     "op17-packs": {
       "history": [],
@@ -1289,12 +1298,16 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:42:57+00:00"
+      "checked_at": "2026-08-11T19:46:40+00:00"
     },
     "op16-packs": {
       "history": [
         {
           "t": "2026-08-11T19:43:01+00:00",
+          "price": 6.99
+        },
+        {
+          "t": "2026-08-11T19:46:43+00:00",
           "price": 6.99
         }
       ],
@@ -1401,14 +1414,15 @@
           ]
         },
         "purchase": {
-          "score": 88,
+          "score": 84,
           "cost_per_pack": 6.99,
-          "baseline_cost_per_pack": 6.99,
+          "baseline_cost_per_pack": 12.62,
           "ev_per_pack": 4.83,
           "verdict": "STRONG BUY",
           "notes": [
-            "$6.99/pack, in line with the market",
+            "$6.99/pack is 45% below the $12.62/pack baseline",
             "estimated $4.83/pack in singles vs $6.99 paid (69% cover) \u2014 estimate, not a measurement",
+            "Opening this is negative EV: you would expect back about 69 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
             "Loose packs almost always cost more per pack than a box of the same set. Compare against the box before buying."
           ]
         }
@@ -1847,7 +1861,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:43:01+00:00",
+      "checked_at": "2026-08-11T19:46:43+00:00",
       "all_time_low": 6.99,
       "all_time_high": 6.99
     }
