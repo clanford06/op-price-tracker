@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-11T21:51:20+00:00",
+  "updated_at": "2026-08-11T22:07:28+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -13,7 +13,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:46:58+00:00"
+      "checked_at": "2026-08-11T22:07:19+00:00"
     },
     "op16": {
       "history": [
@@ -63,6 +63,10 @@
         },
         {
           "t": "2026-08-11T21:47:21+00:00",
+          "price": 209.99
+        },
+        {
+          "t": "2026-08-11T22:07:22+00:00",
           "price": 209.99
         }
       ],
@@ -178,12 +182,11 @@
           "notes": [
             "$8.75/pack is 9% below the $9.58/pack baseline",
             "estimated $4.83/pack in singles vs $8.75 paid (55% cover) \u2014 estimate, not a measurement",
-            "Opening this is negative EV: you would expect back about 55 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "~88% chance this box contains no SP at all \u2014 the average payout is carried by the rare 12%"
+            "Opening this is negative EV: you would expect back about 55 cents of singles per dollar spent. Buy it to open for fun, not to profit."
           ]
         }
       },
-      "considered": 187,
+      "considered": 188,
       "relevant": 23,
       "verified": 8,
       "kept": 1,
@@ -944,7 +947,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:47:21+00:00",
+      "checked_at": "2026-08-11T22:07:22+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -993,21 +996,25 @@
         {
           "t": "2026-08-11T21:47:34+00:00",
           "price": 279.99
+        },
+        {
+          "t": "2026-08-11T22:07:25+00:00",
+          "price": 290.0
         }
       ],
       "name": "OP-14 The Azure Sea's Seven",
       "current": {
-        "title": "ONE PIECE CARD GAME THE AZURE SEA'S SEVEN BOOSTER BOX OP14 ENGLISH UNSEALED",
-        "url": "https://www.ebay.com/itm/376923029547?_skw=One+Piece+Card+Game+OP-14+Booster+Box&hash=item57c25d002b:g:ePUAAeSwZkxpavBv",
-        "price": 274.99,
-        "shipping": 5.0,
-        "total": 279.99,
-        "seller": "collectorscall2023",
-        "seller_score": 111,
+        "title": "One Piece Card Game The Azure Sea's Seven OP14-EB04 Booster Box",
+        "url": "https://www.ebay.com/itm/298432011492?_skw=One+Piece+Card+Game+OP-14+Booster+Box&hash=item457bef1ce4:g:xfIAAeSwKXpqNWNn",
+        "price": 275.0,
+        "shipping": 15.0,
+        "total": 290.0,
+        "seller": "lamchopps1",
+        "seller_score": 2961,
         "seller_pct": 100.0,
         "top_rated": false,
         "trust": {
-          "score": 75,
+          "score": 80,
           "vetoes": [],
           "verified": true,
           "signals": [
@@ -1020,9 +1027,9 @@
             },
             {
               "name": "Seller volume",
-              "earned": 7.2,
+              "earned": 12.2,
               "possible": 14,
-              "detail": "111 completed sales",
+              "detail": "2,961 completed sales",
               "good": true
             },
             {
@@ -1050,7 +1057,7 @@
               "name": "Price plausibility",
               "earned": 12,
               "possible": 12,
-              "detail": "in line with the $304.98 median",
+              "detail": "in line with the $304.99 median",
               "good": true
             },
             {
@@ -1098,22 +1105,21 @@
           ]
         },
         "purchase": {
-          "score": 60,
+          "score": 58,
           "dud_chance": 0.88,
-          "cost_per_pack": 11.67,
+          "cost_per_pack": 12.08,
           "baseline_cost_per_pack": 12.71,
           "ev_per_pack": 4.83,
           "verdict": "FAIR",
           "notes": [
-            "$11.67/pack is 8% below the $12.71/pack baseline",
-            "estimated $4.83/pack in singles vs $11.67 paid (41% cover) \u2014 estimate, not a measurement",
-            "Opening this is negative EV: you would expect back about 41 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "~88% chance this box contains no SP at all \u2014 the average payout is carried by the rare 12%"
+            "$12.08/pack, in line with the market",
+            "estimated $4.83/pack in singles vs $12.08 paid (40% cover) \u2014 estimate, not a measurement",
+            "Opening this is negative EV: you would expect back about 40 cents of singles per dollar spent. Buy it to open for fun, not to profit."
           ]
         }
       },
       "considered": 22,
-      "relevant": 13,
+      "relevant": 12,
       "verified": 8,
       "kept": 1,
       "rejected": [
@@ -1124,7 +1130,7 @@
           "shipping": 0.0,
           "total": 202.78,
           "seller": "amitr90",
-          "seller_score": 2749,
+          "seller_score": 2751,
           "seller_pct": 99.8,
           "top_rated": false,
           "trust": {
@@ -1145,7 +1151,7 @@
                 "name": "Seller volume",
                 "earned": 12.0,
                 "possible": 14,
-                "detail": "2,749 completed sales",
+                "detail": "2,751 completed sales",
                 "good": true
               },
               {
@@ -1173,7 +1179,7 @@
                 "name": "Price plausibility",
                 "earned": 6,
                 "possible": 12,
-                "detail": "$202.78 is well under the $304.98 median \u2014 verify carefully",
+                "detail": "$202.78 is well under the $304.99 median \u2014 verify carefully",
                 "good": false
               },
               {
@@ -1280,7 +1286,7 @@
                 "name": "Price plausibility",
                 "earned": 6,
                 "possible": 12,
-                "detail": "$204.94 is well under the $304.98 median \u2014 verify carefully",
+                "detail": "$204.94 is well under the $304.99 median \u2014 verify carefully",
                 "good": false
               },
               {
@@ -1387,7 +1393,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $304.98 median",
+                "detail": "in line with the $304.99 median",
                 "good": true
               },
               {
@@ -1494,7 +1500,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $304.98 median",
+                "detail": "in line with the $304.99 median",
                 "good": true
               },
               {
@@ -1548,9 +1554,9 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:47:34+00:00",
+      "checked_at": "2026-08-11T22:07:25+00:00",
       "all_time_low": 202.78,
-      "all_time_high": 279.99
+      "all_time_high": 290.0
     },
     "op01": {
       "history": [],
@@ -1563,7 +1569,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:47:35+00:00"
+      "checked_at": "2026-08-11T22:07:25+00:00"
     },
     "op17-packs": {
       "history": [],
@@ -1576,7 +1582,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:47:37+00:00"
+      "checked_at": "2026-08-11T22:07:25+00:00"
     },
     "op16-packs": {
       "history": [
@@ -1614,6 +1620,10 @@
         },
         {
           "t": "2026-08-11T21:47:49+00:00",
+          "price": 6.99
+        },
+        {
+          "t": "2026-08-11T22:07:28+00:00",
           "price": 6.99
         }
       ],
@@ -1672,7 +1682,7 @@
               "name": "Price plausibility",
               "earned": 0,
               "possible": 12,
-              "detail": "$6.99 is 45% under the $12.62 median",
+              "detail": "$6.99 is 46% under the $12.99 median",
               "good": false
             },
             {
@@ -1723,20 +1733,19 @@
           "score": 84,
           "dud_chance": 0.995,
           "cost_per_pack": 6.99,
-          "baseline_cost_per_pack": 12.62,
+          "baseline_cost_per_pack": 12.99,
           "ev_per_pack": 4.83,
           "verdict": "STRONG BUY",
           "notes": [
-            "$6.99/pack is 45% below the $12.62/pack baseline",
+            "$6.99/pack is 46% below the $12.99/pack baseline",
             "estimated $4.83/pack in singles vs $6.99 paid (69% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 69 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "~100% chance this pack contains no SP at all \u2014 the average payout is carried by the rare 1%",
             "Loose packs almost always cost more per pack than a box of the same set. Compare against the box before buying."
           ]
         }
       },
-      "considered": 127,
-      "relevant": 42,
+      "considered": 128,
+      "relevant": 43,
       "verified": 8,
       "kept": 1,
       "rejected": [
@@ -1796,7 +1805,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$6.00 is 52% under the $12.62 median",
+                "detail": "$6.00 is 54% under the $12.99 median",
                 "good": false
               },
               {
@@ -1903,7 +1912,7 @@
                 "name": "Price plausibility",
                 "earned": 6,
                 "possible": 12,
-                "detail": "$8.00 is well under the $12.62 median \u2014 verify carefully",
+                "detail": "$8.00 is well under the $12.99 median \u2014 verify carefully",
                 "good": false
               },
               {
@@ -1961,7 +1970,7 @@
           "shipping": 0.0,
           "total": 9.29,
           "seller": "pwe_warehouse",
-          "seller_score": 15368,
+          "seller_score": 15369,
           "seller_pct": 99.2,
           "top_rated": false,
           "trust": {
@@ -1980,7 +1989,7 @@
                 "name": "Seller volume",
                 "earned": 14.0,
                 "possible": 14,
-                "detail": "15,368 completed sales",
+                "detail": "15,369 completed sales",
                 "good": true
               },
               {
@@ -2008,7 +2017,7 @@
                 "name": "Price plausibility",
                 "earned": 6,
                 "possible": 12,
-                "detail": "$9.29 is well under the $12.62 median \u2014 verify carefully",
+                "detail": "$9.29 is well under the $12.99 median \u2014 verify carefully",
                 "good": false
               },
               {
@@ -2115,7 +2124,7 @@
                 "name": "Price plausibility",
                 "earned": 6,
                 "possible": 12,
-                "detail": "$9.69 is well under the $12.62 median \u2014 verify carefully",
+                "detail": "$9.69 is well under the $12.99 median \u2014 verify carefully",
                 "good": false
               },
               {
@@ -2169,26 +2178,25 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T21:47:49+00:00",
+      "checked_at": "2026-08-11T22:07:28+00:00",
       "all_time_low": 6.99,
       "all_time_high": 6.99
     }
   },
   "portfolio": {
-    "spent": 809.04,
+    "spent": 559.04,
     "planned": 210.0,
-    "committed": 1019.04,
-    "position_committed": -140.25,
+    "committed": 769.04,
+    "position_committed": 109.75,
     "realised": 0,
     "unrealised_gross": 1016.26,
     "unrealised_net": 878.79,
-    "position_gross": 207.22,
-    "position_net": 69.75,
-    "roi_pct": 8.6,
+    "position_gross": 457.22,
+    "position_net": 319.75,
+    "roi_pct": 57.2,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 404.0,
-      "singles": 250.0,
       "grading": 126.47,
       "supplies": 28.57
     },
@@ -2200,13 +2208,6 @@
         "held": 80.8,
         "net": -283.81
       },
-      "psa10kidd": {
-        "spent": 250.0,
-        "planned": 0.0,
-        "realised": 0.0,
-        "held": 216.47,
-        "net": -33.53
-      },
       "supplies": {
         "spent": 28.57,
         "planned": 0.0,
@@ -2214,19 +2215,19 @@
         "held": 0.0,
         "net": -28.57
       },
-      "op15": {
-        "spent": 39.39,
-        "planned": 0.0,
-        "realised": 0.0,
-        "held": 18.04,
-        "net": -21.35
-      },
       "op17": {
         "spent": 0.0,
         "planned": 210.0,
         "realised": 0.0,
         "held": 0.0,
         "net": 0.0
+      },
+      "op15": {
+        "spent": 39.39,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 234.51,
+        "net": 195.12
       },
       "msallsunday": {
         "spent": 126.47,
@@ -2364,14 +2365,6 @@
         "category": "sealed",
         "amount": 39.39,
         "tag": "op15",
-        "planned": false
-      },
-      {
-        "date": "2026-08-11",
-        "item": "PSA 10 Eustass \"Captain\" Kidd SP EB04-039",
-        "category": "singles",
-        "amount": 250.0,
-        "tag": "psa10kidd",
         "planned": false
       }
     ],
