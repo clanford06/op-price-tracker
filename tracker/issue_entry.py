@@ -107,32 +107,38 @@ def _text(raw: str | None) -> str:
 def parse_entry(body: str, *, fee_pct: float, fee_flat: float) -> ParsedEntry:
     f = parse_body(body)
 
-    kind_raw = _text(f.get("type")).lower()
+    def pick(*names: str) -> str | None:
+        for n in names:
+            if n in f:
+                return f[n]
+        return None
+
+    kind_raw = _text(pick("type")).lower()
     kind = next((k for k in ("expense", "sale", "holding") if kind_raw.startswith(k)), "")
     if not kind:
         raise IssueParseError(f"Type must be expense, sale or holding — got {kind_raw!r}")
 
-    description = _text(f.get("what was it?"))
+    description = _text(pick("what was it", "what was it?", "what"))
     if not description:
         raise IssueParseError("Description is required")
 
-    amount = _num(f.get("amount ($)"), field="Amount")
+    amount = _num(pick("amount", "amount ($)"), field="Amount")
     if amount is None or amount <= 0:
         raise IssueParseError("Amount must be greater than zero")
 
-    shipping = _num(f.get("shipping & handling ($)"), field="Shipping") or 0.0
-    fees = _num(f.get("selling fees ($) — sales only"), field="Fees", default=None)
+    shipping = _num(pick("shipping", "shipping & handling ($)"), field="Shipping") or 0.0
+    fees = _num(pick("fees", "selling fees ($) — sales only"), field="Fees", default=None)
 
-    tag = _text(f.get("tag"))
+    tag = _text(pick("tag"))
     if not tag:
         raise IssueParseError("Tag is required — it is what groups your entries")
 
-    category = _text(f.get("category (expenses only)")) or "other"
-    when = _text(f.get("date (yyyy-mm-dd)")) or None
+    category = _text(pick("category", "category (expenses only)")) or "other"
+    when = _text(pick("date", "date (yyyy-mm-dd)")) or None
     if when and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", when):
         raise IssueParseError(f"Date must be YYYY-MM-DD, got {when!r}")
 
-    planned_raw = (f.get("not paid yet") or "").lower()
+    planned_raw = (pick("not paid yet", "planned") or "").lower()
     planned = "[x]" in planned_raw or planned_raw.strip() in {"yes", "true", "y", "1"}
 
     # A sale with no stated fees: estimate eBay's cut rather than recording zero,
