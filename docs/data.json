@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-11T21:50:22+00:00",
+  "updated_at": "2026-08-11T21:51:20+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -2178,13 +2178,13 @@
     "spent": 809.04,
     "planned": 210.0,
     "committed": 1019.04,
-    "position_committed": -356.72,
+    "position_committed": -140.25,
     "realised": 0,
-    "unrealised_gross": 766.26,
-    "unrealised_net": 662.32,
-    "position_gross": -42.78,
-    "position_net": -146.72,
-    "roi_pct": -18.1,
+    "unrealised_gross": 1016.26,
+    "unrealised_net": 878.79,
+    "position_gross": 207.22,
+    "position_net": 69.75,
+    "roi_pct": 8.6,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 404.0,
@@ -2204,8 +2204,8 @@
         "spent": 250.0,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 0.0,
-        "net": -250.0
+        "held": 216.47,
+        "net": -33.53
       },
       "supplies": {
         "spent": 28.57,
@@ -2245,6 +2245,15 @@
         "net_if_sold": 563.48,
         "source": "pulled from OP-16 box",
         "note": "At PSA, expected back Sept-Oct 2026. A 10 is worth a real multiple; a 9 lands near raw."
+      },
+      {
+        "id": "psa-10-eustass-captain-kidd-sp-eb04-039",
+        "name": "PSA 10 Eustass \"Captain\" Kidd SP EB04-039",
+        "status": "owned",
+        "estimate": 250.0,
+        "net_if_sold": 216.47,
+        "source": "",
+        "note": ""
       },
       {
         "id": "op16-022-luffy-alt",
