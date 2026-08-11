@@ -330,3 +330,34 @@ def test_bad_input_is_rejected(bad, msg):
     with pytest.raises(IssueParseError) as e:
         parse_entry(bad, fee_pct=13.25, fee_flat=0.40)
     assert msg in str(e.value)
+
+
+PLAIN = """type: expense
+what: Whatnot break 8/10
+amount: 39.39
+shipping: 0
+tag: op15
+category: sealed
+date: 2026-08-11
+"""
+
+
+def test_plain_text_issue_body_also_parses():
+    """A hand-typed issue must work, not just GitHub's form output."""
+    e = parse_entry(PLAIN, fee_pct=13.25, fee_flat=0.40)
+    assert (e.kind, e.description, e.amount, e.tag, e.category) == (
+        "expense", "Whatnot break 8/10", 39.39, "op15", "sealed")
+    assert e.when == "2026-08-11"
+
+
+def test_plain_text_minimal_and_fuzzy_keys():
+    e = parse_entry("kind: sale\nitem: Kuzan alt\nprice: $6.50\ngroup: op16\n",
+                    fee_pct=13.25, fee_flat=0.40)
+    assert e.kind == "sale" and e.amount == 6.50 and e.tag == "op16"
+    assert e.fees == round(6.50 * 0.1325 + 0.40, 2)
+
+
+def test_plain_text_planned_flag():
+    e = parse_entry("type: expense\nwhat: OP-17 box\namount: 180\ntag: op17\nplanned: yes\n",
+                    fee_pct=13.25, fee_flat=0.40)
+    assert e.planned is True
