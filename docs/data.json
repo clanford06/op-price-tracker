@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-11T19:35:31+00:00",
+  "updated_at": "2026-08-11T19:44:59+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -13,12 +13,24 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:35:23+00:00"
+      "checked_at": "2026-08-11T19:42:49+00:00"
     },
     "op16": {
       "history": [
         {
           "t": "2026-08-11T19:35:27+00:00",
+          "price": 209.99
+        },
+        {
+          "t": "2026-08-11T19:42:52+00:00",
+          "price": 209.99
+        },
+        {
+          "t": "2026-08-11T19:44:18+00:00",
+          "price": 209.99
+        },
+        {
+          "t": "2026-08-11T19:44:59+00:00",
           "price": 209.99
         }
       ],
@@ -123,9 +135,21 @@
               "good": false
             }
           ]
+        },
+        "purchase": {
+          "score": 70,
+          "cost_per_pack": 8.75,
+          "baseline_cost_per_pack": 9.58,
+          "ev_per_pack": 4.83,
+          "verdict": "GOOD",
+          "notes": [
+            "$8.75/pack is 9% below the $9.58/pack baseline",
+            "estimated $4.83/pack in singles vs $8.75 paid (55% cover) \u2014 estimate, not a measurement",
+            "Opening this is negative EV: you would expect back about 55 cents of singles per dollar spent. Buy it to open for fun, not to profit."
+          ]
         }
       },
-      "considered": 187,
+      "considered": 188,
       "relevant": 23,
       "verified": 8,
       "kept": 1,
@@ -886,7 +910,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:35:27+00:00",
+      "checked_at": "2026-08-11T19:44:59+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -894,6 +918,10 @@
       "history": [
         {
           "t": "2026-08-11T19:35:30+00:00",
+          "price": 202.78
+        },
+        {
+          "t": "2026-08-11T19:42:56+00:00",
           "price": 202.78
         }
       ],
@@ -997,6 +1025,17 @@
               "detail": "not on your trusted list (bonus only)",
               "good": false
             }
+          ]
+        },
+        "purchase": {
+          "score": 89,
+          "cost_per_pack": 8.45,
+          "baseline_cost_per_pack": 8.45,
+          "ev_per_pack": 4.83,
+          "verdict": "STRONG BUY",
+          "notes": [
+            "$8.45/pack, in line with the market",
+            "estimated $4.83/pack in singles vs $8.45 paid (57% cover) \u2014 estimate, not a measurement"
           ]
         }
       },
@@ -1222,7 +1261,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:35:30+00:00",
+      "checked_at": "2026-08-11T19:42:56+00:00",
       "all_time_low": 202.78,
       "all_time_high": 202.78
     },
@@ -1237,7 +1276,697 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T19:35:31+00:00"
+      "checked_at": "2026-08-11T19:42:57+00:00"
+    },
+    "op17-packs": {
+      "history": [],
+      "name": "OP-17 loose packs",
+      "current": null,
+      "considered": 0,
+      "relevant": 0,
+      "verified": 0,
+      "kept": 0,
+      "rejected": [],
+      "min_trust_score": 70,
+      "error": null,
+      "checked_at": "2026-08-11T19:42:57+00:00"
+    },
+    "op16-packs": {
+      "history": [
+        {
+          "t": "2026-08-11T19:43:01+00:00",
+          "price": 6.99
+        }
+      ],
+      "name": "OP-16 loose packs",
+      "current": {
+        "title": "The Time of Battle Booster Pack One Piece Card Game English OP16",
+        "url": "https://www.ebay.com/itm/227401757524?_skw=One+Piece+Card+Game+OP-16+booster+pack&hash=item34f2337354:g:3MgAAeSw~49qO0Fy",
+        "price": 6.99,
+        "shipping": 0.0,
+        "total": 6.99,
+        "seller": "angelsotorojas",
+        "seller_score": 478,
+        "seller_pct": 100.0,
+        "top_rated": false,
+        "trust": {
+          "score": 75,
+          "vetoes": [],
+          "verified": true,
+          "signals": [
+            {
+              "name": "Language verified",
+              "earned": 18,
+              "possible": 18,
+              "detail": "item specifics: English",
+              "good": true
+            },
+            {
+              "name": "Seller volume",
+              "earned": 9.4,
+              "possible": 14,
+              "detail": "478 completed sales",
+              "good": true
+            },
+            {
+              "name": "Seller rating",
+              "earned": 14.0,
+              "possible": 14,
+              "detail": "100.0% positive",
+              "good": true
+            },
+            {
+              "name": "Returns",
+              "earned": 12.0,
+              "possible": 12,
+              "detail": "accepted (30 days)",
+              "good": true
+            },
+            {
+              "name": "Top Rated Seller",
+              "earned": 0,
+              "possible": 10,
+              "detail": "not Top Rated (bonus only)",
+              "good": false
+            },
+            {
+              "name": "Price plausibility",
+              "earned": 0,
+              "possible": 12,
+              "detail": "$6.99 is 45% under the $12.62 median",
+              "good": false
+            },
+            {
+              "name": "Item specifics",
+              "earned": 4.0,
+              "possible": 8,
+              "detail": "set matches",
+              "good": true
+            },
+            {
+              "name": "eBay category",
+              "earned": 6,
+              "possible": 6,
+              "detail": "listed under trading cards",
+              "good": true
+            },
+            {
+              "name": "Stock level",
+              "earned": 1,
+              "possible": 3,
+              "detail": "unknown",
+              "good": false
+            },
+            {
+              "name": "eBay programmes",
+              "earned": 0,
+              "possible": 5,
+              "detail": "none (bonus only)",
+              "good": false
+            },
+            {
+              "name": "Description",
+              "earned": 4,
+              "possible": 4,
+              "detail": "no warning phrases",
+              "good": true
+            },
+            {
+              "name": "Your trusted list",
+              "earned": 0,
+              "possible": 8,
+              "detail": "not on your trusted list (bonus only)",
+              "good": false
+            }
+          ]
+        },
+        "purchase": {
+          "score": 88,
+          "cost_per_pack": 6.99,
+          "baseline_cost_per_pack": 6.99,
+          "ev_per_pack": 4.83,
+          "verdict": "STRONG BUY",
+          "notes": [
+            "$6.99/pack, in line with the market",
+            "estimated $4.83/pack in singles vs $6.99 paid (69% cover) \u2014 estimate, not a measurement",
+            "Loose packs almost always cost more per pack than a box of the same set. Compare against the box before buying."
+          ]
+        }
+      },
+      "considered": 127,
+      "relevant": 42,
+      "verified": 8,
+      "kept": 1,
+      "rejected": [
+        {
+          "title": "The Time of Battle Booster Pack One Piece Card Game English OP16",
+          "url": "https://www.ebay.com/itm/198557246200?_skw=One+Piece+Card+Game+OP-16+booster+pack&hash=item2e3aef22f8:g:ttoAAeSwLvZqTSK8",
+          "price": 6.0,
+          "shipping": 0.0,
+          "total": 6.0,
+          "seller": "cardsbydalt",
+          "seller_score": 58,
+          "seller_pct": 100.0,
+          "top_rated": false,
+          "trust": {
+            "score": 58,
+            "vetoes": [
+              "seller has 58 sales, below the 100 minimum"
+            ],
+            "verified": true,
+            "signals": [
+              {
+                "name": "Language verified",
+                "earned": 18,
+                "possible": 18,
+                "detail": "item specifics: English",
+                "good": true
+              },
+              {
+                "name": "Seller volume",
+                "earned": 6.2,
+                "possible": 14,
+                "detail": "58 completed sales",
+                "good": true
+              },
+              {
+                "name": "Seller rating",
+                "earned": 14.0,
+                "possible": 14,
+                "detail": "100.0% positive",
+                "good": true
+              },
+              {
+                "name": "Returns",
+                "earned": 0,
+                "possible": 12,
+                "detail": "not accepted",
+                "good": false
+              },
+              {
+                "name": "Top Rated Seller",
+                "earned": 0,
+                "possible": 10,
+                "detail": "not Top Rated (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Price plausibility",
+                "earned": 0,
+                "possible": 12,
+                "detail": "$6.00 is 52% under the $12.62 median",
+                "good": false
+              },
+              {
+                "name": "Item specifics",
+                "earned": 4.0,
+                "possible": 8,
+                "detail": "set matches",
+                "good": true
+              },
+              {
+                "name": "eBay category",
+                "earned": 6,
+                "possible": 6,
+                "detail": "listed under trading cards",
+                "good": true
+              },
+              {
+                "name": "Stock level",
+                "earned": 1,
+                "possible": 3,
+                "detail": "unknown",
+                "good": false
+              },
+              {
+                "name": "eBay programmes",
+                "earned": 0,
+                "possible": 5,
+                "detail": "none (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Description",
+                "earned": 4,
+                "possible": 4,
+                "detail": "no warning phrases",
+                "good": true
+              },
+              {
+                "name": "Your trusted list",
+                "earned": 0,
+                "possible": 8,
+                "detail": "not on your trusted list (bonus only)",
+                "good": false
+              }
+            ]
+          },
+          "why": [
+            "seller has 58 sales, below the 100 minimum"
+          ]
+        },
+        {
+          "title": "The Time of Battle Booster Pack One Piece Card Game English OP16",
+          "url": "https://www.ebay.com/itm/407003592770?_skw=One+Piece+Card+Game+OP-16+booster+pack&hash=item5ec34df842:g:5NEAAeSw4BZqMLfS",
+          "price": 8.0,
+          "shipping": 0.0,
+          "total": 8.0,
+          "seller": "vault27collectibles",
+          "seller_score": 8,
+          "seller_pct": 100.0,
+          "top_rated": false,
+          "trust": {
+            "score": 64,
+            "vetoes": [
+              "seller has 8 sales, below the 100 minimum"
+            ],
+            "verified": true,
+            "signals": [
+              {
+                "name": "Language verified",
+                "earned": 18,
+                "possible": 18,
+                "detail": "item specifics: English",
+                "good": true
+              },
+              {
+                "name": "Seller volume",
+                "earned": 3.3,
+                "possible": 14,
+                "detail": "8 completed sales",
+                "good": true
+              },
+              {
+                "name": "Seller rating",
+                "earned": 14.0,
+                "possible": 14,
+                "detail": "100.0% positive",
+                "good": true
+              },
+              {
+                "name": "Returns",
+                "earned": 0,
+                "possible": 12,
+                "detail": "not accepted",
+                "good": false
+              },
+              {
+                "name": "Top Rated Seller",
+                "earned": 0,
+                "possible": 10,
+                "detail": "not Top Rated (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Price plausibility",
+                "earned": 6,
+                "possible": 12,
+                "detail": "$8.00 is well under the $12.62 median \u2014 verify carefully",
+                "good": false
+              },
+              {
+                "name": "Item specifics",
+                "earned": 4.0,
+                "possible": 8,
+                "detail": "set matches",
+                "good": true
+              },
+              {
+                "name": "eBay category",
+                "earned": 6,
+                "possible": 6,
+                "detail": "listed under trading cards",
+                "good": true
+              },
+              {
+                "name": "Stock level",
+                "earned": 3,
+                "possible": 3,
+                "detail": "3 in stock",
+                "good": true
+              },
+              {
+                "name": "eBay programmes",
+                "earned": 0,
+                "possible": 5,
+                "detail": "none (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Description",
+                "earned": 4,
+                "possible": 4,
+                "detail": "no warning phrases",
+                "good": true
+              },
+              {
+                "name": "Your trusted list",
+                "earned": 0,
+                "possible": 8,
+                "detail": "not on your trusted list (bonus only)",
+                "good": false
+              }
+            ]
+          },
+          "why": [
+            "seller has 8 sales, below the 100 minimum"
+          ]
+        },
+        {
+          "title": "One Piece Card Game Booster Pack - Pick Your Set English OP01 - OP16 EB03 PRB-02",
+          "url": "https://www.ebay.com/itm/389069735101?_skw=One+Piece+Card+Game+OP-16+booster+pack&hash=item5a965d04bd:g:ePYAAeSw4mtpaSTu",
+          "price": 9.29,
+          "shipping": 0.0,
+          "total": 9.29,
+          "seller": "pwe_warehouse",
+          "seller_score": 15366,
+          "seller_pct": 99.2,
+          "top_rated": false,
+          "trust": {
+            "score": 67,
+            "vetoes": [],
+            "verified": true,
+            "signals": [
+              {
+                "name": "Language verified",
+                "earned": 18,
+                "possible": 18,
+                "detail": "item specifics: English",
+                "good": true
+              },
+              {
+                "name": "Seller volume",
+                "earned": 14.0,
+                "possible": 14,
+                "detail": "15,366 completed sales",
+                "good": true
+              },
+              {
+                "name": "Seller rating",
+                "earned": 8.4,
+                "possible": 14,
+                "detail": "99.2% positive",
+                "good": true
+              },
+              {
+                "name": "Returns",
+                "earned": 0,
+                "possible": 12,
+                "detail": "not accepted",
+                "good": false
+              },
+              {
+                "name": "Top Rated Seller",
+                "earned": 0,
+                "possible": 10,
+                "detail": "not Top Rated (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Price plausibility",
+                "earned": 6,
+                "possible": 12,
+                "detail": "$9.29 is well under the $12.62 median \u2014 verify carefully",
+                "good": false
+              },
+              {
+                "name": "Item specifics",
+                "earned": 2,
+                "possible": 8,
+                "detail": "present but do not confirm set/format",
+                "good": false
+              },
+              {
+                "name": "eBay category",
+                "earned": 6,
+                "possible": 6,
+                "detail": "listed under trading cards",
+                "good": true
+              },
+              {
+                "name": "Stock level",
+                "earned": 3,
+                "possible": 3,
+                "detail": "1 in stock",
+                "good": true
+              },
+              {
+                "name": "eBay programmes",
+                "earned": 0,
+                "possible": 5,
+                "detail": "none (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Description",
+                "earned": 4,
+                "possible": 4,
+                "detail": "no warning phrases",
+                "good": true
+              },
+              {
+                "name": "Your trusted list",
+                "earned": 0,
+                "possible": 8,
+                "detail": "not on your trusted list (bonus only)",
+                "good": false
+              }
+            ]
+          },
+          "why": [
+            "trust score 67 below 70"
+          ]
+        },
+        {
+          "title": "The Time of Battle Booster Pack One Piece Card Game English OP16",
+          "url": "https://www.ebay.com/itm/327277053669?_skw=One+Piece+Card+Game+OP-16+booster+pack&hash=item4c333b86e5:g:91sAAeSw2MxqY-mZ",
+          "price": 9.69,
+          "shipping": 0.0,
+          "total": 9.69,
+          "seller": "hnswatchstrap",
+          "seller_score": 9087,
+          "seller_pct": 97.8,
+          "top_rated": false,
+          "trust": {
+            "score": 73,
+            "vetoes": [
+              "seller rated 97.8%, below the 98.0% minimum"
+            ],
+            "verified": true,
+            "signals": [
+              {
+                "name": "Language verified",
+                "earned": 18,
+                "possible": 18,
+                "detail": "item specifics: English",
+                "good": true
+              },
+              {
+                "name": "Seller volume",
+                "earned": 13.9,
+                "possible": 14,
+                "detail": "9,087 completed sales",
+                "good": true
+              },
+              {
+                "name": "Seller rating",
+                "earned": 0.0,
+                "possible": 14,
+                "detail": "97.8% positive",
+                "good": true
+              },
+              {
+                "name": "Returns",
+                "earned": 12.0,
+                "possible": 12,
+                "detail": "accepted (30 days)",
+                "good": true
+              },
+              {
+                "name": "Top Rated Seller",
+                "earned": 0,
+                "possible": 10,
+                "detail": "not Top Rated (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Price plausibility",
+                "earned": 6,
+                "possible": 12,
+                "detail": "$9.69 is well under the $12.62 median \u2014 verify carefully",
+                "good": false
+              },
+              {
+                "name": "Item specifics",
+                "earned": 4.0,
+                "possible": 8,
+                "detail": "set matches",
+                "good": true
+              },
+              {
+                "name": "eBay category",
+                "earned": 6,
+                "possible": 6,
+                "detail": "listed under trading cards",
+                "good": true
+              },
+              {
+                "name": "Stock level",
+                "earned": 3,
+                "possible": 3,
+                "detail": "4 in stock",
+                "good": true
+              },
+              {
+                "name": "eBay programmes",
+                "earned": 0,
+                "possible": 5,
+                "detail": "none (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Description",
+                "earned": 4,
+                "possible": 4,
+                "detail": "no warning phrases",
+                "good": true
+              },
+              {
+                "name": "Your trusted list",
+                "earned": 0,
+                "possible": 8,
+                "detail": "not on your trusted list (bonus only)",
+                "good": false
+              }
+            ]
+          },
+          "why": [
+            "seller rated 97.8%, below the 98.0% minimum"
+          ]
+        }
+      ],
+      "min_trust_score": 70,
+      "error": null,
+      "checked_at": "2026-08-11T19:43:01+00:00",
+      "all_time_low": 6.99,
+      "all_time_high": 6.99
     }
+  },
+  "portfolio": {
+    "spent": 519.65,
+    "planned": 210.0,
+    "committed": 729.65,
+    "position_committed": -85.37,
+    "realised": 0,
+    "unrealised_gross": 745.0,
+    "unrealised_net": 644.28,
+    "position_gross": 225.35,
+    "position_net": 124.63,
+    "roi_pct": 24.0,
+    "fee_pct": 13.25,
+    "by_category": {
+      "sealed": 364.61,
+      "grading": 126.47,
+      "supplies": 28.57
+    },
+    "holdings": [
+      {
+        "id": "ms-all-sunday-sp",
+        "name": "Ms. All Sunday SP OP14-084 (English)",
+        "status": "grading",
+        "estimate": 650.0,
+        "net_if_sold": 563.48,
+        "source": "pulled from OP-16 box",
+        "note": "At PSA, expected back Sept-Oct 2026. A 10 is worth a real multiple; a 9 lands near raw."
+      },
+      {
+        "id": "op16-022-luffy-alt",
+        "name": "Monkey.D.Luffy Leader OP16-022 (Alt Art)",
+        "status": "owned",
+        "estimate": 63.0,
+        "net_if_sold": 54.25,
+        "source": "pulled from OP-16 box",
+        "note": ""
+      },
+      {
+        "id": "op16-065-sakazuki-alt",
+        "name": "Sakazuki OP16-065 (Alt Art)",
+        "status": "owned",
+        "estimate": 15.0,
+        "net_if_sold": 12.61,
+        "source": "pulled from OP-16 box",
+        "note": ""
+      },
+      {
+        "id": "op16-118-ace-sec",
+        "name": "Portgas.D.Ace OP16-118 (Secret Rare)",
+        "status": "owned",
+        "estimate": 11.0,
+        "net_if_sold": 9.14,
+        "source": "pulled from OP-16 box",
+        "note": "Assumed base SEC. If it's the Alt Art SEC it's ~$40-55 \u2014 check which you have."
+      },
+      {
+        "id": "op16-063-kuzan-alt",
+        "name": "Kuzan OP16-063 (Alt Art)",
+        "status": "owned",
+        "estimate": 6.0,
+        "net_if_sold": 4.8,
+        "source": "pulled from OP-16 box",
+        "note": ""
+      }
+    ],
+    "expenses": [
+      {
+        "date": "2026-07-01",
+        "item": "OP-16 Time of Battle booster box + sleeves + toploader",
+        "category": "sealed",
+        "amount": 209.28,
+        "planned": false
+      },
+      {
+        "date": "2026-07-01",
+        "item": "~16 loose OP-16 packs",
+        "category": "sealed",
+        "amount": 155.33,
+        "planned": false
+      },
+      {
+        "date": "2026-07-01",
+        "item": "Storage boxes and tape",
+        "category": "supplies",
+        "amount": 25.33,
+        "planned": false
+      },
+      {
+        "date": "2026-08-06",
+        "item": "PSA grading \u2014 Ms. All Sunday SP (submission #15289898)",
+        "category": "grading",
+        "amount": 126.47,
+        "planned": false
+      },
+      {
+        "date": "2026-08-01",
+        "item": "Penny sleeves",
+        "category": "supplies",
+        "amount": 3.24,
+        "planned": false
+      },
+      {
+        "date": "2026-08-23",
+        "item": "OP-17 prerelease entry \u2014 Prime Time Gaming",
+        "category": "events",
+        "amount": 30.0,
+        "planned": true
+      },
+      {
+        "date": "2026-08-23",
+        "item": "OP-17 booster box (prerelease purchase)",
+        "category": "sealed",
+        "amount": 180.0,
+        "planned": true
+      }
+    ],
+    "sales": []
   }
 }

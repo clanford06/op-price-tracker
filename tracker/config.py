@@ -36,6 +36,10 @@ class Product:
     require_verified_detail: bool = True
     max_quantity: int = 12
     verify_top_n: int = 8
+    # Purchase scoring
+    unit_kind: str = "box"        # box | pack | case
+    packs_in_unit: int = 24       # English booster box = 24 packs
+    ev_per_pack: float | None = None   # configured estimate; None disables the EV term
     blocked_sellers: list[str] = field(default_factory=list)
     trusted_sellers: list[str] = field(default_factory=list)
 
@@ -102,6 +106,11 @@ def load_products(path: Path | None = None) -> list[Product]:
                 require_verified_detail=bool(merged.get("require_verified_detail", True)),
                 max_quantity=int(merged.get("max_quantity", 12)),
                 verify_top_n=int(merged.get("verify_top_n", 8)),
+                unit_kind=str(merged.get("unit_kind", "box")),
+                packs_in_unit=int(merged.get("packs_in_unit", 24)),
+                ev_per_pack=(
+                    float(merged["ev_per_pack"]) if merged.get("ev_per_pack") is not None else None
+                ),
                 blocked_sellers=[str(s) for s in (merged.get("blocked_sellers") or [])],
                 trusted_sellers=[str(s) for s in (merged.get("trusted_sellers") or [])],
             )

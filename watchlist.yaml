@@ -96,6 +96,24 @@ defaults:
   # buy and the ones most likely to be fake, so checking those is what matters.
   verify_top_n: 8
 
+  # ---- PURCHASE SCORING --------------------------------------------------
+
+  unit_kind: box               # box | pack -- changes how cost/pack is derived
+  packs_in_unit: 24            # English booster box = 24 packs
+
+  # Estimated singles value per pack, from community pull rates. Bandai
+  # publishes none, so this is an assumption made explicit rather than left in
+  # your gut. Worked example for a typical set, per 24-pack box:
+  #     SP    0.2/box x ~$150 avg  =  $30   (1 SP per 5-6 boxes; most SPs are
+  #                                          NOT the $650 chase card)
+  #     SR    7/box   x ~$8   avg  =  $56
+  #     bulk  rares/uncommons      =  $30
+  #                                 -------
+  #                            box   $116  ->  ~$4.83 per pack
+  # Against ~$8.75/pack for a $210 box, that is the arithmetic reason opening
+  # boxes loses money on average. Adjust per set as you learn real numbers.
+  ev_per_pack: 4.83
+
   # Sellers you have bought from successfully (bonus points), and sellers you
   # never want to see again (instant veto). Use exact eBay usernames.
   trusted_sellers: []
@@ -131,6 +149,71 @@ products:
     max_price: 900
     alert_below: 250
     implausible_below: 180
+
+  # ---- LOOSE PACKS -------------------------------------------------------
+  # Tracked so you can SEE the premium, not because they are a good buy.
+  # Carter's 16 loose packs cost $9.71 each against ~$7.68/pack buying the box.
+
+  - id: op17-packs
+    name: "OP-17 loose packs"
+    query: "One Piece Card Game OP-17 booster pack"
+    require_all: ["booster pack"]
+    require_any: ["op 17", "op17", "worlds strongest warriors", "world s strongest warriors"]
+    unit_kind: pack
+    packs_in_unit: 1
+    min_price: 3
+    max_price: 60
+    implausible_below: 3
+    alert_below: 5
+    exclude_any: &pack_excludes
+      - japanese
+      - japan
+      - jpn
+      - jp
+      - korean
+      - chinese
+      - booster box
+      - box
+      - case
+      - lot
+      - bundle
+      - empty
+      - wrapper
+      - single
+      - singles
+      - proxy
+      - custom
+      - replica
+      - fake
+      # Weighed / searched packs. The seller has already scaled them and knows
+      # what is inside; you are buying a pack they chose to sell you.
+      - heavy
+      - heavies
+      - weighed
+      - weighted
+      - searched
+      - gram
+      - grams
+      - g
+      - repack
+      - repacks
+      - mystery
+      - random
+      - break
+      - spot
+
+  - id: op16-packs
+    name: "OP-16 loose packs"
+    query: "One Piece Card Game OP-16 booster pack"
+    require_all: ["booster pack"]
+    require_any: ["op 16", "op16", "time of battle"]
+    unit_kind: pack
+    packs_in_unit: 1
+    min_price: 3
+    max_price: 60
+    implausible_below: 3
+    alert_below: 5
+    exclude_any: *pack_excludes
 
 # Add more sets by copying a block above and changing id / name / query /
 # require_any. Set codes are the reliable matcher -- always include both the

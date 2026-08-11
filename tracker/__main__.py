@@ -29,6 +29,7 @@ from .config import DEFAULT_DATA_FILE, DEFAULT_WATCHLIST, Product, load_products
 from .ebay import EbayClient, EbayError, Listing
 from .filters import Candidate, peer_median, screen_relevance
 from .notify import Notifier
+from .purchase import evaluate_purchase
 from .trust import TrustPolicy, TrustReport, evaluate
 
 
@@ -74,6 +75,18 @@ def policy_for(product: Product) -> TrustPolicy:
         trusted_sellers=tuple(product.trusted_sellers),
         expect_terms=tuple(product.require_any),
     )
+
+
+def baseline_cpp(candidates, product) -> float | None:
+    """Market cost-per-pack for this set: the peer MEDIAN, not the minimum.
+
+    Using the cheapest passing listing was circular -- the winner is by
+    definition the cheapest passing listing, so every winner compared itself
+    against itself and scored full marks. The median is an independent
+    reference the listing can actually be better or worse than.
+    """
+    med = peer_median(candidates)
+    return (med / max(product.packs_in_unit, 1)) if med else None
 
 
 def listing_dict(item: Listing, report: TrustReport | None = None) -> dict:
@@ -213,12 +226,27 @@ def main(argv: list[str] | None = None) -> int:
         winner = pick_winner(scored, product.min_trust_score)
         rejected = [(l, r) for l, r in scored if not (r.passed and r.score >= product.min_trust_score)]
 
+        buy = None
         if winner:
             item, report = winner
+            buy = evaluate_purchase(
+                total_price=item.total,
+                packs_in_unit=product.packs_in_unit,
+                trust_score=report.score,
+                baseline_cost_per_pack=baseline_cpp(candidates, product),
+                ev_per_pack=product.ev_per_pack,
+                unit_kind=product.unit_kind,
+            )
             print(
                 f"  ${item.total:.2f} verified (trust {report.score}/100) — "
                 f"{item.seller_name} [{item.seller_score:,} @ {item.seller_pct}%]"
             )
+            print(
+                f"  BUY SCORE {buy.score}/100 [{buy.verdict}] · "
+                f"${buy.cost_per_pack:.2f}/pack"
+            )
+            for n in buy.notes:
+                print(f"    - {n}")
         else:
             print(
                 f"  no listing passed verification "
@@ -234,7 +262,9 @@ def main(argv: list[str] | None = None) -> int:
                 product_id=product.id,
                 name=product.name,
                 price=price,
-                listing=listing_dict(*winner) if winner else None,
+                listing=(
+                    {**listing_dict(*winner), "purchase": buy.as_dict()} if winner else None
+                ),
                 considered=len(raw),
                 relevant=relevant_n,
                 verified=len(scored),
@@ -260,7 +290,8 @@ def main(argv: list[str] | None = None) -> int:
                     title=f"{product.name} — ${price:.2f}",
                     message=(
                         f"${price:.2f} delivered is {why}.\n"
-                        f"Trust score {report.score}/100, all checks passed.\n"
+                        f"Trust {report.score}/100 · BUY {buy.score}/100 ({buy.verdict})\n"
+                        f"${buy.cost_per_pack:.2f} per pack\n"
                         f"Seller {item.seller_name} ({item.seller_score:,} sales, {item.seller_pct}%)\n"
                         f"{item.title[:110]}"
                     ),
@@ -271,6 +302,17 @@ def main(argv: list[str] | None = None) -> int:
                 alerts.append(f"{product.name} ${price:.2f}")
 
     if not args.dry_run:
+        # Fold the ledger into the same file the dashboard reads, so expenses
+        # and profit render alongside prices instead of living in a separate tool.
+        try:
+            from .config import DEFAULT_LEDGER
+            from .portfolio import load_ledger
+
+            data["portfolio"] = load_ledger(args.ledger or DEFAULT_LEDGER).as_dict()
+        except (FileNotFoundError, ValueError) as exc:
+            print(f"  (portfolio skipped: {exc})")
+            data["portfolio"] = None
+
         storage.save(args.data_file, data)
         print(f"\nWrote {args.data_file}")
     if alerts:
