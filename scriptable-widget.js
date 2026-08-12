@@ -98,17 +98,23 @@ if (rowLimit && products.length) {
 
 // --- footer -----------------------------------------------------------------
 w.addSpacer();
-const foot = w.addText(agoText(data.updated_at));
+const ageMin = data.updated_at
+  ? Math.round((Date.now() - new Date(data.updated_at)) / 60000)
+  : 99999;
+const foot = w.addText(
+  ageMin > 180 ? `${agoText(data.updated_at)} — tap to refresh` : agoText(data.updated_at)
+);
 foot.font = Font.systemFont(9);
-foot.textColor = MUTED;
+// Amber once the data is older than the 2-hourly job should allow, so a stale
+// widget never looks like a current one.
+foot.textColor = ageMin > 180 ? WARN : MUTED;
 
-// Ask iOS to come back soon after the next likely price run. iOS ultimately
-// decides -- widgets get a limited refresh budget per day and the system
-// throttles based on usage -- so this is a request, not a guarantee. Opening
-// the widget (or the dashboard) always pulls fresh data immediately.
-const stamp = data.updated_at ? new Date(data.updated_at).getTime() : Date.now();
-const nextRun = stamp + 2 * 60 * 60 * 1000;   // the job runs every 2h
-w.refreshAfterDate = new Date(Math.max(Date.now() + 5 * 60 * 1000, nextRun + 60 * 1000));
+// iOS decides when widgets actually reload. refreshAfterDate is a REQUEST --
+// the system budgets a limited number of refreshes per day and throttles based
+// on how often you look at the widget. There is no API to force one.
+// Asking for 15 minutes means iOS refreshes as often as it is willing to.
+// Tapping the widget always reloads immediately.
+w.refreshAfterDate = new Date(Date.now() + 15 * 60 * 1000);
 
 if (config.runsInWidget) {
   Script.setWidget(w);
