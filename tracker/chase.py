@@ -54,17 +54,58 @@ STACKED = "https://www.tcgstacked.com/onepiece/card/{card_id}"
 DISAGREE_RATIO = 0.5
 
 
-def stacked_price(session: requests.Session, card_id: str) -> float | None:
-    """Second opinion from TCG Stacked. None if unavailable -- never fatal."""
+# Which TCG Stacked printing label corresponds to which Limitless variant.
+# A bare card-id URL on Stacked lands on whichever printing it defaults to --
+# sometimes the manga rare, sometimes a $2 reprint -- so comparing without
+# checking this flagged 70 of 161 cards as "disputed" when the sources were
+# simply describing different cards.
+PRINT_EQUIV = {
+    "manga rare": {"manga"},
+    "alt art": {"alternate art", "alt art", "aa"},
+    "special art": {"special art", "sp"},
+    "base": {"regular", "reprint", "base", "normal"},
+    "parallel": {"parallel"},
+}
+
+
+def stacked_quote(session: requests.Session, card_id: str) -> tuple[float, str] | None:
+    """(price, printing label) from TCG Stacked. None if unavailable."""
     try:
         r = session.get(STACKED.format(card_id=card_id),
                         headers={"User-Agent": UA}, timeout=25)
         if r.status_code != 200:
             return None
-        m = re.search(r'"market_price"\s*:\s*([0-9.]+)', r.text)
-        return float(m.group(1)) if m else None
+        price_m = re.search(r'"market_price"\s*:\s*([0-9.]+)', r.text)
+        if not price_m:
+            return None
+        # The page names its printing in the FAQ heading, e.g.
+        # "How much is Jewelry Bonney 118 Manga worth?"
+        label_m = re.search(r"How much is ([^?]+?) worth\?", r.text)
+        label = _unescape(label_m.group(1)).strip().lower() if label_m else ""
+        return float(price_m.group(1)), label
     except (requests.RequestException, ValueError):
         return None
+
+
+def _same_printing(variant: str, stacked_label: str) -> bool:
+    """Do the two sources describe the same printing?
+
+    Conservative: an unrecognised label counts as NOT comparable, so an
+    ambiguous match never produces a confident agree/disagree verdict.
+    """
+    if not stacked_label:
+        return False
+    words = set(re.findall(r"[a-z]+", stacked_label))
+    wanted = PRINT_EQUIV.get(variant, set())
+    if any(all(t in words for t in phrase.split()) for phrase in wanted):
+        return True
+    # A label naming a DIFFERENT printing is a definite mismatch.
+    for other, phrases in PRINT_EQUIV.items():
+        if other == variant and True:
+            continue
+        if any(all(t in words for t in phrase.split()) for phrase in phrases):
+            return False
+    return False
 
 
 @dataclass
@@ -76,7 +117,8 @@ class Printing:
     price: float
     url: str
     price2: float | None = None      # second source
-    agree: bool | None = None        # None = unverified, not "agrees"
+    agree: bool | None = None        # None = not comparable, NOT "agrees"
+    compared: str = ""               # what the second source was actually quoting
 
     def as_dict(self) -> dict:
         return {
@@ -87,6 +129,7 @@ class Printing:
             "price": round(self.price, 2),
             "price2": round(self.price2, 2) if self.price2 is not None else None,
             "agree": self.agree,
+            "compared": self.compared,
             "url": self.url,
         }
 
@@ -236,11 +279,19 @@ def top_chase(set_code: str, *, limit: int = 8, delay: float = 0.35) -> list[dic
     # a $1,866 OP-12 "chase" that was a prize card; a second opinion catches
     # that class of error even when the parse looks clean.
     for pr in top:
-        other = stacked_price(session, pr.card_id)
+        quote = stacked_quote(session, pr.card_id)
         time.sleep(delay)
-        if other is None or other <= 0:
+        if quote is None or quote[0] <= 0:
+            continue
+        other, label = quote
+        if not _same_printing(pr.variant, label):
+            # Same card number, different printing. Recording this as a
+            # disagreement would be a lie about what was compared.
+            pr.price2 = other
+            pr.compared = f"second source shows the {label or 'unknown'} printing"
             continue
         pr.price2 = other
+        pr.compared = label
         hi, lo = max(pr.price, other), min(pr.price, other)
         pr.agree = (lo / hi) >= DISAGREE_RATIO
 
