@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-12T01:47:33+00:00",
+  "updated_at": "2026-08-12T01:55:20+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -9042,29 +9042,29 @@
     }
   },
   "portfolio": {
-    "spent": 559.04,
+    "spent": 659.47,
     "planned": 210.0,
-    "committed": 769.04,
-    "position_committed": 109.75,
+    "committed": 869.47,
+    "position_committed": 9.32,
     "realised": 0,
     "unrealised_gross": 1016.26,
     "unrealised_net": 878.79,
-    "position_gross": 457.22,
-    "position_net": 319.75,
-    "roi_pct": 57.2,
+    "position_gross": 356.79,
+    "position_net": 219.32,
+    "roi_pct": 33.3,
     "fee_pct": 13.25,
     "by_category": {
-      "sealed": 404.0,
+      "sealed": 504.43,
       "grading": 126.47,
       "supplies": 28.57
     },
     "by_tag": {
       "op16": {
-        "spent": 364.61,
+        "spent": 465.04,
         "planned": 0.0,
         "realised": 0.0,
         "held": 80.8,
-        "net": -283.81
+        "net": -384.24
       },
       "supplies": {
         "spent": 28.57,
@@ -9223,6 +9223,14 @@
         "category": "sealed",
         "amount": 39.39,
         "tag": "op15",
+        "planned": false
+      },
+      {
+        "date": "2026-08-11",
+        "item": "OP-16 Time of Battle Packs (ebay: carolinas liquidation) X14",
+        "category": "sealed",
+        "amount": 100.43,
+        "tag": "op16",
         "planned": false
       }
     ],
