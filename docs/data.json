@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-11T23:35:49+00:00",
+  "updated_at": "2026-08-12T00:58:45+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -121,7 +121,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:38+00:00"
+      "checked_at": "2026-08-12T00:58:33+00:00"
     },
     "op16": {
       "history": [
@@ -200,6 +200,10 @@
         {
           "t": "2026-08-11T23:35:37+00:00",
           "price": 209.99
+        },
+        {
+          "t": "2026-08-12T00:58:33+00:00",
+          "price": 209.99
         }
       ],
       "name": "OP-16 The Time of Battle",
@@ -210,7 +214,7 @@
         "shipping": 0.0,
         "total": 209.99,
         "seller": "championcard.com",
-        "seller_score": 39481,
+        "seller_score": 39483,
         "seller_pct": 99.9,
         "top_rated": false,
         "trust": {
@@ -229,7 +233,7 @@
               "name": "Seller volume",
               "earned": 14.0,
               "possible": 14,
-              "detail": "39,481 completed sales",
+              "detail": "39,483 completed sales",
               "good": true
             },
             {
@@ -327,7 +331,7 @@
           }
         }
       },
-      "considered": 80,
+      "considered": 79,
       "relevant": 23,
       "verified": 8,
       "kept": 1,
@@ -446,7 +450,7 @@
           "shipping": 0.0,
           "total": 115.88,
           "seller": "dcfonew",
-          "seller_score": 3868,
+          "seller_score": 3869,
           "seller_pct": 99.5,
           "top_rated": false,
           "trust": {
@@ -467,7 +471,7 @@
                 "name": "Seller volume",
                 "earned": 12.6,
                 "possible": 14,
-                "detail": "3,868 completed sales",
+                "detail": "3,869 completed sales",
                 "good": true
               },
               {
@@ -660,7 +664,7 @@
           "shipping": 0.0,
           "total": 115.99,
           "seller": "dcfonew",
-          "seller_score": 3868,
+          "seller_score": 3869,
           "seller_pct": 99.5,
           "top_rated": false,
           "trust": {
@@ -681,7 +685,7 @@
                 "name": "Seller volume",
                 "earned": 12.6,
                 "possible": 14,
-                "detail": "3,868 completed sales",
+                "detail": "3,869 completed sales",
                 "good": true
               },
               {
@@ -1088,7 +1092,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:37+00:00",
+      "checked_at": "2026-08-12T00:58:33+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -1160,6 +1164,10 @@
         },
         {
           "t": "2026-08-11T23:35:32+00:00",
+          "price": 290.0
+        },
+        {
+          "t": "2026-08-12T00:58:27+00:00",
           "price": 290.0
         }
       ],
@@ -1276,15 +1284,15 @@
             "$12.08/pack, in line with the market",
             "estimated $4.83/pack in singles vs $12.08 paid (40% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 40 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $3,499.78 (Boa Hancock) \u2014 12.1x this box; 5 of 8 chases would cover it"
+            "top chase $721.13 (Dracule Mihawk) \u2014 2.5x this box; 2 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 12.1,
-            "chases_above": 5,
+            "upside": 2.5,
+            "chases_above": 2,
             "chase_count": 8,
-            "top_chase": 3499.78,
-            "top_chase_name": "Boa Hancock",
-            "profit_chance": 0.1875
+            "top_chase": 721.13,
+            "top_chase_name": "Dracule Mihawk",
+            "profit_chance": 0.075
           }
         }
       },
@@ -1407,7 +1415,7 @@
           "shipping": 0.0,
           "total": 204.94,
           "seller": "afk1001",
-          "seller_score": 2807,
+          "seller_score": 2808,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -1428,7 +1436,7 @@
                 "name": "Seller volume",
                 "earned": 12.1,
                 "possible": 14,
-                "detail": "2,807 completed sales",
+                "detail": "2,808 completed sales",
                 "good": true
               },
               {
@@ -1724,7 +1732,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:32+00:00",
+      "checked_at": "2026-08-12T00:58:27+00:00",
       "all_time_low": 202.78,
       "all_time_high": 290.0
     },
@@ -1739,7 +1747,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:12+00:00"
+      "checked_at": "2026-08-12T00:58:03+00:00"
     },
     "op17-packs": {
       "history": [],
@@ -1752,7 +1760,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:46+00:00"
+      "checked_at": "2026-08-12T00:58:41+00:00"
     },
     "op16-packs": {
       "history": [
@@ -1814,6 +1822,10 @@
         },
         {
           "t": "2026-08-11T23:35:49+00:00",
+          "price": 6.99
+        },
+        {
+          "t": "2026-08-12T00:58:45+00:00",
           "price": 6.99
         }
       ],
@@ -1943,7 +1955,7 @@
           }
         }
       },
-      "considered": 130,
+      "considered": 129,
       "relevant": 44,
       "verified": 8,
       "kept": 1,
@@ -2377,7 +2389,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:49+00:00",
+      "checked_at": "2026-08-12T00:58:45+00:00",
       "all_time_low": 6.99,
       "all_time_high": 6.99
     },
@@ -2397,6 +2409,10 @@
         },
         {
           "t": "2026-08-11T23:35:14+00:00",
+          "price": 549.99
+        },
+        {
+          "t": "2026-08-12T00:58:06+00:00",
           "price": 549.99
         }
       ],
@@ -2513,15 +2529,15 @@
             "$22.92/pack is 12% below the $26.04/pack baseline",
             "estimated $4.83/pack in singles vs $22.92 paid (21% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 21 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $2,200.00 (Edward.Newgate) \u2014 4.0x this box; 6 of 8 chases would cover it"
+            "top chase $2,050.00 (Portgas.D.Ace) \u2014 3.7x this box; 1 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 4.0,
-            "chases_above": 6,
+            "upside": 3.7,
+            "chases_above": 1,
             "chase_count": 8,
-            "top_chase": 2200.0,
-            "top_chase_name": "Edward.Newgate",
-            "profit_chance": 0.225
+            "top_chase": 2050.0,
+            "top_chase_name": "Portgas.D.Ace",
+            "profit_chance": 0.0375
           }
         }
       },
@@ -2749,7 +2765,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:14+00:00",
+      "checked_at": "2026-08-12T00:58:06+00:00",
       "all_time_low": 549.99,
       "all_time_high": 549.99
     },
@@ -2769,6 +2785,10 @@
         },
         {
           "t": "2026-08-11T23:35:15+00:00",
+          "price": 599.99
+        },
+        {
+          "t": "2026-08-12T00:58:07+00:00",
           "price": 599.99
         }
       ],
@@ -2885,15 +2905,15 @@
             "$25.00/pack, no verified alternative to compare against",
             "estimated $4.83/pack in singles vs $25.00 paid (19% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 19 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $999.99 (Marco) \u2014 1.7x this box; 4 of 8 chases would cover it"
+            "top chase $960.59 (Sogeking) \u2014 1.6x this box; 1 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 1.7,
-            "chases_above": 4,
+            "upside": 1.6,
+            "chases_above": 1,
             "chase_count": 8,
-            "top_chase": 999.99,
-            "top_chase_name": "Marco",
-            "profit_chance": 0.15
+            "top_chase": 960.59,
+            "top_chase_name": "Sogeking",
+            "profit_chance": 0.0375
           }
         }
       },
@@ -3012,7 +3032,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:15+00:00",
+      "checked_at": "2026-08-12T00:58:07+00:00",
       "all_time_low": 599.99,
       "all_time_high": 599.99
     },
@@ -3032,6 +3052,10 @@
         },
         {
           "t": "2026-08-11T23:35:17+00:00",
+          "price": 510.0
+        },
+        {
+          "t": "2026-08-12T00:58:09+00:00",
           "price": 510.0
         }
       ],
@@ -3602,7 +3626,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:17+00:00",
+      "checked_at": "2026-08-12T00:58:09+00:00",
       "all_time_low": 510.0,
       "all_time_high": 510.0
     },
@@ -3729,7 +3753,7 @@
           "shipping": 0.0,
           "total": 149.98,
           "seller": "pengsupply",
-          "seller_score": 254,
+          "seller_score": 255,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -3750,7 +3774,7 @@
                 "name": "Seller volume",
                 "earned": 8.4,
                 "possible": 14,
-                "detail": "254 completed sales",
+                "detail": "255 completed sales",
                 "good": true
               },
               {
@@ -3836,7 +3860,7 @@
           "shipping": 0.0,
           "total": 149.99,
           "seller": "sunnystore24",
-          "seller_score": 108,
+          "seller_score": 109,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -3857,7 +3881,7 @@
                 "name": "Seller volume",
                 "earned": 7.1,
                 "possible": 14,
-                "detail": "108 completed sales",
+                "detail": "109 completed sales",
                 "good": true
               },
               {
@@ -4155,7 +4179,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:19+00:00"
+      "checked_at": "2026-08-12T00:58:11+00:00"
     },
     "op06": {
       "history": [
@@ -4174,6 +4198,10 @@
         {
           "t": "2026-08-11T23:35:21+00:00",
           "price": 427.0
+        },
+        {
+          "t": "2026-08-12T00:58:13+00:00",
+          "price": 427.0
         }
       ],
       "name": "OP-06 Wings of the Captain",
@@ -4184,7 +4212,7 @@
         "shipping": 0.0,
         "total": 427.0,
         "seller": "stromata8",
-        "seller_score": 12585,
+        "seller_score": 12588,
         "seller_pct": 100.0,
         "top_rated": true,
         "trust": {
@@ -4203,7 +4231,7 @@
               "name": "Seller volume",
               "earned": 14.0,
               "possible": 14,
-              "detail": "12,585 completed sales",
+              "detail": "12,588 completed sales",
               "good": true
             },
             {
@@ -4289,15 +4317,15 @@
             "$17.79/pack is 7% below the $19.06/pack baseline",
             "estimated $4.83/pack in singles vs $17.79 paid (27% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 27 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $2,782.67 (Vinsmoke Reiju) \u2014 6.5x this box; 8 of 8 chases would cover it"
+            "top chase $2,490.00 (Roronoa Zoro) \u2014 5.8x this box; 1 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 6.5,
-            "chases_above": 8,
+            "upside": 5.8,
+            "chases_above": 1,
             "chase_count": 8,
-            "top_chase": 2782.67,
-            "top_chase_name": "Vinsmoke Reiju",
-            "profit_chance": 0.3
+            "top_chase": 2490.0,
+            "top_chase_name": "Roronoa Zoro",
+            "profit_chance": 0.0375
           }
         }
       },
@@ -4523,7 +4551,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:21+00:00",
+      "checked_at": "2026-08-12T00:58:13+00:00",
       "all_time_low": 427.0,
       "all_time_high": 427.0
     },
@@ -4543,6 +4571,10 @@
         },
         {
           "t": "2026-08-11T23:35:23+00:00",
+          "price": 399.99
+        },
+        {
+          "t": "2026-08-12T00:58:15+00:00",
           "price": 399.99
         }
       ],
@@ -4659,15 +4691,15 @@
             "$16.67/pack, in line with the market",
             "estimated $4.83/pack in singles vs $16.67 paid (29% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 29 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $9,950.00 (Portgas.D.Ace) \u2014 24.9x this box; 8 of 8 chases would cover it"
+            "top chase $2,168.35 (Boa Hancock) \u2014 5.4x this box; 1 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 24.9,
-            "chases_above": 8,
+            "upside": 5.4,
+            "chases_above": 1,
             "chase_count": 8,
-            "top_chase": 9950.0,
-            "top_chase_name": "Portgas.D.Ace",
-            "profit_chance": 0.3
+            "top_chase": 2168.35,
+            "top_chase_name": "Boa Hancock",
+            "profit_chance": 0.0375
           }
         }
       },
@@ -4998,7 +5030,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:23+00:00",
+      "checked_at": "2026-08-12T00:58:15+00:00",
       "all_time_low": 399.99,
       "all_time_high": 399.99
     },
@@ -5018,6 +5050,10 @@
         },
         {
           "t": "2026-08-11T23:35:25+00:00",
+          "price": 299.0
+        },
+        {
+          "t": "2026-08-12T00:58:18+00:00",
           "price": 299.0
         }
       ],
@@ -5134,15 +5170,15 @@
             "$12.46/pack, in line with the market",
             "estimated $4.83/pack in singles vs $12.46 paid (39% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 39 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $3,165.98 (Tony Tony.Chopper) \u2014 10.6x this box; 8 of 8 chases would cover it"
+            "top chase $591.20 (Silvers Rayleigh) \u2014 2.0x this box; 1 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 10.6,
-            "chases_above": 8,
+            "upside": 2.0,
+            "chases_above": 1,
             "chase_count": 8,
-            "top_chase": 3165.98,
-            "top_chase_name": "Tony Tony.Chopper",
-            "profit_chance": 0.3
+            "top_chase": 591.2,
+            "top_chase_name": "Silvers Rayleigh",
+            "profit_chance": 0.0375
           }
         }
       },
@@ -5477,7 +5513,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:25+00:00",
+      "checked_at": "2026-08-12T00:58:18+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -5492,7 +5528,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:25+00:00"
+      "checked_at": "2026-08-12T00:58:18+00:00"
     },
     "op10": {
       "history": [
@@ -5510,6 +5546,10 @@
         },
         {
           "t": "2026-08-11T23:35:26+00:00",
+          "price": 299.0
+        },
+        {
+          "t": "2026-08-12T00:58:20+00:00",
           "price": 299.0
         }
       ],
@@ -5626,15 +5666,15 @@
             "$12.46/pack is 19% below the $15.33/pack baseline",
             "estimated $4.83/pack in singles vs $12.46 paid (39% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 39 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $2,499.99 (Sanji) \u2014 8.4x this box; 2 of 8 chases would cover it"
+            "top chase $710.67 (Trafalgar Law) \u2014 2.4x this box; 1 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 8.4,
-            "chases_above": 2,
+            "upside": 2.4,
+            "chases_above": 1,
             "chase_count": 8,
-            "top_chase": 2499.99,
-            "top_chase_name": "Sanji",
-            "profit_chance": 0.075
+            "top_chase": 710.67,
+            "top_chase_name": "Trafalgar Law",
+            "profit_chance": 0.0375
           }
         }
       },
@@ -5753,7 +5793,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:26+00:00",
+      "checked_at": "2026-08-12T00:58:20+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -5878,7 +5918,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:27+00:00"
+      "checked_at": "2026-08-12T00:58:21+00:00"
     },
     "op12": {
       "history": [
@@ -5896,6 +5936,10 @@
         },
         {
           "t": "2026-08-11T23:35:29+00:00",
+          "price": 325.97
+        },
+        {
+          "t": "2026-08-12T00:58:23+00:00",
           "price": 325.97
         }
       ],
@@ -6012,15 +6056,15 @@
             "$13.58/pack is 21% below the $17.21/pack baseline",
             "estimated $4.83/pack in singles vs $13.58 paid (36% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 36 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $1,866.67 (Monkey.D.Luffy) \u2014 5.7x this box; 6 of 8 chases would cover it"
+            "top chase $810.52 (Jewelry Bonney) \u2014 2.5x this box; 1 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 5.7,
-            "chases_above": 6,
+            "upside": 2.5,
+            "chases_above": 1,
             "chase_count": 8,
-            "top_chase": 1866.67,
-            "top_chase_name": "Monkey.D.Luffy",
-            "profit_chance": 0.225
+            "top_chase": 810.52,
+            "top_chase_name": "Jewelry Bonney",
+            "profit_chance": 0.0375
           }
         }
       },
@@ -6036,7 +6080,7 @@
           "shipping": 0.0,
           "total": 269.99,
           "seller": "rods_apex_supply",
-          "seller_score": 182,
+          "seller_score": 183,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -6055,7 +6099,7 @@
                 "name": "Seller volume",
                 "earned": 7.9,
                 "possible": 14,
-                "detail": "182 completed sales",
+                "detail": "183 completed sales",
                 "good": true
               },
               {
@@ -6242,7 +6286,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:29+00:00",
+      "checked_at": "2026-08-12T00:58:23+00:00",
       "all_time_low": 325.97,
       "all_time_high": 325.97
     },
@@ -6262,6 +6306,10 @@
         },
         {
           "t": "2026-08-11T23:35:31+00:00",
+          "price": 568.0
+        },
+        {
+          "t": "2026-08-12T00:58:24+00:00",
           "price": 568.0
         }
       ],
@@ -6320,7 +6368,7 @@
               "name": "Price plausibility",
               "earned": 12,
               "possible": 12,
-              "detail": "in line with the $535.49 median",
+              "detail": "in line with the $545.98 median",
               "good": true
             },
             {
@@ -6368,31 +6416,31 @@
           ]
         },
         "purchase": {
-          "score": 46,
+          "score": 47,
           "dud_chance": 0.88,
           "cost_per_pack": 23.67,
-          "baseline_cost_per_pack": 22.31,
+          "baseline_cost_per_pack": 22.75,
           "ev_per_pack": 4.83,
           "verdict": "POOR",
           "notes": [
-            "$23.67/pack is 6% above the $22.31/pack baseline for this set",
+            "$23.67/pack, in line with the market",
             "estimated $4.83/pack in singles vs $23.67 paid (20% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 20 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $19,999.00 (Monkey.D.Luffy) \u2014 35.2x this box; 5 of 8 chases would cover it"
+            "top chase $19,999.00 (Monkey.D.Luffy) \u2014 35.2x this box; 3 of 8 chases would cover it"
           ],
           "profit": {
             "upside": 35.2,
-            "chases_above": 5,
+            "chases_above": 3,
             "chase_count": 8,
             "top_chase": 19999.0,
             "top_chase_name": "Monkey.D.Luffy",
-            "profit_chance": 0.1875
+            "profit_chance": 0.1125
           }
         }
       },
-      "considered": 28,
-      "relevant": 4,
-      "verified": 4,
+      "considered": 27,
+      "relevant": 3,
+      "verified": 3,
       "kept": 1,
       "rejected": [
         {
@@ -6402,13 +6450,13 @@
           "shipping": 8.0,
           "total": 95.99,
           "seller": "coolcollectionllc",
-          "seller_score": 71,
+          "seller_score": 72,
           "seller_pct": 98.6,
           "top_rated": false,
           "trust": {
             "score": 59,
             "vetoes": [
-              "seller has 71 sales, below the 100 minimum"
+              "seller has 72 sales, below the 100 minimum"
             ],
             "verified": true,
             "signals": [
@@ -6423,7 +6471,7 @@
                 "name": "Seller volume",
                 "earned": 6.5,
                 "possible": 14,
-                "detail": "71 completed sales",
+                "detail": "72 completed sales",
                 "good": true
               },
               {
@@ -6451,7 +6499,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$95.99 is 82% under the $535.49 median",
+                "detail": "$95.99 is 82% under the $545.98 median",
                 "good": false
               },
               {
@@ -6499,116 +6547,7 @@
             ]
           },
           "why": [
-            "seller has 71 sales, below the 100 minimum"
-          ]
-        },
-        {
-          "title": "Bandai One Piece Card Game OP-13 Carrying On His Will English Booster Box 288",
-          "url": "https://www.ebay.com/itm/227472145037?_skw=One+Piece+Card+Game+OP-13+Booster+Box&hash=item34f6657a8d:g:ShgAAeSwd3dqe6U6",
-          "price": 525.0,
-          "shipping": 0.0,
-          "total": 525.0,
-          "seller": "reeper-02",
-          "seller_score": 31,
-          "seller_pct": 96.2,
-          "top_rated": false,
-          "trust": {
-            "score": 57,
-            "vetoes": [
-              "seller has 31 sales, below the 100 minimum",
-              "seller rated 96.2%, below the 98.0% minimum"
-            ],
-            "verified": true,
-            "signals": [
-              {
-                "name": "Language verified",
-                "earned": 18,
-                "possible": 18,
-                "detail": "item specifics: English",
-                "good": true
-              },
-              {
-                "name": "Seller volume",
-                "earned": 5.3,
-                "possible": 14,
-                "detail": "31 completed sales",
-                "good": true
-              },
-              {
-                "name": "Seller rating",
-                "earned": 0.0,
-                "possible": 14,
-                "detail": "96.2% positive",
-                "good": true
-              },
-              {
-                "name": "Returns",
-                "earned": 0,
-                "possible": 12,
-                "detail": "not accepted",
-                "good": false
-              },
-              {
-                "name": "Top Rated Seller",
-                "earned": 0,
-                "possible": 10,
-                "detail": "not Top Rated (bonus only)",
-                "good": false
-              },
-              {
-                "name": "Price plausibility",
-                "earned": 12,
-                "possible": 12,
-                "detail": "in line with the $535.49 median",
-                "good": true
-              },
-              {
-                "name": "Item specifics",
-                "earned": 4.0,
-                "possible": 8,
-                "detail": "set matches",
-                "good": true
-              },
-              {
-                "name": "eBay category",
-                "earned": 6,
-                "possible": 6,
-                "detail": "listed under trading cards",
-                "good": true
-              },
-              {
-                "name": "Stock level",
-                "earned": 3,
-                "possible": 3,
-                "detail": "1 in stock",
-                "good": true
-              },
-              {
-                "name": "eBay programmes",
-                "earned": 0,
-                "possible": 5,
-                "detail": "none (bonus only)",
-                "good": false
-              },
-              {
-                "name": "Description",
-                "earned": 4,
-                "possible": 4,
-                "detail": "no warning phrases",
-                "good": true
-              },
-              {
-                "name": "Your trusted list",
-                "earned": 0,
-                "possible": 8,
-                "detail": "not on your trusted list (bonus only)",
-                "good": false
-              }
-            ]
-          },
-          "why": [
-            "seller has 31 sales, below the 100 minimum",
-            "seller rated 96.2%, below the 98.0% minimum"
+            "seller has 72 sales, below the 100 minimum"
           ]
         },
         {
@@ -6668,7 +6607,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $535.49 median",
+                "detail": "in line with the $545.98 median",
                 "good": true
               },
               {
@@ -6723,7 +6662,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:31+00:00",
+      "checked_at": "2026-08-12T00:58:24+00:00",
       "all_time_low": 568.0,
       "all_time_high": 568.0
     },
@@ -6743,6 +6682,10 @@
         },
         {
           "t": "2026-08-11T23:35:34+00:00",
+          "price": 399.99
+        },
+        {
+          "t": "2026-08-12T00:58:29+00:00",
           "price": 399.99
         }
       ],
@@ -7206,7 +7149,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:34+00:00",
+      "checked_at": "2026-08-12T00:58:29+00:00",
       "all_time_low": 399.99,
       "all_time_high": 399.99
     },
@@ -7226,6 +7169,10 @@
         },
         {
           "t": "2026-08-11T23:35:39+00:00",
+          "price": 390.0
+        },
+        {
+          "t": "2026-08-12T00:58:35+00:00",
           "price": 390.0
         }
       ],
@@ -7342,15 +7289,15 @@
             "$16.25/pack is 95% above the $8.33/pack baseline for this set",
             "estimated $4.83/pack in singles vs $16.25 paid (30% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 30 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $3,250.00 (Tony Tony.Chopper) \u2014 8.3x this box; 4 of 8 chases would cover it"
+            "top chase $3,250.00 (Tony Tony.Chopper) \u2014 8.3x this box; 1 of 8 chases would cover it"
           ],
           "profit": {
             "upside": 8.3,
-            "chases_above": 4,
+            "chases_above": 1,
             "chase_count": 8,
             "top_chase": 3250.0,
             "top_chase_name": "Tony Tony.Chopper",
-            "profit_chance": 0.15
+            "profit_chance": 0.0375
           }
         }
       },
@@ -7578,7 +7525,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:39+00:00",
+      "checked_at": "2026-08-12T00:58:35+00:00",
       "all_time_low": 390.0,
       "all_time_high": 390.0
     },
@@ -7921,7 +7868,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:41+00:00"
+      "checked_at": "2026-08-12T00:58:36+00:00"
     },
     "eb03": {
       "history": [],
@@ -8042,7 +7989,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:41+00:00"
+      "checked_at": "2026-08-12T00:58:37+00:00"
     },
     "prb01": {
       "history": [],
@@ -8270,7 +8217,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:42+00:00"
+      "checked_at": "2026-08-12T00:58:38+00:00"
     },
     "prb02": {
       "history": [
@@ -8289,6 +8236,10 @@
         {
           "t": "2026-08-11T23:35:46+00:00",
           "price": 399.95
+        },
+        {
+          "t": "2026-08-12T00:58:41+00:00",
+          "price": 399.95
         }
       ],
       "name": "PRB-02 One Piece Card The Best Vol.2",
@@ -8299,7 +8250,7 @@
         "shipping": 0.0,
         "total": 399.95,
         "seller": "card-colosseum",
-        "seller_score": 4747,
+        "seller_score": 4748,
         "seller_pct": 99.7,
         "top_rated": false,
         "trust": {
@@ -8318,7 +8269,7 @@
               "name": "Seller volume",
               "earned": 12.9,
               "possible": 14,
-              "detail": "4,747 completed sales",
+              "detail": "4,748 completed sales",
               "good": true
             },
             {
@@ -8404,15 +8355,15 @@
             "$16.66/pack is 60% above the $10.43/pack baseline for this set",
             "estimated $4.83/pack in singles vs $16.66 paid (29% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 29 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $8,898.99 (Monkey.D.Luffy) \u2014 22.3x this box; 2 of 8 chases would cover it"
+            "top chase $104.46 (Marco) \u2014 0.3x this box; 0 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 22.3,
-            "chases_above": 2,
+            "upside": 0.3,
+            "chases_above": 0,
             "chase_count": 8,
-            "top_chase": 8898.99,
-            "top_chase_name": "Monkey.D.Luffy",
-            "profit_chance": 0.075
+            "top_chase": 104.46,
+            "top_chase_name": "Marco",
+            "profit_chance": 0.0
           }
         }
       },
@@ -8749,7 +8700,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-11T23:35:46+00:00",
+      "checked_at": "2026-08-12T00:58:41+00:00",
       "all_time_low": 399.95,
       "all_time_high": 399.95
     }
