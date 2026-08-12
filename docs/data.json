@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-12T19:23:18+00:00",
+  "updated_at": "2026-08-12T19:24:25+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -121,7 +121,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:23:07+00:00"
+      "checked_at": "2026-08-12T19:24:16+00:00"
     },
     "op16": {
       "history": [
@@ -252,6 +252,10 @@
         {
           "t": "2026-08-12T19:23:06+00:00",
           "price": 209.99
+        },
+        {
+          "t": "2026-08-12T19:24:16+00:00",
+          "price": 209.99
         }
       ],
       "name": "OP-16 The Time of Battle",
@@ -379,7 +383,7 @@
           }
         }
       },
-      "considered": 82,
+      "considered": 81,
       "relevant": 23,
       "verified": 8,
       "kept": 1,
@@ -1138,7 +1142,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:23:06+00:00",
+      "checked_at": "2026-08-12T19:24:16+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -1262,6 +1266,10 @@
         },
         {
           "t": "2026-08-12T19:23:01+00:00",
+          "price": 290.0
+        },
+        {
+          "t": "2026-08-12T19:24:12+00:00",
           "price": 290.0
         }
       ],
@@ -1826,7 +1834,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:23:01+00:00",
+      "checked_at": "2026-08-12T19:24:12+00:00",
       "all_time_low": 202.78,
       "all_time_high": 290.0
     },
@@ -1841,7 +1849,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:35+00:00"
+      "checked_at": "2026-08-12T19:23:51+00:00"
     },
     "op17-packs": {
       "history": [],
@@ -1854,7 +1862,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:23:14+00:00"
+      "checked_at": "2026-08-12T19:24:22+00:00"
     },
     "op16-packs": {
       "history": [
@@ -1969,6 +1977,10 @@
         {
           "t": "2026-08-12T19:23:18+00:00",
           "price": 8.99
+        },
+        {
+          "t": "2026-08-12T19:24:25+00:00",
+          "price": 8.99
         }
       ],
       "name": "OP-16 loose packs",
@@ -2026,7 +2038,7 @@
               "name": "Price plausibility",
               "earned": 0,
               "possible": 12,
-              "detail": "$8.99 is 51% under the $18.47 median",
+              "detail": "$8.99 is 52% under the $18.91 median",
               "good": false
             },
             {
@@ -2077,11 +2089,11 @@
           "score": 84,
           "dud_chance": 0.995,
           "cost_per_pack": 8.99,
-          "baseline_cost_per_pack": 18.47,
+          "baseline_cost_per_pack": 18.91,
           "ev_per_pack": 4.83,
           "verdict": "STRONG BUY",
           "notes": [
-            "$8.99/pack is 51% below the $18.47/pack baseline",
+            "$8.99/pack is 52% below the $18.91/pack baseline",
             "estimated $4.83/pack in singles vs $8.99 paid (54% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 54 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
             "Loose packs almost always cost more per pack than a box of the same set. Compare against the box before buying.",
@@ -2097,8 +2109,8 @@
           }
         }
       },
-      "considered": 133,
-      "relevant": 43,
+      "considered": 134,
+      "relevant": 44,
       "verified": 8,
       "kept": 1,
       "rejected": [
@@ -2156,7 +2168,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$9.29 is 50% under the $18.47 median",
+                "detail": "$9.29 is 51% under the $18.91 median",
                 "good": false
               },
               {
@@ -2263,7 +2275,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$9.69 is 48% under the $18.47 median",
+                "detail": "$9.69 is 49% under the $18.91 median",
                 "good": false
               },
               {
@@ -2368,7 +2380,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$9.78 is 47% under the $18.47 median",
+                "detail": "$9.78 is 48% under the $18.91 median",
                 "good": false
               },
               {
@@ -2473,7 +2485,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$9.99 is 46% under the $18.47 median",
+                "detail": "$9.99 is 47% under the $18.91 median",
                 "good": false
               },
               {
@@ -2578,7 +2590,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$10.45 is 43% under the $18.47 median",
+                "detail": "$10.45 is 45% under the $18.91 median",
                 "good": false
               },
               {
@@ -2683,7 +2695,7 @@
                 "name": "Price plausibility",
                 "earned": 6,
                 "possible": 12,
-                "detail": "$12.24 is well under the $18.47 median \u2014 verify carefully",
+                "detail": "$12.24 is well under the $18.91 median \u2014 verify carefully",
                 "good": false
               },
               {
@@ -2788,7 +2800,7 @@
                 "name": "Price plausibility",
                 "earned": 6,
                 "possible": 12,
-                "detail": "$12.49 is well under the $18.47 median \u2014 verify carefully",
+                "detail": "$12.49 is well under the $18.91 median \u2014 verify carefully",
                 "good": false
               },
               {
@@ -2842,7 +2854,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:23:18+00:00",
+      "checked_at": "2026-08-12T19:24:25+00:00",
       "all_time_low": 6.99,
       "all_time_high": 8.99
     },
@@ -2914,6 +2926,10 @@
         },
         {
           "t": "2026-08-12T19:22:39+00:00",
+          "price": 549.99
+        },
+        {
+          "t": "2026-08-12T19:23:53+00:00",
           "price": 549.99
         }
       ],
@@ -3268,7 +3284,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:39+00:00",
+      "checked_at": "2026-08-12T19:23:53+00:00",
       "all_time_low": 549.99,
       "all_time_high": 549.99
     },
@@ -3340,6 +3356,10 @@
         },
         {
           "t": "2026-08-12T19:22:40+00:00",
+          "price": 606.79
+        },
+        {
+          "t": "2026-08-12T19:23:54+00:00",
           "price": 606.79
         }
       ],
@@ -3583,7 +3603,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:40+00:00",
+      "checked_at": "2026-08-12T19:23:54+00:00",
       "all_time_low": 599.99,
       "all_time_high": 606.79
     },
@@ -3656,6 +3676,10 @@
         {
           "t": "2026-08-12T19:22:43+00:00",
           "price": 510.0
+        },
+        {
+          "t": "2026-08-12T19:23:56+00:00",
+          "price": 510.0
         }
       ],
       "name": "OP-04 Kingdoms of Intrigue",
@@ -3666,7 +3690,7 @@
         "shipping": 0.0,
         "total": 510.0,
         "seller": "thegamerslair8",
-        "seller_score": 117,
+        "seller_score": 118,
         "seller_pct": 100.0,
         "top_rated": false,
         "trust": {
@@ -3685,7 +3709,7 @@
               "name": "Seller volume",
               "earned": 7.3,
               "possible": 14,
-              "detail": "117 completed sales",
+              "detail": "118 completed sales",
               "good": true
             },
             {
@@ -4227,7 +4251,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:43+00:00",
+      "checked_at": "2026-08-12T19:23:56+00:00",
       "all_time_low": 510.0,
       "all_time_high": 510.0
     },
@@ -4671,7 +4695,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:45+00:00"
+      "checked_at": "2026-08-12T19:23:57+00:00"
     },
     "op06": {
       "history": [
@@ -4741,6 +4765,10 @@
         },
         {
           "t": "2026-08-12T19:22:46+00:00",
+          "price": 427.0
+        },
+        {
+          "t": "2026-08-12T19:23:59+00:00",
           "price": 427.0
         }
       ],
@@ -5091,7 +5119,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:46+00:00",
+      "checked_at": "2026-08-12T19:23:59+00:00",
       "all_time_low": 427.0,
       "all_time_high": 427.0
     },
@@ -5163,6 +5191,10 @@
         },
         {
           "t": "2026-08-12T19:22:48+00:00",
+          "price": 406.79
+        },
+        {
+          "t": "2026-08-12T19:24:01+00:00",
           "price": 406.79
         }
       ],
@@ -5618,7 +5650,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:48+00:00",
+      "checked_at": "2026-08-12T19:24:01+00:00",
       "all_time_low": 399.99,
       "all_time_high": 406.79
     },
@@ -5690,6 +5722,10 @@
         },
         {
           "t": "2026-08-12T19:22:51+00:00",
+          "price": 299.0
+        },
+        {
+          "t": "2026-08-12T19:24:03+00:00",
           "price": 299.0
         }
       ],
@@ -6149,7 +6185,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:51+00:00",
+      "checked_at": "2026-08-12T19:24:03+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -6164,7 +6200,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:51+00:00"
+      "checked_at": "2026-08-12T19:24:04+00:00"
     },
     "op10": {
       "history": [
@@ -6234,6 +6270,10 @@
         },
         {
           "t": "2026-08-12T19:22:53+00:00",
+          "price": 299.0
+        },
+        {
+          "t": "2026-08-12T19:24:05+00:00",
           "price": 299.0
         }
       ],
@@ -6477,7 +6517,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:53+00:00",
+      "checked_at": "2026-08-12T19:24:05+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -6709,7 +6749,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:54+00:00"
+      "checked_at": "2026-08-12T19:24:06+00:00"
     },
     "op12": {
       "history": [
@@ -6779,6 +6819,10 @@
         },
         {
           "t": "2026-08-12T19:22:56+00:00",
+          "price": 340.07
+        },
+        {
+          "t": "2026-08-12T19:24:08+00:00",
           "price": 340.07
         }
       ],
@@ -7125,7 +7169,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:56+00:00",
+      "checked_at": "2026-08-12T19:24:08+00:00",
       "all_time_low": 325.97,
       "all_time_high": 340.07
     },
@@ -7197,6 +7241,10 @@
         },
         {
           "t": "2026-08-12T19:22:58+00:00",
+          "price": 568.0
+        },
+        {
+          "t": "2026-08-12T19:24:10+00:00",
           "price": 568.0
         }
       ],
@@ -7765,7 +7813,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:22:58+00:00",
+      "checked_at": "2026-08-12T19:24:10+00:00",
       "all_time_low": 568.0,
       "all_time_high": 568.0
     },
@@ -7837,6 +7885,10 @@
         },
         {
           "t": "2026-08-12T19:23:02+00:00",
+          "price": 399.99
+        },
+        {
+          "t": "2026-08-12T19:24:13+00:00",
           "price": 399.99
         }
       ],
@@ -8191,7 +8243,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:23:02+00:00",
+      "checked_at": "2026-08-12T19:24:13+00:00",
       "all_time_low": 399.99,
       "all_time_high": 399.99
     },
@@ -8263,6 +8315,10 @@
         },
         {
           "t": "2026-08-12T19:23:08+00:00",
+          "price": 403.0
+        },
+        {
+          "t": "2026-08-12T19:24:17+00:00",
           "price": 403.0
         }
       ],
@@ -8615,7 +8671,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:23:08+00:00",
+      "checked_at": "2026-08-12T19:24:17+00:00",
       "all_time_low": 390.0,
       "all_time_high": 403.0
     },
@@ -8849,7 +8905,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:23:09+00:00"
+      "checked_at": "2026-08-12T19:24:18+00:00"
     },
     "eb03": {
       "history": [],
@@ -8862,7 +8918,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:23:10+00:00"
+      "checked_at": "2026-08-12T19:24:19+00:00"
     },
     "prb01": {
       "history": [],
@@ -9090,7 +9146,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:23:11+00:00"
+      "checked_at": "2026-08-12T19:24:20+00:00"
     },
     "prb02": {
       "history": [
@@ -9160,6 +9216,10 @@
         },
         {
           "t": "2026-08-12T19:23:14+00:00",
+          "price": 399.95
+        },
+        {
+          "t": "2026-08-12T19:24:22+00:00",
           "price": 399.95
         }
       ],
@@ -9621,7 +9681,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-12T19:23:14+00:00",
+      "checked_at": "2026-08-12T19:24:22+00:00",
       "all_time_low": 399.95,
       "all_time_high": 399.95
     }
