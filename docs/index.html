@@ -126,6 +126,8 @@
   .chase .cn { color:var(--muted); font:600 .72rem ui-monospace,Menlo,monospace; white-space:nowrap; }
   .chase .vr { color:var(--muted); font-size:.7rem; }
   .chase .cp { text-align:right; font:650 .76rem ui-monospace,Menlo,monospace; white-space:nowrap; }
+  .chase .flag { color:var(--warn); font-size:.68rem; display:block; }
+  .chase .ok2 { color:var(--muted); font-size:.68rem; }
 
   .chart { margin-top:.9rem; }
   .chart h3 { font-size:.78rem; margin:0 0 .1rem; color:var(--ink); font-weight:650; }
@@ -397,12 +399,25 @@ function applyView(data) {
 function chaseBlock(id) {
   const set = (CHASE.sets || {})[id];
   if (!set || !set.cards || !set.cards.length) return '';
-  const rows = set.cards.map(c => `<tr>
+  // agree === null means unverified, which is different from "agrees".
+  const rows = set.cards.map(c => {
+    let note = '';
+    if (c.agree === false) {
+      note = `<span class="flag">sources disagree — second source says ${money(c.price2)}</span>`;
+    } else if (c.agree === true) {
+      note = `<span class="ok2">confirmed ${money(c.price2)}</span>`;
+    } else {
+      note = `<span class="ok2">single source</span>`;
+    }
+    return `<tr>
       <td class="cn">${esc(c.card_id)}</td>
-      <td>${esc(c.name)} <span class="vr">${esc(c.variant)}</span></td>
-      <td class="cp">${money(c.price)}</td></tr>`).join('');
+      <td>${esc(c.name)} <span class="vr">${esc(c.variant)}</span>${note}</td>
+      <td class="cp">${money(c.price)}</td></tr>`;
+  }).join('');
+  const bad = set.cards.filter(c => c.agree === false).length;
+  const warn = bad ? ` · ${bad} disputed` : '';
   return `<details class="chase"><summary>Top ${set.cards.length} chase cards —
-    best ${money(set.cards[0].price)}</summary><table>${rows}</table></details>`;
+    best ${money(set.cards[0].price)}${warn}</summary><table>${rows}</table></details>`;
 }
 
 function card(id, p) {

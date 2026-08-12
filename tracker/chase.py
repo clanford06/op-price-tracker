@@ -45,6 +45,28 @@ VARIANT_NAMES = {
 }
 
 
+STACKED = "https://www.tcgstacked.com/onepiece/card/{card_id}"
+
+# How far two sources may disagree before the price is treated as unconfirmed.
+# Sources sample different marketplaces, so some spread is normal; a doubling
+# is not, and that is roughly the size of the error that put a $1,866 prize
+# card into OP-12's chase list.
+DISAGREE_RATIO = 0.5
+
+
+def stacked_price(session: requests.Session, card_id: str) -> float | None:
+    """Second opinion from TCG Stacked. None if unavailable -- never fatal."""
+    try:
+        r = session.get(STACKED.format(card_id=card_id),
+                        headers={"User-Agent": UA}, timeout=25)
+        if r.status_code != 200:
+            return None
+        m = re.search(r'"market_price"\s*:\s*([0-9.]+)', r.text)
+        return float(m.group(1)) if m else None
+    except (requests.RequestException, ValueError):
+        return None
+
+
 @dataclass
 class Printing:
     card_id: str
@@ -53,6 +75,8 @@ class Printing:
     variant: str
     price: float
     url: str
+    price2: float | None = None      # second source
+    agree: bool | None = None        # None = unverified, not "agrees"
 
     def as_dict(self) -> dict:
         return {
@@ -61,6 +85,8 @@ class Printing:
             "rarity": self.rarity,
             "variant": self.variant,
             "price": round(self.price, 2),
+            "price2": round(self.price2, 2) if self.price2 is not None else None,
+            "agree": self.agree,
             "url": self.url,
         }
 
@@ -81,6 +107,20 @@ def _unescape(text: str) -> str:
     import html as _h
 
     return _h.unescape(text)
+
+
+def set_title(session: requests.Session, set_code: str) -> str:
+    """The set's display name, e.g. 'Legacy of the Master'.
+
+    Needed because a card page's prints table lists every printing of that card
+    across ALL sets -- Prize Cards, promos, cross-set reprints -- and those
+    prices must not be attributed to a box you can buy.
+    """
+    html = _get(session, f"/cards/{set_code}")
+    if not html:
+        return ""
+    m = re.search(r"<title>\s*(.*?)\s*\(" + re.escape(set_code) + r"\)", html)
+    return _unescape(m.group(1)).strip() if m else ""
 
 
 def set_cards(session: requests.Session, set_code: str) -> list[tuple[str, str, str, float]]:
@@ -107,8 +147,16 @@ def set_cards(session: requests.Session, set_code: str) -> list[tuple[str, str, 
     return out
 
 
-def card_printings(session: requests.Session, card_id: str, name: str, rarity: str) -> list[Printing]:
-    """Every printing of one card, from its prints table."""
+def card_printings(
+    session: requests.Session, card_id: str, name: str, rarity: str, set_name: str
+) -> list[Printing]:
+    """Printings of this card FROM THIS SET only.
+
+    The prints table also carries Prize Cards, promos and other sets' versions.
+    Counting those produced a $1,866 'OP-12 chase' that was actually a prize
+    card -- the real OP-12 alternate art was $24.55. Anything not from
+    `set_name` is discarded.
+    """
     html = _get(session, f"/cards/{card_id}")
     if not html:
         return []
@@ -119,7 +167,11 @@ def card_printings(session: requests.Session, card_id: str, name: str, rarity: s
             continue
         label_m = re.search(r'prints-table-card-number">([^<]*)</span>', row)
         price_m = re.search(r'card-price usd[^>]*>\$([0-9,]+\.[0-9]{2})</a>', row)
+        set_m = re.search(r"<td>\s*<a[^>]*>\s*([^<]+?)\s*<span", row)
         if not price_m:
+            continue
+        row_set = _unescape(set_m.group(1)).strip() if set_m else ""
+        if set_name and row_set and row_set.lower() != set_name.lower():
             continue
         label = (label_m.group(1).strip().lower() if label_m else "")
         printings.append(
@@ -141,6 +193,7 @@ def top_chase(set_code: str, *, limit: int = 8, delay: float = 0.35) -> list[dic
     cards = set_cards(session, set_code)
     if not cards:
         return []
+    set_name = set_title(session, set_code)
 
     # Leaders and Secret Rares are ALWAYS checked, whatever their base price.
     # Selecting purely on base price missed OP16-022 (Luffy Leader): base
@@ -159,7 +212,7 @@ def top_chase(set_code: str, *, limit: int = 8, delay: float = 0.35) -> list[dic
 
     everything: list[Printing] = []
     for cid, name, rarity, base_price in candidates:
-        got = card_printings(session, cid, name, rarity)
+        got = card_printings(session, cid, name, rarity, set_name)
         # If the card page will not load, keep the base row rather than
         # silently dropping a card that might be the set's chase.
         everything.extend(got or [Printing(cid, name, rarity, "base", base_price,
@@ -179,4 +232,16 @@ def top_chase(set_code: str, *, limit: int = 8, delay: float = 0.35) -> list[dic
         top.append(p)
         if len(top) >= limit:
             break
+    # Cross-check each chase against a second source. Limitless alone reported
+    # a $1,866 OP-12 "chase" that was a prize card; a second opinion catches
+    # that class of error even when the parse looks clean.
+    for pr in top:
+        other = stacked_price(session, pr.card_id)
+        time.sleep(delay)
+        if other is None or other <= 0:
+            continue
+        pr.price2 = other
+        hi, lo = max(pr.price, other), min(pr.price, other)
+        pr.agree = (lo / hi) >= DISAGREE_RATIO
+
     return [p.as_dict() for p in top]
