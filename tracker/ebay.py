@@ -78,6 +78,7 @@ class Listing:
     seller_name: str
     seller_score: int
     seller_pct: float
+    shipping_known: bool = True
     top_rated: bool = False
     programs: list[str] = field(default_factory=list)
     location_country: str | None = None
@@ -89,9 +90,15 @@ class Listing:
         """Delivered cost. A $60 box with $25 shipping is not a $60 box."""
         return round(self.price + self.shipping, 2)
 
+    @property
+    def total_is_real(self) -> bool:
+        """False when shipping was never reported, so `total` is a floor only."""
+        return self.shipping_known
+
 
 class EbayClient:
-    def __init__(self, client_id: str, client_secret: str, marketplace: str = "EBAY_US"):
+    def __init__(self, client_id: str, client_secret: str, marketplace: str = "EBAY_US",
+                 postal_code: str = ""):
         if not client_id or not client_secret:
             raise EbayError(
                 "Missing eBay credentials. Set EBAY_CLIENT_ID and EBAY_CLIENT_SECRET "
@@ -100,6 +107,11 @@ class EbayClient:
         self._id = client_id
         self._secret = client_secret
         self._marketplace = marketplace
+        # eBay only calculates shipping when it knows where it is shipping TO.
+        # Without a postcode the API omits shippingOptions entirely, which this
+        # client used to read as "free" -- making every listing look cheaper
+        # than it delivers for.
+        self._postal_code = postal_code
         self._token: str | None = None
         self._token_expires_at = 0.0
         self._session = requests.Session()
@@ -134,7 +146,10 @@ class EbayClient:
         return {
             "Authorization": f"Bearer {self._get_token()}",
             "X-EBAY-C-MARKETPLACE-ID": self._marketplace,
-            "X-EBAY-C-ENDUSERCTX": "affiliateCampaignId=,contextualLocation=country%3DUS",
+            "X-EBAY-C-ENDUSERCTX": (
+                "affiliateCampaignId=,contextualLocation=country%3DUS"
+                + (f"%2Czip%3D{self._postal_code}" if self._postal_code else "")
+            ),
         }
 
     # -- search -------------------------------------------------------------
@@ -254,7 +269,8 @@ def _parse_items(raw_items: list[dict[str, Any]]) -> Iterator[Listing]:
             title=item.get("title", ""),
             url=item.get("itemWebUrl", ""),
             price=price,
-            shipping=_shipping_cost(item),
+            shipping=_shipping_cost(item)[0],
+            shipping_known=_shipping_cost(item)[1],
             currency=(item.get("price") or {}).get("currency", "USD"),
             condition=item.get("condition", "") or "",
             seller_name=seller.get("username", "") or "",
@@ -280,12 +296,24 @@ def _money(node: Any) -> float | None:
         return None
 
 
-def _shipping_cost(item: dict[str, Any]) -> float:
-    """Cheapest advertised shipping. Unknown shipping is treated as free.
+def _shipping_cost(item: dict[str, Any]) -> tuple[float, bool]:
+    """(cheapest advertised shipping, whether it was actually reported).
 
-    Deliberately optimistic: it can make a listing look cheaper than it
-    delivers for, so the dashboard always links out to the real listing.
+    Returning 0.0 for "not reported" was a real bug: a pack listed at $6.29
+    with $4.39 shipping showed as $6.29 delivered and looked like the cheapest
+    on the board. Callers must check the flag rather than trust the number.
     """
     options = item.get("shippingOptions") or []
-    costs = [c for c in (_money(o.get("shippingCost")) for o in options) if c is not None]
-    return min(costs) if costs else 0.0
+    if not options:
+        return 0.0, False
+
+    # Free local pickup is not free delivery.
+    costs = [
+        c for c in (_money(o.get("shippingCost")) for o in options) if c is not None
+    ]
+    if not costs:
+        # An option exists but carries no price -- calculated at checkout.
+        if any((o.get("shippingCostType") or "").upper() == "CALCULATED" for o in options):
+            return 0.0, False
+        return 0.0, False
+    return min(costs), True

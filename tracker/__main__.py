@@ -84,6 +84,7 @@ def policy_for(product: Product) -> TrustPolicy:
         require_returns=product.require_returns,
         require_us_location=product.require_us_location,
         require_verified_detail=product.require_verified_detail,
+        require_known_shipping=product.require_known_shipping,
         max_quantity=product.max_quantity,
         blocked_sellers=tuple(product.blocked_sellers),
         trusted_sellers=tuple(product.trusted_sellers),
@@ -243,7 +244,8 @@ def main(argv: list[str] | None = None) -> int:
             return 2
 
     try:
-        client = EbayClient(settings.ebay_client_id, settings.ebay_client_secret)
+        client = EbayClient(settings.ebay_client_id, settings.ebay_client_secret,
+                            postal_code=settings.postal_code)
     except EbayError as exc:
         print(f"{exc}", file=sys.stderr)
         return 2

@@ -35,6 +35,7 @@ class Product:
     require_returns: bool = True
     require_us_location: bool = True
     require_verified_detail: bool = True
+    require_known_shipping: bool = True
     max_quantity: int = 12
     verify_top_n: int = 8
     # Purchase scoring
@@ -53,6 +54,7 @@ class Product:
 class Settings:
     ebay_client_id: str
     ebay_client_secret: str
+    postal_code: str
     ntfy_topic: str
     ntfy_server: str
     alert_on_new_low: bool
@@ -62,6 +64,7 @@ def load_settings() -> Settings:
     return Settings(
         ebay_client_id=os.environ.get("EBAY_CLIENT_ID", "").strip(),
         ebay_client_secret=os.environ.get("EBAY_CLIENT_SECRET", "").strip(),
+        postal_code=os.environ.get("SHIP_TO_ZIP", "31210").strip(),
         ntfy_topic=os.environ.get("NTFY_TOPIC", "").strip(),
         ntfy_server=os.environ.get("NTFY_SERVER", "https://ntfy.sh").strip().rstrip("/"),
         alert_on_new_low=os.environ.get("ALERT_ON_NEW_LOW", "true").lower() != "false",
@@ -109,6 +112,7 @@ def load_products(path: Path | None = None) -> list[Product]:
                 require_returns=bool(merged.get("require_returns", True)),
                 require_us_location=bool(merged.get("require_us_location", True)),
                 require_verified_detail=bool(merged.get("require_verified_detail", True)),
+                require_known_shipping=bool(merged.get("require_known_shipping", True)),
                 max_quantity=int(merged.get("max_quantity", 12)),
                 verify_top_n=int(merged.get("verify_top_n", 8)),
                 unit_kind=str(merged.get("unit_kind", "box")),

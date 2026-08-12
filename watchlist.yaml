@@ -160,7 +160,7 @@ products:
     max_price: 900
     implausible_below: 140
     verify_top_n: 5
-    alert_below: null
+    alert_below: 505.99
 
   - id: op03
     name: "OP-03 Pillars of Strength"
@@ -170,7 +170,7 @@ products:
     max_price: 700
     implausible_below: 110
     verify_top_n: 5
-    alert_below: null
+    alert_below: 558.25
 
   - id: op04
     name: "OP-04 Kingdoms of Intrigue"
@@ -180,7 +180,7 @@ products:
     max_price: 700
     implausible_below: 110
     verify_top_n: 5
-    alert_below: null
+    alert_below: 469.2
 
   - id: op05
     name: "OP-05 Awakening of the New Era"
@@ -200,7 +200,7 @@ products:
     max_price: 700
     implausible_below: 110
     verify_top_n: 5
-    alert_below: null
+    alert_below: 392.84
 
   - id: op07
     name: "OP-07 500 Years Into the Future"
@@ -210,7 +210,7 @@ products:
     max_price: 700
     implausible_below: 110
     verify_top_n: 5
-    alert_below: null
+    alert_below: 374.25
 
   - id: op08
     name: "OP-08 Two Legends"
@@ -220,7 +220,7 @@ products:
     max_price: 700
     implausible_below: 110
     verify_top_n: 5
-    alert_below: null
+    alert_below: 275.08
 
   - id: op09
     name: "OP-09 Emperors in the New World"
@@ -240,7 +240,7 @@ products:
     max_price: 600
     implausible_below: 95
     verify_top_n: 5
-    alert_below: null
+    alert_below: 275.08
 
   - id: op11
     name: "OP-11 A Fist of Divine Speed"
@@ -260,7 +260,7 @@ products:
     max_price: 600
     implausible_below: 95
     verify_top_n: 5
-    alert_below: null
+    alert_below: 312.86
 
   - id: op13
     name: "OP-13 Carrying On His Will"
@@ -270,7 +270,7 @@ products:
     max_price: 600
     implausible_below: 95
     verify_top_n: 5
-    alert_below: null
+    alert_below: 522.56
 
   - id: op14
     name: "OP-14 The Azure Sea's Seven"
@@ -280,7 +280,7 @@ products:
     max_price: 600
     implausible_below: 178
     verify_top_n: 5
-    alert_below: null
+    alert_below: 266.8
 
   - id: op15
     name: "OP-15 The Adventure on God's Island"
@@ -298,7 +298,7 @@ products:
     max_price: 600
     implausible_below: 70
     verify_top_n: 5
-    alert_below: null
+    alert_below: 367.99
 
   - id: op16
     name: "OP-16 The Time of Battle"
@@ -308,7 +308,7 @@ products:
     max_price: 600
     implausible_below: 100
     verify_top_n: 8
-    alert_below: null
+    alert_below: 193.19
 
   - id: op17
     name: "OP-17 The World's Strongest Warriors"
@@ -328,7 +328,7 @@ products:
     max_price: 400
     implausible_below: 50
     verify_top_n: 5
-    alert_below: null
+    alert_below: 370.76
 
   - id: eb02
     name: "EB-02 Anime 25th Collection"
@@ -368,7 +368,7 @@ products:
     max_price: 500
     implausible_below: 50
     verify_top_n: 5
-    alert_below: null
+    alert_below: 367.95
 
   # ---- LOOSE PACKS -------------------------------------------------------
   # Tracked so you can SEE the premium, not because they are a good buy.
@@ -436,7 +436,7 @@ products:
     min_price: 3
     max_price: 60
     implausible_below: 3
-    alert_below: 5
+    alert_below: 8.27
     exclude_any: *pack_excludes
 
 # Set codes are the reliable matcher; names are a convenience. Always include

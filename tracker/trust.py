@@ -147,6 +147,7 @@ class TrustPolicy:
     require_returns: bool = True
     require_us_location: bool = True
     require_verified_detail: bool = True
+    require_known_shipping: bool = True
     max_quantity: int = 12
     blocked_sellers: tuple[str, ...] = ()
     trusted_sellers: tuple[str, ...] = ()
@@ -192,6 +193,12 @@ def evaluate(
     if listing.seller_pct < policy.min_seller_pct:
         report.vetoes.append(
             f"seller rated {listing.seller_pct}%, below the {policy.min_seller_pct}% minimum"
+        )
+
+    if policy.require_known_shipping and not getattr(listing, "shipping_known", True):
+        report.vetoes.append(
+            "seller did not report a shipping cost, so the delivered price is "
+            "unknown — a $6.29 pack with $4.39 postage is not a $6.29 pack"
         )
 
     if policy.require_us_location:

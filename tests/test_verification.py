@@ -393,3 +393,48 @@ def test_plain_english_specifics_still_pass():
     r = evaluate(listing(detail=good_detail(full_title="One Piece OP-17 Booster Box English")),
                  TRUNC_POLICY, median_price=120.0)
     assert r.passed, r.vetoes
+
+
+# -- shipping must never be assumed free -----------------------------------
+
+from tracker.ebay import _shipping_cost  # noqa: E402
+
+
+def test_missing_shipping_options_is_unknown_not_free():
+    """The bug: a $6.29 pack with $4.39 postage showed as $6.29 delivered and
+    ranked as the cheapest on the board. Absent data is not zero."""
+    cost, known = _shipping_cost({"price": {"value": "6.29"}})
+    assert known is False
+    assert cost == 0.0          # a floor, and the flag says so
+
+
+def test_reported_shipping_is_used():
+    cost, known = _shipping_cost(
+        {"shippingOptions": [{"shippingCost": {"value": "4.39"}}]}
+    )
+    assert (cost, known) == (4.39, True)
+
+
+def test_cheapest_of_several_shipping_options_wins():
+    cost, known = _shipping_cost({"shippingOptions": [
+        {"shippingCost": {"value": "9.99"}},
+        {"shippingCost": {"value": "4.39"}},
+    ]})
+    assert (cost, known) == (4.39, True)
+
+
+def test_calculated_at_checkout_counts_as_unknown():
+    _, known = _shipping_cost(
+        {"shippingOptions": [{"shippingCostType": "CALCULATED"}]}
+    )
+    assert known is False
+
+
+def test_unknown_shipping_is_vetoed():
+    """A listing whose delivered price is unknown cannot be 'the cheapest
+    delivered price', so it must not be allowed to win."""
+    l = listing()
+    l.shipping_known = False
+    r = evaluate(l, POLICY, median_price=120.0)
+    assert not r.passed
+    assert any("did not report a shipping cost" in v for v in r.vetoes), r.vetoes

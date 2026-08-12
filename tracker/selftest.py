@@ -101,7 +101,8 @@ def run(settings: Settings) -> int:
     # -- 1. auth ----------------------------------------------------------
     print("\n[1/4] OAuth token")
     try:
-        client = EbayClient(settings.ebay_client_id, settings.ebay_client_secret)
+        client = EbayClient(settings.ebay_client_id, settings.ebay_client_secret,
+                            postal_code=settings.postal_code)
         token = client._get_token()  # noqa: SLF001 - intentional: this is the contract check
         print(f"    ✓ token acquired ({len(token)} chars)")
     except EbayError as exc:
