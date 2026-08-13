@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-13T15:16:01+00:00",
+  "updated_at": "2026-08-13T17:13:02+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -121,7 +121,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:52+00:00"
+      "checked_at": "2026-08-13T17:12:52+00:00"
     },
     "op16": {
       "history": [
@@ -292,6 +292,10 @@
         {
           "t": "2026-08-13T15:15:51+00:00",
           "price": 209.99
+        },
+        {
+          "t": "2026-08-13T17:12:51+00:00",
+          "price": 209.99
         }
       ],
       "name": "OP-16 The Time of Battle",
@@ -302,7 +306,7 @@
         "shipping": 0.0,
         "total": 209.99,
         "seller": "championcard.com",
-        "seller_score": 39511,
+        "seller_score": 39513,
         "seller_pct": 99.9,
         "top_rated": false,
         "trust": {
@@ -321,7 +325,7 @@
               "name": "Seller volume",
               "earned": 14.0,
               "possible": 14,
-              "detail": "39,511 completed sales",
+              "detail": "39,513 completed sales",
               "good": true
             },
             {
@@ -419,7 +423,7 @@
           }
         }
       },
-      "considered": 85,
+      "considered": 87,
       "relevant": 23,
       "verified": 8,
       "kept": 1,
@@ -1178,7 +1182,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:51+00:00",
+      "checked_at": "2026-08-13T17:12:51+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -1342,6 +1346,10 @@
         },
         {
           "t": "2026-08-13T15:15:46+00:00",
+          "price": 290.0
+        },
+        {
+          "t": "2026-08-13T17:12:45+00:00",
           "price": 290.0
         }
       ],
@@ -1906,7 +1914,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:46+00:00",
+      "checked_at": "2026-08-13T17:12:45+00:00",
       "all_time_low": 202.78,
       "all_time_high": 290.0
     },
@@ -1921,7 +1929,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:14:44+00:00"
+      "checked_at": "2026-08-13T17:12:19+00:00"
     },
     "op17-packs": {
       "history": [],
@@ -1934,7 +1942,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:58+00:00"
+      "checked_at": "2026-08-13T17:12:58+00:00"
     },
     "op16-packs": {
       "history": [
@@ -2088,6 +2096,10 @@
         },
         {
           "t": "2026-08-13T15:16:01+00:00",
+          "price": 8.99
+        },
+        {
+          "t": "2026-08-13T17:13:02+00:00",
           "price": 8.99
         }
       ],
@@ -2962,7 +2974,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:16:01+00:00",
+      "checked_at": "2026-08-13T17:13:02+00:00",
       "all_time_low": 6.99,
       "all_time_high": 8.99
     },
@@ -3074,6 +3086,10 @@
         },
         {
           "t": "2026-08-13T15:14:46+00:00",
+          "price": 549.99
+        },
+        {
+          "t": "2026-08-13T17:12:21+00:00",
           "price": 549.99
         }
       ],
@@ -3428,7 +3444,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:14:46+00:00",
+      "checked_at": "2026-08-13T17:12:21+00:00",
       "all_time_low": 549.99,
       "all_time_high": 549.99
     },
@@ -3540,6 +3556,10 @@
         },
         {
           "t": "2026-08-13T15:14:47+00:00",
+          "price": 606.79
+        },
+        {
+          "t": "2026-08-13T17:12:22+00:00",
           "price": 606.79
         }
       ],
@@ -3783,7 +3803,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:14:47+00:00",
+      "checked_at": "2026-08-13T17:12:22+00:00",
       "all_time_low": 599.99,
       "all_time_high": 606.79
     },
@@ -3895,6 +3915,10 @@
         },
         {
           "t": "2026-08-13T15:14:49+00:00",
+          "price": 510.0
+        },
+        {
+          "t": "2026-08-13T17:12:24+00:00",
           "price": 510.0
         }
       ],
@@ -4467,7 +4491,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:14:49+00:00",
+      "checked_at": "2026-08-13T17:12:24+00:00",
       "all_time_low": 510.0,
       "all_time_high": 510.0
     },
@@ -4487,7 +4511,7 @@
           "shipping": 0.0,
           "total": 149.89,
           "seller": "greatestplc",
-          "seller_score": 314,
+          "seller_score": 315,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -4508,7 +4532,7 @@
                 "name": "Seller volume",
                 "earned": 8.7,
                 "possible": 14,
-                "detail": "314 completed sales",
+                "detail": "315 completed sales",
                 "good": true
               },
               {
@@ -4594,7 +4618,7 @@
           "shipping": 0.0,
           "total": 149.98,
           "seller": "pengsupply",
-          "seller_score": 255,
+          "seller_score": 256,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -4615,7 +4639,7 @@
                 "name": "Seller volume",
                 "earned": 8.4,
                 "possible": 14,
-                "detail": "255 completed sales",
+                "detail": "256 completed sales",
                 "good": true
               },
               {
@@ -4701,7 +4725,7 @@
           "shipping": 0.0,
           "total": 149.99,
           "seller": "sunnystore24",
-          "seller_score": 115,
+          "seller_score": 116,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -4722,7 +4746,7 @@
                 "name": "Seller volume",
                 "earned": 7.2,
                 "possible": 14,
-                "detail": "115 completed sales",
+                "detail": "116 completed sales",
                 "good": true
               },
               {
@@ -4911,7 +4935,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:14:51+00:00"
+      "checked_at": "2026-08-13T17:12:26+00:00"
     },
     "op06": {
       "history": [
@@ -5022,6 +5046,10 @@
         {
           "t": "2026-08-13T15:14:53+00:00",
           "price": 427.0
+        },
+        {
+          "t": "2026-08-13T17:12:28+00:00",
+          "price": 427.0
         }
       ],
       "name": "OP-06 Wings of the Captain",
@@ -5032,7 +5060,7 @@
         "shipping": 0.0,
         "total": 427.0,
         "seller": "stromata8",
-        "seller_score": 12611,
+        "seller_score": 12613,
         "seller_pct": 100.0,
         "top_rated": true,
         "trust": {
@@ -5051,7 +5079,7 @@
               "name": "Seller volume",
               "earned": 14.0,
               "possible": 14,
-              "detail": "12,611 completed sales",
+              "detail": "12,613 completed sales",
               "good": true
             },
             {
@@ -5371,7 +5399,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:14:53+00:00",
+      "checked_at": "2026-08-13T17:12:28+00:00",
       "all_time_low": 427.0,
       "all_time_high": 427.0
     },
@@ -5483,6 +5511,10 @@
         },
         {
           "t": "2026-08-13T15:14:55+00:00",
+          "price": 406.79
+        },
+        {
+          "t": "2026-08-13T17:12:30+00:00",
           "price": 406.79
         }
       ],
@@ -5938,7 +5970,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:14:55+00:00",
+      "checked_at": "2026-08-13T17:12:30+00:00",
       "all_time_low": 399.99,
       "all_time_high": 406.79
     },
@@ -6050,6 +6082,10 @@
         },
         {
           "t": "2026-08-13T15:14:57+00:00",
+          "price": 299.0
+        },
+        {
+          "t": "2026-08-13T17:12:33+00:00",
           "price": 299.0
         }
       ],
@@ -6509,7 +6545,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:14:57+00:00",
+      "checked_at": "2026-08-13T17:12:33+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -6524,7 +6560,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:14:57+00:00"
+      "checked_at": "2026-08-13T17:12:34+00:00"
     },
     "op10": {
       "history": [
@@ -6634,6 +6670,10 @@
         },
         {
           "t": "2026-08-13T15:14:59+00:00",
+          "price": 299.0
+        },
+        {
+          "t": "2026-08-13T17:12:36+00:00",
           "price": 299.0
         }
       ],
@@ -6877,7 +6917,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:14:59+00:00",
+      "checked_at": "2026-08-13T17:12:36+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -7002,7 +7042,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:00+00:00"
+      "checked_at": "2026-08-13T17:12:36+00:00"
     },
     "op12": {
       "history": [
@@ -7112,6 +7152,10 @@
         },
         {
           "t": "2026-08-13T15:15:02+00:00",
+          "price": 277.21
+        },
+        {
+          "t": "2026-08-13T17:12:39+00:00",
           "price": 277.21
         }
       ],
@@ -7252,7 +7296,7 @@
           "shipping": 0.0,
           "total": 542.99,
           "seller": "drukerenterprise",
-          "seller_score": 1904,
+          "seller_score": 1905,
           "seller_pct": 99.0,
           "top_rated": false,
           "trust": {
@@ -7271,7 +7315,7 @@
                 "name": "Seller volume",
                 "earned": 11.5,
                 "possible": 14,
-                "detail": "1,904 completed sales",
+                "detail": "1,905 completed sales",
                 "good": true
               },
               {
@@ -7353,7 +7397,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:02+00:00",
+      "checked_at": "2026-08-13T17:12:39+00:00",
       "all_time_low": 277.21,
       "all_time_high": 340.07
     },
@@ -7465,6 +7509,10 @@
         },
         {
           "t": "2026-08-13T15:15:24+00:00",
+          "price": 507.22
+        },
+        {
+          "t": "2026-08-13T17:12:42+00:00",
           "price": 507.22
         }
       ],
@@ -7926,7 +7974,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:24+00:00",
+      "checked_at": "2026-08-13T17:12:42+00:00",
       "all_time_low": 507.22,
       "all_time_high": 568.0
     },
@@ -8038,6 +8086,10 @@
         },
         {
           "t": "2026-08-13T15:15:48+00:00",
+          "price": 399.99
+        },
+        {
+          "t": "2026-08-13T17:12:47+00:00",
           "price": 399.99
         }
       ],
@@ -8166,7 +8218,7 @@
           }
         }
       },
-      "considered": 51,
+      "considered": 52,
       "relevant": 5,
       "verified": 5,
       "kept": 1,
@@ -8499,7 +8551,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:48+00:00",
+      "checked_at": "2026-08-13T17:12:47+00:00",
       "all_time_low": 399.99,
       "all_time_high": 399.99
     },
@@ -8611,6 +8663,10 @@
         },
         {
           "t": "2026-08-13T15:15:53+00:00",
+          "price": 403.0
+        },
+        {
+          "t": "2026-08-13T17:12:53+00:00",
           "price": 403.0
         }
       ],
@@ -8963,7 +9019,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:53+00:00",
+      "checked_at": "2026-08-13T17:12:53+00:00",
       "all_time_low": 390.0,
       "all_time_high": 403.0
     },
@@ -9197,7 +9253,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:54+00:00"
+      "checked_at": "2026-08-13T17:12:54+00:00"
     },
     "eb03": {
       "history": [],
@@ -9210,7 +9266,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:55+00:00"
+      "checked_at": "2026-08-13T17:12:55+00:00"
     },
     "prb01": {
       "history": [],
@@ -9335,7 +9391,7 @@
           "shipping": 9.45,
           "total": 169.4,
           "seller": "thepristinecollection33",
-          "seller_score": 1050,
+          "seller_score": 1051,
           "seller_pct": 99.8,
           "top_rated": false,
           "trust": {
@@ -9356,7 +9412,7 @@
                 "name": "Seller volume",
                 "earned": 10.6,
                 "possible": 14,
-                "detail": "1,050 completed sales",
+                "detail": "1,051 completed sales",
                 "good": true
               },
               {
@@ -9438,7 +9494,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:56+00:00"
+      "checked_at": "2026-08-13T17:12:56+00:00"
     },
     "prb02": {
       "history": [
@@ -9548,6 +9604,10 @@
         },
         {
           "t": "2026-08-13T15:15:58+00:00",
+          "price": 399.95
+        },
+        {
+          "t": "2026-08-13T17:12:58+00:00",
           "price": 399.95
         }
       ],
@@ -9906,7 +9966,7 @@
           "shipping": 14.1,
           "total": 114.79,
           "seller": "ibosrealm8",
-          "seller_score": 330,
+          "seller_score": 331,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -9927,7 +9987,7 @@
                 "name": "Seller volume",
                 "earned": 8.8,
                 "possible": 14,
-                "detail": "330 completed sales",
+                "detail": "331 completed sales",
                 "good": true
               },
               {
@@ -10009,7 +10069,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-13T15:15:58+00:00",
+      "checked_at": "2026-08-13T17:12:58+00:00",
       "all_time_low": 399.95,
       "all_time_high": 399.95
     }
