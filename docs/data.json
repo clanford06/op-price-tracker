@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-14T05:47:21+00:00",
+  "updated_at": "2026-08-14T07:51:01+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -121,7 +121,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:12+00:00"
+      "checked_at": "2026-08-14T07:50:54+00:00"
     },
     "op16": {
       "history": [
@@ -316,6 +316,10 @@
         {
           "t": "2026-08-14T05:47:11+00:00",
           "price": 209.99
+        },
+        {
+          "t": "2026-08-14T07:50:53+00:00",
+          "price": 209.99
         }
       ],
       "name": "OP-16 The Time of Battle",
@@ -326,7 +330,7 @@
         "shipping": 0.0,
         "total": 209.99,
         "seller": "championcard.com",
-        "seller_score": 39527,
+        "seller_score": 39528,
         "seller_pct": 99.9,
         "top_rated": false,
         "trust": {
@@ -345,7 +349,7 @@
               "name": "Seller volume",
               "earned": 14.0,
               "possible": 14,
-              "detail": "39,527 completed sales",
+              "detail": "39,528 completed sales",
               "good": true
             },
             {
@@ -443,7 +447,7 @@
           }
         }
       },
-      "considered": 90,
+      "considered": 91,
       "relevant": 23,
       "verified": 8,
       "kept": 1,
@@ -1202,7 +1206,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:11+00:00",
+      "checked_at": "2026-08-14T07:50:53+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -1390,6 +1394,10 @@
         },
         {
           "t": "2026-08-14T05:47:06+00:00",
+          "price": 290.0
+        },
+        {
+          "t": "2026-08-14T07:50:49+00:00",
           "price": 290.0
         }
       ],
@@ -1954,7 +1962,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:06+00:00",
+      "checked_at": "2026-08-14T07:50:49+00:00",
       "all_time_low": 202.78,
       "all_time_high": 290.0
     },
@@ -1969,7 +1977,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:46:45+00:00"
+      "checked_at": "2026-08-14T07:50:30+00:00"
     },
     "op17-packs": {
       "history": [],
@@ -1982,7 +1990,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:18+00:00"
+      "checked_at": "2026-08-14T07:50:59+00:00"
     },
     "op16-packs": {
       "history": [
@@ -2160,6 +2168,10 @@
         },
         {
           "t": "2026-08-14T05:47:21+00:00",
+          "price": 8.99
+        },
+        {
+          "t": "2026-08-14T07:51:01+00:00",
           "price": 8.99
         }
       ],
@@ -3034,7 +3046,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:21+00:00",
+      "checked_at": "2026-08-14T07:51:01+00:00",
       "all_time_low": 6.99,
       "all_time_high": 8.99
     },
@@ -3170,6 +3182,10 @@
         },
         {
           "t": "2026-08-14T05:46:47+00:00",
+          "price": 549.99
+        },
+        {
+          "t": "2026-08-14T07:50:32+00:00",
           "price": 549.99
         }
       ],
@@ -3524,7 +3540,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:46:47+00:00",
+      "checked_at": "2026-08-14T07:50:32+00:00",
       "all_time_low": 549.99,
       "all_time_high": 549.99
     },
@@ -3660,6 +3676,10 @@
         },
         {
           "t": "2026-08-14T05:46:48+00:00",
+          "price": 606.79
+        },
+        {
+          "t": "2026-08-14T07:50:33+00:00",
           "price": 606.79
         }
       ],
@@ -3903,7 +3923,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:46:48+00:00",
+      "checked_at": "2026-08-14T07:50:33+00:00",
       "all_time_low": 599.99,
       "all_time_high": 606.79
     },
@@ -4039,6 +4059,10 @@
         },
         {
           "t": "2026-08-14T05:46:50+00:00",
+          "price": 510.0
+        },
+        {
+          "t": "2026-08-14T07:50:34+00:00",
           "price": 510.0
         }
       ],
@@ -4611,7 +4635,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:46:50+00:00",
+      "checked_at": "2026-08-14T07:50:34+00:00",
       "all_time_low": 510.0,
       "all_time_high": 510.0
     },
@@ -4952,7 +4976,7 @@
           "shipping": 0.0,
           "total": 150.99,
           "seller": "goldencardstore",
-          "seller_score": 635,
+          "seller_score": 637,
           "seller_pct": 99.5,
           "top_rated": false,
           "trust": {
@@ -4973,7 +4997,7 @@
                 "name": "Seller volume",
                 "earned": 9.8,
                 "possible": 14,
-                "detail": "635 completed sales",
+                "detail": "637 completed sales",
                 "good": true
               },
               {
@@ -5055,7 +5079,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:46:52+00:00"
+      "checked_at": "2026-08-14T07:50:36+00:00"
     },
     "op06": {
       "history": [
@@ -5189,6 +5213,10 @@
         },
         {
           "t": "2026-08-14T05:46:53+00:00",
+          "price": 427.0
+        },
+        {
+          "t": "2026-08-14T07:50:37+00:00",
           "price": 427.0
         }
       ],
@@ -5539,7 +5567,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:46:53+00:00",
+      "checked_at": "2026-08-14T07:50:37+00:00",
       "all_time_low": 427.0,
       "all_time_high": 427.0
     },
@@ -5675,6 +5703,10 @@
         },
         {
           "t": "2026-08-14T05:46:55+00:00",
+          "price": 406.79
+        },
+        {
+          "t": "2026-08-14T07:50:39+00:00",
           "price": 406.79
         }
       ],
@@ -6130,7 +6162,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:46:55+00:00",
+      "checked_at": "2026-08-14T07:50:39+00:00",
       "all_time_low": 399.99,
       "all_time_high": 406.79
     },
@@ -6266,6 +6298,10 @@
         },
         {
           "t": "2026-08-14T05:46:57+00:00",
+          "price": 299.0
+        },
+        {
+          "t": "2026-08-14T07:50:41+00:00",
           "price": 299.0
         }
       ],
@@ -6725,7 +6761,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:46:57+00:00",
+      "checked_at": "2026-08-14T07:50:41+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -6740,7 +6776,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:46:58+00:00"
+      "checked_at": "2026-08-14T07:50:41+00:00"
     },
     "op10": {
       "history": [
@@ -6874,6 +6910,10 @@
         },
         {
           "t": "2026-08-14T05:46:59+00:00",
+          "price": 299.0
+        },
+        {
+          "t": "2026-08-14T07:50:42+00:00",
           "price": 299.0
         }
       ],
@@ -7117,7 +7157,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:46:59+00:00",
+      "checked_at": "2026-08-14T07:50:42+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -7242,7 +7282,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:00+00:00"
+      "checked_at": "2026-08-14T07:50:43+00:00"
     },
     "op12": {
       "history": [
@@ -7376,6 +7416,10 @@
         },
         {
           "t": "2026-08-14T05:47:02+00:00",
+          "price": 277.21
+        },
+        {
+          "t": "2026-08-14T07:50:45+00:00",
           "price": 277.21
         }
       ],
@@ -7617,7 +7661,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:02+00:00",
+      "checked_at": "2026-08-14T07:50:45+00:00",
       "all_time_low": 277.21,
       "all_time_high": 340.07
     },
@@ -7753,6 +7797,10 @@
         },
         {
           "t": "2026-08-14T05:47:04+00:00",
+          "price": 507.22
+        },
+        {
+          "t": "2026-08-14T07:50:47+00:00",
           "price": 507.22
         }
       ],
@@ -8325,7 +8373,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:04+00:00",
+      "checked_at": "2026-08-14T07:50:47+00:00",
       "all_time_low": 507.22,
       "all_time_high": 568.0
     },
@@ -8461,6 +8509,10 @@
         },
         {
           "t": "2026-08-14T05:47:08+00:00",
+          "price": 399.99
+        },
+        {
+          "t": "2026-08-14T07:50:51+00:00",
           "price": 399.99
         }
       ],
@@ -8815,7 +8867,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:08+00:00",
+      "checked_at": "2026-08-14T07:50:51+00:00",
       "all_time_low": 399.99,
       "all_time_high": 399.99
     },
@@ -8951,6 +9003,10 @@
         },
         {
           "t": "2026-08-14T05:47:13+00:00",
+          "price": 403.0
+        },
+        {
+          "t": "2026-08-14T07:50:55+00:00",
           "price": 403.0
         }
       ],
@@ -9303,7 +9359,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:13+00:00",
+      "checked_at": "2026-08-14T07:50:55+00:00",
       "all_time_low": 390.0,
       "all_time_high": 403.0
     },
@@ -9311,9 +9367,9 @@
       "history": [],
       "name": "EB-02 Anime 25th Collection",
       "current": null,
-      "considered": 2,
-      "relevant": 2,
-      "verified": 2,
+      "considered": 3,
+      "relevant": 3,
+      "verified": 3,
       "kept": 0,
       "rejected": [
         {
@@ -9327,7 +9383,7 @@
           "seller_pct": 97.3,
           "top_rated": false,
           "trust": {
-            "score": 31,
+            "score": 37,
             "vetoes": [
               "seller rated 97.3%, below the 98.0% minimum",
               "item specifics say Language: Japanese"
@@ -9371,10 +9427,10 @@
               },
               {
                 "name": "Price plausibility",
-                "earned": 6,
+                "earned": 12,
                 "possible": 12,
-                "detail": "no peer group to compare against",
-                "good": false
+                "detail": "in line with the $90.99 median",
+                "good": true
               },
               {
                 "name": "Item specifics",
@@ -9427,6 +9483,113 @@
         },
         {
           "title": "ONE PIECE Card Game \"Anime 25th Collection\" EB-02 EX Booster Box",
+          "url": "https://www.ebay.com/itm/407089934490?_skw=One+Piece+Card+Game+EB-02+Booster+Box&hash=item5ec873709a:g:6LIAAOSwoXFn4jtQ",
+          "price": 90.99,
+          "shipping": 0.0,
+          "total": 90.99,
+          "seller": "zylix5270",
+          "seller_score": 630,
+          "seller_pct": 99.4,
+          "top_rated": false,
+          "trust": {
+            "score": 51,
+            "vetoes": [
+              "item specifics say Language: Japanese"
+            ],
+            "verified": true,
+            "signals": [
+              {
+                "name": "Language verified",
+                "earned": 0,
+                "possible": 18,
+                "detail": "item specifics: Japanese",
+                "good": false
+              },
+              {
+                "name": "Seller volume",
+                "earned": 9.8,
+                "possible": 14,
+                "detail": "630 completed sales",
+                "good": true
+              },
+              {
+                "name": "Seller rating",
+                "earned": 9.8,
+                "possible": 14,
+                "detail": "99.4% positive",
+                "good": true
+              },
+              {
+                "name": "Returns",
+                "earned": 0,
+                "possible": 12,
+                "detail": "not accepted",
+                "good": false
+              },
+              {
+                "name": "Top Rated Seller",
+                "earned": 0,
+                "possible": 10,
+                "detail": "not Top Rated (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Price plausibility",
+                "earned": 12,
+                "possible": 12,
+                "detail": "in line with the $90.99 median",
+                "good": true
+              },
+              {
+                "name": "Item specifics",
+                "earned": 2,
+                "possible": 8,
+                "detail": "present but do not confirm set/format",
+                "good": false
+              },
+              {
+                "name": "eBay category",
+                "earned": 6,
+                "possible": 6,
+                "detail": "listed under trading cards",
+                "good": true
+              },
+              {
+                "name": "Stock level",
+                "earned": 3,
+                "possible": 3,
+                "detail": "3 in stock",
+                "good": true
+              },
+              {
+                "name": "eBay programmes",
+                "earned": 0,
+                "possible": 5,
+                "detail": "none (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Description",
+                "earned": 4,
+                "possible": 4,
+                "detail": "no warning phrases",
+                "good": true
+              },
+              {
+                "name": "Your trusted list",
+                "earned": 0,
+                "possible": 8,
+                "detail": "not on your trusted list (bonus only)",
+                "good": false
+              }
+            ]
+          },
+          "why": [
+            "item specifics say Language: Japanese"
+          ]
+        },
+        {
+          "title": "ONE PIECE Card Game \"Anime 25th Collection\" EB-02 EX Booster Box",
           "url": "https://www.ebay.com/itm/128007909875?_skw=One+Piece+Card+Game+EB-02+Booster+Box&hash=item1dcdddb1f3:g:6LIAAOSwoXFn4jtQ",
           "price": 93.99,
           "shipping": 0.0,
@@ -9436,7 +9599,7 @@
           "seller_pct": 98.6,
           "top_rated": false,
           "trust": {
-            "score": 35,
+            "score": 41,
             "vetoes": [
               "seller has 68 sales, below the 100 minimum",
               "item specifics say Language: Japanese"
@@ -9480,10 +9643,10 @@
               },
               {
                 "name": "Price plausibility",
-                "earned": 6,
+                "earned": 12,
                 "possible": 12,
-                "detail": "no peer group to compare against",
-                "good": false
+                "detail": "in line with the $90.99 median",
+                "good": true
               },
               {
                 "name": "Item specifics",
@@ -9537,7 +9700,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:14+00:00"
+      "checked_at": "2026-08-14T07:50:56+00:00"
     },
     "eb03": {
       "history": [],
@@ -9550,7 +9713,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:15+00:00"
+      "checked_at": "2026-08-14T07:50:56+00:00"
     },
     "prb01": {
       "history": [],
@@ -9671,7 +9834,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:15+00:00"
+      "checked_at": "2026-08-14T07:50:57+00:00"
     },
     "prb02": {
       "history": [
@@ -9805,6 +9968,10 @@
         },
         {
           "t": "2026-08-14T05:47:17+00:00",
+          "price": 399.95
+        },
+        {
+          "t": "2026-08-14T07:50:58+00:00",
           "price": 399.95
         }
       ],
@@ -10266,7 +10433,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-14T05:47:17+00:00",
+      "checked_at": "2026-08-14T07:50:58+00:00",
       "all_time_low": 399.95,
       "all_time_high": 399.95
     }
