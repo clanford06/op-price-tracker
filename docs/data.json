@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-14T02:46:29+00:00",
+  "updated_at": "2026-08-14T02:50:03+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -10317,19 +10317,19 @@
     }
   },
   "portfolio": {
-    "spent": 659.47,
+    "spent": 693.46,
     "planned": 210.0,
-    "committed": 869.47,
-    "position_committed": 9.32,
+    "committed": 903.46,
+    "position_committed": -24.67,
     "realised": 0,
     "unrealised_gross": 1016.26,
     "unrealised_net": 878.79,
-    "position_gross": 356.79,
-    "position_net": 219.32,
-    "roi_pct": 33.3,
+    "position_gross": 322.8,
+    "position_net": 185.33,
+    "roi_pct": 26.7,
     "fee_pct": 13.25,
     "by_category": {
-      "sealed": 504.43,
+      "sealed": 538.42,
       "grading": 126.47,
       "supplies": 28.57
     },
@@ -10340,6 +10340,13 @@
         "realised": 0.0,
         "held": 80.8,
         "net": -384.24
+      },
+      "Op17": {
+        "spent": 33.99,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 0.0,
+        "net": -33.99
       },
       "supplies": {
         "spent": 28.57,
@@ -10506,6 +10513,14 @@
         "category": "sealed",
         "amount": 100.43,
         "tag": "op16",
+        "planned": false
+      },
+      {
+        "date": "2026-08-13",
+        "item": "What Not",
+        "category": "sealed",
+        "amount": 33.99,
+        "tag": "Op17",
         "planned": false
       }
     ],
