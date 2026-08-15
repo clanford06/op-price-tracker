@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-15T06:57:52+00:00",
+  "updated_at": "2026-08-15T08:45:44+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -121,7 +121,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:44+00:00"
+      "checked_at": "2026-08-15T08:45:35+00:00"
     },
     "op16": {
       "history": [
@@ -368,6 +368,10 @@
         {
           "t": "2026-08-15T06:57:43+00:00",
           "price": 209.99
+        },
+        {
+          "t": "2026-08-15T08:45:34+00:00",
+          "price": 209.99
         }
       ],
       "name": "OP-16 The Time of Battle",
@@ -378,7 +382,7 @@
         "shipping": 0.0,
         "total": 209.99,
         "seller": "championcard.com",
-        "seller_score": 39547,
+        "seller_score": 39548,
         "seller_pct": 99.9,
         "top_rated": false,
         "trust": {
@@ -397,7 +401,7 @@
               "name": "Seller volume",
               "earned": 14.0,
               "possible": 14,
-              "detail": "39,547 completed sales",
+              "detail": "39,548 completed sales",
               "good": true
             },
             {
@@ -483,19 +487,19 @@
             "$8.75/pack is 12% below the $9.92/pack baseline",
             "estimated $4.83/pack in singles vs $8.75 paid (55% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 55 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $1,224.82 (Sakazuki) \u2014 5.8x this box; 3 of 8 chases would cover it"
+            "top chase $1,212.02 (Sakazuki) \u2014 5.8x this box; 3 of 8 chases would cover it"
           ],
           "profit": {
             "upside": 5.8,
             "chases_above": 3,
             "chase_count": 8,
-            "top_chase": 1224.82,
+            "top_chase": 1212.02,
             "top_chase_name": "Sakazuki",
             "profit_chance": 0.1125
           }
         }
       },
-      "considered": 89,
+      "considered": 90,
       "relevant": 23,
       "verified": 8,
       "kept": 1,
@@ -612,7 +616,7 @@
           "shipping": 0.0,
           "total": 115.88,
           "seller": "dcfonew",
-          "seller_score": 3951,
+          "seller_score": 3952,
           "seller_pct": 99.5,
           "top_rated": false,
           "trust": {
@@ -633,7 +637,7 @@
                 "name": "Seller volume",
                 "earned": 12.6,
                 "possible": 14,
-                "detail": "3,951 completed sales",
+                "detail": "3,952 completed sales",
                 "good": true
               },
               {
@@ -826,7 +830,7 @@
           "shipping": 0.0,
           "total": 115.99,
           "seller": "dcfonew",
-          "seller_score": 3951,
+          "seller_score": 3952,
           "seller_pct": 99.5,
           "top_rated": false,
           "trust": {
@@ -847,7 +851,7 @@
                 "name": "Seller volume",
                 "earned": 12.6,
                 "possible": 14,
-                "detail": "3,951 completed sales",
+                "detail": "3,952 completed sales",
                 "good": true
               },
               {
@@ -1254,7 +1258,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:43+00:00",
+      "checked_at": "2026-08-15T08:45:34+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -1494,6 +1498,10 @@
         },
         {
           "t": "2026-08-15T06:57:39+00:00",
+          "price": 290.0
+        },
+        {
+          "t": "2026-08-15T08:45:29+00:00",
           "price": 290.0
         }
       ],
@@ -1741,7 +1749,7 @@
           "shipping": 0.0,
           "total": 204.94,
           "seller": "afk1001",
-          "seller_score": 2822,
+          "seller_score": 2825,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -1762,7 +1770,7 @@
                 "name": "Seller volume",
                 "earned": 12.1,
                 "possible": 14,
-                "detail": "2,822 completed sales",
+                "detail": "2,825 completed sales",
                 "good": true
               },
               {
@@ -2058,7 +2066,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:39+00:00",
+      "checked_at": "2026-08-15T08:45:29+00:00",
       "all_time_low": 202.78,
       "all_time_high": 290.0
     },
@@ -2073,7 +2081,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:21+00:00"
+      "checked_at": "2026-08-15T08:45:07+00:00"
     },
     "op17-packs": {
       "history": [],
@@ -2086,7 +2094,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:49+00:00"
+      "checked_at": "2026-08-15T08:45:41+00:00"
     },
     "op16-packs": {
       "history": [
@@ -2317,6 +2325,10 @@
         {
           "t": "2026-08-15T06:57:52+00:00",
           "price": 8.99
+        },
+        {
+          "t": "2026-08-15T08:45:44+00:00",
+          "price": 8.99
         }
       ],
       "name": "OP-16 loose packs",
@@ -2433,13 +2445,13 @@
             "estimated $4.83/pack in singles vs $8.99 paid (54% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 54 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
             "Loose packs almost always cost more per pack than a box of the same set. Compare against the box before buying.",
-            "top chase $1,224.82 (Sakazuki) \u2014 136.2x this pack; 8 of 8 chases would cover it"
+            "top chase $1,212.02 (Sakazuki) \u2014 134.8x this pack; 8 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 136.2,
+            "upside": 134.8,
             "chases_above": 8,
             "chase_count": 8,
-            "top_chase": 1224.82,
+            "top_chase": 1212.02,
             "top_chase_name": "Sakazuki",
             "profit_chance": 0.0125
           }
@@ -2457,7 +2469,7 @@
           "shipping": 0.0,
           "total": 9.49,
           "seller": "pwe_warehouse",
-          "seller_score": 15399,
+          "seller_score": 15400,
           "seller_pct": 99.2,
           "top_rated": false,
           "trust": {
@@ -2476,7 +2488,7 @@
                 "name": "Seller volume",
                 "earned": 14.0,
                 "possible": 14,
-                "detail": "15,399 completed sales",
+                "detail": "15,400 completed sales",
                 "good": true
               },
               {
@@ -3089,7 +3101,7 @@
           "shipping": 6.0,
           "total": 12.49,
           "seller": "jamjam_tcg",
-          "seller_score": 380,
+          "seller_score": 381,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -3108,7 +3120,7 @@
                 "name": "Seller volume",
                 "earned": 9.0,
                 "possible": 14,
-                "detail": "380 completed sales",
+                "detail": "381 completed sales",
                 "good": true
               },
               {
@@ -3190,7 +3202,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:52+00:00",
+      "checked_at": "2026-08-15T08:45:44+00:00",
       "all_time_low": 6.99,
       "all_time_high": 8.99
     },
@@ -3378,6 +3390,10 @@
         },
         {
           "t": "2026-08-15T06:57:23+00:00",
+          "price": 549.99
+        },
+        {
+          "t": "2026-08-15T08:45:09+00:00",
           "price": 549.99
         }
       ],
@@ -3839,7 +3855,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:23+00:00",
+      "checked_at": "2026-08-15T08:45:09+00:00",
       "all_time_low": 549.99,
       "all_time_high": 549.99
     },
@@ -4027,6 +4043,10 @@
         },
         {
           "t": "2026-08-15T06:57:24+00:00",
+          "price": 606.79
+        },
+        {
+          "t": "2026-08-15T08:45:10+00:00",
           "price": 606.79
         }
       ],
@@ -4270,7 +4290,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:24+00:00",
+      "checked_at": "2026-08-15T08:45:10+00:00",
       "all_time_low": 599.99,
       "all_time_high": 606.79
     },
@@ -4458,6 +4478,10 @@
         },
         {
           "t": "2026-08-15T06:57:26+00:00",
+          "price": 510.0
+        },
+        {
+          "t": "2026-08-15T08:45:12+00:00",
           "price": 510.0
         }
       ],
@@ -5026,7 +5050,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:26+00:00",
+      "checked_at": "2026-08-15T08:45:12+00:00",
       "all_time_low": 510.0,
       "all_time_high": 510.0
     },
@@ -5470,7 +5494,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:27+00:00"
+      "checked_at": "2026-08-15T08:45:14+00:00"
     },
     "op06": {
       "history": [
@@ -5656,6 +5680,10 @@
         },
         {
           "t": "2026-08-15T06:57:28+00:00",
+          "price": 427.0
+        },
+        {
+          "t": "2026-08-15T08:45:17+00:00",
           "price": 427.0
         }
       ],
@@ -6006,7 +6034,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:28+00:00",
+      "checked_at": "2026-08-15T08:45:17+00:00",
       "all_time_low": 427.0,
       "all_time_high": 427.0
     },
@@ -6195,6 +6223,10 @@
         {
           "t": "2026-08-15T06:57:30+00:00",
           "price": 406.79
+        },
+        {
+          "t": "2026-08-15T08:45:18+00:00",
+          "price": 406.79
         }
       ],
       "name": "OP-07 500 Years Into the Future",
@@ -6252,7 +6284,7 @@
               "name": "Price plausibility",
               "earned": 12,
               "possible": 12,
-              "detail": "in line with the $408.12 median",
+              "detail": "in line with the $453.39 median",
               "good": true
             },
             {
@@ -6300,14 +6332,14 @@
           ]
         },
         "purchase": {
-          "score": 51,
+          "score": 59,
           "dud_chance": 0.88,
           "cost_per_pack": 16.95,
-          "baseline_cost_per_pack": 17.0,
+          "baseline_cost_per_pack": 18.89,
           "ev_per_pack": 4.83,
           "verdict": "FAIR",
           "notes": [
-            "$16.95/pack, in line with the market",
+            "$16.95/pack is 10% below the $18.89/pack baseline",
             "estimated $4.83/pack in singles vs $16.95 paid (28% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 28 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
             "top chase $2,146.90 (Boa Hancock) \u2014 5.3x this box; 1 of 8 chases would cover it"
@@ -6322,9 +6354,9 @@
           }
         }
       },
-      "considered": 9,
-      "relevant": 5,
-      "verified": 5,
+      "considered": 8,
+      "relevant": 4,
+      "verified": 4,
       "kept": 1,
       "rejected": [
         {
@@ -6338,7 +6370,7 @@
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
-            "score": 65,
+            "score": 58,
             "vetoes": [
               "seller has 11 sales, below the 100 minimum"
             ],
@@ -6381,9 +6413,9 @@
               },
               {
                 "name": "Price plausibility",
-                "earned": 6,
+                "earned": 0,
                 "possible": 12,
-                "detail": "$269.10 is well under the $408.12 median \u2014 verify carefully",
+                "detail": "$269.10 is 41% under the $453.39 median",
                 "good": false
               },
               {
@@ -6432,111 +6464,6 @@
           },
           "why": [
             "seller has 11 sales, below the 100 minimum"
-          ]
-        },
-        {
-          "title": "One Piece Card game OP07 500 years in the future Booster Box ENG SEALED",
-          "url": "https://www.ebay.com/itm/267738771550?_skw=One+Piece+Card+Game+OP-07+Booster+Box&hash=item3e5679705e:g:9HkAAeSwxMpqZQcg",
-          "price": 399.99,
-          "shipping": 8.13,
-          "total": 408.12,
-          "seller": "joyboycollectibles",
-          "seller_score": 380,
-          "seller_pct": 100.0,
-          "top_rated": false,
-          "trust": {
-            "score": 62,
-            "vetoes": [],
-            "verified": true,
-            "signals": [
-              {
-                "name": "Language verified",
-                "earned": 4,
-                "possible": 18,
-                "detail": "seller did not state a language",
-                "good": false
-              },
-              {
-                "name": "Seller volume",
-                "earned": 9.0,
-                "possible": 14,
-                "detail": "380 completed sales",
-                "good": true
-              },
-              {
-                "name": "Seller rating",
-                "earned": 14.0,
-                "possible": 14,
-                "detail": "100.0% positive",
-                "good": true
-              },
-              {
-                "name": "Returns",
-                "earned": 0,
-                "possible": 12,
-                "detail": "not accepted",
-                "good": false
-              },
-              {
-                "name": "Top Rated Seller",
-                "earned": 0,
-                "possible": 10,
-                "detail": "not Top Rated (bonus only)",
-                "good": false
-              },
-              {
-                "name": "Price plausibility",
-                "earned": 12,
-                "possible": 12,
-                "detail": "in line with the $408.12 median",
-                "good": true
-              },
-              {
-                "name": "Item specifics",
-                "earned": 4.0,
-                "possible": 8,
-                "detail": "booster box",
-                "good": true
-              },
-              {
-                "name": "eBay category",
-                "earned": 6,
-                "possible": 6,
-                "detail": "listed under trading cards",
-                "good": true
-              },
-              {
-                "name": "Stock level",
-                "earned": 3,
-                "possible": 3,
-                "detail": "1 in stock",
-                "good": true
-              },
-              {
-                "name": "eBay programmes",
-                "earned": 0,
-                "possible": 5,
-                "detail": "none (bonus only)",
-                "good": false
-              },
-              {
-                "name": "Description",
-                "earned": 4,
-                "possible": 4,
-                "detail": "no warning phrases",
-                "good": true
-              },
-              {
-                "name": "Your trusted list",
-                "earned": 0,
-                "possible": 8,
-                "detail": "not on your trusted list (bonus only)",
-                "good": false
-              }
-            ]
-          },
-          "why": [
-            "trust score 62 below 70"
           ]
         },
         {
@@ -6595,7 +6522,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $408.12 median",
+                "detail": "in line with the $453.39 median",
                 "good": true
               },
               {
@@ -6649,7 +6576,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:30+00:00",
+      "checked_at": "2026-08-15T08:45:18+00:00",
       "all_time_low": 399.99,
       "all_time_high": 406.79
     },
@@ -6837,6 +6764,10 @@
         },
         {
           "t": "2026-08-15T06:57:32+00:00",
+          "price": 299.0
+        },
+        {
+          "t": "2026-08-15T08:45:20+00:00",
           "price": 299.0
         }
       ],
@@ -7187,7 +7118,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:32+00:00",
+      "checked_at": "2026-08-15T08:45:20+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -7202,7 +7133,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:32+00:00"
+      "checked_at": "2026-08-15T08:45:21+00:00"
     },
     "op10": {
       "history": [
@@ -7389,6 +7320,10 @@
         {
           "t": "2026-08-15T06:57:33+00:00",
           "price": 299.0
+        },
+        {
+          "t": "2026-08-15T08:45:22+00:00",
+          "price": 299.0
         }
       ],
       "name": "OP-10 Royal Blood",
@@ -7516,7 +7451,7 @@
           }
         }
       },
-      "considered": 13,
+      "considered": 15,
       "relevant": 3,
       "verified": 3,
       "kept": 1,
@@ -7631,7 +7566,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:33+00:00",
+      "checked_at": "2026-08-15T08:45:22+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -7756,7 +7691,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:34+00:00"
+      "checked_at": "2026-08-15T08:45:23+00:00"
     },
     "op12": {
       "history": [
@@ -7943,6 +7878,10 @@
         {
           "t": "2026-08-15T06:57:35+00:00",
           "price": 304.98
+        },
+        {
+          "t": "2026-08-15T08:45:25+00:00",
+          "price": 304.98
         }
       ],
       "name": "OP-12 Legacy of the Master",
@@ -8058,13 +7997,13 @@
             "$12.71/pack is 27% below the $17.50/pack baseline",
             "estimated $4.83/pack in singles vs $12.71 paid (38% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 38 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $810.52 (Jewelry Bonney) \u2014 2.7x this box; 1 of 8 chases would cover it"
+            "top chase $800.93 (Jewelry Bonney) \u2014 2.6x this box; 1 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 2.7,
+            "upside": 2.6,
             "chases_above": 1,
             "chase_count": 8,
-            "top_chase": 810.52,
+            "top_chase": 800.93,
             "top_chase_name": "Jewelry Bonney",
             "profit_chance": 0.0375
           }
@@ -8183,7 +8122,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:35+00:00",
+      "checked_at": "2026-08-15T08:45:25+00:00",
       "all_time_low": 277.21,
       "all_time_high": 340.07
     },
@@ -8371,6 +8310,10 @@
         },
         {
           "t": "2026-08-15T06:57:37+00:00",
+          "price": 507.22
+        },
+        {
+          "t": "2026-08-15T08:45:27+00:00",
           "price": 507.22
         }
       ],
@@ -8939,7 +8882,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:37+00:00",
+      "checked_at": "2026-08-15T08:45:27+00:00",
       "all_time_low": 507.22,
       "all_time_high": 568.0
     },
@@ -9127,6 +9070,10 @@
         },
         {
           "t": "2026-08-15T06:57:41+00:00",
+          "price": 399.99
+        },
+        {
+          "t": "2026-08-15T08:45:31+00:00",
           "price": 399.99
         }
       ],
@@ -9588,7 +9535,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:41+00:00",
+      "checked_at": "2026-08-15T08:45:31+00:00",
       "all_time_low": 399.99,
       "all_time_high": 399.99
     },
@@ -9776,6 +9723,10 @@
         },
         {
           "t": "2026-08-15T06:57:45+00:00",
+          "price": 403.0
+        },
+        {
+          "t": "2026-08-15T08:45:36+00:00",
           "price": 403.0
         }
       ],
@@ -10128,7 +10079,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:45+00:00",
+      "checked_at": "2026-08-15T08:45:36+00:00",
       "all_time_low": 390.0,
       "all_time_high": 403.0
     },
@@ -10362,7 +10313,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:46+00:00"
+      "checked_at": "2026-08-15T08:45:37+00:00"
     },
     "eb03": {
       "history": [],
@@ -10375,7 +10326,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:46+00:00"
+      "checked_at": "2026-08-15T08:45:37+00:00"
     },
     "prb01": {
       "history": [],
@@ -10496,7 +10447,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:47+00:00"
+      "checked_at": "2026-08-15T08:45:38+00:00"
     },
     "prb02": {
       "history": [
@@ -10682,6 +10633,10 @@
         },
         {
           "t": "2026-08-15T06:57:49+00:00",
+          "price": 399.95
+        },
+        {
+          "t": "2026-08-15T08:45:40+00:00",
           "price": 399.95
         }
       ],
@@ -11250,7 +11205,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-15T06:57:49+00:00",
+      "checked_at": "2026-08-15T08:45:40+00:00",
       "all_time_low": 399.95,
       "all_time_high": 399.95
     }
