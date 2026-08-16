@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-16T04:50:49+00:00",
+  "updated_at": "2026-08-16T06:59:31+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -121,7 +121,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:40+00:00"
+      "checked_at": "2026-08-16T06:59:22+00:00"
     },
     "op16": {
       "history": [
@@ -412,6 +412,10 @@
         {
           "t": "2026-08-16T04:50:39+00:00",
           "price": 209.99
+        },
+        {
+          "t": "2026-08-16T06:59:21+00:00",
+          "price": 209.99
         }
       ],
       "name": "OP-16 The Time of Battle",
@@ -422,7 +426,7 @@
         "shipping": 0.0,
         "total": 209.99,
         "seller": "championcard.com",
-        "seller_score": 39560,
+        "seller_score": 39561,
         "seller_pct": 99.9,
         "top_rated": false,
         "trust": {
@@ -441,7 +445,7 @@
               "name": "Seller volume",
               "earned": 14.0,
               "possible": 14,
-              "detail": "39,560 completed sales",
+              "detail": "39,561 completed sales",
               "good": true
             },
             {
@@ -539,7 +543,7 @@
           }
         }
       },
-      "considered": 88,
+      "considered": 87,
       "relevant": 21,
       "verified": 8,
       "kept": 1,
@@ -656,7 +660,7 @@
           "shipping": 0.0,
           "total": 115.88,
           "seller": "dcfonew",
-          "seller_score": 3958,
+          "seller_score": 3959,
           "seller_pct": 99.5,
           "top_rated": false,
           "trust": {
@@ -677,7 +681,7 @@
                 "name": "Seller volume",
                 "earned": 12.6,
                 "possible": 14,
-                "detail": "3,958 completed sales",
+                "detail": "3,959 completed sales",
                 "good": true
               },
               {
@@ -763,11 +767,11 @@
           "shipping": 0.0,
           "total": 115.98,
           "seller": "greatestplc",
-          "seller_score": 325,
-          "seller_pct": 100.0,
+          "seller_score": 324,
+          "seller_pct": 99.6,
           "top_rated": false,
           "trust": {
-            "score": 42,
+            "score": 38,
             "vetoes": [
               "item specifics say Language: Japanese"
             ],
@@ -784,14 +788,14 @@
                 "name": "Seller volume",
                 "earned": 8.8,
                 "possible": 14,
-                "detail": "325 completed sales",
+                "detail": "324 completed sales",
                 "good": true
               },
               {
                 "name": "Seller rating",
-                "earned": 14.0,
+                "earned": 11.2,
                 "possible": 14,
-                "detail": "100.0% positive",
+                "detail": "99.6% positive",
                 "good": true
               },
               {
@@ -870,7 +874,7 @@
           "shipping": 0.0,
           "total": 115.99,
           "seller": "dcfonew",
-          "seller_score": 3958,
+          "seller_score": 3959,
           "seller_pct": 99.5,
           "top_rated": false,
           "trust": {
@@ -891,7 +895,7 @@
                 "name": "Seller volume",
                 "earned": 12.6,
                 "possible": 14,
-                "detail": "3,958 completed sales",
+                "detail": "3,959 completed sales",
                 "good": true
               },
               {
@@ -1191,7 +1195,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:39+00:00",
+      "checked_at": "2026-08-16T06:59:21+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -1475,6 +1479,10 @@
         },
         {
           "t": "2026-08-16T04:50:34+00:00",
+          "price": 290.0
+        },
+        {
+          "t": "2026-08-16T06:59:16+00:00",
           "price": 290.0
         }
       ],
@@ -2039,7 +2047,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:34+00:00",
+      "checked_at": "2026-08-16T06:59:16+00:00",
       "all_time_low": 202.78,
       "all_time_high": 290.0
     },
@@ -2054,7 +2062,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:14+00:00"
+      "checked_at": "2026-08-16T06:58:54+00:00"
     },
     "op17-packs": {
       "history": [],
@@ -2067,7 +2075,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:45+00:00"
+      "checked_at": "2026-08-16T06:59:28+00:00"
     },
     "op16-packs": {
       "history": [
@@ -2342,6 +2350,10 @@
         {
           "t": "2026-08-16T04:50:49+00:00",
           "price": 8.99
+        },
+        {
+          "t": "2026-08-16T06:59:31+00:00",
+          "price": 8.99
         }
       ],
       "name": "OP-16 loose packs",
@@ -2352,7 +2364,7 @@
         "shipping": 0.0,
         "total": 8.99,
         "seller": "kenterrific",
-        "seller_score": 15104,
+        "seller_score": 15105,
         "seller_pct": 99.7,
         "top_rated": true,
         "trust": {
@@ -2371,7 +2383,7 @@
               "name": "Seller volume",
               "earned": 14.0,
               "possible": 14,
-              "detail": "15,104 completed sales",
+              "detail": "15,105 completed sales",
               "good": true
             },
             {
@@ -2399,7 +2411,7 @@
               "name": "Price plausibility",
               "earned": 0,
               "possible": 12,
-              "detail": "$8.99 is 52% under the $18.91 median",
+              "detail": "$8.99 is 54% under the $19.35 median",
               "good": false
             },
             {
@@ -2450,11 +2462,11 @@
           "score": 83,
           "dud_chance": 0.995,
           "cost_per_pack": 8.99,
-          "baseline_cost_per_pack": 18.91,
+          "baseline_cost_per_pack": 19.35,
           "ev_per_pack": 4.83,
           "verdict": "STRONG BUY",
           "notes": [
-            "$8.99/pack is 52% below the $18.91/pack baseline",
+            "$8.99/pack is 54% below the $19.35/pack baseline",
             "estimated $4.83/pack in singles vs $8.99 paid (54% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 54 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
             "Loose packs almost always cost more per pack than a box of the same set. Compare against the box before buying.",
@@ -2470,8 +2482,8 @@
           }
         }
       },
-      "considered": 136,
-      "relevant": 44,
+      "considered": 135,
+      "relevant": 43,
       "verified": 8,
       "kept": 1,
       "rejected": [
@@ -2529,7 +2541,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$9.49 is 50% under the $18.91 median",
+                "detail": "$9.49 is 51% under the $19.35 median",
                 "good": false
               },
               {
@@ -2636,7 +2648,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$9.69 is 49% under the $18.91 median",
+                "detail": "$9.69 is 50% under the $19.35 median",
                 "good": false
               },
               {
@@ -2741,7 +2753,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$9.78 is 48% under the $18.91 median",
+                "detail": "$9.78 is 49% under the $19.35 median",
                 "good": false
               },
               {
@@ -2846,7 +2858,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$9.99 is 47% under the $18.91 median",
+                "detail": "$9.99 is 48% under the $19.35 median",
                 "good": false
               },
               {
@@ -2951,7 +2963,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$10.45 is 45% under the $18.91 median",
+                "detail": "$10.45 is 46% under the $19.35 median",
                 "good": false
               },
               {
@@ -3056,7 +3068,7 @@
                 "name": "Price plausibility",
                 "earned": 6,
                 "possible": 12,
-                "detail": "$12.24 is well under the $18.91 median \u2014 verify carefully",
+                "detail": "$12.24 is well under the $19.35 median \u2014 verify carefully",
                 "good": false
               },
               {
@@ -3108,18 +3120,20 @@
           ]
         },
         {
-          "title": "One Piece Card Game OP-16 The Time Of Battle Booster Pack ENGLISH",
-          "url": "https://www.ebay.com/itm/398059191022?_skw=One+Piece+Card+Game+OP-16+booster+pack&hash=item5cae2d3aee:g:FqoAAeSwt~5qLN7A",
-          "price": 6.49,
-          "shipping": 6.0,
-          "total": 12.49,
-          "seller": "jamjam_tcg",
-          "seller_score": 383,
+          "title": "One Piece Card Game OP-16 Time of Battle Booster Pack 12 Cards English",
+          "url": "https://www.ebay.com/itm/147425752736?_skw=One+Piece+Card+Game+OP-16+booster+pack&hash=item22534276a0:g:pE8AAeSwoZlqTvDA",
+          "price": 11.99,
+          "shipping": 1.36,
+          "total": 13.35,
+          "seller": "rocollec0",
+          "seller_score": 16,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
-            "score": 68,
-            "vetoes": [],
+            "score": 65,
+            "vetoes": [
+              "seller has 16 sales, below the 100 minimum"
+            ],
             "verified": true,
             "signals": [
               {
@@ -3131,9 +3145,9 @@
               },
               {
                 "name": "Seller volume",
-                "earned": 9.0,
+                "earned": 4.3,
                 "possible": 14,
-                "detail": "383 completed sales",
+                "detail": "16 completed sales",
                 "good": true
               },
               {
@@ -3161,15 +3175,15 @@
                 "name": "Price plausibility",
                 "earned": 6,
                 "possible": 12,
-                "detail": "$12.49 is well under the $18.91 median \u2014 verify carefully",
+                "detail": "$13.35 is well under the $19.35 median \u2014 verify carefully",
                 "good": false
               },
               {
                 "name": "Item specifics",
-                "earned": 2,
+                "earned": 4.0,
                 "possible": 8,
-                "detail": "present but do not confirm set/format",
-                "good": false
+                "detail": "set matches",
+                "good": true
               },
               {
                 "name": "eBay category",
@@ -3182,7 +3196,7 @@
                 "name": "Stock level",
                 "earned": 3,
                 "possible": 3,
-                "detail": "2 in stock",
+                "detail": "1 in stock",
                 "good": true
               },
               {
@@ -3209,13 +3223,13 @@
             ]
           },
           "why": [
-            "trust score 68 below 70"
+            "seller has 16 sales, below the 100 minimum"
           ]
         }
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:49+00:00",
+      "checked_at": "2026-08-16T06:59:31+00:00",
       "all_time_low": 6.99,
       "all_time_high": 8.99
     },
@@ -3447,6 +3461,10 @@
         },
         {
           "t": "2026-08-16T04:50:16+00:00",
+          "price": 549.99
+        },
+        {
+          "t": "2026-08-16T06:58:56+00:00",
           "price": 549.99
         }
       ],
@@ -3908,7 +3926,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:16+00:00",
+      "checked_at": "2026-08-16T06:58:56+00:00",
       "all_time_low": 549.99,
       "all_time_high": 549.99
     },
@@ -4140,6 +4158,10 @@
         },
         {
           "t": "2026-08-16T04:50:17+00:00",
+          "price": 606.79
+        },
+        {
+          "t": "2026-08-16T06:58:58+00:00",
           "price": 606.79
         }
       ],
@@ -4383,7 +4405,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:17+00:00",
+      "checked_at": "2026-08-16T06:58:58+00:00",
       "all_time_low": 599.99,
       "all_time_high": 606.79
     },
@@ -4615,6 +4637,10 @@
         },
         {
           "t": "2026-08-16T04:50:18+00:00",
+          "price": 509.9
+        },
+        {
+          "t": "2026-08-16T06:59:00+00:00",
           "price": 509.9
         }
       ],
@@ -4864,7 +4890,7 @@
           "shipping": 0.0,
           "total": 133.99,
           "seller": "zylix5270",
-          "seller_score": 661,
+          "seller_score": 663,
           "seller_pct": 99.3,
           "top_rated": false,
           "trust": {
@@ -4885,7 +4911,7 @@
                 "name": "Seller volume",
                 "earned": 9.9,
                 "possible": 14,
-                "detail": "661 completed sales",
+                "detail": "663 completed sales",
                 "good": true
               },
               {
@@ -5183,7 +5209,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:18+00:00",
+      "checked_at": "2026-08-16T06:59:00+00:00",
       "all_time_low": 509.9,
       "all_time_high": 510.0
     },
@@ -5203,11 +5229,11 @@
           "shipping": 0.0,
           "total": 149.89,
           "seller": "greatestplc",
-          "seller_score": 325,
-          "seller_pct": 100.0,
+          "seller_score": 324,
+          "seller_pct": 99.6,
           "top_rated": false,
           "trust": {
-            "score": 53,
+            "score": 49,
             "vetoes": [
               "item specifics say Language: Japanese"
             ],
@@ -5224,14 +5250,14 @@
                 "name": "Seller volume",
                 "earned": 8.8,
                 "possible": 14,
-                "detail": "325 completed sales",
+                "detail": "324 completed sales",
                 "good": true
               },
               {
                 "name": "Seller rating",
-                "earned": 14.0,
+                "earned": 11.2,
                 "possible": 14,
-                "detail": "100.0% positive",
+                "detail": "99.6% positive",
                 "good": true
               },
               {
@@ -5524,7 +5550,7 @@
           "shipping": 0.0,
           "total": 150.99,
           "seller": "goldencardstore",
-          "seller_score": 650,
+          "seller_score": 651,
           "seller_pct": 99.2,
           "top_rated": false,
           "trust": {
@@ -5545,7 +5571,7 @@
                 "name": "Seller volume",
                 "earned": 9.8,
                 "possible": 14,
-                "detail": "650 completed sales",
+                "detail": "651 completed sales",
                 "good": true
               },
               {
@@ -5736,7 +5762,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:20+00:00"
+      "checked_at": "2026-08-16T06:59:02+00:00"
     },
     "op06": {
       "history": [
@@ -5967,6 +5993,10 @@
         {
           "t": "2026-08-16T04:50:22+00:00",
           "price": 427.0
+        },
+        {
+          "t": "2026-08-16T06:59:03+00:00",
+          "price": 427.0
         }
       ],
       "name": "OP-06 Wings of the Captain",
@@ -5977,7 +6007,7 @@
         "shipping": 0.0,
         "total": 427.0,
         "seller": "stromata8",
-        "seller_score": 12675,
+        "seller_score": 12678,
         "seller_pct": 100.0,
         "top_rated": true,
         "trust": {
@@ -5996,7 +6026,7 @@
               "name": "Seller volume",
               "earned": 14.0,
               "possible": 14,
-              "detail": "12,675 completed sales",
+              "detail": "12,678 completed sales",
               "good": true
             },
             {
@@ -6316,7 +6346,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:22+00:00",
+      "checked_at": "2026-08-16T06:59:03+00:00",
       "all_time_low": 427.0,
       "all_time_high": 427.0
     },
@@ -6548,6 +6578,10 @@
         },
         {
           "t": "2026-08-16T04:50:24+00:00",
+          "price": 406.79
+        },
+        {
+          "t": "2026-08-16T06:59:05+00:00",
           "price": 406.79
         }
       ],
@@ -6898,7 +6932,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:24+00:00",
+      "checked_at": "2026-08-16T06:59:05+00:00",
       "all_time_low": 399.99,
       "all_time_high": 406.79
     },
@@ -7130,6 +7164,10 @@
         },
         {
           "t": "2026-08-16T04:50:25+00:00",
+          "price": 299.0
+        },
+        {
+          "t": "2026-08-16T06:59:07+00:00",
           "price": 299.0
         }
       ],
@@ -7480,7 +7518,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:25+00:00",
+      "checked_at": "2026-08-16T06:59:07+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -7495,7 +7533,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:26+00:00"
+      "checked_at": "2026-08-16T06:59:07+00:00"
     },
     "op10": {
       "history": [
@@ -7725,6 +7763,10 @@
         },
         {
           "t": "2026-08-16T04:50:27+00:00",
+          "price": 299.0
+        },
+        {
+          "t": "2026-08-16T06:59:09+00:00",
           "price": 299.0
         }
       ],
@@ -8075,7 +8117,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:27+00:00",
+      "checked_at": "2026-08-16T06:59:09+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -8200,7 +8242,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:28+00:00"
+      "checked_at": "2026-08-16T06:59:10+00:00"
     },
     "op12": {
       "history": [
@@ -8430,6 +8472,10 @@
         },
         {
           "t": "2026-08-16T04:50:30+00:00",
+          "price": 304.98
+        },
+        {
+          "t": "2026-08-16T06:59:12+00:00",
           "price": 304.98
         }
       ],
@@ -8671,7 +8717,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:30+00:00",
+      "checked_at": "2026-08-16T06:59:12+00:00",
       "all_time_low": 277.21,
       "all_time_high": 340.07
     },
@@ -8904,6 +8950,10 @@
         {
           "t": "2026-08-16T04:50:32+00:00",
           "price": 499.99
+        },
+        {
+          "t": "2026-08-16T06:59:14+00:00",
+          "price": 499.99
         }
       ],
       "name": "OP-13 Carrying On His Will",
@@ -9043,14 +9093,14 @@
           "shipping": 8.0,
           "total": 87.99,
           "seller": "coolcollectionllc",
-          "seller_score": 73,
+          "seller_score": 74,
           "seller_pct": 98.7,
           "top_rated": false,
           "trust": {
             "score": 60,
             "vetoes": [
               "$87.99 is below the $95.00 floor for a genuine sealed box",
-              "seller has 73 sales, below the 100 minimum"
+              "seller has 74 sales, below the 100 minimum"
             ],
             "verified": true,
             "signals": [
@@ -9063,9 +9113,9 @@
               },
               {
                 "name": "Seller volume",
-                "earned": 6.5,
+                "earned": 6.6,
                 "possible": 14,
-                "detail": "73 completed sales",
+                "detail": "74 completed sales",
                 "good": true
               },
               {
@@ -9142,7 +9192,7 @@
           },
           "why": [
             "$87.99 is below the $95.00 floor for a genuine sealed box",
-            "seller has 73 sales, below the 100 minimum"
+            "seller has 74 sales, below the 100 minimum"
           ]
         },
         {
@@ -9471,7 +9521,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:32+00:00",
+      "checked_at": "2026-08-16T06:59:14+00:00",
       "all_time_low": 499.99,
       "all_time_high": 568.0
     },
@@ -9703,6 +9753,10 @@
         },
         {
           "t": "2026-08-16T04:50:36+00:00",
+          "price": 399.99
+        },
+        {
+          "t": "2026-08-16T06:59:18+00:00",
           "price": 399.99
         }
       ],
@@ -9952,7 +10006,7 @@
           "shipping": 0.0,
           "total": 96.99,
           "seller": "zylix5270",
-          "seller_score": 661,
+          "seller_score": 663,
           "seller_pct": 99.3,
           "top_rated": false,
           "trust": {
@@ -9973,7 +10027,7 @@
                 "name": "Seller volume",
                 "earned": 9.9,
                 "possible": 14,
-                "detail": "661 completed sales",
+                "detail": "663 completed sales",
                 "good": true
               },
               {
@@ -10271,7 +10325,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:36+00:00",
+      "checked_at": "2026-08-16T06:59:18+00:00",
       "all_time_low": 399.99,
       "all_time_high": 399.99
     },
@@ -10503,6 +10557,10 @@
         },
         {
           "t": "2026-08-16T04:50:41+00:00",
+          "price": 403.0
+        },
+        {
+          "t": "2026-08-16T06:59:23+00:00",
           "price": 403.0
         }
       ],
@@ -10855,7 +10913,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:41+00:00",
+      "checked_at": "2026-08-16T06:59:23+00:00",
       "all_time_low": 390.0,
       "all_time_high": 403.0
     },
@@ -10980,7 +11038,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:42+00:00"
+      "checked_at": "2026-08-16T06:59:24+00:00"
     },
     "eb03": {
       "history": [
@@ -10990,6 +11048,10 @@
         },
         {
           "t": "2026-08-16T04:50:42+00:00",
+          "price": 359.99
+        },
+        {
+          "t": "2026-08-16T06:59:24+00:00",
           "price": 359.99
         }
       ],
@@ -11125,7 +11187,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:42+00:00",
+      "checked_at": "2026-08-16T06:59:24+00:00",
       "all_time_low": 359.99,
       "all_time_high": 359.99
     },
@@ -11248,7 +11310,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:43+00:00"
+      "checked_at": "2026-08-16T06:59:25+00:00"
     },
     "prb02": {
       "history": [
@@ -11479,6 +11541,10 @@
         {
           "t": "2026-08-16T04:50:45+00:00",
           "price": 399.95
+        },
+        {
+          "t": "2026-08-16T06:59:27+00:00",
+          "price": 399.95
         }
       ],
       "name": "PRB-02 One Piece Card The Best Vol.2",
@@ -11606,7 +11672,7 @@
           }
         }
       },
-      "considered": 40,
+      "considered": 41,
       "relevant": 8,
       "verified": 5,
       "kept": 1,
@@ -11727,7 +11793,7 @@
           "shipping": 0.0,
           "total": 68.99,
           "seller": "zylix5270",
-          "seller_score": 661,
+          "seller_score": 663,
           "seller_pct": 99.3,
           "top_rated": false,
           "trust": {
@@ -11748,7 +11814,7 @@
                 "name": "Seller volume",
                 "earned": 9.9,
                 "possible": 14,
-                "detail": "661 completed sales",
+                "detail": "663 completed sales",
                 "good": true
               },
               {
@@ -12046,7 +12112,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-16T04:50:45+00:00",
+      "checked_at": "2026-08-16T06:59:27+00:00",
       "all_time_low": 399.95,
       "all_time_high": 399.95
     }
