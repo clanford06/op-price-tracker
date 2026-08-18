@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-18T19:55:24+00:00",
+  "updated_at": "2026-08-18T19:59:28+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -14499,13 +14499,13 @@
     "spent": 800.07,
     "planned": 210.0,
     "committed": 1010.07,
-    "position_committed": -131.28,
+    "position_committed": -95.68,
     "realised": 0,
-    "unrealised_gross": 1016.26,
-    "unrealised_net": 878.79,
-    "position_gross": 216.19,
-    "position_net": 78.72,
-    "roi_pct": 9.8,
+    "unrealised_gross": 1057.76,
+    "unrealised_net": 914.39,
+    "position_gross": 257.69,
+    "position_net": 114.32,
+    "roi_pct": 14.3,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 645.03,
@@ -14524,8 +14524,8 @@
         "spent": 106.61,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 0.0,
-        "net": -106.61
+        "held": 35.6,
+        "net": -71.01
       },
       "Op17": {
         "spent": 33.99,
@@ -14589,6 +14589,15 @@
         "estimate": 63.0,
         "net_if_sold": 54.25,
         "source": "pulled from OP-16 box",
+        "note": ""
+      },
+      {
+        "id": "2025-one-piece-prbo2-030-donquixote-rosi",
+        "name": "2025 One Piece PRBO2 #030 Donquixote Rosinante Alternate Art - PSA 10",
+        "status": "owned",
+        "estimate": 41.5,
+        "net_if_sold": 35.6,
+        "source": "",
         "note": ""
       },
       {
