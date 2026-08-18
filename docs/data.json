@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-18T18:57:21+00:00",
+  "updated_at": "2026-08-18T19:55:24+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -14496,19 +14496,19 @@
     }
   },
   "portfolio": {
-    "spent": 693.46,
+    "spent": 800.07,
     "planned": 210.0,
-    "committed": 903.46,
-    "position_committed": -24.67,
+    "committed": 1010.07,
+    "position_committed": -131.28,
     "realised": 0,
     "unrealised_gross": 1016.26,
     "unrealised_net": 878.79,
-    "position_gross": 322.8,
-    "position_net": 185.33,
-    "roi_pct": 26.7,
+    "position_gross": 216.19,
+    "position_net": 78.72,
+    "roi_pct": 9.8,
     "fee_pct": 13.25,
     "by_category": {
-      "sealed": 538.42,
+      "sealed": 645.03,
       "grading": 126.47,
       "supplies": 28.57
     },
@@ -14519,6 +14519,13 @@
         "realised": 0.0,
         "held": 80.8,
         "net": -384.24
+      },
+      "courtyard": {
+        "spent": 106.61,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 0.0,
+        "net": -106.61
       },
       "Op17": {
         "spent": 33.99,
@@ -14700,6 +14707,14 @@
         "category": "sealed",
         "amount": 33.99,
         "tag": "Op17",
+        "planned": false
+      },
+      {
+        "date": "2026-08-18",
+        "item": "Courtyard Digital Packs",
+        "category": "sealed",
+        "amount": 106.61,
+        "tag": "courtyard",
         "planned": false
       }
     ],
