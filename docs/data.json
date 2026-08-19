@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-19T08:55:36+00:00",
+  "updated_at": "2026-08-19T10:47:04+00:00",
   "products": {
     "op17": {
       "history": [],
@@ -341,11 +341,11 @@
           "shipping": 10.43,
           "total": 610.43,
           "seller": "sickoml",
-          "seller_score": 199,
-          "seller_pct": 98.5,
+          "seller_score": 200,
+          "seller_pct": 98.6,
           "top_rated": false,
           "trust": {
-            "score": 64,
+            "score": 65,
             "vetoes": [],
             "verified": true,
             "signals": [
@@ -360,14 +360,14 @@
                 "name": "Seller volume",
                 "earned": 8.1,
                 "possible": 14,
-                "detail": "199 completed sales",
+                "detail": "200 completed sales",
                 "good": true
               },
               {
                 "name": "Seller rating",
-                "earned": 3.5,
+                "earned": 4.2,
                 "possible": 14,
-                "detail": "98.5% positive",
+                "detail": "98.6% positive",
                 "good": true
               },
               {
@@ -436,13 +436,13 @@
             ]
           },
           "why": [
-            "trust score 64 below 70"
+            "trust score 65 below 70"
           ]
         }
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:24+00:00"
+      "checked_at": "2026-08-19T10:46:53+00:00"
     },
     "op16": {
       "history": [
@@ -885,6 +885,10 @@
         {
           "t": "2026-08-19T08:55:22+00:00",
           "price": 209.99
+        },
+        {
+          "t": "2026-08-19T10:46:52+00:00",
+          "price": 209.99
         }
       ],
       "name": "OP-16 The Time of Battle",
@@ -895,7 +899,7 @@
         "shipping": 0.0,
         "total": 209.99,
         "seller": "championcard.com",
-        "seller_score": 39611,
+        "seller_score": 39612,
         "seller_pct": 99.9,
         "top_rated": false,
         "trust": {
@@ -914,7 +918,7 @@
               "name": "Seller volume",
               "earned": 14.0,
               "possible": 14,
-              "detail": "39,611 completed sales",
+              "detail": "39,612 completed sales",
               "good": true
             },
             {
@@ -1012,7 +1016,7 @@
           }
         }
       },
-      "considered": 83,
+      "considered": 84,
       "relevant": 20,
       "verified": 8,
       "kept": 1,
@@ -1129,7 +1133,7 @@
           "shipping": 0.0,
           "total": 115.88,
           "seller": "dcfonew",
-          "seller_score": 4005,
+          "seller_score": 4006,
           "seller_pct": 99.5,
           "top_rated": false,
           "trust": {
@@ -1150,7 +1154,7 @@
                 "name": "Seller volume",
                 "earned": 12.6,
                 "possible": 14,
-                "detail": "4,005 completed sales",
+                "detail": "4,006 completed sales",
                 "good": true
               },
               {
@@ -1343,7 +1347,7 @@
           "shipping": 0.0,
           "total": 115.99,
           "seller": "dcfonew",
-          "seller_score": 4005,
+          "seller_score": 4006,
           "seller_pct": 99.5,
           "top_rated": false,
           "trust": {
@@ -1364,7 +1368,7 @@
                 "name": "Seller volume",
                 "earned": 12.6,
                 "possible": 14,
-                "detail": "4,005 completed sales",
+                "detail": "4,006 completed sales",
                 "good": true
               },
               {
@@ -1662,7 +1666,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:22+00:00",
+      "checked_at": "2026-08-19T10:46:52+00:00",
       "all_time_low": 209.99,
       "all_time_high": 209.99
     },
@@ -2099,6 +2103,10 @@
         {
           "t": "2026-08-19T08:55:16+00:00",
           "price": 290.0
+        },
+        {
+          "t": "2026-08-19T10:46:47+00:00",
+          "price": 290.0
         }
       ],
       "name": "OP-14 The Azure Sea's Seven",
@@ -2226,7 +2234,7 @@
           }
         }
       },
-      "considered": 35,
+      "considered": 36,
       "relevant": 12,
       "verified": 5,
       "kept": 1,
@@ -2555,7 +2563,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:16+00:00",
+      "checked_at": "2026-08-19T10:46:47+00:00",
       "all_time_low": 202.78,
       "all_time_high": 290.0
     },
@@ -2570,7 +2578,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:54:49+00:00"
+      "checked_at": "2026-08-19T10:46:24+00:00"
     },
     "op17-packs": {
       "history": [],
@@ -2583,7 +2591,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:32+00:00"
+      "checked_at": "2026-08-19T10:47:01+00:00"
     },
     "op16-packs": {
       "history": [
@@ -3010,6 +3018,10 @@
         {
           "t": "2026-08-19T08:55:36+00:00",
           "price": 8.99
+        },
+        {
+          "t": "2026-08-19T10:47:04+00:00",
+          "price": 8.99
         }
       ],
       "name": "OP-16 loose packs",
@@ -3150,7 +3162,7 @@
           "shipping": 0.0,
           "total": 9.49,
           "seller": "pwe_warehouse",
-          "seller_score": 15432,
+          "seller_score": 15433,
           "seller_pct": 99.1,
           "top_rated": false,
           "trust": {
@@ -3169,7 +3181,7 @@
                 "name": "Seller volume",
                 "earned": 14.0,
                 "possible": 14,
-                "detail": "15,432 completed sales",
+                "detail": "15,433 completed sales",
                 "good": true
               },
               {
@@ -3883,7 +3895,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:36+00:00",
+      "checked_at": "2026-08-19T10:47:04+00:00",
       "all_time_low": 6.99,
       "all_time_high": 8.99
     },
@@ -4268,6 +4280,10 @@
         {
           "t": "2026-08-19T08:54:52+00:00",
           "price": 499.99
+        },
+        {
+          "t": "2026-08-19T10:46:27+00:00",
+          "price": 499.99
         }
       ],
       "name": "OP-02 Paramount War",
@@ -4617,7 +4633,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:54:52+00:00",
+      "checked_at": "2026-08-19T10:46:27+00:00",
       "all_time_low": 499.99,
       "all_time_high": 549.99
     },
@@ -5002,6 +5018,10 @@
         {
           "t": "2026-08-19T08:54:53+00:00",
           "price": 606.79
+        },
+        {
+          "t": "2026-08-19T10:46:28+00:00",
+          "price": 606.79
         }
       ],
       "name": "OP-03 Pillars of Strength",
@@ -5244,7 +5264,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:54:53+00:00",
+      "checked_at": "2026-08-19T10:46:28+00:00",
       "all_time_low": 599.99,
       "all_time_high": 606.79
     },
@@ -5628,6 +5648,10 @@
         },
         {
           "t": "2026-08-19T08:54:56+00:00",
+          "price": 509.9
+        },
+        {
+          "t": "2026-08-19T10:46:31+00:00",
           "price": 509.9
         }
       ],
@@ -6196,7 +6220,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:54:56+00:00",
+      "checked_at": "2026-08-19T10:46:31+00:00",
       "all_time_low": 509.9,
       "all_time_high": 510.0
     },
@@ -6640,7 +6664,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:54:58+00:00"
+      "checked_at": "2026-08-19T10:46:33+00:00"
     },
     "op06": {
       "history": [
@@ -7023,6 +7047,10 @@
         {
           "t": "2026-08-19T08:54:59+00:00",
           "price": 499.99
+        },
+        {
+          "t": "2026-08-19T10:46:34+00:00",
+          "price": 499.99
         }
       ],
       "name": "OP-06 Wings of the Captain",
@@ -7265,7 +7293,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:54:59+00:00",
+      "checked_at": "2026-08-19T10:46:34+00:00",
       "all_time_low": 375.43,
       "all_time_high": 499.99
     },
@@ -7650,6 +7678,10 @@
         {
           "t": "2026-08-19T08:55:03+00:00",
           "price": 369.99
+        },
+        {
+          "t": "2026-08-19T10:46:36+00:00",
+          "price": 369.99
         }
       ],
       "name": "OP-07 500 Years Into the Future",
@@ -7999,7 +8031,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:03+00:00",
+      "checked_at": "2026-08-19T10:46:36+00:00",
       "all_time_low": 345.43,
       "all_time_high": 406.79
     },
@@ -8384,6 +8416,10 @@
         {
           "t": "2026-08-19T08:55:06+00:00",
           "price": 299.0
+        },
+        {
+          "t": "2026-08-19T10:46:38+00:00",
+          "price": 299.0
         }
       ],
       "name": "OP-08 Two Legends",
@@ -8733,7 +8769,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:06+00:00",
+      "checked_at": "2026-08-19T10:46:38+00:00",
       "all_time_low": 299.0,
       "all_time_high": 299.0
     },
@@ -8748,7 +8784,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:06+00:00"
+      "checked_at": "2026-08-19T10:46:38+00:00"
     },
     "op10": {
       "history": [
@@ -9130,6 +9166,10 @@
         },
         {
           "t": "2026-08-19T08:55:09+00:00",
+          "price": 262.99
+        },
+        {
+          "t": "2026-08-19T10:46:40+00:00",
           "price": 262.99
         }
       ],
@@ -9587,7 +9627,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:09+00:00",
+      "checked_at": "2026-08-19T10:46:40+00:00",
       "all_time_low": 262.99,
       "all_time_high": 299.0
     },
@@ -9712,7 +9752,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:10+00:00"
+      "checked_at": "2026-08-19T10:46:41+00:00"
     },
     "op12": {
       "history": [
@@ -10095,6 +10135,10 @@
         {
           "t": "2026-08-19T08:55:12+00:00",
           "price": 288.99
+        },
+        {
+          "t": "2026-08-19T10:46:43+00:00",
+          "price": 288.99
         }
       ],
       "name": "OP-12 Legacy of the Master",
@@ -10335,7 +10379,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:12+00:00",
+      "checked_at": "2026-08-19T10:46:43+00:00",
       "all_time_low": 277.21,
       "all_time_high": 340.07
     },
@@ -10647,6 +10691,10 @@
         },
         {
           "t": "2026-08-19T08:55:14+00:00",
+          "price": 535.0
+        },
+        {
+          "t": "2026-08-19T10:46:45+00:00",
           "price": 535.0
         }
       ],
@@ -11001,7 +11049,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:14+00:00",
+      "checked_at": "2026-08-19T10:46:45+00:00",
       "all_time_low": 499.99,
       "all_time_high": 568.0
     },
@@ -11385,6 +11433,10 @@
         },
         {
           "t": "2026-08-19T08:55:19+00:00",
+          "price": 399.99
+        },
+        {
+          "t": "2026-08-19T10:46:49+00:00",
           "price": 399.99
         }
       ],
@@ -11846,7 +11898,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:19+00:00",
+      "checked_at": "2026-08-19T10:46:49+00:00",
       "all_time_low": 399.99,
       "all_time_high": 399.99
     },
@@ -12231,6 +12283,10 @@
         {
           "t": "2026-08-19T08:55:26+00:00",
           "price": 403.0
+        },
+        {
+          "t": "2026-08-19T10:46:55+00:00",
+          "price": 403.0
         }
       ],
       "name": "EB-01 Memorial Collection",
@@ -12582,7 +12638,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:26+00:00",
+      "checked_at": "2026-08-19T10:46:55+00:00",
       "all_time_low": 390.0,
       "all_time_high": 403.0
     },
@@ -13135,7 +13191,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:28+00:00"
+      "checked_at": "2026-08-19T10:46:57+00:00"
     },
     "eb03": {
       "history": [
@@ -13297,6 +13353,10 @@
         },
         {
           "t": "2026-08-19T08:55:29+00:00",
+          "price": 359.99
+        },
+        {
+          "t": "2026-08-19T10:46:58+00:00",
           "price": 359.99
         }
       ],
@@ -13540,7 +13600,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:29+00:00",
+      "checked_at": "2026-08-19T10:46:58+00:00",
       "all_time_low": 300.0,
       "all_time_high": 359.99
     },
@@ -13770,7 +13830,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:30+00:00"
+      "checked_at": "2026-08-19T10:46:59+00:00"
     },
     "prb02": {
       "history": [
@@ -14152,6 +14212,10 @@
         },
         {
           "t": "2026-08-19T08:55:32+00:00",
+          "price": 399.95
+        },
+        {
+          "t": "2026-08-19T10:47:01+00:00",
           "price": 399.95
         }
       ],
@@ -14720,7 +14784,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-08-19T08:55:32+00:00",
+      "checked_at": "2026-08-19T10:47:01+00:00",
       "all_time_low": 399.95,
       "all_time_high": 399.95
     }
