@@ -122,10 +122,47 @@ expenses:
     tag: "Op17"
 
   
+  # --- Courtyard, reconciled 2026-08-25 against the bank charges ---
+  # The wallet hides the cash flow: four cards were sold INTERNALLY and the
+  # proceeds auto-funded the next pack, so each charge is already net of the
+  # sale before it. Only these five amounts ever left the bank ($139.39).
+  # Deliberately NOT logging those four sales -- the expenses below are net of
+  # them, so logging them as income would double-count money never received.
+  # Six packs, $281.50 of product, $142.11 recycled internally.
+
   - date: 2026-08-18
-    item: "Courtyard Digital Packs"
+    item: "Courtyard pack — Building Snake PSA 10 (card sold internally $35.89)"
     category: "sealed"
-    amount: 106.61
+    amount: 42.50
+    tag: "courtyard"
+
+  - date: 2026-08-18
+    item: "Courtyard pack — Rosinante AA PSA 10 (card sold internally $40.26)"
+    category: "sealed"
+    amount: 50.00
+    tag: "courtyard"
+
+  - date: 2026-08-18
+    item: "Courtyard pack — Mihawk PSA 10 (sold internally $40.14; $50 pack less $35.89 wallet credit)"
+    category: "sealed"
+    amount: 14.11
+    tag: "courtyard"
+
+  # The $39 Marshall D. Teach pack cost $0 cash -- fully funded by the $40.26
+  # Rosinante sale four minutes earlier. It is absent here on purpose: no bank
+  # charge, and the card was sold on for $25.82. That is the pack that felt
+  # free and was not.
+
+  - date: 2026-08-20
+    item: "Courtyard pack — Black Maria PSA 10 ($50 pack less $40.14 wallet credit)"
+    category: "sealed"
+    amount: 9.86
+    tag: "courtyard"
+
+  - date: 2026-08-20
+    item: "Courtyard pack — Sabo PSA 10 ($50 pack less $27.08 wallet balance)"
+    category: "sealed"
+    amount: 22.92
     tag: "courtyard"
 
   # <<ADD_EXPENSES_HERE>>
@@ -199,36 +236,35 @@ holdings:
   #   acquired: "2026-08-23"
 
   
-  - id: op15-114-wyper-aa
-    name: "OP15-114 Wyper AA"
-    status: "owned"
-    estimate: 21.26
-    acquired: "2026-08-11"
-    tag: "op15"
 
   
   - id: psa-10-eustass-captain-kidd-sp-eb04-039
     name: "PSA 10 Eustass \"Captain\" Kidd SP EB04-039"
     status: "owned"
-    estimate: 250.00
+    estimate: 169.00
     acquired: "2026-08-11"
     tag: "op15"
+    # Revised down from $250 by Carter 2026-08-25 as the more accurate comp.
 
   
-  - id: 2025-one-piece-prbo2-030-donquixote-rosi
-    name: "2025 One Piece PRBO2 #030 Donquixote Rosinante Alternate Art - PSA 10"
-    status: "owned"
-    estimate: 41.50
-    acquired: "2026-08-18"
-    tag: "courtyard"
 
   
-  - id: 2025-one-piece-promos-003-dracule-mihawk
-    name: "2025 One Piece Promos #003 Dracule Mihawk Illustration Box Vol.4 - PSA 10"
+
+  - id: 2025-one-piece-promos-074-black-maria
+    name: "2025 One Piece Promos #074 Black Maria - Illustration Box Vol.2 (PSA 10)"
     status: "owned"
-    estimate: 38.80
-    acquired: "2026-08-18"
+    estimate: 79.40
+    acquired: "2026-08-20"
     tag: "courtyard"
+    note: "Courtyard FMV. Every Courtyard sale so far cleared UNDER sticker; assume ~85% on exit."
+
+  - id: 2026-one-piece-promos-007-sabo
+    name: "2026 One Piece Promos #007 Sabo - Illustration Box Vol.5 (PSA 10)"
+    status: "owned"
+    estimate: 45.20
+    acquired: "2026-08-20"
+    tag: "courtyard"
+    note: "Courtyard FMV. Closest any pack came to breakeven ($45.20 out of a $50 pack)."
 
   # <<ADD_HOLDINGS_HERE>>
 
