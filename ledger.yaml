@@ -333,38 +333,38 @@ holdings:
     ebay_query: "One Piece OP17-020 Shanks Leader Alternate Art English"
 
   - id: st32-002-kozuki-oden-sp
-    name: "ST32-002 Kozuki Oden (SP)"
+    name: "ST32-002 Kouzuki Oden (SP, Conqueror's Haki) — English"
     status: "owned"
-    estimate: null
+    estimate: 285.00
     acquired: "2026-08-23"
     tag: "op17"
+    # PRICED 2026-08-25 off eBay ENGLISH active asks, n=38:
+    #   min $245  25th $284.95  MEDIAN $317.50  75th $375  max $1,250
+    # Booked at the 25th percentile, not the median. Rule: these are ASKS, not
+    # sales, and the low asks are the ones that actually clear. Deliberately
+    # conservative -- revise UP off sold comps if it holds.
+    #
+    # TCGplayer's $398.98 "listed median" is +26% above eBay's English median
+    # and would have been a bad number to book. TCGplayer still shows
+    # Total Sold 0 and flags the card PRESALE, est. ship 2026-08-28.
+    #
+    # LANGUAGE MATTERS ENORMOUSLY -- Carter's is ENGLISH:
+    #   English  median $317.50 (n=38)
+    #   Chinese  median $207.50 (n=3)
+    #   Japanese median $172.99 (n=7)
+    # A naive "oden sp" search is full of Japanese and Chinese copies at half
+    # the price. Note eBay also autocorrects "oden" to "odin" -- override it.
+    #
     # SP reprints carry the ORIGINAL card number, same trap as the Ms. All
-    # Sunday SP -- searching ST32-002 returns the cheap base card too. Always
-    # filter for SP: the plain ST32-002 Oden is $7.78, this one is not.
-    #
-    # DELIBERATELY UNPRICED -- confirmed from the TCGplayer product page
-    # 2026-08-25, which is unambiguous:
-    #   Market Price      -            Most Recent Sale   N/A
-    #   Listed Median     $398.98      Total Sold (3mo)   0
-    #   Low/High Sale     -   -        "We're still gathering pricing data."
-    #   14 listings, 19 copies, 15 sellers, as low as $394.99
-    #
-    # Zero sales. Not thin -- none. The $395-400 cluster is sellers anchoring
-    # to each other, and nobody has paid it. One outlier at $699.
-    #
-    # It is also flagged PRESALE, est. ship 2026-08-28: the set has not
-    # generally released. Every listing is a store with early allocation, and
-    # TCGplayer warns rarity and name may still change before release.
-    #
-    # Do not book a number until after 2026-08-28 plus a couple of weeks of
-    # actual sales. Real price discovery starts when general supply lands, and
-    # it usually lands downward.
-    ebay_query: "One Piece ST32-002 Kozuki Oden SP English"
+    # Sunday SP: the plain ST32-002 Oden is $7.78, this one is not. Also do not
+    # confuse it with ST13-002 / ST20-001 / OP05-067 / ST32-008 Odens, which
+    # all appear in the same search results at different prices.
+    ebay_query: "Kouzuki Oden ST32-002 SP OP17 English -japanese -chinese"
 
   - id: op17-062-kaido-guest-artist
     name: "OP17-062 Kaido (Super Alternate Art) — Keisuke Itagaki / Baki art, English"
     status: "owned"
-    estimate: null
+    estimate: 400.00
     acquired: "2026-08-23"
     tag: "op17"
     # NOT the Alternate Art -- corrected by Carter 2026-08-25. The earlier
@@ -390,9 +390,13 @@ holdings:
     # The one Japanese seller showing "14 sold" at ~$153.75 is the only real
     # sales evidence anywhere, and it is for the Japanese printing.
     #
-    # TO SETTLE IT: on that same eBay search, tick "Sold Items" in the sidebar.
-    # That is the only number that matters and it is one click away. Asks on a
-    # presale set run well above clears.
+    # PRICED 2026-08-25 at the 25th percentile of English asks ($400.00), same
+    # conservative rule as the Oden -- asks are not sales, and low asks clear
+    # first. eBay English median is $500 and TCGplayer's $549.98 is +10% on
+    # that. Revise off sold comps.
+    #
+    # STILL NOT A SALE-BACKED NUMBER. To settle it, tick "Sold Items" in the
+    # eBay sidebar -- one click, and it is the only figure that really counts.
     ebay_query: "Kaido OP17-062 Baki Itagaki English -japanese"
 
   - id: op17-005-edward-newgate-sr
