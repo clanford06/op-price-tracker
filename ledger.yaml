@@ -301,6 +301,13 @@ holdings:
     note: "Courtyard FMV. Closest any pack came to breakeven ($45.20 out of a $50 pack)."
 
   # --- OP-17 haul: 2 booster boxes + the 8/23 prerelease -------------------
+  #
+  # READ BEFORE TRUSTING ANY OP-17 NUMBER BELOW.
+  # OP-17 is still PRESALE on TCGplayer as of 2026-08-25; general release is
+  # 2026-08-28. Every price here comes from the thin prerelease market created
+  # by events like the one these cards came from. When general supply lands on
+  # 8/28 these will move, and fresh-set prices historically move DOWN.
+  # Re-price the whole tag in mid-September off sold comps.
   # Logged 2026-08-25. estimate: null on purpose -- OP-17 released 8/22 and has
   # NO usable comps yet (Limitless has the card pages up but no prices). The
   # report flags these as unpriced rather than valuing them at zero. Price them
@@ -335,13 +342,23 @@ holdings:
     # Sunday SP -- searching ST32-002 returns the cheap base card too. Always
     # filter for SP: the plain ST32-002 Oden is $7.78, this one is not.
     #
-    # DELIBERATELY UNPRICED. TCGplayer has NO market price for it -- zero
-    # recorded sales. The only number available is a listed median of $398.98,
-    # which is what sellers are ASKING, not what anyone has paid. On a set
-    # three days old asks run well above clears, so booking ~$399 here could
-    # overstate the whole portfolio by a couple hundred dollars on its own.
-    # This is very likely the most valuable card in the haul; check it in a
-    # few weeks once sales exist and price it off SOLD comps.
+    # DELIBERATELY UNPRICED -- confirmed from the TCGplayer product page
+    # 2026-08-25, which is unambiguous:
+    #   Market Price      -            Most Recent Sale   N/A
+    #   Listed Median     $398.98      Total Sold (3mo)   0
+    #   Low/High Sale     -   -        "We're still gathering pricing data."
+    #   14 listings, 19 copies, 15 sellers, as low as $394.99
+    #
+    # Zero sales. Not thin -- none. The $395-400 cluster is sellers anchoring
+    # to each other, and nobody has paid it. One outlier at $699.
+    #
+    # It is also flagged PRESALE, est. ship 2026-08-28: the set has not
+    # generally released. Every listing is a store with early allocation, and
+    # TCGplayer warns rarity and name may still change before release.
+    #
+    # Do not book a number until after 2026-08-28 plus a couple of weeks of
+    # actual sales. Real price discovery starts when general supply lands, and
+    # it usually lands downward.
     ebay_query: "One Piece ST32-002 Kozuki Oden SP English"
 
   - id: op17-062-kaido-guest-artist
@@ -353,26 +370,26 @@ holdings:
     # NOT the Alternate Art -- corrected by Carter 2026-08-25. The earlier
     # $46.18 was wrong: that is the DAI-XT. alt art, a different card.
     #
-    # UNPRICED because it is down to two SKUs and neither has a market price,
-    # only asks, and they are $1,350 apart:
-    #   Kaido (062) (Super Alternate Art)  id 712091  ask median $549.98
-    #   Kaido (062) (Manga)                id 712090  ask median $1,900.00
+    # UNPRICED. Carter pulled the TCGplayer page for the Super Alternate Art
+    # on 2026-08-25 and it has NO market either:
+    #   Market Price      -            Most Recent Sale   N/A
+    #   Listed Median     $549.98      Total Sold (3mo)   0
+    #   24 copies, 15 sellers, PRESALE, est. ship 2026-08-28
     #
-    # Limitless lists three printings and credits illustrators as: base =
-    # Hayaken-sarena, alt art = DAI-XT., and the third as "Manga Art Print"
-    # with NO illustrator credit. A guest mangaka card would normally carry a
-    # credit, which points at the Super Alternate Art -- but that is inference,
-    # not confirmation, so nothing is booked until Carter checks the card.
+    # The asks do not even agree with each other: $400.00, $570, $575, $670.98,
+    # $710.45, and one at $2,500. A spread that wide with zero sales means
+    # there is no price here at all -- sellers are guessing, and the "median"
+    # is the median of guesses. Booking $549.98 would be inventing a number.
     #
-    # HOW TO TELL: read the illustrator credit in the card's bottom border. A
-    # named artist means the guest-artist SKU; a black-and-white manga panel
-    # with no credit means the Manga SKU. Itagaki art is full-colour and
-    # unmistakably hyper-muscular.
+    # The other candidate SKU is Kaido (062) (Manga), id 712090, ask median
+    # $1,900.00 -- also zero sales.
     #
-    # This is potentially the single most valuable card Carter owns -- at the
-    # Manga ask it would outrank the Ms. All Sunday SP. Both figures are ASKS
-    # on a set days old, so treat even the resolved number as soft until sales
-    # exist.
+    # STILL TO CONFIRM: whether Carter's card is the Super Alternate Art or the
+    # Manga printing. Limitless credits base = Hayaken-sarena, alt = DAI-XT.,
+    # and lists the third only as "Manga Art Print" with no illustrator.
+    # Read the illustrator credit in the card's bottom border to settle it.
+    #
+    # Either way this stays unpriced until real sales exist after 2026-08-28.
     ebay_query: "One Piece OP17-062 Kaido manga English"
 
   - id: op17-005-edward-newgate-sr
