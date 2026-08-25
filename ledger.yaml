@@ -344,14 +344,36 @@ holdings:
     # few weeks once sales exist and price it off SOLD comps.
     ebay_query: "One Piece ST32-002 Kozuki Oden SP English"
 
-  - id: op17-062-kaido-sr
-    name: "OP17-062 Kaido (Super Rare, alt/star)"
+  - id: op17-062-kaido-guest-artist
+    name: "OP17-062 Kaido — guest-artist variant (Baki creator art)"
     status: "owned"
-    estimate: 46.18
+    estimate: null
     acquired: "2026-08-23"
     tag: "op17"
-    price_note: 'Alternate Art, foil. TCGplayer market 2026-08-25. Read as alt art because you said star. Base Kaido is only $4.09; Super Alt Art asks $400 and Manga asks $1,700 -- worth confirming which you have.'
-    ebay_query: "One Piece OP17-062 Kaido Super Rare English"
+    # NOT the Alternate Art -- corrected by Carter 2026-08-25. The earlier
+    # $46.18 was wrong: that is the DAI-XT. alt art, a different card.
+    #
+    # UNPRICED because it is down to two SKUs and neither has a market price,
+    # only asks, and they are $1,350 apart:
+    #   Kaido (062) (Super Alternate Art)  id 712091  ask median $549.98
+    #   Kaido (062) (Manga)                id 712090  ask median $1,900.00
+    #
+    # Limitless lists three printings and credits illustrators as: base =
+    # Hayaken-sarena, alt art = DAI-XT., and the third as "Manga Art Print"
+    # with NO illustrator credit. A guest mangaka card would normally carry a
+    # credit, which points at the Super Alternate Art -- but that is inference,
+    # not confirmation, so nothing is booked until Carter checks the card.
+    #
+    # HOW TO TELL: read the illustrator credit in the card's bottom border. A
+    # named artist means the guest-artist SKU; a black-and-white manga panel
+    # with no credit means the Manga SKU. Itagaki art is full-colour and
+    # unmistakably hyper-muscular.
+    #
+    # This is potentially the single most valuable card Carter owns -- at the
+    # Manga ask it would outrank the Ms. All Sunday SP. Both figures are ASKS
+    # on a set days old, so treat even the resolved number as soft until sales
+    # exist.
+    ebay_query: "One Piece OP17-062 Kaido manga English"
 
   - id: op17-005-edward-newgate-sr
     name: "OP17-005 Edward Newgate (Super Rare)"
