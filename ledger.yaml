@@ -32,7 +32,7 @@ expenses:
     # sleeves and toploader cost, move that part to the supplies category --
     # supplies are a sunk operating cost, not product that can appreciate.
 
-  - date: 2026-07-01        # TODO: real date
+  - date: 2026-08-08        # confirmed against bank statement
     item: "~16 loose OP-16 packs"
     category: sealed
     amount: 155.33
@@ -40,7 +40,7 @@ expenses:
     # ~$9.71/pack. A 24-pack box works out materially cheaper per pack --
     # see the note in the README. Loose packs are the worse buy.
 
-  - date: 2026-07-01        # TODO: real date
+  - date: 2026-08-07        # confirmed against bank statement (UPS Store)
     item: "Storage boxes and tape"
     category: supplies
     amount: 25.33
@@ -64,7 +64,7 @@ expenses:
     # transit coverage is only $650 though, not $1,500.
     # Form expires 9/20/26; turnaround does not start until PSA logs it in.
 
-  - date: 2026-08-01        # TODO: real date
+  - date: 2026-08-08        # confirmed against bank statement
     item: "Penny sleeves"
     category: supplies
     amount: 3.24
