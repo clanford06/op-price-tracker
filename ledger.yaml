@@ -46,23 +46,32 @@ expenses:
     amount: 25.33
     tag: "supplies"
 
-  - date: 2026-08-06
-    item: "PSA grading — Ms. All Sunday SP (submission #15289898)"
+  - date: 2026-08-08        # bank transaction date; submitted 08-06
+    item: "PSA inbound shipping + coverage — Ms. All Sunday SP"
     category: grading
-    amount: 126.47
+    amount: 26.49
     tag: "msallsunday"
-    # RESOLVED from the submission PDF. The $26.49 Carter saw was only the
-    # inbound shipping label ($19.99) + Cabrella coverage ($6.50). Full cost:
-    #   service level fee (REGULAR, 1 item)   $79.99
-    #   inbound shipping label (FedEx 2Day)   $19.99
-    #   inbound shipping coverage (Cabrella)   $6.50
-    #   insured return shipping               $19.99
-    #                                        -------
-    #                                        $126.47
-    # Declared max insurance value $1,500 — comfortably above the card's ~$650,
-    # so the earlier under-declaration worry does not apply. Note the INBOUND
-    # transit coverage is only $650 though, not $1,500.
-    # Form expires 9/20/26; turnaround does not start until PSA logs it in.
+    # Split out 2026-08-25: this is the ONLY psacard.com charge on the bank
+    # record. It is the inbound FedEx 2Day label ($19.99) plus Cabrella inbound
+    # coverage ($6.50). The grading and return-shipping fees have not been
+    # billed yet -- see the planned entry below.
+
+  - date: 2026-08-13        # date PSA received the order
+    item: "PSA grading + insured return — Ms. All Sunday SP (not yet billed)"
+    category: grading
+    amount: 99.98
+    tag: "msallsunday"
+    planned: true
+    # Service level fee (Regular, 1 item) $79.99 + insured return $19.99.
+    # Order #27355838, submission #15289898. PSA received it 2026-08-13 and it
+    # is at Research & ID; est. 70-80 business days, complete 2026-11-23 to
+    # 2026-12-09. Flip planned to false when the charge actually lands.
+    #
+    # WATCH THE CARD IT HITS: PSA has a Mastercard ending 7775 on file, not the
+    # BofA debit that paid the $26.49. This will never show on the BofA
+    # statement, so it will not reconcile there.
+    #
+    # Amount may move if PSA reassesses the service tier on declared value.
 
   - date: 2026-08-08        # confirmed against bank statement
     item: "Penny sleeves"
@@ -70,29 +79,38 @@ expenses:
     amount: 3.24
     tag: "supplies"
 
-  # --- PLANNED: Sunday 2026-08-23, OP-17 prerelease at Prime Time Gaming ---
-  # `planned: true` keeps these OUT of "spent to date" until actually paid.
-  # Flip to false (or delete the flag) once the money leaves your account.
+  # --- Sunday 2026-08-23, OP-17 prerelease at Prime Time Gaming ---
+  # Reconciled against the bank 2026-08-25. Store charges are GA sales tax
+  # inclusive (8%), so the shelf prices were $150.00, $30.00 and $5.98.
 
   - date: 2026-08-23
-    item: "OP-17 prerelease entry — Prime Time Gaming"
-    category: events
-    amount: 30.00
-    tag: "op17"
-    planned: true
-    # Includes 6 OP-17 packs, 4th Anniversary Tournament Pack, Rainbow Luffy
-    # Leader, World United DON!! cards, and a Monkey.D.Luffy P-110 promo.
-    # 6 packs at retail is ~$30 on its own, so entry is near cost for product.
-
-  - date: 2026-08-23
-    item: "OP-17 booster box (prerelease purchase)"
+    item: "OP-17 booster box (prerelease)"
     category: sealed
-    amount: 180.00
+    amount: 162.00
     tag: "op17"
-    planned: true
-    # ESTIMATE, anchored on Carter's own OP-16 receipt: $209.28 less ~$25-30
-    # of penny sleeves / toploaders / UV toploader implies a ~$180 box.
-    # Replace with the real figure on the day.
+    # $150.00 + 8% tax.
+
+  - date: 2026-08-23
+    item: "OP-17 prerelease tournament entry"
+    category: events
+    amount: 32.40
+    tag: "op17"
+    # $30.00 + 8% tax. Includes 6 OP-17 packs, 4th Anniversary Tournament Pack,
+    # Rainbow Luffy Leader, World United DON!! cards, and a Luffy P-110 promo.
+
+  - date: 2026-08-23
+    item: "Deck box"
+    category: supplies
+    amount: 6.46
+    tag: "op17"
+    # $5.98 + 8% tax. Supplies, not product -- cannot appreciate.
+
+  - date: 2026-08-23
+    item: "OP-17 booster box (second box, bought from a friend)"
+    category: sealed
+    amount: 153.00
+    tag: "op17"
+    # Private sale, paid by transfer. Slightly under the $162 store price.
 
   
 
@@ -119,7 +137,7 @@ expenses:
     item: "What Not"
     category: "sealed"
     amount: 33.99
-    tag: "Op17"
+    tag: "op17"
 
   
   # --- Courtyard, reconciled 2026-08-25 against the bank charges ---
@@ -165,6 +183,22 @@ expenses:
     amount: 22.92
     tag: "courtyard"
 
+  - date: 2026-08-07
+    item: "Luffy starter deck + sleeves and supplies"
+    category: sealed
+    amount: 28.06
+    tag: "starter"
+    # Mixed line: deck plus supplies. Split if the receipt turns up.
+
+  - date: 2026-08-19
+    item: "Pokemon packs — no hits"
+    category: sealed
+    amount: 32.40
+    tag: "pokemon"
+    # Not One Piece. Kept so the ledger matches the bank, tagged separately so
+    # it never contaminates a One Piece tag rollup. Nothing pulled worth
+    # holding, so this is a straight loss and will read as one.
+
   # <<ADD_EXPENSES_HERE>>
 
 holdings:
@@ -175,7 +209,7 @@ holdings:
     estimate: 650.00
     acquired: "2026-07"
     source: "pulled from OP-16 box"
-    note: "At PSA, expected back Sept-Oct 2026. A 10 is worth a real multiple; a 9 lands near raw."
+    note: "At PSA (order #27355838), received 2026-08-13, at Research & ID. Est. complete 2026-11-23 to 2026-12-09 -- NOT Sept-Oct. Not liquid until December. A 10 is worth a real multiple; a 9 lands near raw."
     ebay_query: "Ms All Sunday OP14-084 SP English"
 
   - id: op16-022-luffy-alt
