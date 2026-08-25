@@ -300,6 +300,120 @@ holdings:
     tag: "courtyard"
     note: "Courtyard FMV. Closest any pack came to breakeven ($45.20 out of a $50 pack)."
 
+  # --- OP-17 haul: 2 booster boxes + the 8/23 prerelease -------------------
+  # Logged 2026-08-25. estimate: null on purpose -- OP-17 released 8/22 and has
+  # NO usable comps yet (Limitless has the card pages up but no prices). The
+  # report flags these as unpriced rather than valuing them at zero. Price them
+  # off eBay SOLD listings, not asks: on a set this fresh asks run 30-40% high
+  # and fall fast. Do not anchor on week-one numbers.
+
+  - id: op17-119-loki-sec
+    name: "OP17-119 Loki (Secret Rare)"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    ebay_query: "One Piece OP17-119 Loki Secret Rare English"
+
+  - id: op17-020-shanks-leader-alt
+    name: "OP17-020 Shanks Leader (Alt Art)"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    ebay_query: "One Piece OP17-020 Shanks Leader Alternate Art English"
+
+  - id: st32-002-kozuki-oden-sp
+    name: "ST32-002 Kozuki Oden (SP)"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    # SP reprints carry the ORIGINAL card number, same trap as the Ms. All
+    # Sunday SP -- searching ST32-002 returns the cheap base card too. Always
+    # filter for SP.
+    ebay_query: "One Piece ST32-002 Kozuki Oden SP English"
+
+  - id: op17-062-kaido-sr
+    name: "OP17-062 Kaido (Super Rare, alt/star)"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    ebay_query: "One Piece OP17-062 Kaido Super Rare English"
+
+  - id: op17-005-edward-newgate-sr
+    name: "OP17-005 Edward Newgate (Super Rare)"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    ebay_query: "One Piece OP17-005 Edward Newgate Super Rare English"
+
+  - id: op17-093-luffy-sr-x3
+    name: "OP17-093 Luffy (Super Rare) x3"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    # THREE copies. Estimate should be the total for all three, not one.
+    # Duplicates of the same SR usually sell as a lot for less than 3x single.
+    ebay_query: "One Piece OP17-093 Luffy Super Rare English"
+
+  - id: op17-114-alt-art
+    name: "OP17-114 (Rare, Alternate Art) — NAME TBC"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    ebay_query: "One Piece OP17-114 Alternate Art English"
+
+  - id: op17-4th-anniv-rainbow-luffy
+    name: "OP-17 4th Anniversary Rainbow Luffy Leader"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    source: "prerelease entry"
+    ebay_query: "One Piece 4th Anniversary Rainbow Luffy Leader promo"
+
+  - id: op17-4th-anniv-alt-background
+    name: "4th Anniversary promo — alt background art"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    source: "prerelease entry"
+
+  - id: op17-world-don-luffy-zoro
+    name: "World United DON!! — Luffy and Zoro (opened)"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    source: "prerelease entry"
+    # Opened, so no sealed premium.
+
+  - id: op17-participation-packs-sealed
+    name: "OP-17 participation packs x2 (sealed)"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    source: "prerelease entry"
+    # SEALED -- these are the only haul item with a live market price. Loose
+    # OP-17 packs were asking $18.99 the day pack tracking was retired. Worth
+    # more unopened than opened; see the EV note in the README.
+
+  - id: op17-bulk-and-smalls
+    name: "OP-17 bulk, commons/uncommons and small hits (incl. Panda Man)"
+    status: "owned"
+    estimate: null
+    acquired: "2026-08-23"
+    tag: "op17"
+    # Individually ~nothing, not zero as a lot. Sort before valuing -- Carter
+    # said he may have missed some.
+
   # <<ADD_HOLDINGS_HERE>>
 
 sales:
