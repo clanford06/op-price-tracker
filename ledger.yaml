@@ -362,7 +362,7 @@ holdings:
     ebay_query: "One Piece ST32-002 Kozuki Oden SP English"
 
   - id: op17-062-kaido-guest-artist
-    name: "OP17-062 Kaido — guest-artist variant (Baki creator art)"
+    name: "OP17-062 Kaido (Super Alternate Art) — Keisuke Itagaki / Baki art, English"
     status: "owned"
     estimate: null
     acquired: "2026-08-23"
@@ -370,27 +370,30 @@ holdings:
     # NOT the Alternate Art -- corrected by Carter 2026-08-25. The earlier
     # $46.18 was wrong: that is the DAI-XT. alt art, a different card.
     #
-    # UNPRICED. Carter pulled the TCGplayer page for the Super Alternate Art
-    # on 2026-08-25 and it has NO market either:
-    #   Market Price      -            Most Recent Sale   N/A
-    #   Listed Median     $549.98      Total Sold (3mo)   0
-    #   24 copies, 15 sellers, PRESALE, est. ship 2026-08-28
+    # IDENTIFICATION RESOLVED 2026-08-25 from eBay: this is the TCGplayer SKU
+    # "Kaido (062) (Super Alternate Art)" (id 712091), illustrated by KEISUKE
+    # ITAGAKI, creator of Baki. Dozens of sellers name him outright. It is NOT
+    # the Manga SKU (id 712090) -- that is manga-panel art and a separate card.
+    # Sellers describe this one inconsistently as SP / Alt Art / Super Alt Art /
+    # SR Parallel, so match on the ARTIST, not the rarity word.
     #
-    # The asks do not even agree with each other: $400.00, $570, $575, $670.98,
-    # $710.45, and one at $2,500. A spread that wide with zero sales means
-    # there is no price here at all -- sellers are guessing, and the "median"
-    # is the median of guesses. Booking $549.98 would be inventing a number.
+    # STILL UNPRICED. Both TCGplayer and eBay show asks only:
+    #   TCGplayer  market -, Total Sold 0, ask median $549.98, PRESALE 8/28
+    #   eBay       108 active listings, none confirmed sold
     #
-    # The other candidate SKU is Kaido (062) (Manga), id 712090, ask median
-    # $1,900.00 -- also zero sales.
+    # eBay ACTIVE ASKS 2026-08-24, and the language split is enormous:
+    #   ENGLISH   n=42  min $365  25th $400  MEDIAN $500  75th $550  max $1000
+    #   JAPANESE  n=14  min $148  25th $150  MEDIAN $154  75th $167  max $206
+    #   English trades at 3.25x Japanese. Carter's is ENGLISH -- never price it
+    #   off the Japanese listings, which dominate a naive search.
     #
-    # STILL TO CONFIRM: whether Carter's card is the Super Alternate Art or the
-    # Manga printing. Limitless credits base = Hayaken-sarena, alt = DAI-XT.,
-    # and lists the third only as "Manga Art Print" with no illustrator.
-    # Read the illustrator credit in the card's bottom border to settle it.
+    # The one Japanese seller showing "14 sold" at ~$153.75 is the only real
+    # sales evidence anywhere, and it is for the Japanese printing.
     #
-    # Either way this stays unpriced until real sales exist after 2026-08-28.
-    ebay_query: "One Piece OP17-062 Kaido manga English"
+    # TO SETTLE IT: on that same eBay search, tick "Sold Items" in the sidebar.
+    # That is the only number that matters and it is one click away. Asks on a
+    # presale set run well above clears.
+    ebay_query: "Kaido OP17-062 Baki Itagaki English -japanese"
 
   - id: op17-005-edward-newgate-sr
     name: "OP17-005 Edward Newgate (Super Rare)"
