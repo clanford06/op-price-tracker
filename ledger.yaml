@@ -310,17 +310,19 @@ holdings:
   - id: op17-119-loki-sec
     name: "OP17-119 Loki (Secret Rare)"
     status: "owned"
-    estimate: null
+    estimate: 37.34
     acquired: "2026-08-23"
     tag: "op17"
+    price_note: "Loki base Secret Rare, foil. TCGplayer market 2026-08-25. NOTE: the Alternate Art Loki is $120.80 -- if yours is the alt, this is $83 low."
     ebay_query: "One Piece OP17-119 Loki Secret Rare English"
 
   - id: op17-020-shanks-leader-alt
     name: "OP17-020 Shanks Leader (Alt Art)"
     status: "owned"
-    estimate: null
+    estimate: 88.42
     acquired: "2026-08-23"
     tag: "op17"
+    price_note: "Leader Alternate Art, foil. TCGplayer market 2026-08-25 (listed median $90.73)."
     ebay_query: "One Piece OP17-020 Shanks Leader Alternate Art English"
 
   - id: st32-002-kozuki-oden-sp
@@ -331,59 +333,76 @@ holdings:
     tag: "op17"
     # SP reprints carry the ORIGINAL card number, same trap as the Ms. All
     # Sunday SP -- searching ST32-002 returns the cheap base card too. Always
-    # filter for SP.
+    # filter for SP: the plain ST32-002 Oden is $7.78, this one is not.
+    #
+    # DELIBERATELY UNPRICED. TCGplayer has NO market price for it -- zero
+    # recorded sales. The only number available is a listed median of $398.98,
+    # which is what sellers are ASKING, not what anyone has paid. On a set
+    # three days old asks run well above clears, so booking ~$399 here could
+    # overstate the whole portfolio by a couple hundred dollars on its own.
+    # This is very likely the most valuable card in the haul; check it in a
+    # few weeks once sales exist and price it off SOLD comps.
     ebay_query: "One Piece ST32-002 Kozuki Oden SP English"
 
   - id: op17-062-kaido-sr
     name: "OP17-062 Kaido (Super Rare, alt/star)"
     status: "owned"
-    estimate: null
+    estimate: 46.18
     acquired: "2026-08-23"
     tag: "op17"
+    price_note: 'Alternate Art, foil. TCGplayer market 2026-08-25. Read as alt art because you said star. Base Kaido is only $4.09; Super Alt Art asks $400 and Manga asks $1,700 -- worth confirming which you have.'
     ebay_query: "One Piece OP17-062 Kaido Super Rare English"
 
   - id: op17-005-edward-newgate-sr
     name: "OP17-005 Edward Newgate (Super Rare)"
     status: "owned"
-    estimate: null
+    estimate: 6.72
     acquired: "2026-08-23"
     tag: "op17"
+    price_note: "Base Super Rare, foil. TCGplayer market 2026-08-25. Alternate Art version asks ~$50 with no market price yet."
     ebay_query: "One Piece OP17-005 Edward Newgate Super Rare English"
 
   - id: op17-093-luffy-sr-x3
     name: "OP17-093 Luffy (Super Rare) x3"
     status: "owned"
-    estimate: null
+    estimate: 23.22
     acquired: "2026-08-23"
     tag: "op17"
+    price_note: "3 x base Super Rare foil at $7.74 market each. Duplicates usually clear under 3x as a lot. The Alternate Art 093 is $90.52 -- if any of the three are alt art this is badly low."
     # THREE copies. Estimate should be the total for all three, not one.
     # Duplicates of the same SR usually sell as a lot for less than 3x single.
     ebay_query: "One Piece OP17-093 Luffy Super Rare English"
 
   - id: op17-114-alt-art
-    name: "OP17-114 (Rare, Alternate Art) — NAME TBC"
+    name: "OP17-114 Sweet 3 Generals (Alt Art)"
     status: "owned"
-    estimate: null
+    estimate: 31.80
     acquired: "2026-08-23"
     tag: "op17"
-    ebay_query: "One Piece OP17-114 Alternate Art English"
+    price_note: "Alternate Art, foil. TCGplayer market 2026-08-25 (listed median $30.82). Base version is $1.10."
+    ebay_query: "One Piece OP17-114 Sweet 3 Generals Alternate Art English"
 
   - id: op17-4th-anniv-rainbow-luffy
     name: "OP-17 4th Anniversary Rainbow Luffy Leader"
     status: "owned"
-    estimate: null
+    estimate: 4.02
     acquired: "2026-08-23"
     tag: "op17"
+    price_note: "4th Anniversary Leader Card, foil. TCGplayer market 2026-08-25."
     source: "prerelease entry"
     ebay_query: "One Piece 4th Anniversary Rainbow Luffy Leader promo"
 
-  - id: op17-4th-anniv-alt-background
-    name: "4th Anniversary promo — alt background art"
+  - id: p-110-luffy-elbaph-lego
+    name: "P-110 Monkey.D.Luffy (Elbaph outfit, lego background promo)"
     status: "owned"
-    estimate: null
+    estimate: 20.98
     acquired: "2026-08-23"
     tag: "op17"
+    price_note: "TCGplayer market 2026-08-25 for the standard P-110. The (Winner) version is $323.05 -- you did not place, so this is correctly the standard one."
     source: "prerelease entry"
+    # The STANDARD P-110. Carter did not place, so this is NOT the Silver Foil
+    # + Gold Stamp version each group's 1st place received -- that is a
+    # different, scarcer card. Do not price off stamped comps.
 
   - id: op17-world-don-luffy-zoro
     name: "World United DON!! — Luffy and Zoro (opened)"
@@ -394,16 +413,10 @@ holdings:
     source: "prerelease entry"
     # Opened, so no sealed premium.
 
-  - id: op17-participation-packs-sealed
-    name: "OP-17 participation packs x2 (sealed)"
-    status: "owned"
-    estimate: null
-    acquired: "2026-08-23"
-    tag: "op17"
-    source: "prerelease entry"
-    # SEALED -- these are the only haul item with a live market price. Loose
-    # OP-17 packs were asking $18.99 the day pack tracking was retired. Worth
-    # more unopened than opened; see the EV note in the README.
+  # The 2 participation packs were OPENED and their contents not recorded --
+  # Carter does not remember which cards came out. No sealed premium survives,
+  # and whatever they contained is inside the bulk line below rather than
+  # itemised. Nothing to value separately.
 
   - id: op17-bulk-and-smalls
     name: "OP-17 bulk, commons/uncommons and small hits (incl. Panda Man)"
