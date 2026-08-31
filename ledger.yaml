@@ -383,31 +383,7 @@ holdings:
 
 
 
-  - id: courtyard-alvida-box-topper-cgc85
-    name: "2022 Romance Dawn OP01-064 Alvida borderless box topper (CGC 8.5 NM-MT+)"
-    status: "owned"
-    estimate: 66.83
-    acquired: "2026-08-30"
-    tag: "courtyard"
-    note: "Courtyard buyback offer $66.83 against a $79.00 market value, 84.6% — right in line with the 81-94% every Courtyard exit has cleared at. Booked at the bid, not the MV."
-    # Pulled from a $100 pack funded entirely by the wallet, so there is no
-    # expense line: no bank charge, and logging the two sales that funded it
-    # would double-count. Same rule as every other Courtyard pack.
-    #
-    # What actually happened, in holdings rather than cash: Black Maria
-    # ($74.72) and Sabo ($36.80) were liquidated for $111.52 and became this
-    # card at $66.83 plus $11.52 left in the wallet. $78.35 out of $111.52.
 
-  - id: courtyard-wallet-balance
-    name: "Courtyard wallet balance (cash, withdrawable)"
-    status: "owned"
-    estimate: 11.52
-    liquid: true
-    acquired: "2026-08-30"
-    tag: "courtyard"
-    note: "Residual after the $100 pack. This is cash, not a card — it is worth exactly its face value and no selling fee applies to it."
-    # Tracked as a holding so it cannot quietly vanish from the ledger. It is
-    # the only line here that is already liquid.
 
   # --- Courtyard: repriced 2026-08-30 to Courtyard's own liquidation offers.
   # Those offers are what Courtyard will actually pay today, so they are a
@@ -622,4 +598,32 @@ holdings:
   # <<ADD_HOLDINGS_HERE>>
 
 sales:
+  # --- Courtyard closed out, 2026-08-30 ---------------------------------
+  # Everything left in the account was liquidated and withdrawn to the bank as
+  # a single $78.35 ACH. Recorded as sales because this is the first time
+  # Courtyard money became REAL money -- every prior movement was internal to
+  # the wallet and correctly went unlogged.
+  #
+  # fees: 0.00 on both. The buyback price IS the net bid; there is no eBay cut
+  # to take. That is why closing out is $9.25 better than the holdings figure
+  # suggested -- the ledger had been haircutting the Alvida 13.25% for a sale
+  # that never happened on eBay.
+  #
+  # IN TRANSIT as of 2026-08-30. Coinflow ACH, same-day to 3 business days,
+  # and it may land on the statement as COINFLOW or APTPAY rather than
+  # Courtyard. If it does not arrive, this is the entry to reverse.
+  - date: 2026-08-30
+    item: "Alvida box topper CGC 8.5 — Courtyard buyback"
+    gross: 66.83
+    fees: 0.00
+    shipping_cost: 0.00
+    tag: "courtyard"
+
+  - date: 2026-08-30
+    item: "Courtyard wallet residual, withdrawn"
+    gross: 11.52
+    fees: 0.00
+    shipping_cost: 0.00
+    tag: "courtyard"
+
   # <<ADD_SALES_HERE>>

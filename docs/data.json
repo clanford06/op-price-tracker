@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-31T03:05:57+00:00",
+  "updated_at": "2026-08-31T03:08:14+00:00",
   "products": {
     "op17": {
       "history": [
@@ -19316,12 +19316,12 @@
     "spent": 1174.19,
     "planned": 99.98,
     "committed": 1274.17,
-    "realised": 0,
-    "unrealised_gross": 1498.97,
-    "unrealised_net": 1295.51,
+    "realised": 78.35,
+    "unrealised_gross": 1420.62,
+    "unrealised_net": 1226.41,
     "position_gross": 324.78,
-    "position_net": 121.32,
-    "roi_pct": 10.3,
+    "position_net": 130.57,
+    "roi_pct": 11.1,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 1053.27,
@@ -19341,9 +19341,9 @@
       "courtyard": {
         "spent": 139.39,
         "planned": 0.0,
-        "realised": 0.0,
-        "held": 69.1,
-        "net": -70.29
+        "realised": 78.35,
+        "held": 0.0,
+        "net": -61.04
       },
       "pokemon": {
         "spent": 32.4,
@@ -19418,7 +19418,7 @@
             "share": 0.9324,
             "note": "455 of 488 graded copies. Roughly double raw -- the outcome that justified submitting.",
             "net_if_sold": 997.22,
-            "position_net": 685.19
+            "position_net": 694.44
           },
           {
             "label": "PSA 9",
@@ -19426,7 +19426,7 @@
             "share": 0.0451,
             "note": "Only one on record: $760 on 2026-07-05 when 10s were $1,725, i.e. 44% of a 10. At or below raw.",
             "net_if_sold": 433.35,
-            "position_net": 121.32
+            "position_net": 130.57
           },
           {
             "label": "PSA 8 or lower",
@@ -19434,7 +19434,7 @@
             "share": 0.0225,
             "note": "One sold 2026-08-02 at $510, under what raw was fetching that week.",
             "net_if_sold": 442.02,
-            "position_net": 129.99
+            "position_net": 139.24
           }
         ]
       },
@@ -19477,21 +19477,6 @@
         "liquid": false,
         "source": "",
         "note": "",
-        "qty": 1,
-        "estimate_source": "manual",
-        "estimate_manual": null,
-        "tcgplayer_url": "",
-        "scenarios": []
-      },
-      {
-        "id": "courtyard-alvida-box-topper-cgc85",
-        "name": "2022 Romance Dawn OP01-064 Alvida borderless box topper (CGC 8.5 NM-MT+)",
-        "status": "owned",
-        "estimate": 66.83,
-        "net_if_sold": 57.58,
-        "liquid": false,
-        "source": "",
-        "note": "Courtyard buyback offer $66.83 against a $79.00 market value, 84.6% \u2014 right in line with the 81-94% every Courtyard exit has cleared at. Booked at the bid, not the MV.",
         "qty": 1,
         "estimate_source": "manual",
         "estimate_manual": null,
@@ -19616,21 +19601,6 @@
         "estimate_source": "tcgplayer",
         "estimate_manual": 15.0,
         "tcgplayer_url": "https://www.tcgplayer.com/product/694981",
-        "scenarios": []
-      },
-      {
-        "id": "courtyard-wallet-balance",
-        "name": "Courtyard wallet balance (cash, withdrawable)",
-        "status": "owned",
-        "estimate": 11.52,
-        "net_if_sold": 11.52,
-        "liquid": true,
-        "source": "",
-        "note": "Residual after the $100 pack. This is cash, not a card \u2014 it is worth exactly its face value and no selling fee applies to it.",
-        "qty": 1,
-        "estimate_source": "manual",
-        "estimate_manual": null,
-        "tcgplayer_url": "",
         "scenarios": []
       },
       {
@@ -19879,6 +19849,25 @@
         "planned": false
       }
     ],
-    "sales": []
+    "sales": [
+      {
+        "date": "2026-08-30",
+        "item": "Alvida box topper CGC 8.5 \u2014 Courtyard buyback",
+        "gross": 66.83,
+        "fees": 0.0,
+        "shipping_cost": 0.0,
+        "tag": "courtyard",
+        "net": 66.83
+      },
+      {
+        "date": "2026-08-30",
+        "item": "Courtyard wallet residual, withdrawn",
+        "gross": 11.52,
+        "fees": 0.0,
+        "shipping_cost": 0.0,
+        "tag": "courtyard",
+        "net": 11.52
+      }
+    ]
   }
 }
