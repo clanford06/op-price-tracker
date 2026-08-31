@@ -69,6 +69,13 @@ class Holding:
     raw card's and would be badly understated by it.
     """
     qty: int = 1              # `estimate` is the total for all copies
+    liquid: bool = False
+    """Already cash, so no selling fee applies.
+
+    A platform wallet balance is a holding -- it would otherwise vanish from
+    the ledger -- but it is not a card. Charging it 13.25% to "sell" it would
+    understate the position by inventing a fee that cannot be incurred.
+    """
     estimate_manual: float | None = None   # what the ledger said, pre-overlay
     estimate_source: str = "manual"        # manual | tcgplayer
     tcgplayer_url: str = ""
@@ -135,9 +142,15 @@ class Ledger:
             return 0.0
         return round(gross * (1 - self.fee_pct / 100) - self.fee_flat, 2)
 
+    def net_of(self, h: "Holding") -> float:
+        """What this holding is actually worth to you if converted today."""
+        if h.estimate is None:
+            return 0.0
+        return h.estimate if h.liquid else self.net_if_sold(h.estimate)
+
     @property
     def unrealised_net(self) -> float:
-        return round(sum(self.net_if_sold(h.estimate or 0.0) for h in self.holdings), 2)
+        return round(sum(self.net_of(h) for h in self.holdings), 2)
 
     @property
     def position_gross(self) -> float:
@@ -177,7 +190,7 @@ class Ledger:
         for s_ in self.sales:
             slot(s_.tag)["realised"] += s_.net
         for h in self.holdings:
-            slot(h.tag)["held"] += self.net_if_sold(h.estimate or 0.0)
+            slot(h.tag)["held"] += self.net_of(h)
 
         for row in tags.values():
             row["net"] = round(row["realised"] + row["held"] - row["spent"], 2)
@@ -218,7 +231,8 @@ class Ledger:
                     "name": h.name,
                     "status": h.status,
                     "estimate": h.estimate,
-                    "net_if_sold": self.net_if_sold(h.estimate or 0.0) if h.estimate else None,
+                    "net_if_sold": self.net_of(h) if h.estimate else None,
+                    "liquid": h.liquid,
                     "source": h.source,
                     "note": h.note,
                     "qty": h.qty,
@@ -233,8 +247,7 @@ class Ledger:
                             "note": str(s.get("note", "")),
                             "net_if_sold": self.net_if_sold(float(s["estimate"])),
                             "position_net": round(
-                                self.position_net
-                                - self.net_if_sold(h.estimate or 0.0)
+                                self.position_net - self.net_of(h)
                                 + self.net_if_sold(float(s["estimate"])), 2),
                         }
                         for s in h.scenarios if s.get("estimate") is not None
@@ -314,6 +327,7 @@ def _holding(raw: dict) -> dict:
         "tag": str(raw.get("tag", "")),
         "tcgplayer_id": int(raw["tcgplayer_id"]) if raw.get("tcgplayer_id") else None,
         "qty": int(raw.get("qty", 1)),
+        "liquid": bool(raw.get("liquid", False)),
         "scenarios": list(raw.get("scenarios") or []),
     }
 
@@ -383,7 +397,7 @@ def report(ledger: Ledger) -> None:
     print(f"\n  Holdings:{stamp}")
     for h in sorted(ledger.holdings, key=lambda x: -(x.estimate or 0)):
         est = _money(h.estimate) if h.estimate is not None else "unpriced"
-        net = f"→ {_money(ledger.net_if_sold(h.estimate))} net" if h.estimate else ""
+        net = f"→ {_money(ledger.net_of(h))} net" if h.estimate else ""
         src = "TCG" if h.estimate_source == "tcgplayer" else "   "
         print(f"    {h.name[:38]:<38} {est:>10} {net:<18} {src} [{h.status}]")
         # Booked at the floor, so say out loud what the other branches are

@@ -381,21 +381,33 @@ holdings:
 
   
 
-  - id: 2025-one-piece-promos-074-black-maria
-    name: "2025 One Piece Promos #074 Black Maria - Illustration Box Vol.2 (PSA 10)"
-    status: "owned"
-    estimate: 74.72
-    acquired: "2026-08-20"
-    tag: "courtyard"
-    note: "Courtyard LIQUIDATION OFFER, 2026-08-30 — a live guaranteed bid, not a sticker price. 94.1% of the $79.40 FMV it was carried at."
 
-  - id: 2026-one-piece-promos-007-sabo
-    name: "2026 One Piece Promos #007 Sabo - Illustration Box Vol.5 (PSA 10)"
+
+  - id: courtyard-alvida-box-topper-cgc85
+    name: "2022 Romance Dawn OP01-064 Alvida borderless box topper (CGC 8.5 NM-MT+)"
     status: "owned"
-    estimate: 36.80
-    acquired: "2026-08-20"
+    estimate: 66.83
+    acquired: "2026-08-30"
     tag: "courtyard"
-    note: "Courtyard LIQUIDATION OFFER, 2026-08-30 — a live guaranteed bid, not a sticker price. 81.4% of the $45.20 FMV it was carried at; that FMV was the closest any pack came to breakeven on a $50 pack."
+    note: "Courtyard buyback offer $66.83 against a $79.00 market value, 84.6% — right in line with the 81-94% every Courtyard exit has cleared at. Booked at the bid, not the MV."
+    # Pulled from a $100 pack funded entirely by the wallet, so there is no
+    # expense line: no bank charge, and logging the two sales that funded it
+    # would double-count. Same rule as every other Courtyard pack.
+    #
+    # What actually happened, in holdings rather than cash: Black Maria
+    # ($74.72) and Sabo ($36.80) were liquidated for $111.52 and became this
+    # card at $66.83 plus $11.52 left in the wallet. $78.35 out of $111.52.
+
+  - id: courtyard-wallet-balance
+    name: "Courtyard wallet balance (cash, withdrawable)"
+    status: "owned"
+    estimate: 11.52
+    liquid: true
+    acquired: "2026-08-30"
+    tag: "courtyard"
+    note: "Residual after the $100 pack. This is cash, not a card — it is worth exactly its face value and no selling fee applies to it."
+    # Tracked as a holding so it cannot quietly vanish from the ledger. It is
+    # the only line here that is already liquid.
 
   # --- Courtyard: repriced 2026-08-30 to Courtyard's own liquidation offers.
   # Those offers are what Courtyard will actually pay today, so they are a

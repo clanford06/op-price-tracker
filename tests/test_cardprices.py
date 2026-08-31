@@ -88,3 +88,15 @@ def test_missing_overlay_file_keeps_the_manual_estimate(tmp_path):
     led = _ledger(285.00)
     assert cardprices.apply_to(led, tmp_path / "nope.json") == 0
     assert led.holdings[0].estimate == 285.00
+
+
+def test_liquid_holdings_pay_no_selling_fee():
+    # A wallet balance is a holding so it cannot vanish from the ledger, but
+    # charging it 13.25% to "sell" invents a fee that cannot be incurred.
+    from tracker.portfolio import Holding, Ledger
+
+    cash = Holding(id="w", name="wallet", status="owned", estimate=11.52, liquid=True)
+    card = Holding(id="c", name="card", status="owned", estimate=11.52)
+    led = Ledger(holdings=[cash, card])
+    assert led.net_of(cash) == 11.52
+    assert led.net_of(card) < 11.52

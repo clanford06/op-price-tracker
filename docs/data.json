@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-31T02:57:42+00:00",
+  "updated_at": "2026-08-31T03:05:57+00:00",
   "products": {
     "op17": {
       "history": [
@@ -19317,11 +19317,11 @@
     "planned": 99.98,
     "committed": 1274.17,
     "realised": 0,
-    "unrealised_gross": 1532.14,
-    "unrealised_net": 1322.35,
-    "position_gross": 357.95,
-    "position_net": 148.16,
-    "roi_pct": 12.6,
+    "unrealised_gross": 1498.97,
+    "unrealised_net": 1295.51,
+    "position_gross": 324.78,
+    "position_net": 121.32,
+    "roi_pct": 10.3,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 1053.27,
@@ -19342,8 +19342,8 @@
         "spent": 139.39,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 95.94,
-        "net": -43.45
+        "held": 69.1,
+        "net": -70.29
       },
       "pokemon": {
         "spent": 32.4,
@@ -19404,6 +19404,7 @@
         "status": "grading",
         "estimate": 500.0,
         "net_if_sold": 433.35,
+        "liquid": false,
         "source": "pulled from OP-16 box",
         "note": "At PSA, order #27355838. First View images 2026-08-26, est. complete 2026-11-23 to 2026-12-09. Carried at the FLOOR -- the grade is not known yet, so the position must not assume one. A 10 is the likely outcome and is worth roughly double; see the grade breakdown.",
         "qty": 1,
@@ -19417,7 +19418,7 @@
             "share": 0.9324,
             "note": "455 of 488 graded copies. Roughly double raw -- the outcome that justified submitting.",
             "net_if_sold": 997.22,
-            "position_net": 712.03
+            "position_net": 685.19
           },
           {
             "label": "PSA 9",
@@ -19425,7 +19426,7 @@
             "share": 0.0451,
             "note": "Only one on record: $760 on 2026-07-05 when 10s were $1,725, i.e. 44% of a 10. At or below raw.",
             "net_if_sold": 433.35,
-            "position_net": 148.16
+            "position_net": 121.32
           },
           {
             "label": "PSA 8 or lower",
@@ -19433,7 +19434,7 @@
             "share": 0.0225,
             "note": "One sold 2026-08-02 at $510, under what raw was fetching that week.",
             "net_if_sold": 442.02,
-            "position_net": 156.83
+            "position_net": 129.99
           }
         ]
       },
@@ -19443,6 +19444,7 @@
         "status": "owned",
         "estimate": 341.25,
         "net_if_sold": 295.63,
+        "liquid": false,
         "source": "",
         "note": "",
         "qty": 1,
@@ -19457,6 +19459,7 @@
         "status": "owned",
         "estimate": 213.39,
         "net_if_sold": 184.72,
+        "liquid": false,
         "source": "",
         "note": "",
         "qty": 1,
@@ -19471,6 +19474,7 @@
         "status": "owned",
         "estimate": 169.0,
         "net_if_sold": 146.21,
+        "liquid": false,
         "source": "",
         "note": "",
         "qty": 1,
@@ -19480,13 +19484,14 @@
         "scenarios": []
       },
       {
-        "id": "2025-one-piece-promos-074-black-maria",
-        "name": "2025 One Piece Promos #074 Black Maria - Illustration Box Vol.2 (PSA 10)",
+        "id": "courtyard-alvida-box-topper-cgc85",
+        "name": "2022 Romance Dawn OP01-064 Alvida borderless box topper (CGC 8.5 NM-MT+)",
         "status": "owned",
-        "estimate": 74.72,
-        "net_if_sold": 64.42,
+        "estimate": 66.83,
+        "net_if_sold": 57.58,
+        "liquid": false,
         "source": "",
-        "note": "Courtyard LIQUIDATION OFFER, 2026-08-30 \u2014 a live guaranteed bid, not a sticker price. 94.1% of the $79.40 FMV it was carried at.",
+        "note": "Courtyard buyback offer $66.83 against a $79.00 market value, 84.6% \u2014 right in line with the 81-94% every Courtyard exit has cleared at. Booked at the bid, not the MV.",
         "qty": 1,
         "estimate_source": "manual",
         "estimate_manual": null,
@@ -19499,6 +19504,7 @@
         "status": "owned",
         "estimate": 42.14,
         "net_if_sold": 36.16,
+        "liquid": false,
         "source": "pulled from OP-16 box",
         "note": "",
         "qty": 1,
@@ -19508,25 +19514,12 @@
         "scenarios": []
       },
       {
-        "id": "2026-one-piece-promos-007-sabo",
-        "name": "2026 One Piece Promos #007 Sabo - Illustration Box Vol.5 (PSA 10)",
-        "status": "owned",
-        "estimate": 36.8,
-        "net_if_sold": 31.52,
-        "source": "",
-        "note": "Courtyard LIQUIDATION OFFER, 2026-08-30 \u2014 a live guaranteed bid, not a sticker price. 81.4% of the $45.20 FMV it was carried at; that FMV was the closest any pack came to breakeven on a $50 pack.",
-        "qty": 1,
-        "estimate_source": "manual",
-        "estimate_manual": null,
-        "tcgplayer_url": "",
-        "scenarios": []
-      },
-      {
         "id": "op17-119-loki-sec",
         "name": "OP17-119 Loki (Secret Rare)",
         "status": "owned",
         "estimate": 35.05,
         "net_if_sold": 30.01,
+        "liquid": false,
         "source": "",
         "note": "",
         "qty": 1,
@@ -19541,6 +19534,7 @@
         "status": "owned",
         "estimate": 33.68,
         "net_if_sold": 28.82,
+        "liquid": false,
         "source": "",
         "note": "",
         "qty": 1,
@@ -19555,6 +19549,7 @@
         "status": "owned",
         "estimate": 18.59,
         "net_if_sold": 15.73,
+        "liquid": false,
         "source": "",
         "note": "",
         "qty": 1,
@@ -19569,6 +19564,7 @@
         "status": "owned",
         "estimate": 16.76,
         "net_if_sold": 14.14,
+        "liquid": false,
         "source": "prerelease entry",
         "note": "",
         "qty": 1,
@@ -19583,6 +19579,7 @@
         "status": "owned",
         "estimate": 14.71,
         "net_if_sold": 12.36,
+        "liquid": false,
         "source": "pulled from OP-16 box",
         "note": "Assumed base SEC. If it's the Alt Art SEC it's ~$40-55 \u2014 check which you have.",
         "qty": 1,
@@ -19597,6 +19594,7 @@
         "status": "owned",
         "estimate": 13.47,
         "net_if_sold": 11.29,
+        "liquid": false,
         "source": "",
         "note": "",
         "qty": 3,
@@ -19611,6 +19609,7 @@
         "status": "owned",
         "estimate": 13.19,
         "net_if_sold": 11.04,
+        "liquid": false,
         "source": "pulled from OP-16 box",
         "note": "",
         "qty": 1,
@@ -19620,11 +19619,27 @@
         "scenarios": []
       },
       {
+        "id": "courtyard-wallet-balance",
+        "name": "Courtyard wallet balance (cash, withdrawable)",
+        "status": "owned",
+        "estimate": 11.52,
+        "net_if_sold": 11.52,
+        "liquid": true,
+        "source": "",
+        "note": "Residual after the $100 pack. This is cash, not a card \u2014 it is worth exactly its face value and no selling fee applies to it.",
+        "qty": 1,
+        "estimate_source": "manual",
+        "estimate_manual": null,
+        "tcgplayer_url": "",
+        "scenarios": []
+      },
+      {
         "id": "op16-063-kuzan-alt",
         "name": "Kuzan OP16-063 (Alt Art)",
         "status": "owned",
         "estimate": 4.55,
         "net_if_sold": 3.55,
+        "liquid": false,
         "source": "pulled from OP-16 box",
         "note": "",
         "qty": 1,
@@ -19639,6 +19654,7 @@
         "status": "owned",
         "estimate": 3.22,
         "net_if_sold": 2.39,
+        "liquid": false,
         "source": "prerelease entry",
         "note": "",
         "qty": 1,
@@ -19653,6 +19669,7 @@
         "status": "owned",
         "estimate": 1.62,
         "net_if_sold": 1.01,
+        "liquid": false,
         "source": "",
         "note": "",
         "qty": 1,
@@ -19667,6 +19684,7 @@
         "status": "owned",
         "estimate": null,
         "net_if_sold": null,
+        "liquid": false,
         "source": "prerelease entry",
         "note": "",
         "qty": 1,
@@ -19681,6 +19699,7 @@
         "status": "owned",
         "estimate": null,
         "net_if_sold": null,
+        "liquid": false,
         "source": "",
         "note": "",
         "qty": 1,
