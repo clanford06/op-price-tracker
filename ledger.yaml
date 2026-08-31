@@ -216,11 +216,69 @@ holdings:
     tag: "msallsunday"
     name: "Ms. All Sunday SP OP14-084 (English)"
     status: grading
-    estimate: 650.00
+    estimate: 1106.27
     acquired: "2026-07"
     source: "pulled from OP-16 box"
-    note: "At PSA (order #27355838), received 2026-08-13, at Research & ID. Est. complete 2026-11-23 to 2026-12-09 -- NOT Sept-Oct. Not liquid until December. A 10 is worth a real multiple; a 9 lands near raw."
+    note: "At PSA, order #27355838. First View images 2026-08-26, est. complete 2026-11-23 to 2026-12-09. NOT liquid until then. Estimate is probability-weighted across grades at TODAY's comps, not a promise -- PSA 10s have halved since June and this lands the same week OP-18 does."
     ebay_query: "Ms All Sunday OP14-084 SP English"
+    # ---------------------------------------------------------------------
+    # REPRICED 2026-08-30, from $650.00. That $650 was a placeholder set
+    # before there were comps; it now sits between the two real outcomes and
+    # matches neither. Raw NM is ~$566 and a PSA 10 is ~$1,150, so $650 was
+    # describing a card that does not exist.
+    #
+    # NOT auto-priced on purpose. TCGplayer sells RAW singles; a slab is its
+    # own market. Giving this a `tcgplayer_id` would quietly overwrite the
+    # graded value with the ~$566 raw price and lose half the position.
+    #
+    # PSA POP REPORT (n=488, set released 2026-06-12):
+    #     PSA 10        455   93.24%   x $1,150  = $1,072.23
+    #     PSA 9          22    4.51%   x $  500  = $   22.54
+    #     PSA 8 or less  11    2.25%   x $  510  = $   11.50
+    #                                    EV      = $1,106.27   <- booked
+    #
+    # A 10 is the strong base case: 93.2% gem, 96.5% come back 9 or better.
+    # Call it 90-95% allowing for the one thing the images cannot settle --
+    # centering, which is judged off the back and is what generates most of
+    # those 22 nines. The other three failure modes (corners, edges, surface)
+    # looked clean at high resolution. The bright line along the bottom back
+    # edge is a light reflection, not whitening: ~0.15mm, green-channel
+    # dominant (picking up the surface under it), and perfectly uniform edge
+    # to edge, which is what a light source does and wear never does.
+    #
+    # A 9 IS A BAD OUTCOME, worse than the pop split suggests. The only PSA 9
+    # on record sold $760 on 2026-07-05 when 10s were ~$1,725 -- 44% of a 10.
+    # At today's level that ratio lands near $500, i.e. AT OR BELOW RAW. The
+    # PSA 8 that sold 2026-08-02 went for $510, also below raw that week.
+    # Below a 10, grading this card destroyed value rather than adding it.
+    #
+    # THE REAL RISK IS THE PRICE, NOT THE GRADE:
+    #     PSA 10   ~$2,200 late June  ->  ~$1,150 now      -48% in 10 weeks
+    #     Raw NM    $500-630 (TCGplayer market ~$566)      -20% same period
+    # Roughly $100-150 a week off a 10, with no floor yet, because the 10 pop
+    # keeps growing while the set is still being opened -- 0 to 488 graded in
+    # 11 weeks. The $1,106 above uses TODAY's comps for a card that cannot be
+    # sold for ~12 more weeks. Do not treat it as what the check will say.
+    #
+    # AND THE COMPETITION ARRIVES FIRST:
+    #   Oct 2026  EB-05 Heroines Edition vol. 2 -- Nico Robin leader
+    #   Nov 2026  OP-18 "The Dominance of God" -- OP18-031, Robin's FIRST
+    #             Manga Rare, Water 7 / Enies Lobby art (~1 per case, ~1 in
+    #             288 packs). Manga Rare outranks SP; it becomes "the" Robin
+    #             card. Both are pre-timeskip, so they compete for the same
+    #             buyer rather than opening a second niche.
+    # Set date is unconfirmed by Bandai and much of the checklist is still
+    # leaks; retailers point at Nov 20. That is the same week this slab is
+    # due back, which is the worst available collision.
+    #
+    # DECISION THAT ACTUALLY MATTERS: list on arrival or hold for years.
+    # Waiting a quarter to "see if it bounces" is neither, and is how a card
+    # rides $2,200 down to $800. Also worth confirming the service tier on
+    # the order page -- Express would have it back in October, ahead of both
+    # sets, and Regular is what puts it back in late November. Value tiers
+    # have been paused since 2026-06-02 (backlog ~11.85M units), so it is
+    # one of those two.
+    # ---------------------------------------------------------------------
 
   - id: op16-022-luffy-alt
     tcgplayer_id: 696007      # Monkey.D.Luffy (022) (Alternate Art), Leader, foil

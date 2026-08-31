@@ -114,11 +114,6 @@ class Ledger:
         return round(self.spent + self.planned, 2)
 
     @property
-    def position_committed(self) -> float:
-        """Where you land once planned spend happens, before it returns anything."""
-        return round(self.realised + self.unrealised_net - self.committed, 2)
-
-    @property
     def realised(self) -> float:
         return round(sum(s.net for s in self.sales), 2)
 
@@ -198,7 +193,6 @@ class Ledger:
             "spent": self.spent,
             "planned": self.planned,
             "committed": self.committed,
-            "position_committed": self.position_committed,
             "realised": self.realised,
             "unrealised_gross": self.unrealised_gross,
             "unrealised_net": self.unrealised_net,
@@ -348,9 +342,6 @@ def report(ledger: Ledger) -> None:
     uncosted = ledger.uncosted()
     verdict = "UP" if pos > 0 else ("DOWN" if pos < 0 else "EVEN")
     print(f"  NET POSITION (if you sold everything today){_money(pos):>17}")
-    if ledger.planned:
-        print(f"  After planned spend, before it returns anything"
-              f"{_money(ledger.position_committed):>14}")
     if uncosted:
         print(f"  ** NOT TRUSTWORTHY — {len(uncosted)} cost(s) still at $0.00 **")
     else:

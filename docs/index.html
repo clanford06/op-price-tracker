@@ -139,6 +139,8 @@
   .track { position:relative; height:16px; }
   .track .zero { position:absolute; top:-2px; bottom:-2px; width:1px; background:var(--axis); }
   .bar { position:absolute; top:1px; height:14px; border-radius:3px; }
+  .hnote { font-size:.68rem; color:var(--muted); line-height:1.45; margin-top:.25rem;
+           max-width:52ch; }
   .src { font-size:.66rem; color:var(--muted); border:1px solid var(--axis); border-radius:3px;
          padding:0 .28rem; margin-left:.3rem; white-space:nowrap; }
   a.src.live { text-decoration:none; }
@@ -317,9 +319,13 @@ function portfolio(pf) {
       : `<span class="src">manual</span>`;
     const delta = moved == null || Math.abs(moved) < 0.01 ? ''
       : `<span class="dlt ${moved>0?'pos':'neg'}">${moved>0?'+':''}${money(moved)}</span>`;
+    // The note is where a holding says why its number is what it is. On the
+    // manual ones that reasoning IS the valuation, so hiding it on the
+    // dashboard leaves the biggest positions looking like bare assertions.
+    const note = h.note ? `<div class="hnote">${esc(h.note)}</div>` : '';
     return `
     <div class="hold"><span>${esc(h.name)}${h.status!=='owned'?' · '+esc(h.status):''}
-        ${h.qty>1?`<span class="src">x${h.qty}</span>`:''} ${badge} ${delta}</span>
+        ${h.qty>1?`<span class="src">x${h.qty}</span>`:''} ${badge} ${delta}${note}</span>
       <span class="hv">${h.estimate==null?'unpriced':money(h.estimate)}${h.net_if_sold!=null?' → '+money(h.net_if_sold):''}</span></div>`;
   }).join('');
   const mkt = pf.card_prices_at
@@ -334,8 +340,7 @@ function portfolio(pf) {
       <div class="stat"><div class="k">Holdings (net of fees)</div><div class="v">${money(pf.unrealised_net)}</div></div>
       <div class="stat"><div class="k">Net position</div><div class="v ${cls(pf.position_net)}">${money(pf.position_net)}</div></div>
       <div class="stat"><div class="k">ROI</div><div class="v ${cls(pf.position_net)}">${pf.roi_pct==null?'—':(pf.roi_pct>0?'+':'')+pf.roi_pct+'%'}</div></div>
-      ${pf.planned ? `<div class="stat"><div class="k">Planned spend</div><div class="v">${money(pf.planned)}</div></div>
-      <div class="stat"><div class="k">After planned</div><div class="v ${cls(pf.position_committed)}">${money(pf.position_committed)}</div></div>` : ''}
+      ${pf.planned ? `<div class="stat"><div class="k">Planned spend</div><div class="v">${money(pf.planned)}</div></div>` : ''}
     </div>
     ${plChart(pf.by_tag)}
     ${holdingsChart(pf.holdings)}
