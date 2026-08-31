@@ -384,18 +384,29 @@ holdings:
   - id: 2025-one-piece-promos-074-black-maria
     name: "2025 One Piece Promos #074 Black Maria - Illustration Box Vol.2 (PSA 10)"
     status: "owned"
-    estimate: 79.40
+    estimate: 74.72
     acquired: "2026-08-20"
     tag: "courtyard"
-    note: "Courtyard FMV. Every Courtyard sale so far cleared UNDER sticker; assume ~85% on exit."
+    note: "Courtyard LIQUIDATION OFFER, 2026-08-30 — a live guaranteed bid, not a sticker price. 94.1% of the $79.40 FMV it was carried at."
 
   - id: 2026-one-piece-promos-007-sabo
     name: "2026 One Piece Promos #007 Sabo - Illustration Box Vol.5 (PSA 10)"
     status: "owned"
-    estimate: 45.20
+    estimate: 36.80
     acquired: "2026-08-20"
     tag: "courtyard"
-    note: "Courtyard FMV. Closest any pack came to breakeven ($45.20 out of a $50 pack)."
+    note: "Courtyard LIQUIDATION OFFER, 2026-08-30 — a live guaranteed bid, not a sticker price. 81.4% of the $45.20 FMV it was carried at; that FMV was the closest any pack came to breakeven on a $50 pack."
+
+  # --- Courtyard: repriced 2026-08-30 to Courtyard's own liquidation offers.
+  # Those offers are what Courtyard will actually pay today, so they are a
+  # firmer number than the FMV sticker these were carried at and they replace
+  # it. Same rule as everything else here: book the bid, not the ask.
+  #
+  # They are OFFERS, not sales -- nothing is realised and both cards are still
+  # holdings. Taking them credits the Courtyard WALLET, which is not the same
+  # as money in the bank: the wallet exists to fund the next pack, and that is
+  # exactly how a $40.26 sale quietly became a "free" pack in August. If these
+  # are liquidated, WITHDRAW, then log two sales and drop the holdings.
 
   # --- OP-17 haul: 2 booster boxes + the 8/23 prerelease -------------------
   #

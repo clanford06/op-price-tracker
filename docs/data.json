@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-31T02:55:22+00:00",
+  "updated_at": "2026-08-31T02:57:42+00:00",
   "products": {
     "op17": {
       "history": [
@@ -19317,11 +19317,11 @@
     "planned": 99.98,
     "committed": 1274.17,
     "realised": 0,
-    "unrealised_gross": 1545.22,
-    "unrealised_net": 1333.7,
-    "position_gross": 371.03,
-    "position_net": 159.51,
-    "roi_pct": 13.6,
+    "unrealised_gross": 1532.14,
+    "unrealised_net": 1322.35,
+    "position_gross": 357.95,
+    "position_net": 148.16,
+    "roi_pct": 12.6,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 1053.27,
@@ -19338,19 +19338,19 @@
         "held": 63.11,
         "net": -401.93
       },
+      "courtyard": {
+        "spent": 139.39,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 95.94,
+        "net": -43.45
+      },
       "pokemon": {
         "spent": 32.4,
         "planned": 0.0,
         "realised": 0.0,
         "held": 0.0,
         "net": -32.4
-      },
-      "courtyard": {
-        "spent": 139.39,
-        "planned": 0.0,
-        "realised": 0.0,
-        "held": 107.29,
-        "net": -32.1
       },
       "supplies": {
         "spent": 28.57,
@@ -19417,7 +19417,7 @@
             "share": 0.9324,
             "note": "455 of 488 graded copies. Roughly double raw -- the outcome that justified submitting.",
             "net_if_sold": 997.22,
-            "position_net": 723.38
+            "position_net": 712.03
           },
           {
             "label": "PSA 9",
@@ -19425,7 +19425,7 @@
             "share": 0.0451,
             "note": "Only one on record: $760 on 2026-07-05 when 10s were $1,725, i.e. 44% of a 10. At or below raw.",
             "net_if_sold": 433.35,
-            "position_net": 159.51
+            "position_net": 148.16
           },
           {
             "label": "PSA 8 or lower",
@@ -19433,7 +19433,7 @@
             "share": 0.0225,
             "note": "One sold 2026-08-02 at $510, under what raw was fetching that week.",
             "net_if_sold": 442.02,
-            "position_net": 168.18
+            "position_net": 156.83
           }
         ]
       },
@@ -19483,24 +19483,10 @@
         "id": "2025-one-piece-promos-074-black-maria",
         "name": "2025 One Piece Promos #074 Black Maria - Illustration Box Vol.2 (PSA 10)",
         "status": "owned",
-        "estimate": 79.4,
-        "net_if_sold": 68.48,
+        "estimate": 74.72,
+        "net_if_sold": 64.42,
         "source": "",
-        "note": "Courtyard FMV. Every Courtyard sale so far cleared UNDER sticker; assume ~85% on exit.",
-        "qty": 1,
-        "estimate_source": "manual",
-        "estimate_manual": null,
-        "tcgplayer_url": "",
-        "scenarios": []
-      },
-      {
-        "id": "2026-one-piece-promos-007-sabo",
-        "name": "2026 One Piece Promos #007 Sabo - Illustration Box Vol.5 (PSA 10)",
-        "status": "owned",
-        "estimate": 45.2,
-        "net_if_sold": 38.81,
-        "source": "",
-        "note": "Courtyard FMV. Closest any pack came to breakeven ($45.20 out of a $50 pack).",
+        "note": "Courtyard LIQUIDATION OFFER, 2026-08-30 \u2014 a live guaranteed bid, not a sticker price. 94.1% of the $79.40 FMV it was carried at.",
         "qty": 1,
         "estimate_source": "manual",
         "estimate_manual": null,
@@ -19519,6 +19505,20 @@
         "estimate_source": "tcgplayer",
         "estimate_manual": 63.0,
         "tcgplayer_url": "https://www.tcgplayer.com/product/696007",
+        "scenarios": []
+      },
+      {
+        "id": "2026-one-piece-promos-007-sabo",
+        "name": "2026 One Piece Promos #007 Sabo - Illustration Box Vol.5 (PSA 10)",
+        "status": "owned",
+        "estimate": 36.8,
+        "net_if_sold": 31.52,
+        "source": "",
+        "note": "Courtyard LIQUIDATION OFFER, 2026-08-30 \u2014 a live guaranteed bid, not a sticker price. 81.4% of the $45.20 FMV it was carried at; that FMV was the closest any pack came to breakeven on a $50 pack.",
+        "qty": 1,
+        "estimate_source": "manual",
+        "estimate_manual": null,
+        "tcgplayer_url": "",
         "scenarios": []
       },
       {
