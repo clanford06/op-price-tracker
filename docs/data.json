@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-30T22:45:45+00:00",
+  "updated_at": "2026-08-31T02:38:57+00:00",
   "products": {
     "op17": {
       "history": [
@@ -19313,21 +19313,22 @@
     }
   },
   "portfolio": {
-    "spent": 1147.19,
+    "spent": 1174.19,
     "planned": 99.98,
-    "committed": 1247.17,
-    "position_committed": 425.59,
+    "committed": 1274.17,
+    "position_committed": 189.44,
     "realised": 0,
-    "unrealised_gross": 1936.1,
-    "unrealised_net": 1672.76,
-    "position_gross": 788.91,
-    "position_net": 525.57,
-    "roi_pct": 45.8,
+    "unrealised_gross": 1694.98,
+    "unrealised_net": 1463.61,
+    "position_gross": 520.79,
+    "position_net": 289.42,
+    "roi_pct": 24.6,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 1053.27,
       "supplies": 35.03,
       "events": 32.4,
+      "breaks": 27.0,
       "grading": 26.49
     },
     "by_tag": {
@@ -19335,8 +19336,8 @@
         "spent": 465.04,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 80.8,
-        "net": -384.24
+        "held": 63.11,
+        "net": -401.93
       },
       "pokemon": {
         "spent": 32.4,
@@ -19366,6 +19367,13 @@
         "held": 0.0,
         "net": -28.06
       },
+      "whatnot": {
+        "spent": 27.0,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 0.0,
+        "net": -27.0
+      },
       "op15": {
         "spent": 39.39,
         "planned": 0.0,
@@ -19377,8 +19385,8 @@
         "spent": 387.85,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 774.98,
-        "net": 387.13
+        "held": 583.52,
+        "net": 195.67
       },
       "msallsunday": {
         "spent": 26.49,
@@ -19388,6 +19396,8 @@
         "net": 536.99
       }
     },
+    "card_prices_applied": 13,
+    "card_prices_at": "2026-08-31T02:37:34+00:00",
     "holdings": [
       {
         "id": "ms-all-sunday-sp",
@@ -19396,25 +19406,37 @@
         "estimate": 650.0,
         "net_if_sold": 563.48,
         "source": "pulled from OP-16 box",
-        "note": "At PSA (order #27355838), received 2026-08-13, at Research & ID. Est. complete 2026-11-23 to 2026-12-09 -- NOT Sept-Oct. Not liquid until December. A 10 is worth a real multiple; a 9 lands near raw."
+        "note": "At PSA (order #27355838), received 2026-08-13, at Research & ID. Est. complete 2026-11-23 to 2026-12-09 -- NOT Sept-Oct. Not liquid until December. A 10 is worth a real multiple; a 9 lands near raw.",
+        "qty": 1,
+        "estimate_source": "manual",
+        "estimate_manual": null,
+        "tcgplayer_url": ""
       },
       {
         "id": "op17-062-kaido-guest-artist",
         "name": "OP17-062 Kaido (Super Alternate Art) \u2014 Keisuke Itagaki / Baki art, English",
         "status": "owned",
-        "estimate": 400.0,
-        "net_if_sold": 346.6,
+        "estimate": 341.25,
+        "net_if_sold": 295.63,
         "source": "",
-        "note": ""
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 400.0,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/712091"
       },
       {
         "id": "st32-002-kozuki-oden-sp",
         "name": "ST32-002 Kouzuki Oden (SP, Conqueror's Haki) \u2014 English",
         "status": "owned",
-        "estimate": 285.0,
-        "net_if_sold": 246.84,
+        "estimate": 213.39,
+        "net_if_sold": 184.72,
         "source": "",
-        "note": ""
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 285.0,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/712123"
       },
       {
         "id": "psa-10-eustass-captain-kidd-sp-eb04-039",
@@ -19423,16 +19445,11 @@
         "estimate": 169.0,
         "net_if_sold": 146.21,
         "source": "",
-        "note": ""
-      },
-      {
-        "id": "op17-020-shanks-leader-alt",
-        "name": "OP17-020 Shanks Leader (Alt Art)",
-        "status": "owned",
-        "estimate": 88.42,
-        "net_if_sold": 76.3,
-        "source": "",
-        "note": ""
+        "note": "",
+        "qty": 1,
+        "estimate_source": "manual",
+        "estimate_manual": null,
+        "tcgplayer_url": ""
       },
       {
         "id": "2025-one-piece-promos-074-black-maria",
@@ -19441,16 +19458,11 @@
         "estimate": 79.4,
         "net_if_sold": 68.48,
         "source": "",
-        "note": "Courtyard FMV. Every Courtyard sale so far cleared UNDER sticker; assume ~85% on exit."
-      },
-      {
-        "id": "op16-022-luffy-alt",
-        "name": "Monkey.D.Luffy Leader OP16-022 (Alt Art)",
-        "status": "owned",
-        "estimate": 63.0,
-        "net_if_sold": 54.25,
-        "source": "pulled from OP-16 box",
-        "note": ""
+        "note": "Courtyard FMV. Every Courtyard sale so far cleared UNDER sticker; assume ~85% on exit.",
+        "qty": 1,
+        "estimate_source": "manual",
+        "estimate_manual": null,
+        "tcgplayer_url": ""
       },
       {
         "id": "2026-one-piece-promos-007-sabo",
@@ -19459,88 +19471,154 @@
         "estimate": 45.2,
         "net_if_sold": 38.81,
         "source": "",
-        "note": "Courtyard FMV. Closest any pack came to breakeven ($45.20 out of a $50 pack)."
+        "note": "Courtyard FMV. Closest any pack came to breakeven ($45.20 out of a $50 pack).",
+        "qty": 1,
+        "estimate_source": "manual",
+        "estimate_manual": null,
+        "tcgplayer_url": ""
+      },
+      {
+        "id": "op16-022-luffy-alt",
+        "name": "Monkey.D.Luffy Leader OP16-022 (Alt Art)",
+        "status": "owned",
+        "estimate": 42.14,
+        "net_if_sold": 36.16,
+        "source": "pulled from OP-16 box",
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 63.0,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/696007"
       },
       {
         "id": "op17-119-loki-sec",
         "name": "OP17-119 Loki (Secret Rare)",
         "status": "owned",
-        "estimate": 37.34,
-        "net_if_sold": 31.99,
+        "estimate": 35.05,
+        "net_if_sold": 30.01,
         "source": "",
-        "note": ""
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 37.34,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/710585"
+      },
+      {
+        "id": "op17-020-shanks-leader-alt",
+        "name": "OP17-020 Shanks Leader (Alt Art)",
+        "status": "owned",
+        "estimate": 33.68,
+        "net_if_sold": 28.82,
+        "source": "",
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 88.42,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/705923"
       },
       {
         "id": "op17-114-alt-art",
         "name": "OP17-114 Sweet 3 Generals (Alt Art)",
         "status": "owned",
-        "estimate": 31.8,
-        "net_if_sold": 27.19,
+        "estimate": 18.59,
+        "net_if_sold": 15.73,
         "source": "",
-        "note": ""
-      },
-      {
-        "id": "op17-093-luffy-sr-x3",
-        "name": "OP17-093 Luffy (Super Rare) x3",
-        "status": "owned",
-        "estimate": 23.22,
-        "net_if_sold": 19.74,
-        "source": "",
-        "note": ""
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 31.8,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/712116"
       },
       {
         "id": "p-110-luffy-elbaph-lego",
         "name": "P-110 Monkey.D.Luffy (Elbaph outfit, lego background promo)",
         "status": "owned",
-        "estimate": 20.98,
-        "net_if_sold": 17.8,
+        "estimate": 16.67,
+        "net_if_sold": 14.06,
         "source": "prerelease entry",
-        "note": ""
-      },
-      {
-        "id": "op16-065-sakazuki-alt",
-        "name": "Sakazuki OP16-065 (Alt Art)",
-        "status": "owned",
-        "estimate": 15.0,
-        "net_if_sold": 12.61,
-        "source": "pulled from OP-16 box",
-        "note": ""
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 20.98,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/712742"
       },
       {
         "id": "op16-118-ace-sec",
         "name": "Portgas.D.Ace OP16-118 (Secret Rare)",
         "status": "owned",
-        "estimate": 11.0,
-        "net_if_sold": 9.14,
+        "estimate": 14.71,
+        "net_if_sold": 12.36,
         "source": "pulled from OP-16 box",
-        "note": "Assumed base SEC. If it's the Alt Art SEC it's ~$40-55 \u2014 check which you have."
+        "note": "Assumed base SEC. If it's the Alt Art SEC it's ~$40-55 \u2014 check which you have.",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 11.0,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/694932"
       },
       {
-        "id": "op17-005-edward-newgate-sr",
-        "name": "OP17-005 Edward Newgate (Super Rare)",
+        "id": "op17-093-luffy-sr-x3",
+        "name": "OP17-093 Luffy (Super Rare) x3",
         "status": "owned",
-        "estimate": 6.72,
-        "net_if_sold": 5.43,
+        "estimate": 13.29,
+        "net_if_sold": 11.13,
         "source": "",
-        "note": ""
+        "note": "",
+        "qty": 3,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 23.22,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/710861"
+      },
+      {
+        "id": "op16-065-sakazuki-alt",
+        "name": "Sakazuki OP16-065 (Alt Art)",
+        "status": "owned",
+        "estimate": 13.19,
+        "net_if_sold": 11.04,
+        "source": "pulled from OP-16 box",
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 15.0,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/694981"
       },
       {
         "id": "op16-063-kuzan-alt",
         "name": "Kuzan OP16-063 (Alt Art)",
         "status": "owned",
-        "estimate": 6.0,
-        "net_if_sold": 4.8,
+        "estimate": 4.55,
+        "net_if_sold": 3.55,
         "source": "pulled from OP-16 box",
-        "note": ""
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 6.0,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/696051"
       },
       {
         "id": "op17-4th-anniv-rainbow-luffy",
         "name": "OP-17 4th Anniversary Rainbow Luffy Leader",
         "status": "owned",
-        "estimate": 4.02,
-        "net_if_sold": 3.09,
+        "estimate": 3.22,
+        "net_if_sold": 2.39,
         "source": "prerelease entry",
-        "note": ""
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 4.02,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/712746"
+      },
+      {
+        "id": "op17-005-edward-newgate-sr",
+        "name": "OP17-005 Edward Newgate (Super Rare)",
+        "status": "owned",
+        "estimate": 1.65,
+        "net_if_sold": 1.03,
+        "source": "",
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 6.72,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/711499"
       },
       {
         "id": "op17-world-don-luffy-zoro",
@@ -19549,7 +19627,11 @@
         "estimate": null,
         "net_if_sold": null,
         "source": "prerelease entry",
-        "note": ""
+        "note": "",
+        "qty": 1,
+        "estimate_source": "manual",
+        "estimate_manual": null,
+        "tcgplayer_url": ""
       },
       {
         "id": "op17-bulk-and-smalls",
@@ -19558,7 +19640,11 @@
         "estimate": null,
         "net_if_sold": null,
         "source": "",
-        "note": ""
+        "note": "",
+        "qty": 1,
+        "estimate_source": "manual",
+        "estimate_manual": null,
+        "tcgplayer_url": ""
       }
     ],
     "expenses": [
@@ -19720,6 +19806,14 @@
         "category": "sealed",
         "amount": 32.4,
         "tag": "pokemon",
+        "planned": false
+      },
+      {
+        "date": "2026-08-29",
+        "item": "Whatnot break \u2014 Yassop slot (accidental buy, app since deleted)",
+        "category": "breaks",
+        "amount": 27.0,
+        "tag": "whatnot",
         "planned": false
       }
     ],

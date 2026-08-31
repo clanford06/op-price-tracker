@@ -68,6 +68,17 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Refresh top chase cards per set from Limitless. Slow; run nightly.",
     )
     p.add_argument(
+        "--card-prices",
+        action="store_true",
+        help="Refresh holding values from TCGplayer foil market prices. Fast; run twice daily.",
+    )
+    p.add_argument(
+        "--find-card",
+        metavar="NUMBER",
+        help="Look up TCGplayer product ids for a card NUMBER, e.g. OP17-062. "
+             "Search by the number alone -- adding the name returns the wrong card.",
+    )
+    p.add_argument(
         "--selftest",
         action="store_true",
         help="Verify the live eBay response shape matches the parsers. Run this first.",
@@ -203,6 +214,43 @@ def main(argv: list[str] | None = None) -> int:
         except (FileNotFoundError, ValueError) as exc:
             print(f"Ledger error: {exc}", file=sys.stderr)
             return 2
+        return 0
+
+    if args.find_card:
+        from .cardprices import find_card
+
+        for row in find_card(args.find_card):
+            mkt = f"${row['market']:,.2f}" if row["market"] else "-"
+            print(f"  {row['tcgplayer_id']:>7}  {mkt:>10}  {row['name']}  "
+                  f"[{row['rarity']}]  {row['set']}")
+        print("\n  Put the id you want on the holding as `tcgplayer_id:` in ledger.yaml.")
+        return 0
+
+    if args.card_prices:
+        from .cardprices import refresh, write
+        from .config import DEFAULT_CARD_PRICES, DEFAULT_LEDGER
+        from .portfolio import load_ledger, report
+
+        # Load WITHOUT the overlay: quoting against already-overlaid values
+        # would compare each run to the previous run instead of to the ledger,
+        # so the sanity check would drift along with any bad quote it let in.
+        ledger = load_ledger(args.ledger or DEFAULT_LEDGER, live=False)
+        priced = [h for h in ledger.holdings if h.tcgplayer_id]
+        print(f"TCGplayer market values — {len(priced)} pinned holding(s)\n")
+        result = refresh(ledger)
+        write(DEFAULT_CARD_PRICES, result)
+        print(f"\n  {result.applied} applied, {result.failed} unpriced, "
+              f"{len(result.rejected)} rejected")
+        for r in result.rejected:
+            print(f"    rejected: {r}")
+        unpinned = [h for h in ledger.holdings if not h.tcgplayer_id and h.estimate]
+        if unpinned:
+            print(f"\n  {len(unpinned)} holding(s) stay manual (graded slabs, sealed, "
+                  f"bulk) — TCGplayer has no equivalent raw single:")
+            for h in unpinned:
+                print(f"      {h.name}")
+        print(f"\nWrote {DEFAULT_CARD_PRICES}\n")
+        report(load_ledger(args.ledger or DEFAULT_LEDGER))
         return 0
 
     if args.chase:

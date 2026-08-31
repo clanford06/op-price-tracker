@@ -139,6 +139,10 @@
   .track { position:relative; height:16px; }
   .track .zero { position:absolute; top:-2px; bottom:-2px; width:1px; background:var(--axis); }
   .bar { position:absolute; top:1px; height:14px; border-radius:3px; }
+  .src { font-size:.66rem; color:var(--muted); border:1px solid var(--axis); border-radius:3px;
+         padding:0 .28rem; margin-left:.3rem; white-space:nowrap; }
+  a.src.live { text-decoration:none; }
+  .dlt { font-size:.68rem; margin-left:.3rem; }
   .legend { display:flex; gap:.9rem; font-size:.72rem; color:var(--muted); margin-top:.5rem; }
   .key { display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:.3rem;
          vertical-align:middle; }
@@ -152,6 +156,8 @@
     <button id="refresh" class="btn">Refresh</button>
     <a class="btn ghost" target="_blank" rel="noopener"
        href="https://github.com/clanford06/op-price-tracker/actions/workflows/check-prices.yml">Run a new price check ↗</a>
+    <a class="btn ghost" target="_blank" rel="noopener"
+       href="https://github.com/clanford06/op-price-tracker/actions/workflows/card-values.yml">Refresh card values ↗</a>
     <a class="btn ghost" target="_blank" rel="noopener"
        href="https://github.com/clanford06/op-price-tracker/issues/new?template=ledger-entry.yml">+ Add expense ↗</a>
   </div>
@@ -299,9 +305,28 @@ function shortHolding(n) {
 function portfolio(pf) {
   if (!pf) return '';
   const cls = v => v > 0 ? 'pos' : (v < 0 ? 'neg' : '');
-  const holds = (pf.holdings||[]).map(h => `
-    <div class="hold"><span>${esc(h.name)}${h.status!=='owned'?' · '+esc(h.status):''}</span>
-      <span class="hv">${h.estimate==null?'unpriced':money(h.estimate)}${h.net_if_sold!=null?' → '+money(h.net_if_sold):''}</span></div>`).join('');
+  const holds = (pf.holdings||[]).map(h => {
+    // Say where each number came from. A live TCGplayer quote and a figure
+    // typed in by hand three weeks ago are not the same kind of fact, and the
+    // whole point of the auto-refresh is that you can tell them apart.
+    const live = h.estimate_source === 'tcgplayer';
+    const moved = live && h.estimate_manual != null && h.estimate != null
+      ? h.estimate - h.estimate_manual : null;
+    const badge = live
+      ? `<a class="src live" target="_blank" rel="noopener" href="${esc(h.tcgplayer_url||'#')}">TCG market ↗</a>`
+      : `<span class="src">manual</span>`;
+    const delta = moved == null || Math.abs(moved) < 0.01 ? ''
+      : `<span class="dlt ${moved>0?'pos':'neg'}">${moved>0?'+':''}${money(moved)}</span>`;
+    return `
+    <div class="hold"><span>${esc(h.name)}${h.status!=='owned'?' · '+esc(h.status):''}
+        ${h.qty>1?`<span class="src">x${h.qty}</span>`:''} ${badge} ${delta}</span>
+      <span class="hv">${h.estimate==null?'unpriced':money(h.estimate)}${h.net_if_sold!=null?' → '+money(h.net_if_sold):''}</span></div>`;
+  }).join('');
+  const mkt = pf.card_prices_at
+    ? `<div class="pfnote">Card values: ${pf.card_prices_applied} priced from TCGplayer
+        foil market prices, refreshed ${ago(pf.card_prices_at)}. Graded slabs and sealed
+        lots stay manual — TCGplayer prices raw singles, and a PSA 10 is a different market.</div>`
+    : '';
   return `<section class="pf">
     <h2>Expenses &amp; profit</h2>
     <div class="pfgrid">
@@ -316,6 +341,7 @@ function portfolio(pf) {
     ${holdingsChart(pf.holdings)}
     ${tagTable(pf.by_tag)}
     <details><summary>Holdings (${(pf.holdings||[]).length})</summary>${holds}</details>
+    ${mkt}
     <div class="pfnote">Values are net of ${pf.fee_pct}% eBay selling fees. Position assumes you
       sold everything today — nothing here is realised until you actually sell.</div>
   </section>`;

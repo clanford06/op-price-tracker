@@ -1,0 +1,55 @@
+name: Refresh card values
+
+on:
+  schedule:
+    # Twice a day, 00:25 and 12:25 UTC -- roughly 8pm and 8am Eastern. Singles
+    # do not move fast enough to justify the 2-hourly cadence the sealed boxes
+    # get, and TCGplayer's market price is a trailing average anyway: polling
+    # it more often just resamples the same number.
+    - cron: "25 0,12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: card-values
+  cancel-in-progress: false
+
+jobs:
+  values:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      # No secrets needed. TCGplayer's price-point endpoint is unauthenticated,
+      # which is the point of running this as its own job: card values keep
+      # refreshing even in a week where the eBay credentials have expired and
+      # the box price run is failing.
+      - name: Refresh card values
+        run: python -m tracker --card-prices
+
+      - name: Commit
+        run: |
+          git config user.name  "op-price-tracker"
+          git config user.email "actions@github.com"
+          # cardprices.json is generated and owned solely by this job, so this
+          # run's output always wins. Same pattern as chase.json: never rebase
+          # a generated file, just re-lay it on top of the remote tip.
+          cp docs/cardprices.json /tmp/cardprices.json
+          git fetch origin "${GITHUB_REF_NAME}"
+          git reset --hard "origin/${GITHUB_REF_NAME}"
+          cp /tmp/cardprices.json docs/cardprices.json
+          git add docs/cardprices.json
+          if git diff --staged --quiet; then
+            echo "No card value change."
+          else
+            git commit -m "card values: $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

@@ -39,6 +39,14 @@ jobs:
       - name: Verify safety checks still hold
         run: python -m pytest tests/ -q
 
+      # Re-quote the singles first so docs/data.json is written with card
+      # values from this run rather than from whenever the twice-daily job last
+      # fired. Without this the dashboard could show a portfolio total up to
+      # 12 hours out of step with the prices printed beside it.
+      - name: Refresh card values
+        continue-on-error: true
+        run: python -m tracker --card-prices
+
       - name: Check prices
         env:
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
@@ -59,11 +67,13 @@ jobs:
           # run conflicts every time and fails the job; resetting onto the
           # remote tip and re-laying our file down is deterministic.
           cp docs/data.json /tmp/data.json
+          cp docs/cardprices.json /tmp/cardprices.json
           git fetch origin "${GITHUB_REF_NAME}"
           git reset --hard "origin/${GITHUB_REF_NAME}"
           cp /tmp/data.json docs/data.json
+          cp /tmp/cardprices.json docs/cardprices.json
 
-          git add docs/data.json
+          git add docs/data.json docs/cardprices.json
           if git diff --staged --quiet; then
             echo "No price change."
           else

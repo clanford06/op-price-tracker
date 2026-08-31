@@ -60,6 +60,18 @@ class Holding:
     note: str = ""
     ebay_query: str = ""      # if set, live pricing can refresh `estimate`
     tag: str = ""
+    tcgplayer_id: int | None = None
+    """TCGplayer product id. Pins ONE printing in ONE language.
+
+    Set it and `estimate` is refreshed from TCGplayer's foil market price
+    automatically. Leave it unset for anything TCGplayer does not sell as a
+    raw single -- graded slabs above all, whose market is separate from the
+    raw card's and would be badly understated by it.
+    """
+    qty: int = 1              # `estimate` is the total for all copies
+    estimate_manual: float | None = None   # what the ledger said, pre-overlay
+    estimate_source: str = "manual"        # manual | tcgplayer
+    tcgplayer_url: str = ""
 
 
 @dataclass
@@ -83,6 +95,8 @@ class Ledger:
     sales: list[Sale] = field(default_factory=list)
     fee_pct: float = DEFAULT_FEE_PCT
     fee_flat: float = DEFAULT_FEE_FLAT
+    card_prices_applied: int = 0    # holdings priced from the last TCGplayer run
+    card_prices_at: str = ""        # when that run happened
 
     # -- totals ------------------------------------------------------------
 
@@ -194,6 +208,8 @@ class Ledger:
             "fee_pct": self.fee_pct,
             "by_category": self.by_category(),
             "by_tag": self.by_tag(),
+            "card_prices_applied": self.card_prices_applied,
+            "card_prices_at": self.card_prices_at,
             "holdings": [
                 {
                     "id": h.id,
@@ -203,6 +219,10 @@ class Ledger:
                     "net_if_sold": self.net_if_sold(h.estimate or 0.0) if h.estimate else None,
                     "source": h.source,
                     "note": h.note,
+                    "qty": h.qty,
+                    "estimate_source": h.estimate_source,
+                    "estimate_manual": h.estimate_manual,
+                    "tcgplayer_url": h.tcgplayer_url,
                 }
                 for h in sorted(self.holdings, key=lambda x: -(x.estimate or 0))
             ],
@@ -211,12 +231,18 @@ class Ledger:
         }
 
 
-def load_ledger(path: Path) -> Ledger:
+def load_ledger(path: Path, *, live: bool = True) -> Ledger:
+    """Load the ledger, overlaying the last TCGplayer refresh by default.
+
+    The overlay is applied here rather than by each caller so the terminal
+    report, the dashboard and the issue workflow can never disagree about what
+    a card is worth.
+    """
     if not path.exists():
         raise FileNotFoundError(f"Ledger not found: {path}")
     doc = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     settings = doc.get("settings") or {}
-    return Ledger(
+    ledger = Ledger(
         expenses=[Expense(**_req(e, "expense", "date", "item", "amount"))
                   for e in (doc.get("expenses") or [])],
         holdings=[Holding(**_holding(h)) for h in (doc.get("holdings") or [])],
@@ -224,6 +250,22 @@ def load_ledger(path: Path) -> Ledger:
         fee_pct=float(settings.get("fee_pct", DEFAULT_FEE_PCT)),
         fee_flat=float(settings.get("fee_flat", DEFAULT_FEE_FLAT)),
     )
+    if live:
+        from .cardprices import apply_to
+        from .config import DEFAULT_CARD_PRICES
+
+        ledger.card_prices_applied = apply_to(ledger, DEFAULT_CARD_PRICES)
+        ledger.card_prices_at = _card_prices_stamp(DEFAULT_CARD_PRICES)
+    return ledger
+
+
+def _card_prices_stamp(path: Path) -> str:
+    import json
+
+    try:
+        return json.loads(path.read_text(encoding="utf-8")).get("updated_at", "")
+    except (OSError, ValueError):
+        return ""
 
 
 def _req(raw: dict, kind: str, *required: str) -> dict:
@@ -254,6 +296,8 @@ def _holding(raw: dict) -> dict:
         "note": str(raw.get("note", "")),
         "ebay_query": str(raw.get("ebay_query", "")),
         "tag": str(raw.get("tag", "")),
+        "tcgplayer_id": int(raw["tcgplayer_id"]) if raw.get("tcgplayer_id") else None,
+        "qty": int(raw.get("qty", 1)),
     }
 
 
@@ -319,11 +363,15 @@ def report(ledger: Ledger) -> None:
         for e in uncosted:
             print(f"      {e.date}  {e.item}")
 
-    print("\n  Holdings:")
+    live = "live" if ledger.card_prices_applied else ""
+    stamp = f" · {ledger.card_prices_applied} priced live {ledger.card_prices_at[:16]}" \
+        if ledger.card_prices_applied else ""
+    print(f"\n  Holdings:{stamp}")
     for h in sorted(ledger.holdings, key=lambda x: -(x.estimate or 0)):
         est = _money(h.estimate) if h.estimate is not None else "unpriced"
         net = f"→ {_money(ledger.net_if_sold(h.estimate))} net" if h.estimate else ""
-        print(f"    {h.name[:38]:<38} {est:>10} {net:<18} [{h.status}]")
+        src = "TCG" if h.estimate_source == "tcgplayer" else "   "
+        print(f"    {h.name[:38]:<38} {est:>10} {net:<18} {src} [{h.status}]")
 
     tags = ledger.by_tag()
     if len(tags) > 1:

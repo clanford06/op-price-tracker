@@ -177,6 +177,57 @@ spaced and unspaced set code (`"op 15"` and `"op15"`) — sellers write both.
 Set `implausible_below` to roughly **55–65% of normal market** for that set.
 Too high and you'll flag real bargains; too low and fakes get through.
 
+### Card values refresh themselves
+
+Sealed boxes are priced by searching eBay and verifying listings. Singles are
+not, because a card-number search returns every printing in every language and
+the spread between them is enormous — the Kaido 062 English Super Alternate Art
+asks 3.25x its Japanese printing, and its Manga printing is a different card at
+$1,234. Any name-based lookup eventually prices the wrong card.
+
+So each single is pinned to a **TCGplayer product id**, which names exactly one
+printing in one language:
+
+```yaml
+- id: op17-062-kaido-guest-artist
+  name: "OP17-062 Kaido (Super Alternate Art)"
+  estimate: 400.00          # fallback only, if a refresh fails
+  tcgplayer_id: 712091      # the real source of truth
+  qty: 1                    # `estimate` is the total for all copies
+```
+
+`Refresh card values` runs twice a day (00:25 and 12:25 UTC) and re-quotes every
+pinned holding from that product's **foil market price** — falling back to
+normal for the few cards with no foil printing. The 2-hourly box price run
+re-quotes them too, so the dashboard's totals are never out of step with the
+prices printed beside them.
+
+Market price, not listed median. The median is what sellers are *asking*, and on
+a fresh set it runs far above what clears: on release week the Oden's foil
+market was $213.39 against a $325.00 listed median, a 52% gap.
+
+To pin a new card, search by the **number alone**:
+
+```bash
+python -m tracker --find-card OP17-062     # lists ids for every printing
+python -m tracker --card-prices            # re-quote everything, then report
+```
+
+Adding the character name makes TCGplayer's fuzzy matcher return a confident
+wrong answer — `OP17-020 Shanks` resolves to the OP13-028 Shanks SP, a $393 card
+in place of a $34 one.
+
+Two things deliberately stay manual. **Graded slabs** — TCGplayer sells raw
+singles, and a PSA 10 is a separate market that a raw price would badly
+understate. And **bulk lots**, which have no product id at all. The dashboard
+labels every holding `TCG market` or `manual` so you always know which kind of
+number you are looking at.
+
+A quote that disagrees with the standing estimate by more than 4x *and* by more
+than $25 is reported but not applied — that shape is a mis-pinned id, not a
+market move. A card with no market price yet stays unpriced rather than being
+recorded as $0.00, because a zero silently deletes a holding from the position.
+
 ### Tuning
 
 Titles are normalised before matching — punctuation stripped, lowercased, whole

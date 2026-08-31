@@ -199,6 +199,16 @@ expenses:
     # it never contaminates a One Piece tag rollup. Nothing pulled worth
     # holding, so this is a straight loss and will read as one.
 
+  - date: 2026-08-29
+    item: "Whatnot break — Yassop slot (accidental buy, app since deleted)"
+    category: "breaks"
+    amount: 27.00
+    tag: "whatnot"
+    # Bought by mistake on a One Piece Whatnot stream. Logged because money
+    # left the account, not because it bought anything worth holding: breaks
+    # pay out to the slot, and this one is treated as a total loss unless a
+    # card actually arrives. If one does, add it as a holding under `whatnot`.
+
   # <<ADD_EXPENSES_HERE>>
 
 holdings:
@@ -213,6 +223,7 @@ holdings:
     ebay_query: "Ms All Sunday OP14-084 SP English"
 
   - id: op16-022-luffy-alt
+    tcgplayer_id: 696007      # Monkey.D.Luffy (022) (Alternate Art), Leader, foil
     tag: "op16"
     name: "Monkey.D.Luffy Leader OP16-022 (Alt Art)"
     status: owned
@@ -221,6 +232,7 @@ holdings:
     ebay_query: "One Piece OP16-022 Luffy Leader Alternate Art"
 
   - id: op16-065-sakazuki-alt
+    tcgplayer_id: 694981      # Sakazuki (Alternate Art), foil
     tag: "op16"
     name: "Sakazuki OP16-065 (Alt Art)"
     status: owned
@@ -229,6 +241,7 @@ holdings:
     ebay_query: "One Piece OP16-065 Sakazuki Alternate Art"
 
   - id: op16-118-ace-sec
+    tcgplayer_id: 694932      # Portgas.D.Ace (118) base Secret Rare, foil
     tag: "op16"
     name: "Portgas.D.Ace OP16-118 (Secret Rare)"
     status: owned
@@ -238,6 +251,7 @@ holdings:
     ebay_query: "One Piece OP16-118 Ace Secret Rare"
 
   - id: op16-063-kuzan-alt
+    tcgplayer_id: 696051      # Kuzan (Alternate Art), foil
     tag: "op16"
     name: "Kuzan OP16-063 (Alt Art)"
     status: owned
@@ -302,6 +316,22 @@ holdings:
 
   # --- OP-17 haul: 2 booster boxes + the 8/23 prerelease -------------------
   #
+  # UPDATE 2026-08-30: the wait is over and these are now priced automatically.
+  # OP-17 released 8/28 and TCGplayer has real market prices, so every card
+  # below carries a `tcgplayer_id:` and is re-quoted twice a day from that
+  # product's FOIL market price. The hand-entered numbers below are kept only
+  # as the fallback if a refresh fails; the dashboard labels which is which.
+  #
+  # The prerelease asks were high, exactly as the warning underneath predicted.
+  # First live pass moved this tag from $774.98 to $476.24.
+  #
+  # To pin a new card: `python -m tracker --find-card OP17-062`, then put the
+  # id on the holding. Search by the NUMBER ALONE -- adding the character name
+  # makes TCGplayer's fuzzy matcher confidently return a card from another set.
+  # Use `qty:` when one holding covers several copies; `estimate` is always the
+  # total for all of them.
+  #
+  # ORIGINAL WARNING, kept because it is what actually happened:
   # READ BEFORE TRUSTING ANY OP-17 NUMBER BELOW.
   # OP-17 is still PRESALE on TCGplayer as of 2026-08-25; general release is
   # 2026-08-28. Every price here comes from the thin prerelease market created
@@ -315,6 +345,7 @@ holdings:
   # and fall fast. Do not anchor on week-one numbers.
 
   - id: op17-119-loki-sec
+    tcgplayer_id: 710585      # Loki (119) base Secret Rare, foil
     name: "OP17-119 Loki (Secret Rare)"
     status: "owned"
     estimate: 37.34
@@ -324,6 +355,7 @@ holdings:
     ebay_query: "One Piece OP17-119 Loki Secret Rare English"
 
   - id: op17-020-shanks-leader-alt
+    tcgplayer_id: 705923      # Shanks (020) (Alternate Art), Leader, foil
     name: "OP17-020 Shanks Leader (Alt Art)"
     status: "owned"
     estimate: 88.42
@@ -333,6 +365,7 @@ holdings:
     ebay_query: "One Piece OP17-020 Shanks Leader Alternate Art English"
 
   - id: st32-002-kozuki-oden-sp
+    tcgplayer_id: 712123      # Kouzuki Oden (ST32-002) (SP), foil
     name: "ST32-002 Kouzuki Oden (SP, Conqueror's Haki) — English"
     status: "owned"
     estimate: 285.00
@@ -362,6 +395,7 @@ holdings:
     ebay_query: "Kouzuki Oden ST32-002 SP OP17 English -japanese -chinese"
 
   - id: op17-062-kaido-guest-artist
+    tcgplayer_id: 712091      # Kaido (062) (Super Alternate Art), foil
     name: "OP17-062 Kaido (Super Alternate Art) — Keisuke Itagaki / Baki art, English"
     status: "owned"
     estimate: 400.00
@@ -400,6 +434,7 @@ holdings:
     ebay_query: "Kaido OP17-062 Baki Itagaki English -japanese"
 
   - id: op17-005-edward-newgate-sr
+    tcgplayer_id: 711499      # Edward.Newgate (005) base Super Rare, foil
     name: "OP17-005 Edward Newgate (Super Rare)"
     status: "owned"
     estimate: 6.72
@@ -409,6 +444,8 @@ holdings:
     ebay_query: "One Piece OP17-005 Edward Newgate Super Rare English"
 
   - id: op17-093-luffy-sr-x3
+    tcgplayer_id: 710861      # Monkey.D.Luffy (093) base Super Rare, foil x3
+    qty: 3
     name: "OP17-093 Luffy (Super Rare) x3"
     status: "owned"
     estimate: 23.22
@@ -420,6 +457,7 @@ holdings:
     ebay_query: "One Piece OP17-093 Luffy Super Rare English"
 
   - id: op17-114-alt-art
+    tcgplayer_id: 712116      # Sweet 3 Generals (Alternate Art), foil
     name: "OP17-114 Sweet 3 Generals (Alt Art)"
     status: "owned"
     estimate: 31.80
@@ -429,6 +467,7 @@ holdings:
     ebay_query: "One Piece OP17-114 Sweet 3 Generals Alternate Art English"
 
   - id: op17-4th-anniv-rainbow-luffy
+    tcgplayer_id: 712746      # Monkey.D.Luffy (4th Anniversary Leader Card), foil
     name: "OP-17 4th Anniversary Rainbow Luffy Leader"
     status: "owned"
     estimate: 4.02
@@ -439,6 +478,7 @@ holdings:
     ebay_query: "One Piece 4th Anniversary Rainbow Luffy Leader promo"
 
   - id: p-110-luffy-elbaph-lego
+    tcgplayer_id: 712742      # Monkey.D.Luffy (4th Anniversary) standard, NON-foil
     name: "P-110 Monkey.D.Luffy (Elbaph outfit, lego background promo)"
     status: "owned"
     estimate: 20.98

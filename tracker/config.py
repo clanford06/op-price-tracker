@@ -14,6 +14,7 @@ DEFAULT_WATCHLIST = REPO_ROOT / "watchlist.yaml"
 DEFAULT_DATA_FILE = REPO_ROOT / "docs" / "data.json"
 DEFAULT_LEDGER = REPO_ROOT / "ledger.yaml"
 DEFAULT_CHASE_FILE = REPO_ROOT / "docs" / "chase.json"
+DEFAULT_CARD_PRICES = REPO_ROOT / "docs" / "cardprices.json"
 
 
 @dataclass
