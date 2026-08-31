@@ -139,6 +139,14 @@
   .track { position:relative; height:16px; }
   .track .zero { position:absolute; top:-2px; bottom:-2px; width:1px; background:var(--axis); }
   .bar { position:absolute; top:1px; height:14px; border-radius:3px; }
+  .scen { margin-top:.35rem; font-size:.72rem; }
+  .scen summary { cursor:pointer; color:var(--muted); font-size:.7rem; }
+  .srow { display:flex; flex-wrap:wrap; justify-content:space-between; gap:.4rem;
+          padding:.3rem 0 .3rem .8rem; border-left:2px solid var(--axis); margin-top:.3rem; }
+  .srow .slab { font-weight:600; }
+  .srow .sval { text-align:right; }
+  .srow .m { display:block; color:var(--muted); font-weight:400; }
+  .srow .hnote { flex-basis:100%; margin-top:.1rem; }
   .hnote { font-size:.68rem; color:var(--muted); line-height:1.45; margin-top:.25rem;
            max-width:52ch; }
   .src { font-size:.66rem; color:var(--muted); border:1px solid var(--axis); border-radius:3px;
@@ -323,9 +331,23 @@ function portfolio(pf) {
     // manual ones that reasoning IS the valuation, so hiding it on the
     // dashboard leaves the biggest positions looking like bare assertions.
     const note = h.note ? `<div class="hnote">${esc(h.note)}</div>` : '';
+    // An unresolved holding gets branches instead of a single number. The
+    // booked value is the floor; this is what the other outcomes would do to
+    // the whole position, which is the part you actually care about.
+    const sc = (h.scenarios||[]).length ? `<details class="scen">
+        <summary>If it grades…</summary>
+        ${h.scenarios.map(s => `<div class="srow">
+            <span class="slab">${esc(s.label)}${s.share!=null?` <span class="src">${Math.round(s.share*1000)/10}%</span>`:''}</span>
+            <span class="sval">${money(s.estimate)}
+              <span class="m">→ ${money(s.net_if_sold)} net · position ${money(s.position_net)}</span></span>
+            ${s.note?`<div class="hnote">${esc(s.note)}</div>`:''}
+          </div>`).join('')}
+        <div class="hnote">Booked at the floor (${money(h.estimate)}). These are shown, not counted —
+          the position only moves when the grade is known.</div>
+      </details>` : '';
     return `
     <div class="hold"><span>${esc(h.name)}${h.status!=='owned'?' · '+esc(h.status):''}
-        ${h.qty>1?`<span class="src">x${h.qty}</span>`:''} ${badge} ${delta}${note}</span>
+        ${h.qty>1?`<span class="src">x${h.qty}</span>`:''} ${badge} ${delta}${note}${sc}</span>
       <span class="hv">${h.estimate==null?'unpriced':money(h.estimate)}${h.net_if_sold!=null?' → '+money(h.net_if_sold):''}</span></div>`;
   }).join('');
   const mkt = pf.card_prices_at

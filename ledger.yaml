@@ -216,16 +216,38 @@ holdings:
     tag: "msallsunday"
     name: "Ms. All Sunday SP OP14-084 (English)"
     status: grading
-    estimate: 1106.27
+    estimate: 500.00
     acquired: "2026-07"
     source: "pulled from OP-16 box"
-    note: "At PSA, order #27355838. First View images 2026-08-26, est. complete 2026-11-23 to 2026-12-09. NOT liquid until then. Estimate is probability-weighted across grades at TODAY's comps, not a promise -- PSA 10s have halved since June and this lands the same week OP-18 does."
+    note: "At PSA, order #27355838. First View images 2026-08-26, est. complete 2026-11-23 to 2026-12-09. Carried at the FLOOR -- the grade is not known yet, so the position must not assume one. A 10 is the likely outcome and is worth roughly double; see the grade breakdown."
     ebay_query: "Ms All Sunday OP14-084 SP English"
+    # What it is worth per grade, at today's comps. These are shown, never
+    # counted: the card is booked at the floor above until PSA says otherwise.
+    scenarios:
+      - label: "PSA 10"
+        estimate: 1150.00
+        share: 0.9324
+        note: "455 of 488 graded copies. Roughly double raw -- the outcome that justified submitting."
+      - label: "PSA 9"
+        estimate: 500.00
+        share: 0.0451
+        note: "Only one on record: $760 on 2026-07-05 when 10s were $1,725, i.e. 44% of a 10. At or below raw."
+      - label: "PSA 8 or lower"
+        estimate: 510.00
+        share: 0.0225
+        note: "One sold 2026-08-02 at $510, under what raw was fetching that week."
     # ---------------------------------------------------------------------
-    # REPRICED 2026-08-30, from $650.00. That $650 was a placeholder set
-    # before there were comps; it now sits between the two real outcomes and
-    # matches neither. Raw NM is ~$566 and a PSA 10 is ~$1,150, so $650 was
-    # describing a card that does not exist.
+    # REPRICED 2026-08-30, from $650.00 -> $1,106.27 -> $500.00. The $650 was
+    # a placeholder set before there were comps. The $1,106 was the
+    # probability-weighted value across grades, and Carter was right to reject
+    # it: 93% of that number is the PSA 10 branch, so booking it quietly
+    # asserts a grade nobody has seen. The card is now carried at the FLOOR --
+    # what it is worth if it comes back a 9, which is also roughly what an 8
+    # fetches -- and every grade outcome lives in `scenarios` above, shown on
+    # the dashboard behind a drop-down rather than counted in the position.
+    #
+    # This is the same rule as the Oden and the Kaido: book the low end, let
+    # the upside be upside. The position can only be surprised upward.
     #
     # NOT auto-priced on purpose. TCGplayer sells RAW singles; a slab is its
     # own market. Giving this a `tcgplayer_id` would quietly overwrite the
@@ -235,7 +257,10 @@ holdings:
     #     PSA 10        455   93.24%   x $1,150  = $1,072.23
     #     PSA 9          22    4.51%   x $  500  = $   22.54
     #     PSA 8 or less  11    2.25%   x $  510  = $   11.50
-    #                                    EV      = $1,106.27   <- booked
+    #                                    EV      = $1,106.27   <- NOT booked
+    # Kept here because it is the right number for deciding whether grading was
+    # worth it. It is the wrong number for a ledger line, which has to survive
+    # being wrong about one specific card.
     #
     # A 10 is the strong base case: 93.2% gem, 96.5% come back 9 or better.
     # Call it 90-95% allowing for the one thing the images cannot settle --

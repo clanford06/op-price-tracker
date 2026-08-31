@@ -72,6 +72,14 @@ class Holding:
     estimate_manual: float | None = None   # what the ledger said, pre-overlay
     estimate_source: str = "manual"        # manual | tcgplayer
     tcgplayer_url: str = ""
+    scenarios: list[dict] = field(default_factory=list)
+    """Outcomes this holding could resolve to, when the value is not yet known.
+
+    A card at PSA has no single correct estimate -- it has a grade that already
+    exists and that nobody has seen. `estimate` stays at the conservative floor
+    so the position is never inflated by a guess, and the branches live here so
+    the upside is visible without being counted.
+    """
 
 
 @dataclass
@@ -217,6 +225,20 @@ class Ledger:
                     "estimate_source": h.estimate_source,
                     "estimate_manual": h.estimate_manual,
                     "tcgplayer_url": h.tcgplayer_url,
+                    "scenarios": [
+                        {
+                            "label": str(s.get("label", "")),
+                            "estimate": float(s["estimate"]),
+                            "share": s.get("share"),
+                            "note": str(s.get("note", "")),
+                            "net_if_sold": self.net_if_sold(float(s["estimate"])),
+                            "position_net": round(
+                                self.position_net
+                                - self.net_if_sold(h.estimate or 0.0)
+                                + self.net_if_sold(float(s["estimate"])), 2),
+                        }
+                        for s in h.scenarios if s.get("estimate") is not None
+                    ],
                 }
                 for h in sorted(self.holdings, key=lambda x: -(x.estimate or 0))
             ],
@@ -292,6 +314,7 @@ def _holding(raw: dict) -> dict:
         "tag": str(raw.get("tag", "")),
         "tcgplayer_id": int(raw["tcgplayer_id"]) if raw.get("tcgplayer_id") else None,
         "qty": int(raw.get("qty", 1)),
+        "scenarios": list(raw.get("scenarios") or []),
     }
 
 
@@ -363,6 +386,12 @@ def report(ledger: Ledger) -> None:
         net = f"→ {_money(ledger.net_if_sold(h.estimate))} net" if h.estimate else ""
         src = "TCG" if h.estimate_source == "tcgplayer" else "   "
         print(f"    {h.name[:38]:<38} {est:>10} {net:<18} {src} [{h.status}]")
+        # Booked at the floor, so say out loud what the other branches are
+        # worth. Hiding them makes the floor look like a valuation.
+        for s in h.scenarios:
+            share = f"{s['share']*100:.1f}%" if s.get("share") is not None else ""
+            print(f"      if {s.get('label',''):<16}{_money(float(s['estimate'])):>10}"
+                  f"   {share:>6}")
 
     tags = ledger.by_tag()
     if len(tags) > 1:
