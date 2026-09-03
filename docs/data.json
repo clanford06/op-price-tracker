@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-03T00:16:45+00:00",
+  "updated_at": "2026-09-03T04:38:39+00:00",
   "products": {
     "op17": {
       "history": [
@@ -347,6 +347,10 @@
         {
           "t": "2026-09-03T00:16:37+00:00",
           "price": 376.94
+        },
+        {
+          "t": "2026-09-03T04:38:32+00:00",
+          "price": 376.94
         }
       ],
       "name": "OP-17 The World's Strongest Warriors",
@@ -357,7 +361,7 @@
         "shipping": 6.99,
         "total": 376.94,
         "seller": "steve1597-2025",
-        "seller_score": 2071,
+        "seller_score": 2076,
         "seller_pct": 99.8,
         "top_rated": false,
         "trust": {
@@ -376,7 +380,7 @@
               "name": "Seller volume",
               "earned": 11.6,
               "possible": 14,
-              "detail": "2,071 completed sales",
+              "detail": "2,076 completed sales",
               "good": true
             },
             {
@@ -404,7 +408,7 @@
               "name": "Price plausibility",
               "earned": 12,
               "possible": 12,
-              "detail": "in line with the $404.93 median",
+              "detail": "in line with the $405.38 median",
               "good": true
             },
             {
@@ -455,11 +459,11 @@
           "score": 57,
           "dud_chance": 0.88,
           "cost_per_pack": 15.71,
-          "baseline_cost_per_pack": 16.87,
+          "baseline_cost_per_pack": 16.89,
           "ev_per_pack": 4.83,
           "verdict": "FAIR",
           "notes": [
-            "$15.71/pack is 7% below the $16.87/pack baseline",
+            "$15.71/pack is 7% below the $16.89/pack baseline",
             "estimated $4.83/pack in singles vs $15.71 paid (31% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 31 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
             "top chase $2,104.42 (Monkey.D.Luffy) \u2014 5.6x this box; 5 of 8 chases would cover it"
@@ -474,8 +478,8 @@
           }
         }
       },
-      "considered": 25,
-      "relevant": 15,
+      "considered": 23,
+      "relevant": 14,
       "verified": 8,
       "kept": 1,
       "rejected": [
@@ -535,7 +539,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $404.93 median",
+                "detail": "in line with the $405.38 median",
                 "good": true
               },
               {
@@ -643,7 +647,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $404.93 median",
+                "detail": "in line with the $405.38 median",
                 "good": true
               },
               {
@@ -693,113 +697,6 @@
           "why": [
             "seller has 0 sales, below the 100 minimum",
             "seller rated 0.0%, below the 98.0% minimum"
-          ]
-        },
-        {
-          "title": "One Piece Card Game OP-17 Strongest Warriors English Booster Box + Treasure Pack",
-          "url": "https://www.ebay.com/itm/257719033407?_skw=One+Piece+Card+Game+OP-17+Booster+Box&hash=item3c01405e3f:g:13IAAeSwKVxqmHYR",
-          "price": 380.0,
-          "shipping": 0.0,
-          "total": 380.0,
-          "seller": "mephflynn",
-          "seller_score": 13,
-          "seller_pct": 100.0,
-          "top_rated": false,
-          "trust": {
-            "score": 85,
-            "vetoes": [
-              "seller has 13 sales, below the 100 minimum"
-            ],
-            "verified": true,
-            "signals": [
-              {
-                "name": "Language verified",
-                "earned": 18,
-                "possible": 18,
-                "detail": "item specifics: English",
-                "good": true
-              },
-              {
-                "name": "Seller volume",
-                "earned": 4.0,
-                "possible": 14,
-                "detail": "13 completed sales",
-                "good": true
-              },
-              {
-                "name": "Seller rating",
-                "earned": 14.0,
-                "possible": 14,
-                "detail": "100.0% positive",
-                "good": true
-              },
-              {
-                "name": "Returns",
-                "earned": 12.0,
-                "possible": 12,
-                "detail": "accepted (30 days)",
-                "good": true
-              },
-              {
-                "name": "Top Rated Seller",
-                "earned": 0,
-                "possible": 10,
-                "detail": "not Top Rated (bonus only)",
-                "good": false
-              },
-              {
-                "name": "Price plausibility",
-                "earned": 12,
-                "possible": 12,
-                "detail": "in line with the $404.93 median",
-                "good": true
-              },
-              {
-                "name": "Item specifics",
-                "earned": 4.0,
-                "possible": 8,
-                "detail": "set matches",
-                "good": true
-              },
-              {
-                "name": "eBay category",
-                "earned": 6,
-                "possible": 6,
-                "detail": "listed under trading cards",
-                "good": true
-              },
-              {
-                "name": "Stock level",
-                "earned": 3,
-                "possible": 3,
-                "detail": "1 in stock",
-                "good": true
-              },
-              {
-                "name": "eBay programmes",
-                "earned": 0,
-                "possible": 5,
-                "detail": "none (bonus only)",
-                "good": false
-              },
-              {
-                "name": "Description",
-                "earned": 4,
-                "possible": 4,
-                "detail": "no warning phrases",
-                "good": true
-              },
-              {
-                "name": "Your trusted list",
-                "earned": 0,
-                "possible": 8,
-                "detail": "not on your trusted list (bonus only)",
-                "good": false
-              }
-            ]
-          },
-          "why": [
-            "seller has 13 sales, below the 100 minimum"
           ]
         },
         {
@@ -858,7 +755,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $404.93 median",
+                "detail": "in line with the $405.38 median",
                 "good": true
               },
               {
@@ -965,7 +862,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $404.93 median",
+                "detail": "in line with the $405.38 median",
                 "good": true
               },
               {
@@ -1072,7 +969,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $404.93 median",
+                "detail": "in line with the $405.38 median",
                 "good": true
               },
               {
@@ -1179,7 +1076,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $404.93 median",
+                "detail": "in line with the $405.38 median",
                 "good": true
               },
               {
@@ -1229,11 +1126,118 @@
           "why": [
             "seller has 81 sales, below the 100 minimum"
           ]
+        },
+        {
+          "title": "Bandai One Piece Card Game OP-17 The World's Strongest Warriors Booster Box EN",
+          "url": "https://www.ebay.com/itm/298609085416?_skw=One+Piece+Card+Game+OP-17+Booster+Box&hash=item45867d0be8:g:g7sAAeSw2npqikCo",
+          "price": 400.0,
+          "shipping": 5.83,
+          "total": 405.83,
+          "seller": "grandgeck-91",
+          "seller_score": 1,
+          "seller_pct": 100.0,
+          "top_rated": false,
+          "trust": {
+            "score": 68,
+            "vetoes": [
+              "seller has 1 sales, below the 100 minimum"
+            ],
+            "verified": true,
+            "signals": [
+              {
+                "name": "Language verified",
+                "earned": 18,
+                "possible": 18,
+                "detail": "item specifics: English",
+                "good": true
+              },
+              {
+                "name": "Seller volume",
+                "earned": 1.1,
+                "possible": 14,
+                "detail": "1 completed sales",
+                "good": true
+              },
+              {
+                "name": "Seller rating",
+                "earned": 14.0,
+                "possible": 14,
+                "detail": "100.0% positive",
+                "good": true
+              },
+              {
+                "name": "Returns",
+                "earned": 0,
+                "possible": 12,
+                "detail": "not accepted",
+                "good": false
+              },
+              {
+                "name": "Top Rated Seller",
+                "earned": 0,
+                "possible": 10,
+                "detail": "not Top Rated (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Price plausibility",
+                "earned": 12,
+                "possible": 12,
+                "detail": "in line with the $405.38 median",
+                "good": true
+              },
+              {
+                "name": "Item specifics",
+                "earned": 4.0,
+                "possible": 8,
+                "detail": "set matches",
+                "good": true
+              },
+              {
+                "name": "eBay category",
+                "earned": 6,
+                "possible": 6,
+                "detail": "listed under trading cards",
+                "good": true
+              },
+              {
+                "name": "Stock level",
+                "earned": 3,
+                "possible": 3,
+                "detail": "2 in stock",
+                "good": true
+              },
+              {
+                "name": "eBay programmes",
+                "earned": 0,
+                "possible": 5,
+                "detail": "none (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Description",
+                "earned": 4,
+                "possible": 4,
+                "detail": "no warning phrases",
+                "good": true
+              },
+              {
+                "name": "Your trusted list",
+                "earned": 0,
+                "possible": 8,
+                "detail": "not on your trusted list (bonus only)",
+                "good": false
+              }
+            ]
+          },
+          "why": [
+            "seller has 1 sales, below the 100 minimum"
+          ]
         }
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:37+00:00",
+      "checked_at": "2026-09-03T04:38:32+00:00",
       "all_time_low": 319.99,
       "all_time_high": 549.0
     },
@@ -2174,6 +2178,10 @@
         {
           "t": "2026-09-03T00:16:34+00:00",
           "price": 234.99
+        },
+        {
+          "t": "2026-09-03T04:38:28+00:00",
+          "price": 234.99
         }
       ],
       "name": "OP-16 The Time of Battle",
@@ -2252,7 +2260,7 @@
               "name": "Stock level",
               "earned": 3,
               "possible": 3,
-              "detail": "5 in stock",
+              "detail": "3 in stock",
               "good": true
             },
             {
@@ -2301,7 +2309,7 @@
           }
         }
       },
-      "considered": 71,
+      "considered": 70,
       "relevant": 18,
       "verified": 8,
       "kept": 1,
@@ -2420,7 +2428,7 @@
           "shipping": 0.0,
           "total": 115.88,
           "seller": "dcfonew",
-          "seller_score": 4275,
+          "seller_score": 4281,
           "seller_pct": 99.6,
           "top_rated": false,
           "trust": {
@@ -2441,7 +2449,7 @@
                 "name": "Seller volume",
                 "earned": 12.7,
                 "possible": 14,
-                "detail": "4,275 completed sales",
+                "detail": "4,281 completed sales",
                 "good": true
               },
               {
@@ -2527,7 +2535,7 @@
           "shipping": 0.0,
           "total": 115.98,
           "seller": "greatestplc",
-          "seller_score": 389,
+          "seller_score": 390,
           "seller_pct": 99.7,
           "top_rated": false,
           "trust": {
@@ -2548,7 +2556,7 @@
                 "name": "Seller volume",
                 "earned": 9.1,
                 "possible": 14,
-                "detail": "389 completed sales",
+                "detail": "390 completed sales",
                 "good": true
               },
               {
@@ -2634,7 +2642,7 @@
           "shipping": 0.0,
           "total": 115.99,
           "seller": "dcfonew",
-          "seller_score": 4275,
+          "seller_score": 4281,
           "seller_pct": 99.6,
           "top_rated": false,
           "trust": {
@@ -2655,7 +2663,7 @@
                 "name": "Seller volume",
                 "earned": 12.7,
                 "possible": 14,
-                "detail": "4,275 completed sales",
+                "detail": "4,281 completed sales",
                 "good": true
               },
               {
@@ -2846,7 +2854,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:34+00:00",
+      "checked_at": "2026-09-03T04:38:28+00:00",
       "all_time_low": 208.76,
       "all_time_high": 234.99
     },
@@ -3779,6 +3787,10 @@
         {
           "t": "2026-09-03T00:16:29+00:00",
           "price": 290.0
+        },
+        {
+          "t": "2026-09-03T04:38:23+00:00",
+          "price": 290.0
         }
       ],
       "name": "OP-14 The Azure Sea's Seven",
@@ -3918,7 +3930,7 @@
           "shipping": 0.0,
           "total": 202.76,
           "seller": "amitr90",
-          "seller_score": 2909,
+          "seller_score": 2910,
           "seller_pct": 99.8,
           "top_rated": false,
           "trust": {
@@ -3939,7 +3951,7 @@
                 "name": "Seller volume",
                 "earned": 12.1,
                 "possible": 14,
-                "detail": "2,909 completed sales",
+                "detail": "2,910 completed sales",
                 "good": true
               },
               {
@@ -4025,7 +4037,7 @@
           "shipping": 0.0,
           "total": 204.91,
           "seller": "afk1001",
-          "seller_score": 2929,
+          "seller_score": 2932,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -4046,7 +4058,7 @@
                 "name": "Seller volume",
                 "earned": 12.1,
                 "possible": 14,
-                "detail": "2,929 completed sales",
+                "detail": "2,932 completed sales",
                 "good": true
               },
               {
@@ -4235,7 +4247,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:29+00:00",
+      "checked_at": "2026-09-03T04:38:23+00:00",
       "all_time_low": 202.78,
       "all_time_high": 290.0
     },
@@ -4250,7 +4262,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:05+00:00"
+      "checked_at": "2026-09-03T04:38:00+00:00"
     },
     "op02": {
       "history": [
@@ -5129,6 +5141,10 @@
         {
           "t": "2026-09-03T00:16:08+00:00",
           "price": 499.99
+        },
+        {
+          "t": "2026-09-03T04:38:02+00:00",
+          "price": 499.99
         }
       ],
       "name": "OP-02 Paramount War",
@@ -5256,7 +5272,7 @@
           }
         }
       },
-      "considered": 17,
+      "considered": 18,
       "relevant": 5,
       "verified": 5,
       "kept": 1,
@@ -5480,7 +5496,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:08+00:00",
+      "checked_at": "2026-09-03T04:38:02+00:00",
       "all_time_low": 499.99,
       "all_time_high": 549.99
     },
@@ -6361,6 +6377,10 @@
         {
           "t": "2026-09-03T00:16:10+00:00",
           "price": 591.99
+        },
+        {
+          "t": "2026-09-03T04:38:04+00:00",
+          "price": 591.99
         }
       ],
       "name": "OP-03 Pillars of Strength",
@@ -6371,7 +6391,7 @@
         "shipping": 6.99,
         "total": 591.99,
         "seller": "bigavelli2",
-        "seller_score": 506,
+        "seller_score": 507,
         "seller_pct": 100.0,
         "top_rated": false,
         "trust": {
@@ -6390,7 +6410,7 @@
               "name": "Seller volume",
               "earned": 9.5,
               "possible": 14,
-              "detail": "506 completed sales",
+              "detail": "507 completed sales",
               "good": true
             },
             {
@@ -6500,13 +6520,13 @@
           "shipping": 8.07,
           "total": 558.07,
           "seller": "micone_62",
-          "seller_score": 95,
+          "seller_score": 96,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
             "score": 75,
             "vetoes": [
-              "seller has 95 sales, below the 100 minimum"
+              "seller has 96 sales, below the 100 minimum"
             ],
             "verified": true,
             "signals": [
@@ -6519,9 +6539,9 @@
               },
               {
                 "name": "Seller volume",
-                "earned": 6.9,
+                "earned": 7.0,
                 "possible": 14,
-                "detail": "95 completed sales",
+                "detail": "96 completed sales",
                 "good": true
               },
               {
@@ -6597,13 +6617,13 @@
             ]
           },
           "why": [
-            "seller has 95 sales, below the 100 minimum"
+            "seller has 96 sales, below the 100 minimum"
           ]
         }
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:10+00:00",
+      "checked_at": "2026-09-03T04:38:04+00:00",
       "all_time_low": 591.99,
       "all_time_high": 606.79
     },
@@ -7484,6 +7504,10 @@
         {
           "t": "2026-09-03T00:16:12+00:00",
           "price": 499.0
+        },
+        {
+          "t": "2026-09-03T04:38:06+00:00",
+          "price": 499.0
         }
       ],
       "name": "OP-04 Kingdoms of Intrigue",
@@ -7494,7 +7518,7 @@
         "shipping": 0.0,
         "total": 499.0,
         "seller": "thegamerslair8",
-        "seller_score": 177,
+        "seller_score": 178,
         "seller_pct": 100.0,
         "top_rated": false,
         "trust": {
@@ -7513,7 +7537,7 @@
               "name": "Seller volume",
               "earned": 7.9,
               "possible": 14,
-              "detail": "177 completed sales",
+              "detail": "178 completed sales",
               "good": true
             },
             {
@@ -7623,7 +7647,7 @@
           "shipping": 0.0,
           "total": 139.99,
           "seller": "jawlashop339",
-          "seller_score": 207,
+          "seller_score": 211,
           "seller_pct": 99.5,
           "top_rated": false,
           "trust": {
@@ -7644,7 +7668,7 @@
                 "name": "Seller volume",
                 "earned": 8.1,
                 "possible": 14,
-                "detail": "207 completed sales",
+                "detail": "211 completed sales",
                 "good": true
               },
               {
@@ -7833,7 +7857,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:12+00:00",
+      "checked_at": "2026-09-03T04:38:06+00:00",
       "all_time_low": 499.0,
       "all_time_high": 510.0
     },
@@ -7848,7 +7872,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:12+00:00"
+      "checked_at": "2026-09-03T04:38:06+00:00"
     },
     "op06": {
       "history": [
@@ -8727,6 +8751,10 @@
         {
           "t": "2026-09-03T00:16:13+00:00",
           "price": 499.99
+        },
+        {
+          "t": "2026-09-03T04:38:07+00:00",
+          "price": 499.99
         }
       ],
       "name": "OP-06 Wings of the Captain",
@@ -8737,7 +8765,7 @@
         "shipping": 0.0,
         "total": 499.99,
         "seller": "boosterbooster",
-        "seller_score": 232,
+        "seller_score": 233,
         "seller_pct": 100.0,
         "top_rated": false,
         "trust": {
@@ -8756,7 +8784,7 @@
               "name": "Seller volume",
               "earned": 8.3,
               "possible": 14,
-              "detail": "232 completed sales",
+              "detail": "233 completed sales",
               "good": true
             },
             {
@@ -8854,7 +8882,7 @@
           }
         }
       },
-      "considered": 11,
+      "considered": 10,
       "relevant": 2,
       "verified": 2,
       "kept": 1,
@@ -8967,7 +8995,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:13+00:00",
+      "checked_at": "2026-09-03T04:38:07+00:00",
       "all_time_low": 375.43,
       "all_time_high": 499.99
     },
@@ -9848,6 +9876,10 @@
         {
           "t": "2026-09-03T00:16:16+00:00",
           "price": 350.0
+        },
+        {
+          "t": "2026-09-03T04:38:10+00:00",
+          "price": 350.0
         }
       ],
       "name": "OP-07 500 Years Into the Future",
@@ -10088,7 +10120,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:16+00:00",
+      "checked_at": "2026-09-03T04:38:10+00:00",
       "all_time_low": 345.43,
       "all_time_high": 406.79
     },
@@ -10969,6 +11001,10 @@
         {
           "t": "2026-09-03T00:16:18+00:00",
           "price": 299.0
+        },
+        {
+          "t": "2026-09-03T04:38:12+00:00",
+          "price": 299.0
         }
       ],
       "name": "OP-08 Two Legends",
@@ -11316,7 +11352,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:18+00:00",
+      "checked_at": "2026-09-03T04:38:12+00:00",
       "all_time_low": 256.98,
       "all_time_high": 306.98
     },
@@ -11331,7 +11367,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:18+00:00"
+      "checked_at": "2026-09-03T04:38:13+00:00"
     },
     "op10": {
       "history": [
@@ -12210,6 +12246,10 @@
         {
           "t": "2026-09-03T00:16:21+00:00",
           "price": 267.99
+        },
+        {
+          "t": "2026-09-03T04:38:15+00:00",
+          "price": 267.99
         }
       ],
       "name": "OP-10 Royal Blood",
@@ -12349,7 +12389,7 @@
           "shipping": 0.0,
           "total": 161.69,
           "seller": "amped_97",
-          "seller_score": 24917,
+          "seller_score": 24937,
           "seller_pct": 99.3,
           "top_rated": false,
           "trust": {
@@ -12368,7 +12408,7 @@
                 "name": "Seller volume",
                 "earned": 14.0,
                 "possible": 14,
-                "detail": "24,917 completed sales",
+                "detail": "24,937 completed sales",
                 "good": true
               },
               {
@@ -12662,7 +12702,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:21+00:00",
+      "checked_at": "2026-09-03T04:38:15+00:00",
       "all_time_low": 231.99,
       "all_time_high": 299.0
     },
@@ -12687,9 +12727,9 @@
       ],
       "name": "OP-11 A Fist of Divine Speed",
       "current": null,
-      "considered": 13,
-      "relevant": 4,
-      "verified": 4,
+      "considered": 14,
+      "relevant": 5,
+      "verified": 5,
       "kept": 0,
       "rejected": [
         {
@@ -12749,7 +12789,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$160.00 is 66% under the $472.52 median",
+                "detail": "$160.00 is 74% under the $606.99 median",
                 "good": false
               },
               {
@@ -12812,7 +12852,7 @@
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
-            "score": 59,
+            "score": 53,
             "vetoes": [
               "seller has 26 sales, below the 100 minimum",
               "item specifics say Language: Japanese"
@@ -12856,9 +12896,9 @@
               },
               {
                 "name": "Price plausibility",
-                "earned": 6,
+                "earned": 0,
                 "possible": 12,
-                "detail": "$338.05 is well under the $472.52 median \u2014 verify carefully",
+                "detail": "$338.05 is 44% under the $606.99 median",
                 "good": false
               },
               {
@@ -12967,7 +13007,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $472.52 median",
+                "detail": "in line with the $606.99 median",
                 "good": true
               },
               {
@@ -13026,7 +13066,7 @@
           "shipping": 14.1,
           "total": 614.09,
           "seller": "toywizstore",
-          "seller_score": 1013,
+          "seller_score": 1014,
           "seller_pct": 98.8,
           "top_rated": false,
           "trust": {
@@ -13045,7 +13085,7 @@
                 "name": "Seller volume",
                 "earned": 10.5,
                 "possible": 14,
-                "detail": "1,013 completed sales",
+                "detail": "1,014 completed sales",
                 "good": true
               },
               {
@@ -13073,7 +13113,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $472.52 median",
+                "detail": "in line with the $606.99 median",
                 "good": true
               },
               {
@@ -13123,11 +13163,116 @@
           "why": [
             "trust score 69 below 70"
           ]
+        },
+        {
+          "title": "Bandai One Piece Card Game OP-11 A Fist of Divine Speed English Booster Box",
+          "url": "https://www.ebay.com/itm/227462534246?_skw=One+Piece+Card+Game+OP-11+Booster+Box&hash=item34f5d2d466:g:HEAAAeSwwrlqcpSe",
+          "price": 600.0,
+          "shipping": 14.99,
+          "total": 614.99,
+          "seller": "west_coast_collectibles",
+          "seller_score": 203,
+          "seller_pct": 99.0,
+          "top_rated": false,
+          "trust": {
+            "score": 66,
+            "vetoes": [],
+            "verified": true,
+            "signals": [
+              {
+                "name": "Language verified",
+                "earned": 18,
+                "possible": 18,
+                "detail": "item specifics: English",
+                "good": true
+              },
+              {
+                "name": "Seller volume",
+                "earned": 8.1,
+                "possible": 14,
+                "detail": "203 completed sales",
+                "good": true
+              },
+              {
+                "name": "Seller rating",
+                "earned": 7.0,
+                "possible": 14,
+                "detail": "99.0% positive",
+                "good": true
+              },
+              {
+                "name": "Returns",
+                "earned": 0,
+                "possible": 12,
+                "detail": "not accepted",
+                "good": false
+              },
+              {
+                "name": "Top Rated Seller",
+                "earned": 0,
+                "possible": 10,
+                "detail": "not Top Rated (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Price plausibility",
+                "earned": 12,
+                "possible": 12,
+                "detail": "in line with the $606.99 median",
+                "good": true
+              },
+              {
+                "name": "Item specifics",
+                "earned": 4.0,
+                "possible": 8,
+                "detail": "set matches",
+                "good": true
+              },
+              {
+                "name": "eBay category",
+                "earned": 6,
+                "possible": 6,
+                "detail": "listed under trading cards",
+                "good": true
+              },
+              {
+                "name": "Stock level",
+                "earned": 1,
+                "possible": 3,
+                "detail": "unknown",
+                "good": false
+              },
+              {
+                "name": "eBay programmes",
+                "earned": 0,
+                "possible": 5,
+                "detail": "none (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Description",
+                "earned": 4,
+                "possible": 4,
+                "detail": "no warning phrases",
+                "good": true
+              },
+              {
+                "name": "Your trusted list",
+                "earned": 0,
+                "possible": 8,
+                "detail": "not on your trusted list (bonus only)",
+                "good": false
+              }
+            ]
+          },
+          "why": [
+            "trust score 66 below 70"
+          ]
         }
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:22+00:00",
+      "checked_at": "2026-09-03T04:38:17+00:00",
       "all_time_low": 599.99,
       "all_time_high": 601.99
     },
@@ -14008,6 +14153,10 @@
         {
           "t": "2026-09-03T00:16:24+00:00",
           "price": 275.92
+        },
+        {
+          "t": "2026-09-03T04:38:19+00:00",
+          "price": 275.92
         }
       ],
       "name": "OP-12 Legacy of the Master",
@@ -14250,7 +14399,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:24+00:00",
+      "checked_at": "2026-09-03T04:38:19+00:00",
       "all_time_low": 275.92,
       "all_time_high": 340.07
     },
@@ -14907,6 +15056,10 @@
         {
           "t": "2026-09-03T00:16:27+00:00",
           "price": 499.99
+        },
+        {
+          "t": "2026-09-03T04:38:21+00:00",
+          "price": 499.99
         }
       ],
       "name": "OP-13 Carrying On His Will",
@@ -14917,7 +15070,7 @@
         "shipping": 0.0,
         "total": 499.99,
         "seller": "luckyfootllc",
-        "seller_score": 3630,
+        "seller_score": 3634,
         "seller_pct": 99.6,
         "top_rated": false,
         "trust": {
@@ -14936,7 +15089,7 @@
               "name": "Seller volume",
               "earned": 12.5,
               "possible": 14,
-              "detail": "3,630 completed sales",
+              "detail": "3,634 completed sales",
               "good": true
             },
             {
@@ -15472,7 +15625,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:27+00:00",
+      "checked_at": "2026-09-03T04:38:21+00:00",
       "all_time_low": 482.0,
       "all_time_high": 568.0
     },
@@ -16353,6 +16506,10 @@
         {
           "t": "2026-09-03T00:16:31+00:00",
           "price": 394.98
+        },
+        {
+          "t": "2026-09-03T04:38:25+00:00",
+          "price": 394.98
         }
       ],
       "name": "OP-15 The Adventure on God's Island",
@@ -16492,7 +16649,7 @@
           "shipping": 0.0,
           "total": 99.99,
           "seller": "jawlashop339",
-          "seller_score": 207,
+          "seller_score": 211,
           "seller_pct": 99.5,
           "top_rated": false,
           "trust": {
@@ -16513,7 +16670,7 @@
                 "name": "Seller volume",
                 "earned": 8.1,
                 "possible": 14,
-                "detail": "207 completed sales",
+                "detail": "211 completed sales",
                 "good": true
               },
               {
@@ -16599,7 +16756,7 @@
           "shipping": 6.5,
           "total": 146.49,
           "seller": "goods-seller",
-          "seller_score": 474178,
+          "seller_score": 474191,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -16618,7 +16775,7 @@
                 "name": "Seller volume",
                 "earned": 14.0,
                 "possible": 14,
-                "detail": "474,178 completed sales",
+                "detail": "474,191 completed sales",
                 "good": true
               },
               {
@@ -16700,7 +16857,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:31+00:00",
+      "checked_at": "2026-09-03T04:38:25+00:00",
       "all_time_low": 146.49,
       "all_time_high": 399.99
     },
@@ -17531,7 +17688,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:38+00:00",
+      "checked_at": "2026-09-03T04:38:33+00:00",
       "all_time_low": 390.0,
       "all_time_high": 403.0
     },
@@ -17551,7 +17708,7 @@
           "shipping": 0.0,
           "total": 99.85,
           "seller": "sunnystore24",
-          "seller_score": 158,
+          "seller_score": 160,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -17572,7 +17729,7 @@
                 "name": "Seller volume",
                 "earned": 7.7,
                 "possible": 14,
-                "detail": "158 completed sales",
+                "detail": "160 completed sales",
                 "good": true
               },
               {
@@ -17658,7 +17815,7 @@
           "shipping": 0.0,
           "total": 99.88,
           "seller": "greatestplc",
-          "seller_score": 389,
+          "seller_score": 390,
           "seller_pct": 99.7,
           "top_rated": false,
           "trust": {
@@ -17679,7 +17836,7 @@
                 "name": "Seller volume",
                 "earned": 9.1,
                 "possible": 14,
-                "detail": "389 completed sales",
+                "detail": "390 completed sales",
                 "good": true
               },
               {
@@ -17765,7 +17922,7 @@
           "shipping": 0.0,
           "total": 99.92,
           "seller": "werknor",
-          "seller_score": 708,
+          "seller_score": 710,
           "seller_pct": 99.4,
           "top_rated": false,
           "trust": {
@@ -17786,7 +17943,7 @@
                 "name": "Seller volume",
                 "earned": 10.0,
                 "possible": 14,
-                "detail": "708 completed sales",
+                "detail": "710 completed sales",
                 "good": true
               },
               {
@@ -17979,7 +18136,7 @@
           "shipping": 0.0,
           "total": 99.99,
           "seller": "goldencardstore",
-          "seller_score": 749,
+          "seller_score": 752,
           "seller_pct": 99.3,
           "top_rated": false,
           "trust": {
@@ -18000,7 +18157,7 @@
                 "name": "Seller volume",
                 "earned": 10.1,
                 "possible": 14,
-                "detail": "749 completed sales",
+                "detail": "752 completed sales",
                 "good": true
               },
               {
@@ -18082,7 +18239,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:40+00:00"
+      "checked_at": "2026-09-03T04:38:35+00:00"
     },
     "eb03": {
       "history": [
@@ -18681,6 +18838,10 @@
         {
           "t": "2026-09-03T00:16:42+00:00",
           "price": 339.26
+        },
+        {
+          "t": "2026-09-03T04:38:36+00:00",
+          "price": 339.26
         }
       ],
       "name": "EB-03 Heroines Edition",
@@ -18738,7 +18899,7 @@
               "name": "Price plausibility",
               "earned": 12,
               "possible": 12,
-              "detail": "in line with the $339.26 median",
+              "detail": "in line with the $332.60 median",
               "good": true
             },
             {
@@ -18786,10 +18947,10 @@
           ]
         },
         "purchase": {
-          "score": 55,
+          "score": 54,
           "dud_chance": 0.88,
           "cost_per_pack": 14.14,
-          "baseline_cost_per_pack": 14.14,
+          "baseline_cost_per_pack": 13.86,
           "ev_per_pack": 4.83,
           "verdict": "FAIR",
           "notes": [
@@ -18809,8 +18970,8 @@
         }
       },
       "considered": 30,
-      "relevant": 3,
-      "verified": 3,
+      "relevant": 4,
+      "verified": 4,
       "kept": 1,
       "rejected": [
         {
@@ -18820,7 +18981,7 @@
           "shipping": 0.0,
           "total": 99.99,
           "seller": "goldencardstore",
-          "seller_score": 749,
+          "seller_score": 752,
           "seller_pct": 99.3,
           "top_rated": false,
           "trust": {
@@ -18841,7 +19002,7 @@
                 "name": "Seller volume",
                 "earned": 10.1,
                 "possible": 14,
-                "detail": "749 completed sales",
+                "detail": "752 completed sales",
                 "good": true
               },
               {
@@ -18869,7 +19030,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$99.99 is 71% under the $339.26 median",
+                "detail": "$99.99 is 70% under the $332.60 median",
                 "good": false
               },
               {
@@ -18918,6 +19079,113 @@
           },
           "why": [
             "item specifics say Language: Japanese"
+          ]
+        },
+        {
+          "title": "Bandai One Piece Card Game Heroines Edition EB-03 English Booster Box 24 Packs",
+          "url": "https://www.ebay.com/itm/820080629932?_skw=One+Piece+Card+Game+EB-03+Booster+Box&hash=itembef09d58ac:g:GzEAAeSwPdNqmMst",
+          "price": 320.0,
+          "shipping": 5.93,
+          "total": 325.93,
+          "seller": "pa627529",
+          "seller_score": 1,
+          "seller_pct": 100.0,
+          "top_rated": false,
+          "trust": {
+            "score": 68,
+            "vetoes": [
+              "seller has 1 sales, below the 100 minimum"
+            ],
+            "verified": true,
+            "signals": [
+              {
+                "name": "Language verified",
+                "earned": 18,
+                "possible": 18,
+                "detail": "item specifics: English",
+                "good": true
+              },
+              {
+                "name": "Seller volume",
+                "earned": 1.1,
+                "possible": 14,
+                "detail": "1 completed sales",
+                "good": true
+              },
+              {
+                "name": "Seller rating",
+                "earned": 14.0,
+                "possible": 14,
+                "detail": "100.0% positive",
+                "good": true
+              },
+              {
+                "name": "Returns",
+                "earned": 0,
+                "possible": 12,
+                "detail": "not accepted",
+                "good": false
+              },
+              {
+                "name": "Top Rated Seller",
+                "earned": 0,
+                "possible": 10,
+                "detail": "not Top Rated (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Price plausibility",
+                "earned": 12,
+                "possible": 12,
+                "detail": "in line with the $332.60 median",
+                "good": true
+              },
+              {
+                "name": "Item specifics",
+                "earned": 4.0,
+                "possible": 8,
+                "detail": "set matches",
+                "good": true
+              },
+              {
+                "name": "eBay category",
+                "earned": 6,
+                "possible": 6,
+                "detail": "listed under trading cards",
+                "good": true
+              },
+              {
+                "name": "Stock level",
+                "earned": 3,
+                "possible": 3,
+                "detail": "1 in stock",
+                "good": true
+              },
+              {
+                "name": "eBay programmes",
+                "earned": 0,
+                "possible": 5,
+                "detail": "none (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Description",
+                "earned": 4,
+                "possible": 4,
+                "detail": "no warning phrases",
+                "good": true
+              },
+              {
+                "name": "Your trusted list",
+                "earned": 0,
+                "possible": 8,
+                "detail": "not on your trusted list (bonus only)",
+                "good": false
+              }
+            ]
+          },
+          "why": [
+            "seller has 1 sales, below the 100 minimum"
           ]
         },
         {
@@ -18977,7 +19245,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $339.26 median",
+                "detail": "in line with the $332.60 median",
                 "good": true
               },
               {
@@ -19032,7 +19300,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:42+00:00",
+      "checked_at": "2026-09-03T04:38:36+00:00",
       "all_time_low": 300.0,
       "all_time_high": 359.99
     },
@@ -19155,7 +19423,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:43+00:00"
+      "checked_at": "2026-09-03T04:38:37+00:00"
     },
     "prb02": {
       "history": [
@@ -20034,6 +20302,10 @@
         {
           "t": "2026-09-03T00:16:45+00:00",
           "price": 399.95
+        },
+        {
+          "t": "2026-09-03T04:38:39+00:00",
+          "price": 399.95
         }
       ],
       "name": "PRB-02 One Piece Card The Best Vol.2",
@@ -20044,7 +20316,7 @@
         "shipping": 0.0,
         "total": 399.95,
         "seller": "card-colosseum",
-        "seller_score": 4841,
+        "seller_score": 4842,
         "seller_pct": 99.7,
         "top_rated": false,
         "trust": {
@@ -20063,7 +20335,7 @@
               "name": "Seller volume",
               "earned": 12.9,
               "possible": 14,
-              "detail": "4,841 completed sales",
+              "detail": "4,842 completed sales",
               "good": true
             },
             {
@@ -20383,7 +20655,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-03T00:16:45+00:00",
+      "checked_at": "2026-09-03T04:38:39+00:00",
       "all_time_low": 394.99,
       "all_time_high": 399.95
     }
@@ -20393,11 +20665,11 @@
     "planned": 99.98,
     "committed": 1274.17,
     "realised": 78.35,
-    "unrealised_gross": 1369.88,
-    "unrealised_net": 1182.35,
-    "position_gross": 274.04,
-    "position_net": 86.51,
-    "roi_pct": 7.4,
+    "unrealised_gross": 1364.38,
+    "unrealised_net": 1177.59,
+    "position_gross": 268.54,
+    "position_net": 81.75,
+    "roi_pct": 7.0,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 1053.27,
@@ -20411,8 +20683,8 @@
         "spent": 465.04,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 60.72,
-        "net": -404.32
+        "held": 61.0,
+        "net": -404.04
       },
       "courtyard": {
         "spent": 139.39,
@@ -20460,8 +20732,8 @@
         "spent": 387.85,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 542.07,
-        "net": 154.22
+        "held": 537.03,
+        "net": 149.18
       },
       "msallsunday": {
         "spent": 26.49,
@@ -20472,7 +20744,7 @@
       }
     },
     "card_prices_applied": 13,
-    "card_prices_at": "2026-09-03T00:16:04+00:00",
+    "card_prices_at": "2026-09-03T04:37:59+00:00",
     "holdings": [
       {
         "id": "ms-all-sunday-sp",
@@ -20494,7 +20766,7 @@
             "share": 0.9324,
             "note": "455 of 488 graded copies. Roughly double raw -- the outcome that justified submitting.",
             "net_if_sold": 997.22,
-            "position_net": 650.38
+            "position_net": 645.62
           },
           {
             "label": "PSA 9",
@@ -20502,7 +20774,7 @@
             "share": 0.0451,
             "note": "Only one on record: $760 on 2026-07-05 when 10s were $1,725, i.e. 44% of a 10. At or below raw.",
             "net_if_sold": 433.35,
-            "position_net": 86.51
+            "position_net": 81.75
           },
           {
             "label": "PSA 8 or lower",
@@ -20510,7 +20782,7 @@
             "share": 0.0225,
             "note": "One sold 2026-08-02 at $510, under what raw was fetching that week.",
             "net_if_sold": 442.02,
-            "position_net": 95.18
+            "position_net": 90.42
           }
         ]
       },
@@ -20518,8 +20790,8 @@
         "id": "op17-062-kaido-guest-artist",
         "name": "OP17-062 Kaido (Super Alternate Art) \u2014 Keisuke Itagaki / Baki art, English",
         "status": "owned",
-        "estimate": 286.23,
-        "net_if_sold": 247.9,
+        "estimate": 280.33,
+        "net_if_sold": 242.79,
         "liquid": false,
         "source": "",
         "note": "",
@@ -20578,8 +20850,8 @@
         "id": "op17-119-loki-sec",
         "name": "OP17-119 Loki (Secret Rare)",
         "status": "owned",
-        "estimate": 34.99,
-        "net_if_sold": 29.95,
+        "estimate": 36.56,
+        "net_if_sold": 31.32,
         "liquid": false,
         "source": "",
         "note": "",
@@ -20593,8 +20865,8 @@
         "id": "op17-020-shanks-leader-alt",
         "name": "OP17-020 Shanks Leader (Alt Art)",
         "status": "owned",
-        "estimate": 31.04,
-        "net_if_sold": 26.53,
+        "estimate": 31.23,
+        "net_if_sold": 26.69,
         "liquid": false,
         "source": "",
         "note": "",
@@ -20608,8 +20880,8 @@
         "id": "p-110-luffy-elbaph-lego",
         "name": "P-110 Monkey.D.Luffy (Elbaph outfit, lego background promo)",
         "status": "owned",
-        "estimate": 23.49,
-        "net_if_sold": 19.98,
+        "estimate": 21.8,
+        "net_if_sold": 18.51,
         "liquid": false,
         "source": "prerelease entry",
         "note": "",
@@ -20623,8 +20895,8 @@
         "id": "op17-114-alt-art",
         "name": "OP17-114 Sweet 3 Generals (Alt Art)",
         "status": "owned",
-        "estimate": 19.06,
-        "net_if_sold": 16.13,
+        "estimate": 18.76,
+        "net_if_sold": 15.87,
         "liquid": false,
         "source": "",
         "note": "",
@@ -20638,8 +20910,8 @@
         "id": "op17-093-luffy-sr-x3",
         "name": "OP17-093 Luffy (Super Rare) x3",
         "status": "owned",
-        "estimate": 15.12,
-        "net_if_sold": 12.72,
+        "estimate": 15.45,
+        "net_if_sold": 13.0,
         "liquid": false,
         "source": "",
         "note": "",
@@ -20653,8 +20925,8 @@
         "id": "op16-118-ace-sec",
         "name": "Portgas.D.Ace OP16-118 (Secret Rare)",
         "status": "owned",
-        "estimate": 14.41,
-        "net_if_sold": 12.1,
+        "estimate": 14.71,
+        "net_if_sold": 12.36,
         "liquid": false,
         "source": "pulled from OP-16 box",
         "note": "Assumed base SEC. If it's the Alt Art SEC it's ~$40-55 \u2014 check which you have.",
@@ -20668,8 +20940,8 @@
         "id": "op16-065-sakazuki-alt",
         "name": "Sakazuki OP16-065 (Alt Art)",
         "status": "owned",
-        "estimate": 12.51,
-        "net_if_sold": 10.45,
+        "estimate": 12.46,
+        "net_if_sold": 10.41,
         "liquid": false,
         "source": "pulled from OP-16 box",
         "note": "",
@@ -20683,8 +20955,8 @@
         "id": "op16-063-kuzan-alt",
         "name": "Kuzan OP16-063 (Alt Art)",
         "status": "owned",
-        "estimate": 4.8,
-        "net_if_sold": 3.76,
+        "estimate": 4.86,
+        "net_if_sold": 3.82,
         "liquid": false,
         "source": "pulled from OP-16 box",
         "note": "",
@@ -20713,8 +20985,8 @@
         "id": "op17-005-edward-newgate-sr",
         "name": "OP17-005 Edward Newgate (Super Rare)",
         "status": "owned",
-        "estimate": 1.35,
-        "net_if_sold": 0.77,
+        "estimate": 1.34,
+        "net_if_sold": 0.76,
         "liquid": false,
         "source": "",
         "note": "",
