@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-05T15:14:27+00:00",
+  "updated_at": "2026-09-05T15:21:04+00:00",
   "source": "tcgplayer price points",
   "basis": "foil market price, or normal where the card has no foil printing",
-  "applied": 36,
-  "failed": 1,
+  "applied": 37,
+  "failed": 0,
   "rejected": [],
   "cards": {
     "kaido-062-superalt": {
@@ -189,18 +189,18 @@
     },
     "newgate-005-alt": {
       "tcgplayer_id": 708077,
-      "price": null,
-      "printing": "",
-      "foil_market": null,
+      "price": 20.12,
+      "printing": "foil",
+      "foil_market": 20.12,
       "normal_market": null,
-      "listed_median": null,
+      "listed_median": 24.45,
       "url": "https://www.tcgplayer.com/product/708077",
-      "error": "HTTPSConnectionPool(host='mpapi.tcgplayer.com', port=443): Read timed out. (read timeout=25)",
+      "error": "",
       "name": "Edward.Newgate (005) (Alternate Art)",
       "qty": 1,
       "previous_estimate": 22.06,
-      "value": null,
-      "applied": false
+      "value": 20.12,
+      "applied": true
     },
     "newgate-001-alt": {
       "tcgplayer_id": 705924,
@@ -399,9 +399,9 @@
     },
     "luffy-093": {
       "tcgplayer_id": 710861,
-      "price": 4.45,
+      "price": 4.48,
       "printing": "foil",
-      "foil_market": 4.45,
+      "foil_market": 4.48,
       "normal_market": null,
       "listed_median": 5.82,
       "url": "https://www.tcgplayer.com/product/710861",
@@ -409,14 +409,14 @@
       "name": "Monkey.D.Luffy (093)",
       "qty": 1,
       "previous_estimate": 4.59,
-      "value": 4.45,
+      "value": 4.48,
       "applied": true
     },
     "usopp-080": {
       "tcgplayer_id": 711426,
-      "price": 2.63,
+      "price": 2.65,
       "printing": "foil",
-      "foil_market": 2.63,
+      "foil_market": 2.65,
       "normal_market": null,
       "listed_median": 2.73,
       "url": "https://www.tcgplayer.com/product/711426",
@@ -424,7 +424,7 @@
       "name": "Usopp",
       "qty": 2,
       "previous_estimate": 5.06,
-      "value": 5.26,
+      "value": 5.3,
       "applied": true
     },
     "kingdew-006": {
@@ -444,9 +444,9 @@
     },
     "shanks-op14-027-4th": {
       "tcgplayer_id": 714351,
-      "price": 2.02,
+      "price": 2.03,
       "printing": "foil",
-      "foil_market": 2.02,
+      "foil_market": 2.03,
       "normal_market": null,
       "listed_median": 2.5,
       "url": "https://www.tcgplayer.com/product/714351",
@@ -454,7 +454,7 @@
       "name": "Shanks (4th Anniv Treasure Campaign)",
       "qty": 1,
       "previous_estimate": 2.08,
-      "value": 2.02,
+      "value": 2.03,
       "applied": true
     },
     "newgate-op16-003": {
@@ -474,9 +474,9 @@
     },
     "newgate-005": {
       "tcgplayer_id": 711499,
-      "price": 1.68,
+      "price": 1.66,
       "printing": "foil",
-      "foil_market": 1.68,
+      "foil_market": 1.66,
       "normal_market": null,
       "listed_median": 2.39,
       "url": "https://www.tcgplayer.com/product/711499",
@@ -484,7 +484,7 @@
       "name": "Edward.Newgate (005)",
       "qty": 3,
       "previous_estimate": 5.28,
-      "value": 5.04,
+      "value": 4.98,
       "applied": true
     },
     "teach-p100": {
