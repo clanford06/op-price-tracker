@@ -209,9 +209,38 @@ expenses:
     # pay out to the slot, and this one is treated as a total loss unless a
     # card actually arrives. If one does, add it as a holding under `whatnot`.
 
+  
+  - date: 2026-09-04
+    item: "OP-17 booster box + card binder"
+    category: "sealed"
+    amount: 296.99
+    tag: "op17"
+
   # <<ADD_EXPENSES_HERE>>
 
 holdings:
+holdings:
+  # =====================================================================
+  # HOLDINGS REBUILT 2026-09-04 from Carter's TCGplayer app inventory
+  # (8 screenshots, list "OP-TCG", 51 items, $1,832.64 est. market).
+  # The transcription reconciles to the app exactly: 39 distinct lines,
+  # 51 total copies, $1,832.64. Every line below was matched to its
+  # TCGplayer product by CARD NUMBER and then disambiguated by PRICE --
+  # which is what separates Kaido (063) Alt at $12.18 from Kaido (063)
+  # base at $0.48, and the same for Usopp 080 and Newgate 005. Matching
+  # on number alone would have collapsed each of those pairs.
+  #
+  # The app list is Carter's ~51 BEST cards, not the whole collection.
+  # Everything else is the bulk line at the bottom.
+  #
+  # TWO CARDS ARE DELIBERATELY NOT AUTO-PRICED, and must stay that way:
+  # Ms. All Sunday (at PSA) and the PSA 10 Kidd. TCGplayer prices RAW
+  # singles; a slab is its own market. Pinning either to a tcgplayer_id
+  # would overwrite a graded value with a raw one -- for Ms. All Sunday
+  # that is a ~$37 overstatement of a card that isn't raw, and for the
+  # Kidd it is an $80 UNDERSTATEMENT ($88.84 raw vs $169 as a PSA 10).
+  # =====================================================================
+
   - id: ms-all-sunday-sp
     tag: "msallsunday"
     name: "Ms. All Sunday SP OP14-084 (English)"
@@ -305,70 +334,7 @@ holdings:
     # one of those two.
     # ---------------------------------------------------------------------
 
-  - id: op16-022-luffy-alt
-    tcgplayer_id: 696007      # Monkey.D.Luffy (022) (Alternate Art), Leader, foil
-    tag: "op16"
-    name: "Monkey.D.Luffy Leader OP16-022 (Alt Art)"
-    status: owned
-    estimate: 63.00
-    source: "pulled from OP-16 box"
-    ebay_query: "One Piece OP16-022 Luffy Leader Alternate Art"
 
-  - id: op16-065-sakazuki-alt
-    tcgplayer_id: 694981      # Sakazuki (Alternate Art), foil
-    tag: "op16"
-    name: "Sakazuki OP16-065 (Alt Art)"
-    status: owned
-    estimate: 15.00
-    source: "pulled from OP-16 box"
-    ebay_query: "One Piece OP16-065 Sakazuki Alternate Art"
-
-  - id: op16-118-ace-sec
-    tcgplayer_id: 694932      # Portgas.D.Ace (118) base Secret Rare, foil
-    tag: "op16"
-    name: "Portgas.D.Ace OP16-118 (Secret Rare)"
-    status: owned
-    estimate: 11.00
-    source: "pulled from OP-16 box"
-    note: "Assumed base SEC. If it's the Alt Art SEC it's ~$40-55 — check which you have."
-    ebay_query: "One Piece OP16-118 Ace Secret Rare"
-
-  - id: op16-063-kuzan-alt
-    tcgplayer_id: 696051      # Kuzan (Alternate Art), foil
-    tag: "op16"
-    name: "Kuzan OP16-063 (Alt Art)"
-    status: owned
-    estimate: 6.00
-    source: "pulled from OP-16 box"
-    ebay_query: "One Piece OP16-063 Kuzan Alternate Art"
-
-  # The bulk commons/uncommons from two boxes are worth ~nothing individually
-  # but are not zero as a lot. Weigh them in if you ever bother to sell.
-  # - id: op16-bulk
-  #   name: "OP-16 bulk (2 boxes, commons/uncommons)"
-  #   status: owned
-  #   estimate: 20.00
-
-  # --- To add on 8/23 once opened ---
-  # Leave estimate blank (null) until you know what you pulled. The report
-  # flags unpriced holdings rather than quietly valuing them at zero.
-  #
-  # - id: op17-prerelease-haul
-  #   name: "OP-17 prerelease haul (6 packs + promos + Rainbow Luffy leader)"
-  #   status: owned
-  #   estimate: null
-  #   acquired: "2026-08-23"
-  #   source: "Prime Time Gaming prerelease entry"
-  #
-  # - id: op17-box-haul
-  #   name: "OP-17 booster box contents"
-  #   status: owned
-  #   estimate: null
-  #   acquired: "2026-08-23"
-
-  
-
-  
   - id: psa-10-eustass-captain-kidd-sp-eb04-039
     name: "PSA 10 Eustass \"Captain\" Kidd SP EB04-039"
     status: "owned"
@@ -377,223 +343,286 @@ holdings:
     tag: "op15"
     # Revised down from $250 by Carter 2026-08-25 as the more accurate comp.
 
-  
+  # --- Auto-priced from the TCGplayer inventory, 2026-09-04 -------------
+  # Re-quoted twice daily from each product's FOIL market price. The
+  # `estimate` here is the app's market price at transcription time and is
+  # only the fallback if a refresh fails. `qty` means one line covers
+  # several copies; `estimate` is always the TOTAL for all of them.
 
-  
-
-
-
-
-
-  # --- Courtyard: repriced 2026-08-30 to Courtyard's own liquidation offers.
-  # Those offers are what Courtyard will actually pay today, so they are a
-  # firmer number than the FMV sticker these were carried at and they replace
-  # it. Same rule as everything else here: book the bid, not the ask.
-  #
-  # They are OFFERS, not sales -- nothing is realised and both cards are still
-  # holdings. Taking them credits the Courtyard WALLET, which is not the same
-  # as money in the bank: the wallet exists to fund the next pack, and that is
-  # exactly how a $40.26 sale quietly became a "free" pack in August. If these
-  # are liquidated, WITHDRAW, then log two sales and drop the holdings.
-
-  # --- OP-17 haul: 2 booster boxes + the 8/23 prerelease -------------------
-  #
-  # UPDATE 2026-08-30: the wait is over and these are now priced automatically.
-  # OP-17 released 8/28 and TCGplayer has real market prices, so every card
-  # below carries a `tcgplayer_id:` and is re-quoted twice a day from that
-  # product's FOIL market price. The hand-entered numbers below are kept only
-  # as the fallback if a refresh fails; the dashboard labels which is which.
-  #
-  # The prerelease asks were high, exactly as the warning underneath predicted.
-  # First live pass moved this tag from $774.98 to $476.24.
-  #
-  # To pin a new card: `python -m tracker --find-card OP17-062`, then put the
-  # id on the holding. Search by the NUMBER ALONE -- adding the character name
-  # makes TCGplayer's fuzzy matcher confidently return a card from another set.
-  # Use `qty:` when one holding covers several copies; `estimate` is always the
-  # total for all of them.
-  #
-  # ORIGINAL WARNING, kept because it is what actually happened:
-  # READ BEFORE TRUSTING ANY OP-17 NUMBER BELOW.
-  # OP-17 is still PRESALE on TCGplayer as of 2026-08-25; general release is
-  # 2026-08-28. Every price here comes from the thin prerelease market created
-  # by events like the one these cards came from. When general supply lands on
-  # 8/28 these will move, and fresh-set prices historically move DOWN.
-  # Re-price the whole tag in mid-September off sold comps.
-  # Logged 2026-08-25. estimate: null on purpose -- OP-17 released 8/22 and has
-  # NO usable comps yet (Limitless has the card pages up but no prices). The
-  # report flags these as unpriced rather than valuing them at zero. Price them
-  # off eBay SOLD listings, not asks: on a set this fresh asks run 30-40% high
-  # and fall fast. Do not anchor on week-one numbers.
-
-  - id: op17-119-loki-sec
-    tcgplayer_id: 710585      # Loki (119) base Secret Rare, foil
-    name: "OP17-119 Loki (Secret Rare)"
-    status: "owned"
-    estimate: 37.34
-    acquired: "2026-08-23"
+  - id: kaido-062-superalt
+    tcgplayer_id: 712091      # Kaido (062) (Super Alternate Art), Super Rare
     tag: "op17"
-    price_note: "Loki base Secret Rare, foil. TCGplayer market 2026-08-25. NOTE: the Alternate Art Loki is $120.80 -- if yours is the alt, this is $83 low."
-    ebay_query: "One Piece OP17-119 Loki Secret Rare English"
+    name: "Kaido (062) (Super Alternate Art)"
+    status: owned
+    estimate: 261.26
 
-  - id: op17-020-shanks-leader-alt
-    tcgplayer_id: 705923      # Shanks (020) (Alternate Art), Leader, foil
-    name: "OP17-020 Shanks Leader (Alt Art)"
-    status: "owned"
-    estimate: 88.42
-    acquired: "2026-08-23"
+  - id: oden-st32-002-sp
+    tcgplayer_id: 712123      # Kouzuki Oden (ST32-002) (SP), Super Rare
     tag: "op17"
-    price_note: "Leader Alternate Art, foil. TCGplayer market 2026-08-25 (listed median $90.73)."
-    ebay_query: "One Piece OP17-020 Shanks Leader Alternate Art English"
+    name: "Kouzuki Oden (ST32-002) (SP)"
+    status: owned
+    estimate: 214.81
 
-  - id: st32-002-kozuki-oden-sp
-    tcgplayer_id: 712123      # Kouzuki Oden (ST32-002) (SP), foil
-    name: "ST32-002 Kouzuki Oden (SP, Conqueror's Haki) — English"
-    status: "owned"
-    estimate: 285.00
-    acquired: "2026-08-23"
+  - id: luffy-079-alt
+    tcgplayer_id: 707124      # Monkey.D.Luffy (079) (Alternate Art), Leader
     tag: "op17"
-    # PRICED 2026-08-25 off eBay ENGLISH active asks, n=38:
-    #   min $245  25th $284.95  MEDIAN $317.50  75th $375  max $1,250
-    # Booked at the 25th percentile, not the median. Rule: these are ASKS, not
-    # sales, and the low asks are the ones that actually clear. Deliberately
-    # conservative -- revise UP off sold comps if it holds.
-    #
-    # TCGplayer's $398.98 "listed median" is +26% above eBay's English median
-    # and would have been a bad number to book. TCGplayer still shows
-    # Total Sold 0 and flags the card PRESALE, est. ship 2026-08-28.
-    #
-    # LANGUAGE MATTERS ENORMOUSLY -- Carter's is ENGLISH:
-    #   English  median $317.50 (n=38)
-    #   Chinese  median $207.50 (n=3)
-    #   Japanese median $172.99 (n=7)
-    # A naive "oden sp" search is full of Japanese and Chinese copies at half
-    # the price. Note eBay also autocorrects "oden" to "odin" -- override it.
-    #
-    # SP reprints carry the ORIGINAL card number, same trap as the Ms. All
-    # Sunday SP: the plain ST32-002 Oden is $7.78, this one is not. Also do not
-    # confuse it with ST13-002 / ST20-001 / OP05-067 / ST32-008 Odens, which
-    # all appear in the same search results at different prices.
-    ebay_query: "Kouzuki Oden ST32-002 SP OP17 English -japanese -chinese"
+    name: "Monkey.D.Luffy (079) (Alternate Art)"
+    status: owned
+    estimate: 62.99
 
-  - id: op17-062-kaido-guest-artist
-    tcgplayer_id: 712091      # Kaido (062) (Super Alternate Art), foil
-    name: "OP17-062 Kaido (Super Alternate Art) — Keisuke Itagaki / Baki art, English"
-    status: "owned"
-    estimate: 400.00
-    acquired: "2026-08-23"
+  - id: xebec-039-alt
+    tcgplayer_id: 710591      # Rocks.D.Xebec (039) (Alternate Art), Leader
     tag: "op17"
-    # NOT the Alternate Art -- corrected by Carter 2026-08-25. The earlier
-    # $46.18 was wrong: that is the DAI-XT. alt art, a different card.
-    #
-    # IDENTIFICATION RESOLVED 2026-08-25 from eBay: this is the TCGplayer SKU
-    # "Kaido (062) (Super Alternate Art)" (id 712091), illustrated by KEISUKE
-    # ITAGAKI, creator of Baki. Dozens of sellers name him outright. It is NOT
-    # the Manga SKU (id 712090) -- that is manga-panel art and a separate card.
-    # Sellers describe this one inconsistently as SP / Alt Art / Super Alt Art /
-    # SR Parallel, so match on the ARTIST, not the rarity word.
-    #
-    # STILL UNPRICED. Both TCGplayer and eBay show asks only:
-    #   TCGplayer  market -, Total Sold 0, ask median $549.98, PRESALE 8/28
-    #   eBay       108 active listings, none confirmed sold
-    #
-    # eBay ACTIVE ASKS 2026-08-24, and the language split is enormous:
-    #   ENGLISH   n=42  min $365  25th $400  MEDIAN $500  75th $550  max $1000
-    #   JAPANESE  n=14  min $148  25th $150  MEDIAN $154  75th $167  max $206
-    #   English trades at 3.25x Japanese. Carter's is ENGLISH -- never price it
-    #   off the Japanese listings, which dominate a naive search.
-    #
-    # The one Japanese seller showing "14 sold" at ~$153.75 is the only real
-    # sales evidence anywhere, and it is for the Japanese printing.
-    #
-    # PRICED 2026-08-25 at the 25th percentile of English asks ($400.00), same
-    # conservative rule as the Oden -- asks are not sales, and low asks clear
-    # first. eBay English median is $500 and TCGplayer's $549.98 is +10% on
-    # that. Revise off sold comps.
-    #
-    # STILL NOT A SALE-BACKED NUMBER. To settle it, tick "Sold Items" in the
-    # eBay sidebar -- one click, and it is the only figure that really counts.
-    ebay_query: "Kaido OP17-062 Baki Itagaki English -japanese"
+    name: "Rocks.D.Xebec (039) (Alternate Art)"
+    status: owned
+    estimate: 53.92
 
-  - id: op17-005-edward-newgate-sr
-    tcgplayer_id: 711499      # Edward.Newgate (005) base Super Rare, foil
-    name: "OP17-005 Edward Newgate (Super Rare)"
-    status: "owned"
-    estimate: 6.72
-    acquired: "2026-08-23"
+  - id: shanks-022-alt
+    tcgplayer_id: 707121      # Shanks (022) (Alternate Art), Super Rare
     tag: "op17"
-    price_note: "Base Super Rare, foil. TCGplayer market 2026-08-25. Alternate Art version asks ~$50 with no market price yet."
-    ebay_query: "One Piece OP17-005 Edward Newgate Super Rare English"
+    name: "Shanks (022) (Alternate Art)"
+    status: owned
+    estimate: 42.10
 
-  - id: op17-093-luffy-sr-x3
-    tcgplayer_id: 710861      # Monkey.D.Luffy (093) base Super Rare, foil x3
+  - id: luffy-op16-022-alt
+    tcgplayer_id: 696007      # Monkey.D.Luffy (022) (Alternate Art), Leader
+    tag: "op16"
+    name: "Monkey.D.Luffy (022) (Alternate Art)"
+    status: owned
+    estimate: 39.71
+
+  - id: kaido-058-alt
+    tcgplayer_id: 707118      # Kaido (058) (Alternate Art), Leader
+    tag: "op17"
+    name: "Kaido (058) (Alternate Art)"
+    status: owned
+    estimate: 36.92
+
+  - id: loki-119-sec
+    tcgplayer_id: 710585      # Loki, Secret Rare
+    tag: "op17"
+    name: "Loki"
+    status: owned
+    estimate: 67.40
+    qty: 2
+
+  - id: shanks-020-alt
+    tcgplayer_id: 705923      # Shanks (020) (Alternate Art), Leader
+    tag: "op17"
+    name: "Shanks (020) (Alternate Art)"
+    status: owned
+    estimate: 65.60
+    qty: 2
+
+  - id: ace-118-alt
+    tcgplayer_id: 694933      # Portgas.D.Ace (118) (Alternate Art), Secret Rare
+    tag: "op16"
+    name: "Portgas.D.Ace (118) (Alternate Art)"
+    status: owned
+    estimate: 26.77
+
+  - id: stussy-054-alt
+    tcgplayer_id: 710539      # Miss Buckingham Stussy (Alternate Art), Rare
+    tag: "op17"
+    name: "Miss Buckingham Stussy (Alternate Art)"
+    status: owned
+    estimate: 23.30
+
+  - id: luffy-p110
+    tcgplayer_id: 712742      # Monkey.D.Luffy (4th Anniversary), Promo
+    tag: "op17"
+    name: "Monkey.D.Luffy (4th Anniversary)"
+    status: owned
+    estimate: 22.96
+
+  - id: newgate-005-alt
+    tcgplayer_id: 708077      # Edward.Newgate (005) (Alternate Art), Super Rare
+    tag: "op17"
+    name: "Edward.Newgate (005) (Alternate Art)"
+    status: owned
+    estimate: 22.06
+
+  - id: newgate-001-alt
+    tcgplayer_id: 705924      # Edward.Newgate (001) (Alternate Art), Leader
+    tag: "op17"
+    name: "Edward.Newgate (001) (Alternate Art)"
+    status: owned
+    estimate: 21.08
+
+  - id: linlin-049-alt
+    tcgplayer_id: 710540      # Charlotte Linlin (049) (Alternate Art), Rare
+    tag: "op17"
+    name: "Charlotte Linlin (049) (Alternate Art)"
+    status: owned
+    estimate: 20.85
+
+  - id: linlin-099-alt
+    tcgplayer_id: 707139      # Charlotte Linlin (099) (Alternate Art), Leader
+    tag: "op17"
+    name: "Charlotte Linlin (099) (Alternate Art)"
+    status: owned
+    estimate: 19.72
+
+  - id: sweet3-114-alt
+    tcgplayer_id: 712116      # Sweet 3 Generals (Alternate Art), Rare
+    tag: "op17"
+    name: "Sweet 3 Generals (Alternate Art)"
+    status: owned
+    estimate: 39.32
+    qty: 2
+
+  - id: yasopp-031-alt
+    tcgplayer_id: 711423      # Yasopp (Alternate Art), Super Rare
+    tag: "op17"
+    name: "Yasopp (Alternate Art)"
+    status: owned
+    estimate: 19.54
+
+  - id: usopp-080-alt
+    tcgplayer_id: 711427      # Usopp (Alternate Art), Super Rare
+    tag: "op17"
+    name: "Usopp (Alternate Art)"
+    status: owned
+    estimate: 17.74
+
+  - id: luffy-p099
+    tcgplayer_id: 714352      # Monkey.D.Luffy (4th Anniversary Treasure Campaign Pack), Promo
+    tag: "op17"
+    name: "Monkey.D.Luffy (4th Anniv Treasure Campaign)"
+    status: owned
+    estimate: 26.68
+    qty: 2
+
+  - id: don-luffy
+    tcgplayer_id: 712745      # DON!! Card (World United) (Luffy), DON!!
+    tag: "op17"
+    name: "DON!! Card World United Luffy"
+    status: owned
+    estimate: 12.62
+
+  - id: kaido-063-alt
+    tcgplayer_id: 712092      # Kaido (063) (Alternate Art), Super Rare
+    tag: "op17"
+    name: "Kaido (063) (Alternate Art)"
+    status: owned
+    estimate: 25.16
+    qty: 2
+
+  - id: don-zoro
+    tcgplayer_id: 712744      # DON!! Card (World United) (Zoro), DON!!
+    tag: "op17"
+    name: "DON!! Card World United Zoro"
+    status: owned
+    estimate: 11.82
+
+  - id: beckman-027-alt
+    tcgplayer_id: 712085      # Benn.Beckman (Alternate Art), Rare
+    tag: "op17"
+    name: "Benn.Beckman (Alternate Art)"
+    status: owned
+    estimate: 8.07
+
+  - id: linlin-112
+    tcgplayer_id: 711325      # Charlotte Linlin (112), Super Rare
+    tag: "op17"
+    name: "Charlotte Linlin (112)"
+    status: owned
+    estimate: 5.52
+
+  - id: kuzan-op16-063-alt
+    tcgplayer_id: 696051      # Kuzan (Alternate Art), Rare
+    tag: "op16"
+    name: "Kuzan (Alternate Art)"
+    status: owned
+    estimate: 9.82
+    qty: 2
+
+  - id: luffy-093
+    tcgplayer_id: 710861      # Monkey.D.Luffy (093), Super Rare
+    tag: "op17"
+    name: "Monkey.D.Luffy (093)"
+    status: owned
+    estimate: 4.59
+
+  - id: usopp-080
+    tcgplayer_id: 711426      # Usopp, Super Rare
+    tag: "op17"
+    name: "Usopp"
+    status: owned
+    estimate: 5.06
+    qty: 2
+
+  - id: kingdew-006
+    tcgplayer_id: 712593      # Kingdew (Pandaman Art), Common
+    tag: "op17"
+    name: "Kingdew (Pandaman Art)"
+    status: owned
+    estimate: 2.36
+
+  - id: shanks-op14-027-4th
+    tcgplayer_id: 714351      # Shanks (4th Anniversary Treasure Campaign Pack), Rare
+    tag: "op17"
+    name: "Shanks (4th Anniv Treasure Campaign)"
+    status: owned
+    estimate: 2.08
+
+  - id: newgate-op16-003
+    tcgplayer_id: 693824      # Edward.Newgate, Super Rare
+    tag: "op16"
+    name: "Edward.Newgate"
+    status: owned
+    estimate: 1.87
+
+  - id: newgate-005
+    tcgplayer_id: 711499      # Edward.Newgate (005), Super Rare
+    tag: "op17"
+    name: "Edward.Newgate (005)"
+    status: owned
+    estimate: 5.28
     qty: 3
-    name: "OP17-093 Luffy (Super Rare) x3"
-    status: "owned"
-    estimate: 23.22
-    acquired: "2026-08-23"
-    tag: "op17"
-    price_note: "3 x base Super Rare foil at $7.74 market each. Duplicates usually clear under 3x as a lot. The Alternate Art 093 is $90.52 -- if any of the three are alt art this is badly low."
-    # THREE copies. Estimate should be the total for all three, not one.
-    # Duplicates of the same SR usually sell as a lot for less than 3x single.
-    ebay_query: "One Piece OP17-093 Luffy Super Rare English"
 
-  - id: op17-114-alt-art
-    tcgplayer_id: 712116      # Sweet 3 Generals (Alternate Art), foil
-    name: "OP17-114 Sweet 3 Generals (Alt Art)"
-    status: "owned"
-    estimate: 31.80
-    acquired: "2026-08-23"
+  - id: teach-p100
+    tcgplayer_id: 714353      # Marshall.D.Teach (4th Anniversary Treasure Campaign Pack), Promo
     tag: "op17"
-    price_note: "Alternate Art, foil. TCGplayer market 2026-08-25 (listed median $30.82). Base version is $1.10."
-    ebay_query: "One Piece OP17-114 Sweet 3 Generals Alternate Art English"
+    name: "Marshall.D.Teach (4th Anniv Treasure Campaign)"
+    status: owned
+    estimate: 1.64
 
-  - id: op17-4th-anniv-rainbow-luffy
-    tcgplayer_id: 712746      # Monkey.D.Luffy (4th Anniversary Leader Card), foil
-    name: "OP-17 4th Anniversary Rainbow Luffy Leader"
-    status: "owned"
-    estimate: 4.02
-    acquired: "2026-08-23"
+  - id: kaido-eb04-030-4th
+    tcgplayer_id: 714349      # Kaido (4th Anniversary Treasure Campaign Pack), Rare
     tag: "op17"
-    price_note: "4th Anniversary Leader Card, foil. TCGplayer market 2026-08-25."
-    source: "prerelease entry"
-    ebay_query: "One Piece 4th Anniversary Rainbow Luffy Leader promo"
+    name: "Kaido (4th Anniv Treasure Campaign)"
+    status: owned
+    estimate: 1.24
 
-  - id: p-110-luffy-elbaph-lego
-    tcgplayer_id: 712742      # Monkey.D.Luffy (4th Anniversary) standard, NON-foil
-    name: "P-110 Monkey.D.Luffy (Elbaph outfit, lego background promo)"
-    status: "owned"
-    estimate: 20.98
-    acquired: "2026-08-23"
+  - id: linlin-st20-005-4th
+    tcgplayer_id: 714355      # Charlotte Linlin (4th Anniversary Treasure Campaign Pack), Super Rare
     tag: "op17"
-    price_note: "TCGplayer market 2026-08-25 for the standard P-110. The (Winner) version is $323.05 -- you did not place, so this is correctly the standard one."
-    source: "prerelease entry"
-    # The STANDARD P-110. Carter did not place, so this is NOT the Silver Foil
-    # + Gold Stamp version each group's 1st place received -- that is a
-    # different, scarcer card. Do not price off stamped comps.
+    name: "Charlotte Linlin (4th Anniv Treasure Campaign)"
+    status: owned
+    estimate: 1.18
 
-  - id: op17-world-don-luffy-zoro
-    name: "World United DON!! — Luffy and Zoro (opened)"
-    status: "owned"
-    estimate: null
-    acquired: "2026-08-23"
+  - id: shiki-048
+    tcgplayer_id: 710542      # Shiki (048), Super Rare
     tag: "op17"
-    source: "prerelease entry"
-    # Opened, so no sealed premium.
+    name: "Shiki (048)"
+    status: owned
+    estimate: 2.46
+    qty: 3
 
-  # The 2 participation packs were OPENED and their contents not recorded --
-  # Carter does not remember which cards came out. No sealed premium survives,
-  # and whatever they contained is inside the bulk line below rather than
-  # itemised. Nothing to value separately.
-
-  - id: op17-bulk-and-smalls
-    name: "OP-17 bulk, commons/uncommons and small hits (incl. Panda Man)"
-    status: "owned"
-    estimate: null
-    acquired: "2026-08-23"
+  - id: kaido-063
+    tcgplayer_id: 710578      # Kaido (063), Super Rare
     tag: "op17"
-    # Individually ~nothing, not zero as a lot. Sort before valuing -- Carter
-    # said he may have missed some.
+    name: "Kaido (063)"
+    status: owned
+    estimate: 1.16
+    qty: 2
+
+  - id: op-bulk-outside-app-list
+    tag: "op17"
+    name: "Bulk — everything outside the TCGplayer app list"
+    status: owned
+    note: "The app list is Carter's ~51 best cards; he confirmed a lot was left out. This covers the OP-16 and OP-17 commons/uncommons, the 4th Anniversary Rainbow Luffy Leader, and the small hits. Unpriced on purpose rather than valued at zero — the report flags it so the position is known to be understated, not silently wrong."
 
   # <<ADD_HOLDINGS_HERE>>
 
