@@ -211,10 +211,18 @@ expenses:
 
   
   - date: 2026-09-04
-    item: "OP-17 booster box + card binder"
+    item: "OP-17 booster box"
     category: "sealed"
-    amount: 296.99
+    amount: 259.99
     tag: "op17"
+    # The box Carter opened 2026-09-04 -- the god-pack pull. Bought together
+    # with the binder below for $296.99; split confirmed by him after the fact.
+
+  - date: 2026-09-04
+    item: "Card binder"
+    category: "supplies"
+    amount: 37.00
+    tag: "supplies"
 
   # <<ADD_EXPENSES_HERE>>
 
