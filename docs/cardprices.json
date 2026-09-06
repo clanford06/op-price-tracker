@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-06T15:28:10+00:00",
+  "updated_at": "2026-09-06T15:34:02+00:00",
   "source": "tcgplayer price points",
   "basis": "foil market price, or normal where the card has no foil printing",
-  "applied": 36,
-  "failed": 1,
+  "applied": 37,
+  "failed": 0,
   "rejected": [],
   "cards": {
     "kaido-062-superalt": {
@@ -24,18 +24,18 @@
     },
     "oden-st32-002-sp": {
       "tcgplayer_id": 712123,
-      "price": null,
-      "printing": "",
-      "foil_market": null,
+      "price": 210.66,
+      "printing": "foil",
+      "foil_market": 210.66,
       "normal_market": null,
-      "listed_median": null,
+      "listed_median": 216.49,
       "url": "https://www.tcgplayer.com/product/712123",
-      "error": "HTTP 504",
+      "error": "",
       "name": "Kouzuki Oden (ST32-002) (SP)",
       "qty": 1,
       "previous_estimate": 214.81,
-      "value": null,
-      "applied": false
+      "value": 210.66,
+      "applied": true
     },
     "luffy-079-alt": {
       "tcgplayer_id": 707124,
@@ -249,9 +249,9 @@
     },
     "sweet3-114-alt": {
       "tcgplayer_id": 712116,
-      "price": 20.61,
+      "price": 20.47,
       "printing": "foil",
-      "foil_market": 20.61,
+      "foil_market": 20.47,
       "normal_market": null,
       "listed_median": 24.98,
       "url": "https://www.tcgplayer.com/product/712116",
@@ -259,7 +259,7 @@
       "name": "Sweet 3 Generals (Alternate Art)",
       "qty": 2,
       "previous_estimate": 39.32,
-      "value": 41.22,
+      "value": 40.94,
       "applied": true
     },
     "yasopp-031-alt": {
@@ -369,9 +369,9 @@
     },
     "linlin-112": {
       "tcgplayer_id": 711325,
-      "price": 7.68,
+      "price": 7.67,
       "printing": "foil",
-      "foil_market": 7.68,
+      "foil_market": 7.67,
       "normal_market": null,
       "listed_median": 7.18,
       "url": "https://www.tcgplayer.com/product/711325",
@@ -379,7 +379,7 @@
       "name": "Charlotte Linlin (112)",
       "qty": 1,
       "previous_estimate": 5.52,
-      "value": 7.68,
+      "value": 7.67,
       "applied": true
     },
     "kuzan-op16-063-alt": {
