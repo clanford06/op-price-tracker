@@ -48,6 +48,17 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Measure thresholds against real listings and suggest values. Writes nothing.",
     )
     p.add_argument(
+        "--flips",
+        action="store_true",
+        help="Scan local card shops for cards priced below resale value.",
+    )
+    p.add_argument(
+        "--stores",
+        action="store_true",
+        help="Show what each local shop has in stock, by set.",
+    )
+    p.add_argument("--store-list", type=Path, default=None)
+    p.add_argument(
         "--portfolio",
         action="store_true",
         help="Show expenses, holdings and profit/loss from ledger.yaml.",
@@ -203,6 +214,23 @@ def main(argv: list[str] | None = None) -> int:
             return 2
         print(msg + "\n")
         report(load_ledger(args.ledger or DEFAULT_LEDGER))
+        return 0
+
+    if args.stores:
+        from .stores import DEFAULT_STORES, load_stores, set_availability
+        for st in load_stores(args.store_list or DEFAULT_STORES):
+            print(f"\n{st.name} — {st.city}\n  {st.base}")
+            rows = [r for r in set_availability(st) if r["available"]]
+            total = sum(r["available"] for r in rows)
+            print(f"  {total} One Piece cards across {len(rows)} sets")
+            for r in sorted(rows, key=lambda r: -r["available"])[:12]:
+                print(f"    {r['set'][:44]:<44} {r['available']:>5}")
+        return 0
+
+    if args.flips:
+        from .flips import report, scan
+        from .stores import DEFAULT_STORES, load_stores
+        report(scan(load_stores(args.store_list or DEFAULT_STORES)))
         return 0
 
     if args.portfolio:

@@ -1,0 +1,25 @@
+# Local card shops to read inventory from.
+#
+# Only shops running TCGplayer Pro work here -- their storefront serves an
+# open JSON API on its own subdomain (see tracker/stores.py). There is no
+# index of which shops are on the platform, so this list is maintained by
+# hand. To test a candidate shop, open <subdomain>.tcgplayerpro.com; if it
+# loads, it will work.
+#
+# Prime Time has no independent website -- the tcgplayerpro subdomain IS
+# their online store. Facebook/Instagram is the rest of their presence.
+
+stores:
+  - id: primetime
+    name: "Prime Time Gaming"
+    url: "https://primetimegaming.tcgplayerpro.com"
+    city: "Macon, GA"
+    enabled: true
+    note: "3076 Riverside Dr Ste 200, (478) 257-7018. Closed Mondays. Where the OP-17 prerelease was. ~1,950 One Piece cards in stock."
+
+  # Add more shops here as you find them. Same shape.
+  # - id: someshop
+  #   name: "Some Shop"
+  #   url: "https://someshop.tcgplayerpro.com"
+  #   city: "Warner Robins, GA"
+  #   enabled: true
