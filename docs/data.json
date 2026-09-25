@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-25T13:47:53+00:00",
+  "updated_at": "2026-09-25T18:37:08+00:00",
   "products": {
     "op17": {
       "history": [
@@ -674,6 +674,10 @@
         },
         {
           "t": "2026-09-25T13:47:47+00:00",
+          "price": 456.03
+        },
+        {
+          "t": "2026-09-25T18:37:01+00:00",
           "price": 456.03
         }
       ],
@@ -1563,7 +1567,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:47+00:00",
+      "checked_at": "2026-09-25T18:37:01+00:00",
       "all_time_low": 319.99,
       "all_time_high": 549.0
     },
@@ -2944,6 +2948,10 @@
         {
           "t": "2026-09-25T13:47:44+00:00",
           "price": 244.69
+        },
+        {
+          "t": "2026-09-25T18:36:58+00:00",
+          "price": 244.69
         }
       ],
       "name": "OP-16 The Time of Battle",
@@ -3071,7 +3079,7 @@
           }
         }
       },
-      "considered": 58,
+      "considered": 57,
       "relevant": 14,
       "verified": 8,
       "kept": 1,
@@ -3083,7 +3091,7 @@
           "shipping": 0.0,
           "total": 115.88,
           "seller": "dcfonew",
-          "seller_score": 4761,
+          "seller_score": 4765,
           "seller_pct": 99.6,
           "top_rated": false,
           "trust": {
@@ -3104,7 +3112,7 @@
                 "name": "Seller volume",
                 "earned": 12.9,
                 "possible": 14,
-                "detail": "4,761 completed sales",
+                "detail": "4,765 completed sales",
                 "good": true
               },
               {
@@ -3190,7 +3198,7 @@
           "shipping": 0.0,
           "total": 115.98,
           "seller": "greatestplc",
-          "seller_score": 563,
+          "seller_score": 565,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -3211,7 +3219,7 @@
                 "name": "Seller volume",
                 "earned": 9.6,
                 "possible": 14,
-                "detail": "563 completed sales",
+                "detail": "565 completed sales",
                 "good": true
               },
               {
@@ -3297,7 +3305,7 @@
           "shipping": 0.0,
           "total": 115.99,
           "seller": "dcfonew",
-          "seller_score": 4761,
+          "seller_score": 4765,
           "seller_pct": 99.6,
           "top_rated": false,
           "trust": {
@@ -3318,7 +3326,7 @@
                 "name": "Seller volume",
                 "earned": 12.9,
                 "possible": 14,
-                "detail": "4,761 completed sales",
+                "detail": "4,765 completed sales",
                 "good": true
               },
               {
@@ -3828,7 +3836,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:44+00:00",
+      "checked_at": "2026-09-25T18:36:58+00:00",
       "all_time_low": 208.76,
       "all_time_high": 244.69
     },
@@ -5201,6 +5209,10 @@
         {
           "t": "2026-09-25T13:47:39+00:00",
           "price": 222.99
+        },
+        {
+          "t": "2026-09-25T18:36:52+00:00",
+          "price": 222.99
         }
       ],
       "name": "OP-14 The Azure Sea's Seven",
@@ -5211,7 +5223,7 @@
         "shipping": 0.0,
         "total": 222.99,
         "seller": "pokemon_genie",
-        "seller_score": 380,
+        "seller_score": 383,
         "seller_pct": 99.7,
         "top_rated": false,
         "trust": {
@@ -5230,7 +5242,7 @@
               "name": "Seller volume",
               "earned": 9.0,
               "possible": 14,
-              "detail": "380 completed sales",
+              "detail": "383 completed sales",
               "good": true
             },
             {
@@ -5443,7 +5455,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:39+00:00",
+      "checked_at": "2026-09-25T18:36:52+00:00",
       "all_time_low": 202.78,
       "all_time_high": 290.0
     },
@@ -5458,7 +5470,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:19+00:00"
+      "checked_at": "2026-09-25T18:36:33+00:00"
     },
     "op02": {
       "history": [
@@ -6489,13 +6501,13 @@
           "shipping": 0.0,
           "total": 145.0,
           "seller": "fede-3489",
-          "seller_score": 27,
+          "seller_score": 28,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
             "score": 59,
             "vetoes": [
-              "seller has 27 sales, below the 100 minimum",
+              "seller has 28 sales, below the 100 minimum",
               "item specifics say Language: Japanese"
             ],
             "verified": true,
@@ -6511,7 +6523,7 @@
                 "name": "Seller volume",
                 "earned": 5.1,
                 "possible": 14,
-                "detail": "27 completed sales",
+                "detail": "28 completed sales",
                 "good": true
               },
               {
@@ -6587,7 +6599,7 @@
             ]
           },
           "why": [
-            "seller has 27 sales, below the 100 minimum",
+            "seller has 28 sales, below the 100 minimum",
             "item specifics say Language: Japanese"
           ]
         },
@@ -6701,7 +6713,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:21+00:00",
+      "checked_at": "2026-09-25T18:36:34+00:00",
       "all_time_low": 499.99,
       "all_time_high": 549.99
     },
@@ -7765,7 +7777,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:21+00:00",
+      "checked_at": "2026-09-25T18:36:35+00:00",
       "all_time_low": 531.99,
       "all_time_high": 606.79
     },
@@ -9086,6 +9098,10 @@
         {
           "t": "2026-09-25T13:47:24+00:00",
           "price": 446.03
+        },
+        {
+          "t": "2026-09-25T18:36:37+00:00",
+          "price": 446.03
         }
       ],
       "name": "OP-04 Kingdoms of Intrigue",
@@ -9096,7 +9112,7 @@
         "shipping": 6.03,
         "total": 446.03,
         "seller": "eyesofphorensiccards",
-        "seller_score": 648,
+        "seller_score": 649,
         "seller_pct": 99.5,
         "top_rated": false,
         "trust": {
@@ -9115,7 +9131,7 @@
               "name": "Seller volume",
               "earned": 9.8,
               "possible": 14,
-              "detail": "648 completed sales",
+              "detail": "649 completed sales",
               "good": true
             },
             {
@@ -9220,7 +9236,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:24+00:00",
+      "checked_at": "2026-09-25T18:36:37+00:00",
       "all_time_low": 446.03,
       "all_time_high": 510.0
     },
@@ -9424,7 +9440,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:25+00:00",
+      "checked_at": "2026-09-25T18:36:37+00:00",
       "all_time_low": 425.98,
       "all_time_high": 435.91
     },
@@ -10745,6 +10761,10 @@
         {
           "t": "2026-09-25T13:47:26+00:00",
           "price": 440.0
+        },
+        {
+          "t": "2026-09-25T18:36:39+00:00",
+          "price": 440.0
         }
       ],
       "name": "OP-06 Wings of the Captain",
@@ -10884,7 +10904,7 @@
           "shipping": 7.99,
           "total": 583.99,
           "seller": "lowkeystock",
-          "seller_score": 144,
+          "seller_score": 146,
           "seller_pct": 99.0,
           "top_rated": false,
           "trust": {
@@ -10903,7 +10923,7 @@
                 "name": "Seller volume",
                 "earned": 7.6,
                 "possible": 14,
-                "detail": "144 completed sales",
+                "detail": "146 completed sales",
                 "good": true
               },
               {
@@ -10985,7 +11005,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:26+00:00",
+      "checked_at": "2026-09-25T18:36:39+00:00",
       "all_time_low": 375.43,
       "all_time_high": 499.99
     },
@@ -12306,6 +12326,10 @@
         {
           "t": "2026-09-25T13:47:28+00:00",
           "price": 499.99
+        },
+        {
+          "t": "2026-09-25T18:36:40+00:00",
+          "price": 499.99
         }
       ],
       "name": "OP-07 500 Years Into the Future",
@@ -12550,7 +12574,7 @@
           "shipping": 7.99,
           "total": 583.99,
           "seller": "lowkeystock",
-          "seller_score": 144,
+          "seller_score": 146,
           "seller_pct": 99.0,
           "top_rated": false,
           "trust": {
@@ -12569,7 +12593,7 @@
                 "name": "Seller volume",
                 "earned": 7.6,
                 "possible": 14,
-                "detail": "144 completed sales",
+                "detail": "146 completed sales",
                 "good": true
               },
               {
@@ -12651,7 +12675,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:28+00:00",
+      "checked_at": "2026-09-25T18:36:40+00:00",
       "all_time_low": 330.0,
       "all_time_high": 499.99
     },
@@ -13972,6 +13996,10 @@
         {
           "t": "2026-09-25T13:47:30+00:00",
           "price": 299.0
+        },
+        {
+          "t": "2026-09-25T18:36:43+00:00",
+          "price": 299.0
         }
       ],
       "name": "OP-08 Two Legends",
@@ -14321,7 +14349,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:30+00:00",
+      "checked_at": "2026-09-25T18:36:43+00:00",
       "all_time_low": 253.99,
       "all_time_high": 306.98
     },
@@ -14329,14 +14357,14 @@
       "history": [],
       "name": "OP-09 Emperors in the New World",
       "current": null,
-      "considered": 8,
+      "considered": 7,
       "relevant": 0,
       "verified": 0,
       "kept": 0,
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:31+00:00"
+      "checked_at": "2026-09-25T18:36:43+00:00"
     },
     "op10": {
       "history": [
@@ -15655,6 +15683,10 @@
         {
           "t": "2026-09-25T13:47:33+00:00",
           "price": 299.0
+        },
+        {
+          "t": "2026-09-25T18:36:45+00:00",
+          "price": 299.0
         }
       ],
       "name": "OP-10 Royal Blood",
@@ -15794,7 +15826,7 @@
           "shipping": 0.0,
           "total": 161.69,
           "seller": "amped_97",
-          "seller_score": 25763,
+          "seller_score": 25783,
           "seller_pct": 99.2,
           "top_rated": false,
           "trust": {
@@ -15813,7 +15845,7 @@
                 "name": "Seller volume",
                 "earned": 14.0,
                 "possible": 14,
-                "detail": "25,763 completed sales",
+                "detail": "25,783 completed sales",
                 "good": true
               },
               {
@@ -16113,7 +16145,7 @@
           "shipping": 7.99,
           "total": 439.99,
           "seller": "lowkeystock",
-          "seller_score": 144,
+          "seller_score": 146,
           "seller_pct": 99.0,
           "top_rated": false,
           "trust": {
@@ -16132,7 +16164,7 @@
                 "name": "Seller volume",
                 "earned": 7.6,
                 "possible": 14,
-                "detail": "144 completed sales",
+                "detail": "146 completed sales",
                 "good": true
               },
               {
@@ -16214,7 +16246,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:33+00:00",
+      "checked_at": "2026-09-25T18:36:45+00:00",
       "all_time_low": 231.99,
       "all_time_high": 299.0
     },
@@ -16367,7 +16399,7 @@
       ],
       "name": "OP-11 A Fist of Divine Speed",
       "current": null,
-      "considered": 26,
+      "considered": 27,
       "relevant": 2,
       "verified": 2,
       "kept": 0,
@@ -16379,14 +16411,13 @@
           "shipping": 0.0,
           "total": 160.0,
           "seller": "flume.b32",
-          "seller_score": 46,
-          "seller_pct": 97.9,
+          "seller_score": 48,
+          "seller_pct": 98.0,
           "top_rated": false,
           "trust": {
             "score": 32,
             "vetoes": [
-              "seller has 46 sales, below the 100 minimum",
-              "seller rated 97.9%, below the 98.0% minimum",
+              "seller has 48 sales, below the 100 minimum",
               "item specifics say Language: Japanese"
             ],
             "verified": true,
@@ -16402,14 +16433,14 @@
                 "name": "Seller volume",
                 "earned": 5.9,
                 "possible": 14,
-                "detail": "46 completed sales",
+                "detail": "48 completed sales",
                 "good": true
               },
               {
                 "name": "Seller rating",
                 "earned": 0.0,
                 "possible": 14,
-                "detail": "97.9% positive",
+                "detail": "98.0% positive",
                 "good": true
               },
               {
@@ -16478,8 +16509,7 @@
             ]
           },
           "why": [
-            "seller has 46 sales, below the 100 minimum",
-            "seller rated 97.9%, below the 98.0% minimum",
+            "seller has 48 sales, below the 100 minimum",
             "item specifics say Language: Japanese"
           ]
         },
@@ -16595,7 +16625,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:34+00:00",
+      "checked_at": "2026-09-25T18:36:46+00:00",
       "all_time_low": 556.99,
       "all_time_high": 606.99
     },
@@ -17916,15 +17946,19 @@
         {
           "t": "2026-09-25T13:47:35+00:00",
           "price": 301.98
+        },
+        {
+          "t": "2026-09-25T18:36:48+00:00",
+          "price": 294.98
         }
       ],
       "name": "OP-12 Legacy of the Master",
       "current": {
         "title": "ONE PIECE CARD GAME Legacy Of The Master BOOSTER BOX OP-12 ENGLISH Sealed TCG",
         "url": "https://www.ebay.com/itm/137614183399?_skw=One+Piece+Card+Game+OP-12+Booster+Box&hash=item200a71cbe7:g:HH0AAeSwQGhqfNlW",
-        "price": 296.99,
+        "price": 289.99,
         "shipping": 4.99,
-        "total": 301.98,
+        "total": 294.98,
         "seller": "ravenseyegaming",
         "seller_score": 1891,
         "seller_pct": 100.0,
@@ -18021,20 +18055,20 @@
           ]
         },
         "purchase": {
-          "score": 68,
+          "score": 71,
           "dud_chance": 0.88,
-          "cost_per_pack": 12.58,
+          "cost_per_pack": 12.29,
           "baseline_cost_per_pack": 14.17,
           "ev_per_pack": 4.83,
           "verdict": "GOOD",
           "notes": [
-            "$12.58/pack is 11% below the $14.17/pack baseline",
-            "estimated $4.83/pack in singles vs $12.58 paid (38% cover) \u2014 estimate, not a measurement",
-            "Opening this is negative EV: you would expect back about 38 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $766.78 (Jewelry Bonney) \u2014 2.5x this box; 1 of 8 chases would cover it"
+            "$12.29/pack is 13% below the $14.17/pack baseline",
+            "estimated $4.83/pack in singles vs $12.29 paid (39% cover) \u2014 estimate, not a measurement",
+            "Opening this is negative EV: you would expect back about 39 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
+            "top chase $766.78 (Jewelry Bonney) \u2014 2.6x this box; 1 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 2.5,
+            "upside": 2.6,
             "chases_above": 1,
             "chase_count": 8,
             "top_chase": 766.78,
@@ -18050,7 +18084,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:35+00:00",
+      "checked_at": "2026-09-25T18:36:48+00:00",
       "all_time_low": 275.92,
       "all_time_high": 340.07
     },
@@ -19147,6 +19181,10 @@
         {
           "t": "2026-09-25T13:47:37+00:00",
           "price": 499.0
+        },
+        {
+          "t": "2026-09-25T18:36:50+00:00",
+          "price": 499.0
         }
       ],
       "name": "OP-13 Carrying On His Will",
@@ -19157,7 +19195,7 @@
         "shipping": 14.0,
         "total": 499.0,
         "seller": "ballgame_breaks",
-        "seller_score": 911,
+        "seller_score": 912,
         "seller_pct": 100.0,
         "top_rated": false,
         "trust": {
@@ -19176,7 +19214,7 @@
               "name": "Seller volume",
               "earned": 10.4,
               "possible": 14,
-              "detail": "911 completed sales",
+              "detail": "912 completed sales",
               "good": true
             },
             {
@@ -19286,7 +19324,7 @@
           "shipping": 8.0,
           "total": 87.99,
           "seller": "coolcollectionllc",
-          "seller_score": 111,
+          "seller_score": 113,
           "seller_pct": 98.3,
           "top_rated": false,
           "trust": {
@@ -19307,7 +19345,7 @@
                 "name": "Seller volume",
                 "earned": 7.2,
                 "possible": 14,
-                "detail": "111 completed sales",
+                "detail": "113 completed sales",
                 "good": true
               },
               {
@@ -19496,7 +19534,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:37+00:00",
+      "checked_at": "2026-09-25T18:36:50+00:00",
       "all_time_low": 469.99,
       "all_time_high": 568.0
     },
@@ -20817,6 +20855,10 @@
         {
           "t": "2026-09-25T13:47:41+00:00",
           "price": 272.08
+        },
+        {
+          "t": "2026-09-25T18:36:54+00:00",
+          "price": 272.08
         }
       ],
       "name": "OP-15 The Adventure on God's Island",
@@ -20956,7 +20998,7 @@
           "shipping": 6.5,
           "total": 146.49,
           "seller": "goods-seller",
-          "seller_score": 474633,
+          "seller_score": 474634,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -20975,7 +21017,7 @@
                 "name": "Seller volume",
                 "earned": 14.0,
                 "possible": 14,
-                "detail": "474,633 completed sales",
+                "detail": "474,634 completed sales",
                 "good": true
               },
               {
@@ -21057,7 +21099,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:41+00:00",
+      "checked_at": "2026-09-25T18:36:54+00:00",
       "all_time_low": 146.49,
       "all_time_high": 399.99
     },
@@ -21678,7 +21720,7 @@
           "shipping": 7.99,
           "total": 187.99,
           "seller": "lowkeystock",
-          "seller_score": 144,
+          "seller_score": 146,
           "seller_pct": 99.0,
           "top_rated": false,
           "trust": {
@@ -21699,7 +21741,7 @@
                 "name": "Seller volume",
                 "earned": 7.6,
                 "possible": 14,
-                "detail": "144 completed sales",
+                "detail": "146 completed sales",
                 "good": true
               },
               {
@@ -21888,7 +21930,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:48+00:00",
+      "checked_at": "2026-09-25T18:37:02+00:00",
       "all_time_low": 390.0,
       "all_time_high": 403.0
     },
@@ -21903,7 +21945,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:48+00:00"
+      "checked_at": "2026-09-25T18:37:02+00:00"
     },
     "eb03": {
       "history": [
@@ -22726,6 +22768,10 @@
         {
           "t": "2026-09-25T13:47:50+00:00",
           "price": 384.09
+        },
+        {
+          "t": "2026-09-25T18:37:04+00:00",
+          "price": 384.09
         }
       ],
       "name": "EB-03 Heroines Edition",
@@ -23180,7 +23226,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:50+00:00",
+      "checked_at": "2026-09-25T18:37:04+00:00",
       "all_time_low": 300.0,
       "all_time_high": 384.09
     },
@@ -23303,7 +23349,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:50+00:00"
+      "checked_at": "2026-09-25T18:37:05+00:00"
     },
     "prb02": {
       "history": [
@@ -24622,6 +24668,10 @@
         {
           "t": "2026-09-25T13:47:53+00:00",
           "price": 399.95
+        },
+        {
+          "t": "2026-09-25T18:37:08+00:00",
+          "price": 399.95
         }
       ],
       "name": "PRB-02 One Piece Card The Best Vol.2",
@@ -24632,7 +24682,7 @@
         "shipping": 0.0,
         "total": 399.95,
         "seller": "card-colosseum",
-        "seller_score": 4977,
+        "seller_score": 4978,
         "seller_pct": 99.8,
         "top_rated": false,
         "trust": {
@@ -24651,7 +24701,7 @@
               "name": "Seller volume",
               "earned": 12.9,
               "possible": 14,
-              "detail": "4,977 completed sales",
+              "detail": "4,978 completed sales",
               "good": true
             },
             {
@@ -25082,13 +25132,13 @@
           "shipping": 7.09,
           "total": 427.09,
           "seller": "mflabs439",
-          "seller_score": 8,
+          "seller_score": 9,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
             "score": 71,
             "vetoes": [
-              "seller has 8 sales, below the 100 minimum"
+              "seller has 9 sales, below the 100 minimum"
             ],
             "verified": true,
             "signals": [
@@ -25101,9 +25151,9 @@
               },
               {
                 "name": "Seller volume",
-                "earned": 3.3,
+                "earned": 3.5,
                 "possible": 14,
-                "detail": "8 completed sales",
+                "detail": "9 completed sales",
                 "good": true
               },
               {
@@ -25179,13 +25229,13 @@
             ]
           },
           "why": [
-            "seller has 8 sales, below the 100 minimum"
+            "seller has 9 sales, below the 100 minimum"
           ]
         }
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-09-25T13:47:53+00:00",
+      "checked_at": "2026-09-25T18:37:08+00:00",
       "all_time_low": 345.0,
       "all_time_high": 399.95
     }
@@ -25195,11 +25245,11 @@
     "planned": 99.98,
     "committed": 1571.16,
     "realised": 78.35,
-    "unrealised_gross": 1756.04,
-    "unrealised_net": 1507.76,
-    "position_gross": 363.21,
-    "position_net": 114.93,
-    "roi_pct": 7.8,
+    "unrealised_gross": 1753.6,
+    "unrealised_net": 1505.66,
+    "position_gross": 360.77,
+    "position_net": 112.83,
+    "roi_pct": 7.7,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 1313.26,
@@ -25213,8 +25263,8 @@
         "spent": 465.04,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 59.57,
-        "net": -405.47
+        "held": 59.51,
+        "net": -405.53
       },
       "supplies": {
         "spent": 65.57,
@@ -25262,8 +25312,8 @@
         "spent": 647.84,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 868.63,
-        "net": 220.79
+        "held": 866.59,
+        "net": 218.75
       },
       "msallsunday": {
         "spent": 26.49,
@@ -25274,7 +25324,7 @@
       }
     },
     "card_prices_applied": 37,
-    "card_prices_at": "2026-09-25T13:47:18+00:00",
+    "card_prices_at": "2026-09-25T18:36:32+00:00",
     "holdings": [
       {
         "id": "ms-all-sunday-sp",
@@ -25296,7 +25346,7 @@
             "share": 0.9324,
             "note": "455 of 488 graded copies. Roughly double raw -- the outcome that justified submitting.",
             "net_if_sold": 997.22,
-            "position_net": 678.8
+            "position_net": 676.7
           },
           {
             "label": "PSA 9",
@@ -25304,7 +25354,7 @@
             "share": 0.0451,
             "note": "Only one on record: $760 on 2026-07-05 when 10s were $1,725, i.e. 44% of a 10. At or below raw.",
             "net_if_sold": 433.35,
-            "position_net": 114.93
+            "position_net": 112.83
           },
           {
             "label": "PSA 8 or lower",
@@ -25312,7 +25362,7 @@
             "share": 0.0225,
             "note": "One sold 2026-08-02 at $510, under what raw was fetching that week.",
             "net_if_sold": 442.02,
-            "position_net": 123.6
+            "position_net": 121.5
           }
         ]
       },
@@ -25320,8 +25370,8 @@
         "id": "kaido-062-superalt",
         "name": "Kaido (062) (Super Alternate Art)",
         "status": "owned",
-        "estimate": 219.69,
-        "net_if_sold": 190.18,
+        "estimate": 218.5,
+        "net_if_sold": 189.15,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25350,8 +25400,8 @@
         "id": "oden-st32-002-sp",
         "name": "Kouzuki Oden (ST32-002) (SP)",
         "status": "owned",
-        "estimate": 146.77,
-        "net_if_sold": 126.92,
+        "estimate": 146.84,
+        "net_if_sold": 126.98,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25365,8 +25415,8 @@
         "id": "shanks-020-alt",
         "name": "Shanks (020) (Alternate Art)",
         "status": "owned",
-        "estimate": 106.66,
-        "net_if_sold": 92.13,
+        "estimate": 104.46,
+        "net_if_sold": 90.22,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25380,8 +25430,8 @@
         "id": "xebec-039-alt",
         "name": "Rocks.D.Xebec (039) (Alternate Art)",
         "status": "owned",
-        "estimate": 69.72,
-        "net_if_sold": 60.08,
+        "estimate": 69.88,
+        "net_if_sold": 60.22,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25395,8 +25445,8 @@
         "id": "loki-119-sec",
         "name": "Loki",
         "status": "owned",
-        "estimate": 61.68,
-        "net_if_sold": 53.11,
+        "estimate": 61.28,
+        "net_if_sold": 52.76,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25410,8 +25460,8 @@
         "id": "luffy-079-alt",
         "name": "Monkey.D.Luffy (079) (Alternate Art)",
         "status": "owned",
-        "estimate": 50.83,
-        "net_if_sold": 43.7,
+        "estimate": 51.12,
+        "net_if_sold": 43.95,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25425,8 +25475,8 @@
         "id": "shanks-022-alt",
         "name": "Shanks (022) (Alternate Art)",
         "status": "owned",
-        "estimate": 35.0,
-        "net_if_sold": 29.96,
+        "estimate": 35.4,
+        "net_if_sold": 30.31,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25440,8 +25490,8 @@
         "id": "sweet3-114-alt",
         "name": "Sweet 3 Generals (Alternate Art)",
         "status": "owned",
-        "estimate": 34.2,
-        "net_if_sold": 29.27,
+        "estimate": 34.26,
+        "net_if_sold": 29.32,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25455,8 +25505,8 @@
         "id": "linlin-049-alt",
         "name": "Charlotte Linlin (049) (Alternate Art)",
         "status": "owned",
-        "estimate": 33.78,
-        "net_if_sold": 28.9,
+        "estimate": 33.58,
+        "net_if_sold": 28.73,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25470,8 +25520,8 @@
         "id": "luffy-op16-022-alt",
         "name": "Monkey.D.Luffy (022) (Alternate Art)",
         "status": "owned",
-        "estimate": 33.61,
-        "net_if_sold": 28.76,
+        "estimate": 33.46,
+        "net_if_sold": 28.63,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25485,8 +25535,8 @@
         "id": "stussy-054-alt",
         "name": "Miss Buckingham Stussy (Alternate Art)",
         "status": "owned",
-        "estimate": 31.96,
-        "net_if_sold": 27.33,
+        "estimate": 32.34,
+        "net_if_sold": 27.65,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25500,8 +25550,8 @@
         "id": "kaido-058-alt",
         "name": "Kaido (058) (Alternate Art)",
         "status": "owned",
-        "estimate": 31.57,
-        "net_if_sold": 26.99,
+        "estimate": 31.75,
+        "net_if_sold": 27.14,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25545,8 +25595,8 @@
         "id": "newgate-001-alt",
         "name": "Edward.Newgate (001) (Alternate Art)",
         "status": "owned",
-        "estimate": 17.67,
-        "net_if_sold": 14.93,
+        "estimate": 17.63,
+        "net_if_sold": 14.89,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25560,8 +25610,8 @@
         "id": "newgate-005-alt",
         "name": "Edward.Newgate (005) (Alternate Art)",
         "status": "owned",
-        "estimate": 16.74,
-        "net_if_sold": 14.12,
+        "estimate": 16.87,
+        "net_if_sold": 14.23,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25575,8 +25625,8 @@
         "id": "beckman-027-alt",
         "name": "Benn.Beckman (Alternate Art)",
         "status": "owned",
-        "estimate": 16.63,
-        "net_if_sold": 14.03,
+        "estimate": 16.32,
+        "net_if_sold": 13.76,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25605,8 +25655,8 @@
         "id": "linlin-099-alt",
         "name": "Charlotte Linlin (099) (Alternate Art)",
         "status": "owned",
-        "estimate": 14.74,
-        "net_if_sold": 12.39,
+        "estimate": 14.78,
+        "net_if_sold": 12.42,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25620,8 +25670,8 @@
         "id": "yasopp-031-alt",
         "name": "Yasopp (Alternate Art)",
         "status": "owned",
-        "estimate": 13.95,
-        "net_if_sold": 11.7,
+        "estimate": 14.28,
+        "net_if_sold": 11.99,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25635,8 +25685,8 @@
         "id": "luffy-p099",
         "name": "Monkey.D.Luffy (4th Anniv Treasure Campaign)",
         "status": "owned",
-        "estimate": 13.74,
-        "net_if_sold": 11.52,
+        "estimate": 13.84,
+        "net_if_sold": 11.61,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25647,26 +25697,11 @@
         "scenarios": []
       },
       {
-        "id": "don-luffy",
-        "name": "DON!! Card World United Luffy",
-        "status": "owned",
-        "estimate": 13.14,
-        "net_if_sold": 11.0,
-        "liquid": false,
-        "source": "",
-        "note": "",
-        "qty": 1,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 12.62,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/712745",
-        "scenarios": []
-      },
-      {
         "id": "luffy-p110",
         "name": "Monkey.D.Luffy (4th Anniversary)",
         "status": "owned",
-        "estimate": 13.06,
-        "net_if_sold": 10.93,
+        "estimate": 13.12,
+        "net_if_sold": 10.98,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25677,11 +25712,26 @@
         "scenarios": []
       },
       {
+        "id": "don-luffy",
+        "name": "DON!! Card World United Luffy",
+        "status": "owned",
+        "estimate": 13.06,
+        "net_if_sold": 10.93,
+        "liquid": false,
+        "source": "",
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 12.62,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/712745",
+        "scenarios": []
+      },
+      {
         "id": "don-zoro",
         "name": "DON!! Card World United Zoro",
         "status": "owned",
-        "estimate": 11.75,
-        "net_if_sold": 9.79,
+        "estimate": 11.72,
+        "net_if_sold": 9.77,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25695,8 +25745,8 @@
         "id": "kuzan-op16-063-alt",
         "name": "Kuzan (Alternate Art)",
         "status": "owned",
-        "estimate": 8.16,
-        "net_if_sold": 6.68,
+        "estimate": 8.26,
+        "net_if_sold": 6.77,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25710,8 +25760,8 @@
         "id": "linlin-112",
         "name": "Charlotte Linlin (112)",
         "status": "owned",
-        "estimate": 4.87,
-        "net_if_sold": 3.82,
+        "estimate": 4.92,
+        "net_if_sold": 3.87,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25725,8 +25775,8 @@
         "id": "newgate-005",
         "name": "Edward.Newgate (005)",
         "status": "owned",
-        "estimate": 4.5,
-        "net_if_sold": 3.5,
+        "estimate": 4.62,
+        "net_if_sold": 3.61,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25740,8 +25790,8 @@
         "id": "shiki-048",
         "name": "Shiki (048)",
         "status": "owned",
-        "estimate": 4.5,
-        "net_if_sold": 3.5,
+        "estimate": 3.72,
+        "net_if_sold": 2.83,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25755,8 +25805,8 @@
         "id": "luffy-093",
         "name": "Monkey.D.Luffy (093)",
         "status": "owned",
-        "estimate": 3.39,
-        "net_if_sold": 2.54,
+        "estimate": 3.52,
+        "net_if_sold": 2.65,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25770,8 +25820,8 @@
         "id": "usopp-080",
         "name": "Usopp",
         "status": "owned",
-        "estimate": 3.36,
-        "net_if_sold": 2.51,
+        "estimate": 3.5,
+        "net_if_sold": 2.64,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25785,8 +25835,8 @@
         "id": "newgate-op16-003",
         "name": "Edward.Newgate",
         "status": "owned",
-        "estimate": 2.3,
-        "net_if_sold": 1.6,
+        "estimate": 2.28,
+        "net_if_sold": 1.58,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25800,8 +25850,8 @@
         "id": "kingdew-006",
         "name": "Kingdew (Pandaman Art)",
         "status": "owned",
-        "estimate": 2.13,
-        "net_if_sold": 1.45,
+        "estimate": 2.16,
+        "net_if_sold": 1.47,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25812,26 +25862,11 @@
         "scenarios": []
       },
       {
-        "id": "kaido-eb04-030-4th",
-        "name": "Kaido (4th Anniv Treasure Campaign)",
-        "status": "owned",
-        "estimate": 1.29,
-        "net_if_sold": 0.72,
-        "liquid": false,
-        "source": "",
-        "note": "",
-        "qty": 1,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 1.24,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/714349",
-        "scenarios": []
-      },
-      {
         "id": "shanks-op14-027-4th",
         "name": "Shanks (4th Anniv Treasure Campaign)",
         "status": "owned",
-        "estimate": 1.23,
-        "net_if_sold": 0.67,
+        "estimate": 1.3,
+        "net_if_sold": 0.73,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25842,11 +25877,26 @@
         "scenarios": []
       },
       {
+        "id": "kaido-eb04-030-4th",
+        "name": "Kaido (4th Anniv Treasure Campaign)",
+        "status": "owned",
+        "estimate": 1.3,
+        "net_if_sold": 0.73,
+        "liquid": false,
+        "source": "",
+        "note": "",
+        "qty": 1,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 1.24,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/714349",
+        "scenarios": []
+      },
+      {
         "id": "teach-p100",
         "name": "Marshall.D.Teach (4th Anniv Treasure Campaign)",
         "status": "owned",
-        "estimate": 1.17,
-        "net_if_sold": 0.61,
+        "estimate": 1.26,
+        "net_if_sold": 0.69,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25860,8 +25910,8 @@
         "id": "kaido-063",
         "name": "Kaido (063)",
         "status": "owned",
-        "estimate": 1.02,
-        "net_if_sold": 0.48,
+        "estimate": 0.98,
+        "net_if_sold": 0.45,
         "liquid": false,
         "source": "",
         "note": "",
@@ -25875,8 +25925,8 @@
         "id": "linlin-st20-005-4th",
         "name": "Charlotte Linlin (4th Anniv Treasure Campaign)",
         "status": "owned",
-        "estimate": 0.87,
-        "net_if_sold": 0.35,
+        "estimate": 0.93,
+        "net_if_sold": 0.41,
         "liquid": false,
         "source": "",
         "note": "",
