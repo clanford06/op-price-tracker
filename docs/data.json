@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-27T19:32:03+00:00",
+  "updated_at": "2026-09-27T19:41:52+00:00",
   "products": {
     "op17": {
       "history": [
@@ -25983,24 +25983,32 @@
     }
   },
   "portfolio": {
-    "spent": 1471.18,
+    "spent": 2037.39,
     "planned": 99.98,
-    "committed": 1571.16,
+    "committed": 2137.37,
     "realised": 78.35,
     "unrealised_gross": 1742.19,
     "unrealised_net": 1495.76,
-    "position_gross": 349.36,
-    "position_net": 102.93,
-    "roi_pct": 7.0,
+    "position_gross": -216.85,
+    "position_net": -463.28,
+    "roi_pct": -22.7,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 1313.26,
+      "unsorted": 538.74,
       "supplies": 72.03,
+      "breaks": 54.47,
       "events": 32.4,
-      "breaks": 27.0,
       "grading": 26.49
     },
     "by_tag": {
+      "unsorted": {
+        "spent": 538.74,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 0.0,
+        "net": -538.74
+      },
       "op16": {
         "spent": 465.04,
         "planned": 0.0,
@@ -26022,6 +26030,13 @@
         "held": 0.0,
         "net": -61.04
       },
+      "whatnot": {
+        "spent": 54.47,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 0.0,
+        "net": -54.47
+      },
       "pokemon": {
         "spent": 32.4,
         "planned": 0.0,
@@ -26035,13 +26050,6 @@
         "realised": 0.0,
         "held": 0.0,
         "net": -28.06
-      },
-      "whatnot": {
-        "spent": 27.0,
-        "planned": 0.0,
-        "realised": 0.0,
-        "held": 0.0,
-        "net": -27.0
       },
       "op15": {
         "spent": 39.39,
@@ -26067,6 +26075,10 @@
     },
     "card_prices_applied": 37,
     "card_prices_at": "2026-09-27T18:23:58+00:00",
+    "last_expense_date": "2026-09-20",
+    "expenses_stale_days": 7,
+    "collection_synced": "2026-09-04",
+    "collection_stale_days": 23,
     "holdings": [
       {
         "id": "ms-all-sunday-sp",
@@ -26089,7 +26101,7 @@
             "share": 0.9324,
             "note": "455 of 488 graded copies. Roughly double raw -- the outcome that justified submitting.",
             "net_if_sold": 997.22,
-            "position_net": 666.8
+            "position_net": 100.59
           },
           {
             "label": "PSA 9",
@@ -26097,7 +26109,7 @@
             "share": 0.0451,
             "note": "Only one on record: $760 on 2026-07-05 when 10s were $1,725, i.e. 44% of a 10. At or below raw.",
             "net_if_sold": 433.35,
-            "position_net": 102.93
+            "position_net": -463.28
           },
           {
             "label": "PSA 8 or lower",
@@ -26105,7 +26117,7 @@
             "share": 0.0225,
             "note": "One sold 2026-08-02 at $510, under what raw was fetching that week.",
             "net_if_sold": 442.02,
-            "position_net": 111.6
+            "position_net": -454.61
           }
         ]
       },
@@ -26896,10 +26908,10 @@
         "planned": false
       },
       {
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "item": "Whatnot break \u2014 Yassop slot (accidental buy, app since deleted)",
         "category": "breaks",
-        "amount": 27.0,
+        "amount": 26.43,
         "tag": "whatnot",
         "planned": false
       },
@@ -26917,6 +26929,54 @@
         "category": "supplies",
         "amount": 37.0,
         "tag": "supplies",
+        "planned": false
+      },
+      {
+        "date": "2026-09-06",
+        "item": "Prime Time Gaming \u2014 purchase 1 of 3 on 09/06 (contents not recorded)",
+        "category": "unsorted",
+        "amount": 78.8,
+        "tag": "unsorted",
+        "planned": false
+      },
+      {
+        "date": "2026-09-06",
+        "item": "Prime Time Gaming \u2014 purchase 2 of 3 on 09/06 (contents not recorded)",
+        "category": "unsorted",
+        "amount": 43.19,
+        "tag": "unsorted",
+        "planned": false
+      },
+      {
+        "date": "2026-09-06",
+        "item": "Prime Time Gaming \u2014 purchase 3 of 3 on 09/06 (contents not recorded)",
+        "category": "unsorted",
+        "amount": 10.78,
+        "tag": "unsorted",
+        "planned": false
+      },
+      {
+        "date": "2026-09-11",
+        "item": "Prime Time Gaming \u2014 09/11 (contents not recorded)",
+        "category": "unsorted",
+        "amount": 49.58,
+        "tag": "unsorted",
+        "planned": false
+      },
+      {
+        "date": "2026-09-16",
+        "item": "Whatnot \u2014 09/16",
+        "category": "breaks",
+        "amount": 28.04,
+        "tag": "whatnot",
+        "planned": false
+      },
+      {
+        "date": "2026-09-20",
+        "item": "Prime Time Gaming \u2014 09/20 (contents not recorded)",
+        "category": "unsorted",
+        "amount": 356.39,
+        "tag": "unsorted",
         "planned": false
       }
     ],

@@ -1,0 +1,33 @@
+name: Ledger reminder
+
+on:
+  schedule:
+    # Mondays, 14:10 UTC (~10am Eastern). Weekly rather than monthly because
+    # the check is conditional: it only pushes when the ledger has actually
+    # gone stale, so a current ledger produces nothing and a rotting one gets
+    # caught within a week instead of within a month.
+    - cron: "10 14 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      # Writes nothing. Its only side effect is a phone push, and only when
+      # one of the two human-fed halves of the ledger is behind.
+      - name: Check for staleness and push if needed
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_SERVER: ${{ vars.NTFY_SERVER || 'https://ntfy.sh' }}
+        run: python -m tracker --remind

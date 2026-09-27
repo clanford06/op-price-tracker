@@ -33,6 +33,10 @@ from .purchase import evaluate_purchase
 from .trust import TrustPolicy, TrustReport, evaluate
 
 
+def _money(v: float) -> str:
+    return f"{'-' if v < 0 else ''}${abs(v):,.2f}"
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p = argparse.ArgumentParser(
         prog="tracker", description="Track verified English One Piece sealed box prices."
@@ -88,6 +92,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         metavar="NUMBER",
         help="Look up TCGplayer product ids for a card NUMBER, e.g. OP17-062. "
              "Search by the number alone -- adding the name returns the wrong card.",
+    )
+    p.add_argument(
+        "--remind",
+        action="store_true",
+        help="Push a phone reminder if the ledger has gone stale. Silent when it is current.",
     )
     p.add_argument(
         "--selftest",
@@ -242,6 +251,46 @@ def main(argv: list[str] | None = None) -> int:
         except (FileNotFoundError, ValueError) as exc:
             print(f"Ledger error: {exc}", file=sys.stderr)
             return 2
+        return 0
+
+    if args.remind:
+        from .config import DEFAULT_LEDGER
+        from .portfolio import load_ledger
+
+        led = load_ledger(args.ledger or DEFAULT_LEDGER)
+        ex, col = led.expenses_stale_days, led.collection_stale_days
+        overdue = []
+        # Thresholds differ because the two halves rot at different speeds. A
+        # fortnight without logging a purchase is normal for someone who did
+        # not buy anything; three weeks without one, when he shops most weeks,
+        # means the list is behind rather than empty.
+        if ex is not None and ex > 14:
+            overdue.append(f"No purchase logged in {ex} days — paste your statement "
+                           f"so costs stop being understated.")
+        if col is not None and col > 21:
+            overdue.append(f"Collection last synced {col} days ago — send the TCGplayer "
+                           f"app CSV export (Collection → ⋯ → Send via Email).")
+        if not overdue:
+            print(f"Ledger is current (expenses {ex}d, collection {col}d). No reminder sent.")
+            return 0
+
+        # Deliberately reports the position INSIDE the nag. A bare "update your
+        # ledger" is easy to dismiss; "this number is wrong by an unknown
+        # amount" is the part that actually gets it done.
+        body = "\n".join(overdue) + (
+            f"\n\nShowing: {_money(led.position_net)} on {_money(led.spent)} spent. "
+            f"Treat it as wrong until both halves are fed."
+        )
+        sent = Notifier(settings.ntfy_server, settings.ntfy_topic,
+                        enabled=not args.dry_run).send(
+            title="One Piece ledger has gone stale",
+            message=body,
+            priority="high" if (ex or 0) > 30 or (col or 0) > 45 else "default",
+            tags=["calendar"],
+            click_url="https://clanford06.github.io/op-price-tracker/",
+        )
+        print(body)
+        print(f"\nreminder {'sent' if sent else 'NOT sent (no ntfy topic configured)'}")
         return 0
 
     if args.find_card:

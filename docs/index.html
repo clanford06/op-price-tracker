@@ -139,6 +139,10 @@
   .track { position:relative; height:16px; }
   .track .zero { position:absolute; top:-2px; bottom:-2px; width:1px; background:var(--axis); }
   .bar { position:absolute; top:1px; height:14px; border-radius:3px; }
+  .stale { border:1px solid var(--neg); border-left-width:4px; border-radius:8px;
+           padding:.6rem .8rem; margin:.7rem 0; font-size:.78rem; line-height:1.5; }
+  .stale ul { margin:.4rem 0 0; padding-left:1.1rem; }
+  .stale li { margin-top:.2rem; }
   .grid { display:grid; gap:.7rem; margin-top:.7rem;
           grid-template-columns:repeat(auto-fill,minmax(112px,1fr)); }
   .ccard { display:block; position:relative; text-decoration:none; color:inherit;
@@ -415,9 +419,22 @@ function portfolio(pf) {
         foil market prices, refreshed ${ago(pf.card_prices_at)}. Graded slabs and sealed
         lots stay manual — TCGplayer prices raw singles, and a PSA 10 is a different market.</div>`
     : '';
+  const stale = [];
+  if (pf.expenses_stale_days > 14)
+    stale.push(`No purchase logged in <b>${pf.expenses_stale_days} days</b>
+      (last ${esc(pf.last_expense_date||'—')}). Missing costs make this look better than it is.`);
+  if (pf.collection_stale_days > 21)
+    stale.push(`Collection last synced <b>${pf.collection_stale_days} days ago</b>
+      (${esc(pf.collection_synced||'—')}). Missing cards make it look worse than it is.`);
+  const warn = stale.length
+    ? `<div class="stale"><b>This position is not trustworthy yet.</b>
+        <ul>${stale.map(s => `<li>${s}</li>`).join('')}</ul></div>`
+    : '';
+
   return `${collection(pf)}
   <section class="pf">
     <h2>Expenses &amp; profit</h2>
+    ${warn}
     <div class="pfgrid">
       <div class="stat"><div class="k">Spent to date</div><div class="v">${money(pf.spent)}</div></div>
       <div class="stat"><div class="k">Holdings (net of fees)</div><div class="v">${money(pf.unrealised_net)}</div></div>

@@ -112,6 +112,7 @@ class Ledger:
     fee_flat: float = DEFAULT_FEE_FLAT
     card_prices_applied: int = 0    # holdings priced from the last TCGplayer run
     card_prices_at: str = ""        # when that run happened
+    collection_synced: str = ""     # last TCGplayer app export, from settings
 
     # -- totals ------------------------------------------------------------
 
@@ -198,6 +199,33 @@ class Ledger:
                 row[k] = round(row[k], 2)
         return dict(sorted(tags.items(), key=lambda kv: kv[1]["net"]))
 
+    # -- staleness ---------------------------------------------------------
+    #
+    # Prices look after themselves; the two halves a human has to feed do not,
+    # and when they rot the position silently becomes fiction. Spending going
+    # stale overstates profit, a stale collection understates it, and neither
+    # announces itself. So both are measured and surfaced.
+
+    @staticmethod
+    def _age_days(when: str) -> int | None:
+        try:
+            return (date.today() - date.fromisoformat(when[:10])).days
+        except (ValueError, TypeError):
+            return None
+
+    @property
+    def last_expense_date(self) -> str:
+        real = [e.date for e in self.expenses if not e.planned]
+        return max(real) if real else ""
+
+    @property
+    def expenses_stale_days(self) -> int | None:
+        return self._age_days(self.last_expense_date)
+
+    @property
+    def collection_stale_days(self) -> int | None:
+        return self._age_days(self.collection_synced)
+
     def unpriced(self) -> list[Holding]:
         return [h for h in self.holdings if h.estimate is None]
 
@@ -225,6 +253,10 @@ class Ledger:
             "by_tag": self.by_tag(),
             "card_prices_applied": self.card_prices_applied,
             "card_prices_at": self.card_prices_at,
+            "last_expense_date": self.last_expense_date,
+            "expenses_stale_days": self.expenses_stale_days,
+            "collection_synced": self.collection_synced,
+            "collection_stale_days": self.collection_stale_days,
             "holdings": [
                 {
                     "id": h.id,
@@ -279,6 +311,7 @@ def load_ledger(path: Path, *, live: bool = True) -> Ledger:
         sales=[Sale(**_sale(s)) for s in (doc.get("sales") or [])],
         fee_pct=float(settings.get("fee_pct", DEFAULT_FEE_PCT)),
         fee_flat=float(settings.get("fee_flat", DEFAULT_FEE_FLAT)),
+        collection_synced=str(settings.get("collection_synced", "")),
     )
     if live:
         from .cardprices import apply_to
@@ -374,6 +407,16 @@ def report(ledger: Ledger) -> None:
     print(f"  Holdings at estimate{'':<13}{_money(ledger.unrealised_gross):>12}")
     print(f"  Holdings after selling fees{'':<6}{_money(ledger.unrealised_net):>12}"
           f"   ({ledger.fee_pct}% + ${ledger.fee_flat:.2f})")
+
+    ex, col = ledger.expenses_stale_days, ledger.collection_stale_days
+    if (ex is not None and ex > 14) or (col is not None and col > 21):
+        print(f"\n  ** STALE — the position below is not trustworthy **")
+        if ex is not None and ex > 14:
+            print(f"     No purchase logged in {ex} days (last {ledger.last_expense_date}). "
+                  f"Missing costs overstate profit.")
+        if col is not None and col > 21:
+            print(f"     Collection last synced {col} days ago ({ledger.collection_synced}). "
+                  f"Missing cards understate it.")
 
     print("\n" + "-" * w)
     pos = ledger.position_net

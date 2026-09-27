@@ -19,6 +19,12 @@ settings:
   fee_pct: 13.25
   fee_flat: 0.40
 
+  # Last time holdings were rebuilt from the TCGplayer app export. Bump this
+  # whenever the collection is re-synced. The dashboard and the reminder job
+  # both read it, because a stale collection understates the position exactly
+  # as badly as a stale expense list overstates it.
+  collection_synced: 2026-09-04
+
 # Real amounts from Carter 2026-08-09. Amounts are correct; the descriptions
 # are placeholders — relabel them and the category breakdown becomes useful.
 # The totals and net position are already accurate as-is.
@@ -199,10 +205,10 @@ expenses:
     # it never contaminates a One Piece tag rollup. Nothing pulled worth
     # holding, so this is a straight loss and will read as one.
 
-  - date: 2026-08-29
+  - date: 2026-08-30        # purchase date per the bank; posted 08/31
     item: "Whatnot break — Yassop slot (accidental buy, app since deleted)"
     category: "breaks"
-    amount: 27.00
+    amount: 26.43            # was 27.00 from memory; bank says 26.43
     tag: "whatnot"
     # Bought by mistake on a One Piece Whatnot stream. Logged because money
     # left the account, not because it bought anything worth holding: breaks
@@ -223,6 +229,62 @@ expenses:
     category: "supplies"
     amount: 37.00
     tag: "supplies"
+
+  # --- Reconciled 2026-09-27 against the bank statement -------------------
+  # Nothing had been logged since 09/04. These are every card-shop charge in
+  # the gap that is unambiguously One Piece: the local shop and Whatnot. Money
+  # left the account, so it is logged now even though WHAT it bought is not
+  # recorded yet -- an unrecorded cost understates spending, which is the
+  # failure that made the whole ledger untrustworthy for three weeks.
+  #
+  # category and tag are both "unsorted" ON PURPOSE. They are meant to look
+  # wrong on the dashboard until Carter says what each purchase was, at which
+  # point they get a real tag and stop standing out.
+  #
+  # IMPORTANT: these costs are in and the CARDS THEY BOUGHT ARE NOT. The
+  # collection was last synced 09/04, so the position below is now understated
+  # on the holdings side by roughly whatever these purchases yielded. Do not
+  # read the net position as real until the TCGplayer CSV lands.
+
+  - date: 2026-09-06
+    item: "Prime Time Gaming — purchase 1 of 3 on 09/06 (contents not recorded)"
+    category: "unsorted"
+    amount: 78.80
+    tag: "unsorted"
+
+  - date: 2026-09-06
+    item: "Prime Time Gaming — purchase 2 of 3 on 09/06 (contents not recorded)"
+    category: "unsorted"
+    amount: 43.19
+    tag: "unsorted"
+
+  - date: 2026-09-06
+    item: "Prime Time Gaming — purchase 3 of 3 on 09/06 (contents not recorded)"
+    category: "unsorted"
+    amount: 10.78
+    tag: "unsorted"
+    # Small enough to be sleeves, a deck box or a single pack.
+
+  - date: 2026-09-11
+    item: "Prime Time Gaming — 09/11 (contents not recorded)"
+    category: "unsorted"
+    amount: 49.58
+    tag: "unsorted"
+
+  - date: 2026-09-16
+    item: "Whatnot — 09/16"
+    category: "breaks"
+    amount: 28.04
+    tag: "whatnot"
+    # Second Whatnot charge AFTER the app was deleted on 08/29. Worth knowing.
+
+  - date: 2026-09-20
+    item: "Prime Time Gaming — 09/20 (contents not recorded)"
+    category: "unsorted"
+    amount: 356.39
+    tag: "unsorted"
+    # The single largest One Piece purchase to date, bigger than either OP-17
+    # box. Whatever this was needs itemising before any number here means much.
 
   # <<ADD_EXPENSES_HERE>>
 
