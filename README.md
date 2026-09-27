@@ -228,6 +228,58 @@ than $25 is reported but not applied — that shape is a mis-pinned id, not a
 market move. A card with no market price yet stays unpriced rather than being
 recorded as $0.00, because a zero silently deletes a holding from the position.
 
+### Syncing the collection
+
+Holdings come from the TCGplayer app's own export, not from typing:
+
+    Collection tab -> open the list -> ... menu -> Send via Email
+    (Settings -> Email Export must be set to CSV)
+
+Then:
+
+```bash
+python -m tracker --import-collection ~/Downloads/OP-TCG_092726.csv
+```
+
+That export already carries the TCGplayer **Product ID**, which is why this
+works at all. No name matching happens anywhere, and name matching is the part
+that goes wrong: a card-number search still returns four different Kaidos
+between $0.86 and $1,234.
+
+After an import the responsibilities split cleanly:
+
+    the CSV        decides WHAT is owned and HOW MANY
+    the price job  decides WHAT IT IS WORTH, twice a day, by product id
+
+Everything between `# <<TCG_COLLECTION_START>>` and `# <<TCG_COLLECTION_END>>`
+in `ledger.yaml` is generated and gets overwritten on every import. Anything
+that must survive goes **above** the start marker.
+
+Graded slabs are listed by product id in `settings.graded_product_ids` and are
+never imported. The app prices the raw card, and a graded card is a different
+asset: importing Ms. All Sunday would replace a reasoned floor with a $527 raw
+quote for a card sitting at PSA, and the PSA 10 Kidd would drop from $169 to
+$88.66.
+
+### When the ledger goes stale
+
+Prices look after themselves. The two halves a human feeds do not, and when
+they rot the position quietly becomes fiction: missing costs overstate profit,
+a missing collection understates it, and neither announces itself.
+
+So both are measured. `Refresh card values` has a sibling, `Ledger reminder`,
+which runs Mondays and pushes to your phone **only** when a half is behind:
+
+    expenses    stale after 14 days
+    collection  stale after 21 days
+
+The dashboard carries the same warning as a banner, and the terminal report
+refuses to present the position as trustworthy. Run it by hand with:
+
+```bash
+python -m tracker --remind          # silent when the ledger is current
+```
+
 ### Tuning
 
 Titles are normalised before matching — punctuation stripped, lowercased, whole

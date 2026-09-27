@@ -94,6 +94,13 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
              "Search by the number alone -- adding the name returns the wrong card.",
     )
     p.add_argument(
+        "--import-collection",
+        metavar="CSV",
+        type=Path,
+        help="Rebuild holdings from the TCGplayer app's CSV export "
+             "(Collection tab → ⋯ → Send via Email).",
+    )
+    p.add_argument(
         "--remind",
         action="store_true",
         help="Push a phone reminder if the ledger has gone stale. Silent when it is current.",
@@ -251,6 +258,36 @@ def main(argv: list[str] | None = None) -> int:
         except (FileNotFoundError, ValueError) as exc:
             print(f"Ledger error: {exc}", file=sys.stderr)
             return 2
+        return 0
+
+    if args.import_collection:
+        import yaml
+
+        from .collection import CollectionError, import_into
+        from .config import DEFAULT_LEDGER
+        from .portfolio import load_ledger, report
+
+        led_path = args.ledger or DEFAULT_LEDGER
+        before = load_ledger(led_path)
+        graded = set((yaml.safe_load(Path(led_path).read_text()).get("settings") or {})
+                     .get("graded_product_ids") or [])
+        try:
+            res = import_into(Path(led_path), args.import_collection, graded=graded)
+        except (CollectionError, OSError) as exc:
+            print(f"{exc}", file=sys.stderr)
+            return 2
+
+        after = load_ledger(led_path)
+        m_ = lambda v: ("-$" if v < 0 else "$") + f"{abs(v):,.2f}"
+        print(f"Imported {res['lines']} lines / {res['copies']} copies "
+              f"= {m_(res['value'])} at app market.\n")
+        for r in res["skipped"]:
+            print(f"  kept manual: {r.number or r.name} — app says {m_(r.value)} raw, "
+                  f"ledger keeps the graded value")
+        print(f"\n  holdings {len(before.holdings)} -> {len(after.holdings)}")
+        print(f"  held     {m_(before.unrealised_net)} -> {m_(after.unrealised_net)}")
+        print(f"  position {m_(before.position_net)} -> {m_(after.position_net)}\n")
+        report(after)
         return 0
 
     if args.remind:

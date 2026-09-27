@@ -23,7 +23,15 @@ settings:
   # whenever the collection is re-synced. The dashboard and the reminder job
   # both read it, because a stale collection understates the position exactly
   # as badly as a stale expense list overstates it.
-  collection_synced: 2026-09-04
+  collection_synced: 2026-09-27
+
+  # Product ids that must NEVER be imported from the app export. Carter tracks
+  # his slabs in the app next to everything else, but the app prices the RAW
+  # card, and a graded card is a different asset with its own market.
+  #   695324  Ms. All Sunday (SP) OP14-084 -- at PSA, carried at a reasoned
+  #           floor with grade scenarios; the app says $527.10 raw
+  #   671450  Eustass"Captain"Kid EB04-039 (SP) -- PSA 10 at $169; raw is $88.66
+  graded_product_ids: [695324, 671450]
 
 # Real amounts from Carter 2026-08-09. Amounts are correct; the descriptions
 # are placeholders — relabel them and the category breakdown becomes useful.
@@ -366,6 +374,18 @@ holdings:
   # Kidd it is an $80 UNDERSTATEMENT ($88.84 raw vs $169 as a PSA 10).
   # =====================================================================
 
+  # ---------------------------------------------------------------------
+  # MANUAL HOLDINGS. These sit ABOVE the generated region on purpose and
+  # survive every --import-collection run.
+  #
+  # Both slabs DO appear in Carter's TCGplayer app list, and both must stay
+  # out of the import: the app quotes the RAW card, and a graded card is a
+  # different asset from the card inside it. Importing them would rewrite
+  # Ms. All Sunday's reasoned $500 floor and its grade scenarios with a $527
+  # raw quote, and drop the PSA 10 Kidd from $169 to $88.66. Their product
+  # ids are listed in settings.graded_product_ids to block exactly that.
+  # ---------------------------------------------------------------------
+
   - id: ms-all-sunday-sp
     tag: "msallsunday"
     name: "Ms. All Sunday SP OP14-084 (English)"
@@ -474,280 +494,374 @@ holdings:
   # only the fallback if a refresh fails. `qty` means one line covers
   # several copies; `estimate` is always the TOTAL for all of them.
 
-  - id: kaido-062-superalt
-    tcgplayer_id: 712091      # Kaido (062) (Super Alternate Art), Super Rare
-    tag: "op17"
-    name: "Kaido (062) (Super Alternate Art)"
-    status: owned
-    estimate: 261.26
-
-  - id: oden-st32-002-sp
-    tcgplayer_id: 712123      # Kouzuki Oden (ST32-002) (SP), Super Rare
-    tag: "op17"
-    name: "Kouzuki Oden (ST32-002) (SP)"
-    status: owned
-    estimate: 214.81
-
-  - id: luffy-079-alt
-    tcgplayer_id: 707124      # Monkey.D.Luffy (079) (Alternate Art), Leader
-    tag: "op17"
-    name: "Monkey.D.Luffy (079) (Alternate Art)"
-    status: owned
-    estimate: 62.99
-
-  - id: xebec-039-alt
-    tcgplayer_id: 710591      # Rocks.D.Xebec (039) (Alternate Art), Leader
-    tag: "op17"
-    name: "Rocks.D.Xebec (039) (Alternate Art)"
-    status: owned
-    estimate: 53.92
-
-  - id: shanks-022-alt
-    tcgplayer_id: 707121      # Shanks (022) (Alternate Art), Super Rare
-    tag: "op17"
-    name: "Shanks (022) (Alternate Art)"
-    status: owned
-    estimate: 42.10
-
-  - id: luffy-op16-022-alt
-    tcgplayer_id: 696007      # Monkey.D.Luffy (022) (Alternate Art), Leader
-    tag: "op16"
-    name: "Monkey.D.Luffy (022) (Alternate Art)"
-    status: owned
-    estimate: 39.71
-
-  - id: kaido-058-alt
-    tcgplayer_id: 707118      # Kaido (058) (Alternate Art), Leader
-    tag: "op17"
-    name: "Kaido (058) (Alternate Art)"
-    status: owned
-    estimate: 36.92
-
-  - id: loki-119-sec
-    tcgplayer_id: 710585      # Loki, Secret Rare
-    tag: "op17"
-    name: "Loki"
-    status: owned
-    estimate: 67.40
-    qty: 2
-
-  - id: shanks-020-alt
-    tcgplayer_id: 705923      # Shanks (020) (Alternate Art), Leader
-    tag: "op17"
-    name: "Shanks (020) (Alternate Art)"
-    status: owned
-    estimate: 65.60
-    qty: 2
-
-  - id: ace-118-alt
-    tcgplayer_id: 694933      # Portgas.D.Ace (118) (Alternate Art), Secret Rare
-    tag: "op16"
-    name: "Portgas.D.Ace (118) (Alternate Art)"
-    status: owned
-    estimate: 26.77
-
-  - id: stussy-054-alt
-    tcgplayer_id: 710539      # Miss Buckingham Stussy (Alternate Art), Rare
-    tag: "op17"
-    name: "Miss Buckingham Stussy (Alternate Art)"
-    status: owned
-    estimate: 23.30
-
-  - id: luffy-p110
-    tcgplayer_id: 712742      # Monkey.D.Luffy (4th Anniversary), Promo
-    tag: "op17"
-    name: "Monkey.D.Luffy (4th Anniversary)"
-    status: owned
-    estimate: 22.96
-
-  - id: newgate-005-alt
-    tcgplayer_id: 708077      # Edward.Newgate (005) (Alternate Art), Super Rare
-    tag: "op17"
-    name: "Edward.Newgate (005) (Alternate Art)"
-    status: owned
-    estimate: 22.06
-
-  - id: newgate-001-alt
-    tcgplayer_id: 705924      # Edward.Newgate (001) (Alternate Art), Leader
-    tag: "op17"
-    name: "Edward.Newgate (001) (Alternate Art)"
-    status: owned
-    estimate: 21.08
-
-  - id: linlin-049-alt
-    tcgplayer_id: 710540      # Charlotte Linlin (049) (Alternate Art), Rare
-    tag: "op17"
-    name: "Charlotte Linlin (049) (Alternate Art)"
-    status: owned
-    estimate: 20.85
-
-  - id: linlin-099-alt
-    tcgplayer_id: 707139      # Charlotte Linlin (099) (Alternate Art), Leader
-    tag: "op17"
-    name: "Charlotte Linlin (099) (Alternate Art)"
-    status: owned
-    estimate: 19.72
-
-  - id: sweet3-114-alt
-    tcgplayer_id: 712116      # Sweet 3 Generals (Alternate Art), Rare
-    tag: "op17"
-    name: "Sweet 3 Generals (Alternate Art)"
-    status: owned
-    estimate: 39.32
-    qty: 2
-
-  - id: yasopp-031-alt
-    tcgplayer_id: 711423      # Yasopp (Alternate Art), Super Rare
-    tag: "op17"
-    name: "Yasopp (Alternate Art)"
-    status: owned
-    estimate: 19.54
-
-  - id: usopp-080-alt
-    tcgplayer_id: 711427      # Usopp (Alternate Art), Super Rare
-    tag: "op17"
-    name: "Usopp (Alternate Art)"
-    status: owned
-    estimate: 17.74
-
-  - id: luffy-p099
-    tcgplayer_id: 714352      # Monkey.D.Luffy (4th Anniversary Treasure Campaign Pack), Promo
-    tag: "op17"
-    name: "Monkey.D.Luffy (4th Anniv Treasure Campaign)"
-    status: owned
-    estimate: 26.68
-    qty: 2
-
-  - id: don-luffy
-    tcgplayer_id: 712745      # DON!! Card (World United) (Luffy), DON!!
-    tag: "op17"
-    name: "DON!! Card World United Luffy"
-    status: owned
-    estimate: 12.62
-
-  - id: kaido-063-alt
-    tcgplayer_id: 712092      # Kaido (063) (Alternate Art), Super Rare
-    tag: "op17"
-    name: "Kaido (063) (Alternate Art)"
-    status: owned
-    estimate: 25.16
-    qty: 2
-
-  - id: don-zoro
-    tcgplayer_id: 712744      # DON!! Card (World United) (Zoro), DON!!
-    tag: "op17"
-    name: "DON!! Card World United Zoro"
-    status: owned
-    estimate: 11.82
-
-  - id: beckman-027-alt
-    tcgplayer_id: 712085      # Benn.Beckman (Alternate Art), Rare
-    tag: "op17"
-    name: "Benn.Beckman (Alternate Art)"
-    status: owned
-    estimate: 8.07
-
-  - id: linlin-112
-    tcgplayer_id: 711325      # Charlotte Linlin (112), Super Rare
-    tag: "op17"
-    name: "Charlotte Linlin (112)"
-    status: owned
-    estimate: 5.52
-
-  - id: kuzan-op16-063-alt
-    tcgplayer_id: 696051      # Kuzan (Alternate Art), Rare
-    tag: "op16"
-    name: "Kuzan (Alternate Art)"
-    status: owned
-    estimate: 9.82
-    qty: 2
-
-  - id: luffy-093
-    tcgplayer_id: 710861      # Monkey.D.Luffy (093), Super Rare
-    tag: "op17"
-    name: "Monkey.D.Luffy (093)"
-    status: owned
-    estimate: 4.59
-
-  - id: usopp-080
-    tcgplayer_id: 711426      # Usopp, Super Rare
-    tag: "op17"
-    name: "Usopp"
-    status: owned
-    estimate: 5.06
-    qty: 2
-
-  - id: kingdew-006
-    tcgplayer_id: 712593      # Kingdew (Pandaman Art), Common
-    tag: "op17"
-    name: "Kingdew (Pandaman Art)"
-    status: owned
-    estimate: 2.36
-
-  - id: shanks-op14-027-4th
-    tcgplayer_id: 714351      # Shanks (4th Anniversary Treasure Campaign Pack), Rare
-    tag: "op17"
-    name: "Shanks (4th Anniv Treasure Campaign)"
-    status: owned
-    estimate: 2.08
-
-  - id: newgate-op16-003
-    tcgplayer_id: 693824      # Edward.Newgate, Super Rare
-    tag: "op16"
-    name: "Edward.Newgate"
-    status: owned
-    estimate: 1.87
-
-  - id: newgate-005
-    tcgplayer_id: 711499      # Edward.Newgate (005), Super Rare
-    tag: "op17"
-    name: "Edward.Newgate (005)"
-    status: owned
-    estimate: 5.28
-    qty: 3
-
-  - id: teach-p100
-    tcgplayer_id: 714353      # Marshall.D.Teach (4th Anniversary Treasure Campaign Pack), Promo
-    tag: "op17"
-    name: "Marshall.D.Teach (4th Anniv Treasure Campaign)"
-    status: owned
-    estimate: 1.64
-
-  - id: kaido-eb04-030-4th
-    tcgplayer_id: 714349      # Kaido (4th Anniversary Treasure Campaign Pack), Rare
-    tag: "op17"
-    name: "Kaido (4th Anniv Treasure Campaign)"
-    status: owned
-    estimate: 1.24
-
-  - id: linlin-st20-005-4th
-    tcgplayer_id: 714355      # Charlotte Linlin (4th Anniversary Treasure Campaign Pack), Super Rare
-    tag: "op17"
-    name: "Charlotte Linlin (4th Anniv Treasure Campaign)"
-    status: owned
-    estimate: 1.18
-
-  - id: shiki-048
-    tcgplayer_id: 710542      # Shiki (048), Super Rare
-    tag: "op17"
-    name: "Shiki (048)"
-    status: owned
-    estimate: 2.46
-    qty: 3
-
-  - id: kaido-063
-    tcgplayer_id: 710578      # Kaido (063), Super Rare
-    tag: "op17"
-    name: "Kaido (063)"
-    status: owned
-    estimate: 1.16
-    qty: 2
 
   - id: op-bulk-outside-app-list
     tag: "op17"
     name: "Bulk — everything outside the TCGplayer app list"
     status: owned
     note: "The app list is Carter's ~51 best cards; he confirmed a lot was left out. This covers the OP-16 and OP-17 commons/uncommons, the 4th Anniversary Rainbow Luffy Leader, and the small hits. Unpriced on purpose rather than valued at zero — the report flags it so the position is known to be understated, not silently wrong."
+
+  # <<ADD_HOLDINGS_HERE>>
+
+  # <<TCG_COLLECTION_START>>
+  # GENERATED from the TCGplayer app export. Do not hand-edit: the next
+  # --import-collection run overwrites everything between these markers.
+  # Anything that must survive a re-import belongs ABOVE the start marker.
+  #
+  # Export OP-TCG_092726_172152.csv -- 42 lines, 60 copies, $1,357.91 at app market.
+  # `estimate` here is the app's market price at export time; the twice-daily
+  # price job re-quotes it from the same product id and takes over from there.
+
+  - id: op17-062-712091
+    name: "OP17-062 Kaido (062) (Super Alternate Art)"
+    status: owned
+    tcgplayer_id: 712091
+    estimate: 217.00
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: st27-005-707128
+    name: "ST27-005 Marshall.D.Teach (ST27-005) (SP)"
+    status: owned
+    tcgplayer_id: 707128
+    estimate: 209.62
+    tag: "st27"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: st32-002-712123
+    name: "ST32-002 Kouzuki Oden (ST32-002) (SP)"
+    status: owned
+    tcgplayer_id: 712123
+    estimate: 145.60
+    tag: "st32"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-020-705923
+    name: "OP17-020 Shanks (020) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 705923
+    estimate: 102.32
+    qty: 2
+    tag: "op17"
+    source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
+
+  - id: op17-022-707121
+    name: "OP17-022 Shanks (022) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 707121
+    estimate: 69.98
+    qty: 2
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-119-710585
+    name: "OP17-119 Loki"
+    status: owned
+    tcgplayer_id: 710585
+    estimate: 67.88
+    qty: 2
+    tag: "op17"
+    source: "The World's Strongest Warriors · Secret Rare · Foil · Near Mint"
+
+  - id: op17-039-710591
+    name: "OP17-039 Rocks.D.Xebec (039) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 710591
+    estimate: 67.52
+    tag: "op17"
+    source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
+
+  - id: op17-079-707124
+    name: "OP17-079 Monkey.D.Luffy (079) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 707124
+    estimate: 52.10
+    tag: "op17"
+    source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
+
+  - id: op17-114-712116
+    name: "OP17-114 Sweet 3 Generals (Alternate Art)"
+    status: owned
+    tcgplayer_id: 712116
+    estimate: 51.93
+    qty: 3
+    tag: "op17"
+    source: "The World's Strongest Warriors · Rare · Foil · Near Mint"
+
+  - id: op16-022-696007
+    name: "OP16-022 Monkey.D.Luffy (022) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 696007
+    estimate: 33.36
+    tag: "op16"
+    source: "The Time of Battle · Leader · Foil · Near Mint"
+
+  - id: op17-058-707118
+    name: "OP17-058 Kaido (058) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 707118
+    estimate: 31.83
+    tag: "op17"
+    source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
+
+  - id: op17-054-710539
+    name: "OP17-054 Miss Buckingham Stussy (Alternate Art)"
+    status: owned
+    tcgplayer_id: 710539
+    estimate: 31.03
+    tag: "op17"
+    source: "The World's Strongest Warriors · Rare · Foil · Near Mint"
+
+  - id: op17-049-710540
+    name: "OP17-049 Charlotte Linlin (049) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 710540
+    estimate: 27.05
+    tag: "op17"
+    source: "The World's Strongest Warriors · Rare · Foil · Near Mint"
+
+  - id: op16-118-694933
+    name: "OP16-118 Portgas.D.Ace (118) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 694933
+    estimate: 26.67
+    tag: "op16"
+    source: "The Time of Battle · Secret Rare · Foil · Near Mint"
+
+  - id: op17-027-712085
+    name: "OP17-027 Benn.Beckman (Alternate Art)"
+    status: owned
+    tcgplayer_id: 712085
+    estimate: 19.60
+    tag: "op17"
+    source: "The World's Strongest Warriors · Rare · Foil · Near Mint"
+
+  - id: op17-063-712092
+    name: "OP17-063 Kaido (063) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 712092
+    estimate: 18.58
+    qty: 2
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-001-705924
+    name: "OP17-001 Edward.Newgate (001) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 705924
+    estimate: 17.07
+    tag: "op17"
+    source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
+
+  - id: op17-005-708077
+    name: "OP17-005 Edward.Newgate (005) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 708077
+    estimate: 16.74
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-080-711427
+    name: "OP17-080 Usopp (Alternate Art)"
+    status: owned
+    tcgplayer_id: 711427
+    estimate: 16.04
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-099-707139
+    name: "OP17-099 Charlotte Linlin (099) (Alternate Art)"
+    status: owned
+    tcgplayer_id: 707139
+    estimate: 14.35
+    tag: "op17"
+    source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
+
+  - id: p-099-714352
+    name: "P-099 Monkey.D.Luffy (4th Anniversary Treasure Campaign Pack)"
+    status: owned
+    tcgplayer_id: 714352
+    estimate: 13.86
+    qty: 2
+    tag: "p"
+    source: "One Piece Promotion Cards · Promo · Foil · Near Mint"
+
+  - id: op17-031-711423
+    name: "OP17-031 Yasopp (Alternate Art)"
+    status: owned
+    tcgplayer_id: 711423
+    estimate: 13.86
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: p-110-712742
+    name: "P-110 Monkey.D.Luffy (4th Anniversary)"
+    status: owned
+    tcgplayer_id: 712742
+    estimate: 12.58
+    tag: "p"
+    source: "One Piece Promotion Cards · Promo · Normal · Near Mint"
+
+  - id: don-card-world-united-luffy-712745
+    name: "DON!! Card (World United) (Luffy)"
+    status: owned
+    tcgplayer_id: 712745
+    estimate: 11.83
+    tag: "promo"
+    source: "One Piece Promotion Cards · DON!! · Foil · Near Mint"
+
+  - id: don-card-world-united-zoro-712744
+    name: "DON!! Card (World United) (Zoro)"
+    status: owned
+    tcgplayer_id: 712744
+    estimate: 11.19
+    tag: "promo"
+    source: "One Piece Promotion Cards · DON!! · Foil · Near Mint"
+
+  - id: op16-063-696051
+    name: "OP16-063 Kuzan (Alternate Art)"
+    status: owned
+    tcgplayer_id: 696051
+    estimate: 8.06
+    qty: 2
+    tag: "op16"
+    source: "The Time of Battle · Rare · Foil · Near Mint"
+
+  - id: op17-112-711325
+    name: "OP17-112 Charlotte Linlin (112)"
+    status: owned
+    tcgplayer_id: 711325
+    estimate: 7.98
+    qty: 2
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-093-710861
+    name: "OP17-093 Monkey.D.Luffy (093)"
+    status: owned
+    tcgplayer_id: 710861
+    estimate: 6.50
+    qty: 2
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-005-711499
+    name: "OP17-005 Edward.Newgate (005)"
+    status: owned
+    tcgplayer_id: 711499
+    estimate: 5.76
+    qty: 4
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-080-711426
+    name: "OP17-080 Usopp"
+    status: owned
+    tcgplayer_id: 711426
+    estimate: 5.76
+    qty: 3
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-107-712655
+    name: "OP17-107 Charlotte Daifuku (Pandaman Art)"
+    status: owned
+    tcgplayer_id: 712655
+    estimate: 4.65
+    tag: "op17"
+    source: "The World's Strongest Warriors · Uncommon · Normal · Near Mint"
+
+  - id: op17-022-707120
+    name: "OP17-022 Shanks (022)"
+    status: owned
+    tcgplayer_id: 707120
+    estimate: 3.81
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-048-710542
+    name: "OP17-048 Shiki (048)"
+    status: owned
+    tcgplayer_id: 710542
+    estimate: 2.67
+    qty: 3
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-046-710541
+    name: "OP17-046 Gloriosa"
+    status: owned
+    tcgplayer_id: 710541
+    estimate: 2.60
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-006-712593
+    name: "OP17-006 Kingdew (Pandaman Art)"
+    status: owned
+    tcgplayer_id: 712593
+    estimate: 2.14
+    tag: "op17"
+    source: "The World's Strongest Warriors · Common · Normal · Near Mint"
+
+  - id: op16-003-693824
+    name: "OP16-003 Edward.Newgate"
+    status: owned
+    tcgplayer_id: 693824
+    estimate: 1.95
+    tag: "op16"
+    source: "The Time of Battle · Super Rare · Foil · Near Mint"
+
+  - id: op14-027-714351
+    name: "OP14-027 Shanks (4th Anniversary Treasure Campaign Pack)"
+    status: owned
+    tcgplayer_id: 714351
+    estimate: 1.49
+    tag: "op14"
+    source: "One Piece Promotion Cards · Rare · Foil · Near Mint"
+
+  - id: eb04-030-714349
+    name: "EB04-030 Kaido (4th Anniversary Treasure Campaign Pack)"
+    status: owned
+    tcgplayer_id: 714349
+    estimate: 1.27
+    tag: "eb04"
+    source: "One Piece Promotion Cards · Rare · Foil · Near Mint"
+
+  - id: p-100-714353
+    name: "P-100 Marshall.D.Teach (4th Anniversary Treasure Campaign Pack)"
+    status: owned
+    tcgplayer_id: 714353
+    estimate: 1.24
+    tag: "p"
+    source: "One Piece Promotion Cards · Promo · Foil · Near Mint"
+
+  - id: op17-062-707133
+    name: "OP17-062 Kaido (062)"
+    status: owned
+    tcgplayer_id: 707133
+    estimate: 0.86
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: op17-063-710578
+    name: "OP17-063 Kaido (063)"
+    status: owned
+    tcgplayer_id: 710578
+    estimate: 0.80
+    qty: 2
+    tag: "op17"
+    source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
+
+  - id: st20-005-714355
+    name: "ST20-005 Charlotte Linlin (4th Anniversary Treasure Campaign Pack)"
+    status: owned
+    tcgplayer_id: 714355
+    estimate: 0.78
+    tag: "st20"
+    source: "One Piece Promotion Cards · Super Rare · Foil · Near Mint"
+
+  # <<TCG_COLLECTION_END>>
 
   # <<ADD_HOLDINGS_HERE>>
 
