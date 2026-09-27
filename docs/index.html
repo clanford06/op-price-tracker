@@ -139,6 +139,21 @@
   .track { position:relative; height:16px; }
   .track .zero { position:absolute; top:-2px; bottom:-2px; width:1px; background:var(--axis); }
   .bar { position:absolute; top:1px; height:14px; border-radius:3px; }
+  .grid { display:grid; gap:.7rem; margin-top:.7rem;
+          grid-template-columns:repeat(auto-fill,minmax(112px,1fr)); }
+  .ccard { display:block; position:relative; text-decoration:none; color:inherit;
+           border:1px solid var(--line); border-radius:8px; padding:.4rem; background:var(--card); }
+  .ccard img { display:block; width:100%; aspect-ratio:5/7; object-fit:contain; border-radius:4px; }
+  .ccard .noart { display:flex; align-items:center; justify-content:center; aspect-ratio:5/7;
+                 border-radius:4px; border:1px dashed var(--line); color:var(--muted);
+                 font-size:.7rem; }
+  .ccard .qty { position:absolute; top:.55rem; right:.55rem; background:var(--ink);
+               color:var(--bg); font-size:.62rem; font-weight:700; border-radius:3px;
+               padding:0 .25rem; }
+  .cname { font-size:.68rem; line-height:1.3; margin-top:.35rem;
+           overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+  .cprice { font-size:.74rem; font-weight:700; margin-top:.15rem; }
+  .cprice .m { display:block; font-weight:400; font-size:.64rem; color:var(--muted); }
   .scen { margin-top:.35rem; font-size:.72rem; }
   .scen summary { cursor:pointer; color:var(--muted); font-size:.7rem; }
   .srow { display:flex; flex-wrap:wrap; justify-content:space-between; gap:.4rem;
@@ -312,6 +327,51 @@ function shortHolding(n) {
   return String(n||'').replace(/\s*\(.*?\)\s*/g,' ').replace(/OP\d\d-\d+/,'').trim().slice(0,22);
 }
 
+// The collection as cards, not a spreadsheet row. A list of names and prices
+// tells you what things are worth; it does not let you see what you own, and
+// "see what I own" is most of why a collection gets tracked at all.
+function collection(pf) {
+  const rows = (pf.holdings||[]).filter(h => h.estimate != null && !h.liquid);
+  if (!rows.length) return '';
+  const copies = rows.reduce((n,h) => n + (h.qty||1), 0);
+  const IMG = id => `https://product-images.tcgplayer.com/fit-in/300x300/${id}.jpg`;
+
+  const cards = rows.map(h => {
+    // A slab has no TCGplayer product image worth showing -- the raw card's
+    // picture would misrepresent what is actually in the holder.
+    const art = h.tcgplayer_id
+      ? `<img loading="lazy" src="${IMG(h.tcgplayer_id)}" alt="${esc(h.name)}">`
+      : `<div class="noart">${h.status === 'grading' ? 'at PSA' : 'graded'}</div>`;
+    const href = h.tcgplayer_url || (h.tcgplayer_id
+      ? `https://www.tcgplayer.com/product/${h.tcgplayer_id}` : '');
+    const inner = `${art}
+      ${(h.qty||1) > 1 ? `<span class="qty">x${h.qty}</span>` : ''}
+      <div class="cname">${esc(shortCard(h.name))}</div>
+      <div class="cprice">${money(h.estimate)}${(h.qty||1)>1
+        ? `<span class="m">${money(h.estimate/h.qty)} ea</span>` : ''}</div>`;
+    return href
+      ? `<a class="ccard" target="_blank" rel="noopener" href="${esc(href)}">${inner}</a>`
+      : `<div class="ccard">${inner}</div>`;
+  }).join('');
+
+  return `<section class="pf">
+    <h2>Collection</h2>
+    <div class="cap">${copies} copies across ${rows.length} lines ·
+      ${money(rows.reduce((s,h) => s + h.estimate, 0))} at market
+      ${pf.card_prices_at ? `· prices ${ago(pf.card_prices_at)}` : ''}</div>
+    <div class="grid">${cards}</div>
+    <div class="pfnote">Card images are served by TCGplayer. Tap one to open its
+      product page. Ordered by value, biggest first.</div>
+  </section>`;
+}
+
+// Drop the bracketed variant notes -- at this size the picture says it better
+// than "(Alt Art)" does, and the full name is one tap away.
+function shortCard(n) {
+  return String(n||'').replace(/\s*\((?:Alt|Alternate|Super Alternate|Manga|SP)[^)]*\)/gi,'')
+    .replace(/\s*—.*$/,'').replace(/\s+/g,' ').trim();
+}
+
 function portfolio(pf) {
   if (!pf) return '';
   const cls = v => v > 0 ? 'pos' : (v < 0 ? 'neg' : '');
@@ -355,7 +415,8 @@ function portfolio(pf) {
         foil market prices, refreshed ${ago(pf.card_prices_at)}. Graded slabs and sealed
         lots stay manual — TCGplayer prices raw singles, and a PSA 10 is a different market.</div>`
     : '';
-  return `<section class="pf">
+  return `${collection(pf)}
+  <section class="pf">
     <h2>Expenses &amp; profit</h2>
     <div class="pfgrid">
       <div class="stat"><div class="k">Spent to date</div><div class="v">${money(pf.spent)}</div></div>

@@ -238,6 +238,7 @@ class Ledger:
                     "qty": h.qty,
                     "estimate_source": h.estimate_source,
                     "estimate_manual": h.estimate_manual,
+                    "tcgplayer_id": h.tcgplayer_id,
                     "tcgplayer_url": h.tcgplayer_url,
                     "scenarios": [
                         {
