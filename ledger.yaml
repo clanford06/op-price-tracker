@@ -286,6 +286,54 @@ expenses:
     # The single largest One Piece purchase to date, bigger than either OP-17
     # box. Whatever this was needs itemising before any number here means much.
 
+  # --- Also reconciled 2026-09-27: Carter confirmed all four of the charges
+  # I had left unclassified are One Piece. Same "unsorted" treatment -- the
+  # money is accounted for, the contents are not.
+
+  - date: 2026-07-03
+    item: "Replay Toys — 07/03 (contents not recorded)"
+    category: "unsorted"
+    amount: 47.72
+    tag: "unsorted"
+    # Predates every other entry, so this is now the earliest One Piece spend.
+
+  - date: 2026-08-23
+    item: "Replay Toys — 08/23 (contents not recorded)"
+    category: "unsorted"
+    amount: 11.10
+    tag: "unsorted"
+    # One of the three August charges that sat unexplained for a month.
+
+  - date: 2026-09-04
+    item: "The Ript Zone — 09/04 (contents not recorded)"
+    category: "unsorted"
+    amount: 21.60
+    tag: "unsorted"
+    # NOTE: the other Ript Zone charge, $32.40 on 08/19, is the Pokemon packs
+    # and stays tagged pokemon. This shop sells both -- do not auto-classify it.
+
+  - date: 2026-09-18
+    item: "Customs brokerage fee on an imported order"
+    category: "shipping"
+    amount: 30.99
+    tag: "unsorted"
+    # A customs fee means something crossed a border, and the ORDER ITSELF is
+    # not in this ledger -- no matching purchase appears on the statement, so
+    # it was paid some other way. Worth chasing: this fee implies a cost that
+    # is still missing.
+
+  - date: 2026-09-19
+    item: "GameStop — 09/19 (contents not recorded)"
+    category: "unsorted"
+    amount: 102.58
+    tag: "unsorted"
+
+  - date: 2026-09-24
+    item: "GameStop — 09/24 (contents not recorded)"
+    category: "unsorted"
+    amount: 74.50
+    tag: "unsorted"
+
   # <<ADD_EXPENSES_HERE>>
 
 holdings:

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-27T19:41:52+00:00",
+  "updated_at": "2026-09-27T21:18:47+00:00",
   "products": {
     "op17": {
       "history": [
@@ -25983,31 +25983,32 @@
     }
   },
   "portfolio": {
-    "spent": 2037.39,
+    "spent": 2325.88,
     "planned": 99.98,
-    "committed": 2137.37,
+    "committed": 2425.86,
     "realised": 78.35,
     "unrealised_gross": 1742.19,
     "unrealised_net": 1495.76,
-    "position_gross": -216.85,
-    "position_net": -463.28,
-    "roi_pct": -22.7,
+    "position_gross": -505.34,
+    "position_net": -751.77,
+    "roi_pct": -32.3,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 1313.26,
-      "unsorted": 538.74,
+      "unsorted": 796.24,
       "supplies": 72.03,
       "breaks": 54.47,
       "events": 32.4,
+      "shipping": 30.99,
       "grading": 26.49
     },
     "by_tag": {
       "unsorted": {
-        "spent": 538.74,
+        "spent": 827.23,
         "planned": 0.0,
         "realised": 0.0,
         "held": 0.0,
-        "net": -538.74
+        "net": -827.23
       },
       "op16": {
         "spent": 465.04,
@@ -26075,8 +26076,8 @@
     },
     "card_prices_applied": 37,
     "card_prices_at": "2026-09-27T18:23:58+00:00",
-    "last_expense_date": "2026-09-20",
-    "expenses_stale_days": 7,
+    "last_expense_date": "2026-09-24",
+    "expenses_stale_days": 3,
     "collection_synced": "2026-09-04",
     "collection_stale_days": 23,
     "holdings": [
@@ -26101,7 +26102,7 @@
             "share": 0.9324,
             "note": "455 of 488 graded copies. Roughly double raw -- the outcome that justified submitting.",
             "net_if_sold": 997.22,
-            "position_net": 100.59
+            "position_net": -187.9
           },
           {
             "label": "PSA 9",
@@ -26109,7 +26110,7 @@
             "share": 0.0451,
             "note": "Only one on record: $760 on 2026-07-05 when 10s were $1,725, i.e. 44% of a 10. At or below raw.",
             "net_if_sold": 433.35,
-            "position_net": -463.28
+            "position_net": -751.77
           },
           {
             "label": "PSA 8 or lower",
@@ -26117,7 +26118,7 @@
             "share": 0.0225,
             "note": "One sold 2026-08-02 at $510, under what raw was fetching that week.",
             "net_if_sold": 442.02,
-            "position_net": -454.61
+            "position_net": -743.1
           }
         ]
       },
@@ -26976,6 +26977,54 @@
         "item": "Prime Time Gaming \u2014 09/20 (contents not recorded)",
         "category": "unsorted",
         "amount": 356.39,
+        "tag": "unsorted",
+        "planned": false
+      },
+      {
+        "date": "2026-07-03",
+        "item": "Replay Toys \u2014 07/03 (contents not recorded)",
+        "category": "unsorted",
+        "amount": 47.72,
+        "tag": "unsorted",
+        "planned": false
+      },
+      {
+        "date": "2026-08-23",
+        "item": "Replay Toys \u2014 08/23 (contents not recorded)",
+        "category": "unsorted",
+        "amount": 11.1,
+        "tag": "unsorted",
+        "planned": false
+      },
+      {
+        "date": "2026-09-04",
+        "item": "The Ript Zone \u2014 09/04 (contents not recorded)",
+        "category": "unsorted",
+        "amount": 21.6,
+        "tag": "unsorted",
+        "planned": false
+      },
+      {
+        "date": "2026-09-18",
+        "item": "Customs brokerage fee on an imported order",
+        "category": "shipping",
+        "amount": 30.99,
+        "tag": "unsorted",
+        "planned": false
+      },
+      {
+        "date": "2026-09-19",
+        "item": "GameStop \u2014 09/19 (contents not recorded)",
+        "category": "unsorted",
+        "amount": 102.58,
+        "tag": "unsorted",
+        "planned": false
+      },
+      {
+        "date": "2026-09-24",
+        "item": "GameStop \u2014 09/24 (contents not recorded)",
+        "category": "unsorted",
+        "amount": 74.5,
         "tag": "unsorted",
         "planned": false
       }
