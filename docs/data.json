@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-27T21:25:47+00:00",
+  "updated_at": "2026-09-27T21:37:52+00:00",
   "products": {
     "op17": {
       "history": [
@@ -25994,8 +25994,9 @@
     "roi_pct": -21.7,
     "fee_pct": 13.25,
     "by_category": {
-      "sealed": 1313.26,
-      "unsorted": 796.24,
+      "sealed": 1399.65,
+      "unsorted": 619.16,
+      "other-tcg": 90.69,
       "supplies": 72.03,
       "breaks": 54.47,
       "events": 32.4,
@@ -26004,11 +26005,11 @@
     },
     "by_tag": {
       "unsorted": {
-        "spent": 796.24,
+        "spent": 619.16,
         "planned": 0.0,
         "realised": 0.0,
         "held": 0.0,
-        "net": -796.24
+        "net": -619.16
       },
       "op16": {
         "spent": 465.04,
@@ -26016,6 +26017,20 @@
         "realised": 0.0,
         "held": 59.16,
         "net": -405.88
+      },
+      "other-tcg": {
+        "spent": 90.69,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 0.0,
+        "net": -90.69
+      },
+      "op-promo": {
+        "spent": 86.39,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 0.0,
+        "net": -86.39
       },
       "whatnot": {
         "spent": 85.46,
@@ -27143,18 +27158,26 @@
       },
       {
         "date": "2026-09-19",
-        "item": "GameStop \u2014 09/19 (contents not recorded)",
-        "category": "unsorted",
-        "amount": 102.58,
-        "tag": "unsorted",
+        "item": "One Piece Illustration Box Vol.8 \u2014 Kid & Killer (2 promos + 4 packs)",
+        "category": "sealed",
+        "amount": 86.39,
+        "tag": "op-promo",
+        "planned": false
+      },
+      {
+        "date": "2026-09-19",
+        "item": "Pokemon First Partner Illustration Collection Series 2",
+        "category": "other-tcg",
+        "amount": 16.19,
+        "tag": "other-tcg",
         "planned": false
       },
       {
         "date": "2026-09-24",
-        "item": "GameStop \u2014 09/24 (contents not recorded)",
-        "category": "unsorted",
+        "item": "Pokemon tin + Topps Chrome pack",
+        "category": "other-tcg",
         "amount": 74.5,
-        "tag": "unsorted",
+        "tag": "other-tcg",
         "planned": false
       }
     ],

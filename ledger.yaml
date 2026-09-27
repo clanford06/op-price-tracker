@@ -337,17 +337,37 @@ expenses:
     # The fee was 110% of the item. Any Canadian Whatnot seller costs roughly
     # double sticker by the time it lands -- treat CA prices as 2x, not 0.72x.
 
+  # GameStop 09/19, $102.58, split 2026-09-27 from Carter's recollection:
+  # a One Piece Illustration Box (Kid/Killer) plus a Pokemon First Partner
+  # Illustration Collection Series 2. Only the first is One Piece.
+  #
+  # ASSUMED SPLIT, worth checking against the receipt: the Pokemon collection
+  # has a published $14.99 MSRP, so it is booked at $14.99 plus Georgia sales
+  # tax and the Illustration Box takes the remainder. If the receipt disagrees,
+  # only these two lines move.
   - date: 2026-09-19
-    item: "GameStop — 09/19 (contents not recorded)"
-    category: "unsorted"
-    amount: 102.58
-    tag: "unsorted"
+    item: "One Piece Illustration Box Vol.8 — Kid & Killer (2 promos + 4 packs)"
+    category: "sealed"
+    amount: 86.39
+    tag: "op-promo"
+    # NOT YET IN THE COLLECTION. The app export has no Kid/Killer promos, so
+    # either this is unopened or the pulls were never added. Until they are,
+    # this $86.39 is a cost with nothing held against it.
+
+  - date: 2026-09-19
+    item: "Pokemon First Partner Illustration Collection Series 2"
+    category: "other-tcg"
+    amount: 16.19
+    tag: "other-tcg"
 
   - date: 2026-09-24
-    item: "GameStop — 09/24 (contents not recorded)"
-    category: "unsorted"
+    item: "Pokemon tin + Topps Chrome pack"
+    category: "other-tcg"
     amount: 74.50
-    tag: "unsorted"
+    tag: "other-tcg"
+    # Nothing One Piece in this trip. Kept in the ledger because the money left
+    # the account, but tagged out of the One Piece position -- its cards are not
+    # in the One Piece collection, so counting it there only distorts the ROI.
 
   # <<ADD_EXPENSES_HERE>>
 
