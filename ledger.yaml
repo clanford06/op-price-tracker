@@ -206,7 +206,7 @@ expenses:
     # holding, so this is a straight loss and will read as one.
 
   - date: 2026-08-30        # purchase date per the bank; posted 08/31
-    item: "Whatnot break — Yassop slot (accidental buy, app since deleted)"
+    item: "Whatnot — OP17 + Enigma HGT repack (accidental buy, app since deleted)"
     category: "breaks"
     amount: 26.43            # was 27.00 from memory; bank says 26.43
     tag: "whatnot"
@@ -272,11 +272,12 @@ expenses:
     tag: "unsorted"
 
   - date: 2026-09-16
-    item: "Whatnot — 09/16"
+    item: "Whatnot — singles/promos packs, CA$39 from a Canadian seller"
     category: "breaks"
     amount: 28.04
     tag: "whatnot"
     # Second Whatnot charge AFTER the app was deleted on 08/29. Worth knowing.
+    # Delivered 09/22. Add $30.99 of UPS brokerage below for the true cost.
 
   - date: 2026-09-20
     item: "Prime Time Gaming — 09/20 (contents not recorded)"
@@ -313,14 +314,20 @@ expenses:
     # and stays tagged pokemon. This shop sells both -- do not auto-classify it.
 
   - date: 2026-09-18
-    item: "Customs brokerage fee on an imported order"
+    item: "UPS customs brokerage on the 09/16 Whatnot import"
     category: "shipping"
     amount: 30.99
-    tag: "unsorted"
-    # A customs fee means something crossed a border, and the ORDER ITSELF is
-    # not in this ledger -- no matching purchase appears on the statement, so
-    # it was paid some other way. Worth chasing: this fee implies a cost that
-    # is still missing.
+    tag: "whatnot"
+    # RESOLVED 2026-09-27 from Carter's Whatnot history. No cost was missing:
+    # the 09/16 Whatnot purchase was CA$39 from a CANADIAN seller, so the
+    # parcel cleared customs and UPS billed brokerage separately.
+    #
+    # Read the two lines together, because neither is the real price:
+    #     item       CA$39  ->  $28.04
+    #     brokerage             $30.99
+    #     ACTUAL COST          $59.03   for a CA$39 singles/promos pack
+    # The fee was 110% of the item. Any Canadian Whatnot seller costs roughly
+    # double sticker by the time it lands -- treat CA prices as 2x, not 0.72x.
 
   - date: 2026-09-19
     item: "GameStop — 09/19 (contents not recorded)"

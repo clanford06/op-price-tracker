@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-27T21:18:47+00:00",
+  "updated_at": "2026-09-27T21:22:34+00:00",
   "products": {
     "op17": {
       "history": [
@@ -26004,11 +26004,11 @@
     },
     "by_tag": {
       "unsorted": {
-        "spent": 827.23,
+        "spent": 796.24,
         "planned": 0.0,
         "realised": 0.0,
         "held": 0.0,
-        "net": -827.23
+        "net": -796.24
       },
       "op16": {
         "spent": 465.04,
@@ -26016,6 +26016,13 @@
         "realised": 0.0,
         "held": 59.21,
         "net": -405.83
+      },
+      "whatnot": {
+        "spent": 85.46,
+        "planned": 0.0,
+        "realised": 0.0,
+        "held": 0.0,
+        "net": -85.46
       },
       "supplies": {
         "spent": 65.57,
@@ -26030,13 +26037,6 @@
         "realised": 78.35,
         "held": 0.0,
         "net": -61.04
-      },
-      "whatnot": {
-        "spent": 54.47,
-        "planned": 0.0,
-        "realised": 0.0,
-        "held": 0.0,
-        "net": -54.47
       },
       "pokemon": {
         "spent": 32.4,
@@ -26910,7 +26910,7 @@
       },
       {
         "date": "2026-08-30",
-        "item": "Whatnot break \u2014 Yassop slot (accidental buy, app since deleted)",
+        "item": "Whatnot \u2014 OP17 + Enigma HGT repack (accidental buy, app since deleted)",
         "category": "breaks",
         "amount": 26.43,
         "tag": "whatnot",
@@ -26966,7 +26966,7 @@
       },
       {
         "date": "2026-09-16",
-        "item": "Whatnot \u2014 09/16",
+        "item": "Whatnot \u2014 singles/promos packs, CA$39 from a Canadian seller",
         "category": "breaks",
         "amount": 28.04,
         "tag": "whatnot",
@@ -27006,10 +27006,10 @@
       },
       {
         "date": "2026-09-18",
-        "item": "Customs brokerage fee on an imported order",
+        "item": "UPS customs brokerage on the 09/16 Whatnot import",
         "category": "shipping",
         "amount": 30.99,
-        "tag": "unsorted",
+        "tag": "whatnot",
         "planned": false
       },
       {
