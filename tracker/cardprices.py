@@ -70,13 +70,26 @@ class Quote:
     listed_median: float | None = None
     error: str = ""
 
+    wanted: str = ""          # printing the holding actually is, if known
+
     @property
     def price(self) -> float | None:
-        """Foil market, or Normal for the few cards with no foil printing."""
+        """The market price of the printing Carter owns.
+
+        With no stated printing this falls back to foil-first, which is right
+        for One Piece where essentially every hit is foil. With one stated, the
+        answer is exact and never guesses across printings.
+        """
+        if self.wanted == "Normal":
+            return self.normal_market
+        if self.wanted == "Foil":
+            return self.foil_market
         return self.foil_market if self.foil_market is not None else self.normal_market
 
     @property
     def printing(self) -> str:
+        if self.wanted:
+            return self.wanted.lower()
         if self.foil_market is not None:
             return "foil"
         return "normal" if self.normal_market is not None else ""
@@ -100,7 +113,19 @@ def _session() -> requests.Session:
     return s
 
 
-def quote(pid: int, session: requests.Session | None = None) -> Quote:
+# The endpoint only ever splits Normal from Foil, but the app labels printings
+# far more finely -- Normal, 1st Edition, Unlimited, Holofoil, Reverse Holofoil,
+# Unlimited Holofoil. Everything that is not a holo/foil variant is priced off
+# Normal. Getting this wrong is not a rounding error: Carter's Clefairy 101/165
+# is a Normal at $11.43 and the Foil of the same product is $79.69, so
+# preferring foil overstated it sevenfold.
+def wanted_printing(app_printing: str) -> str:
+    p = (app_printing or "").lower()
+    return "Foil" if ("holo" in p or "foil" in p) else "Normal"
+
+
+def quote(pid: int, session: requests.Session | None = None,
+          printing: str = "") -> Quote:
     s = session or _session()
     try:
         r = s.get(PRICEPOINTS.format(pid=pid), timeout=25)
@@ -116,6 +141,7 @@ def quote(pid: int, session: requests.Session | None = None) -> Quote:
         foil_market=foil.get("marketPrice"),
         normal_market=normal.get("marketPrice"),
         listed_median=foil.get("listedMedianPrice") or normal.get("listedMedianPrice"),
+        wanted=wanted_printing(printing) if printing else "",
     )
     if q.price is None:
         # A live product with no market price has not sold yet -- normal for a
@@ -157,6 +183,7 @@ class RefreshResult:
     applied: int = 0
     failed: int = 0
     rejected: list[str] = field(default_factory=list)
+    held_by_condition: list[str] = field(default_factory=list)
 
 
 def refresh(ledger, *, verbose: bool = True) -> RefreshResult:
@@ -167,7 +194,14 @@ def refresh(ledger, *, verbose: bool = True) -> RefreshResult:
     for h in ledger.holdings:
         if not h.tcgplayer_id:
             continue
-        q = quote(h.tcgplayer_id, session)
+        # The endpoint quotes NEAR MINT. Carter's four non-NM cards are worth
+        # $721 between them -- a Damaged vintage holo is a fraction of its NM
+        # price, so refreshing them from an NM quote would inflate the position
+        # by hundreds. Those keep the condition-specific price from the export.
+        if h.condition and h.condition.split(" -")[0] != "Near Mint":
+            out.held_by_condition.append(f"{h.name} ({h.condition})")
+            continue
+        q = quote(h.tcgplayer_id, session, printing=h.printing)
         unit = q.price
         was = h.estimate
         row = {**q.as_dict(), "name": h.name, "qty": h.qty,
@@ -214,7 +248,8 @@ def write(path: Path, result: RefreshResult) -> None:
         {"schema": 1, "updated_at": utc_now_iso(), "source": "tcgplayer price points",
          "basis": "foil market price, or normal where the card has no foil printing",
          "applied": result.applied, "failed": result.failed,
-         "rejected": result.rejected, "cards": result.cards},
+         "rejected": result.rejected,
+         "held_by_condition": result.held_by_condition, "cards": result.cards},
         indent=2) + "\n", encoding="utf-8")
 
 

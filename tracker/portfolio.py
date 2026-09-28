@@ -69,6 +69,17 @@ class Holding:
     raw card's and would be badly understated by it.
     """
     qty: int = 1              # `estimate` is the total for all copies
+    printing: str = ""        # app's printing label: Normal, Holofoil, 1st Edition...
+    condition: str = ""       # Near Mint, Lightly Played, Damaged...
+    owned_share: float = 1.0
+    """The fraction of this card Carter actually owns.
+
+    Most of the Pokemon collection is split 50/50 with his brother. The card is
+    still worth what it is worth, so `estimate` stays at full market and this
+    scales what reaches the position -- otherwise either the card's value or
+    his stake in it would have to be a lie. Fees come off the whole sale first,
+    then the split: a $100 card nets $86.75 and he keeps $43.37.
+    """
     liquid: bool = False
     """Already cash, so no selling fee applies.
 
@@ -135,6 +146,15 @@ class Ledger:
 
     @property
     def unrealised_gross(self) -> float:
+        """Market value of Carter's STAKE, not of the cards.
+
+        A shelf full of half-owned cards is not a position worth its sticker.
+        """
+        return round(sum((h.estimate or 0.0) * h.owned_share for h in self.holdings), 2)
+
+    @property
+    def unrealised_gross_all(self) -> float:
+        """Sticker value of everything on the shelf, including other people's halves."""
         return round(sum(h.estimate or 0.0 for h in self.holdings), 2)
 
     def net_if_sold(self, gross: float) -> float:
@@ -147,7 +167,8 @@ class Ledger:
         """What this holding is actually worth to you if converted today."""
         if h.estimate is None:
             return 0.0
-        return h.estimate if h.liquid else self.net_if_sold(h.estimate)
+        gross = h.estimate if h.liquid else self.net_if_sold(h.estimate)
+        return round(gross * h.owned_share, 2)
 
     @property
     def unrealised_net(self) -> float:
@@ -224,7 +245,10 @@ class Ledger:
 
     @property
     def collection_stale_days(self) -> int | None:
-        return self._age_days(self.collection_synced)
+        """Age of the OLDEST collection sync -- one stale list is enough."""
+        dates = [d for d in self.collection_synced.split(",") if d.strip()]
+        ages = [a for a in (self._age_days(d.strip()) for d in dates) if a is not None]
+        return max(ages) if ages else None
 
     def unpriced(self) -> list[Holding]:
         return [h for h in self.holdings if h.estimate is None]
@@ -244,6 +268,7 @@ class Ledger:
             "committed": self.committed,
             "realised": self.realised,
             "unrealised_gross": self.unrealised_gross,
+            "unrealised_gross_all": self.unrealised_gross_all,
             "unrealised_net": self.unrealised_net,
             "position_gross": self.position_gross,
             "position_net": self.position_net,
@@ -268,6 +293,7 @@ class Ledger:
                     "source": h.source,
                     "note": h.note,
                     "qty": h.qty,
+                    "owned_share": h.owned_share,
                     "estimate_source": h.estimate_source,
                     "estimate_manual": h.estimate_manual,
                     "tcgplayer_id": h.tcgplayer_id,
@@ -311,7 +337,7 @@ def load_ledger(path: Path, *, live: bool = True) -> Ledger:
         sales=[Sale(**_sale(s)) for s in (doc.get("sales") or [])],
         fee_pct=float(settings.get("fee_pct", DEFAULT_FEE_PCT)),
         fee_flat=float(settings.get("fee_flat", DEFAULT_FEE_FLAT)),
-        collection_synced=str(settings.get("collection_synced", "")),
+        collection_synced=_synced(settings.get("collection_synced")),
     )
     if live:
         from .cardprices import apply_to
@@ -320,6 +346,13 @@ def load_ledger(path: Path, *, live: bool = True) -> Ledger:
         ledger.card_prices_applied = apply_to(ledger, DEFAULT_CARD_PRICES)
         ledger.card_prices_at = _card_prices_stamp(DEFAULT_CARD_PRICES)
     return ledger
+
+
+def _synced(raw: Any) -> str:
+    """Accepts a single date or a per-collection mapping; keeps them all."""
+    if isinstance(raw, dict):
+        return ",".join(str(v) for v in raw.values() if v)
+    return str(raw or "")
 
 
 def _card_prices_stamp(path: Path) -> str:
@@ -361,6 +394,9 @@ def _holding(raw: dict) -> dict:
         "tag": str(raw.get("tag", "")),
         "tcgplayer_id": int(raw["tcgplayer_id"]) if raw.get("tcgplayer_id") else None,
         "qty": int(raw.get("qty", 1)),
+        "printing": str(raw.get("printing", "")),
+        "condition": str(raw.get("condition", "")),
+        "owned_share": float(raw.get("owned_share", 1.0)),
         "liquid": bool(raw.get("liquid", False)),
         "scenarios": list(raw.get("scenarios") or []),
     }
@@ -443,6 +479,8 @@ def report(ledger: Ledger) -> None:
         est = _money(h.estimate) if h.estimate is not None else "unpriced"
         net = f"→ {_money(ledger.net_of(h))} net" if h.estimate else ""
         src = "TCG" if h.estimate_source == "tcgplayer" else "   "
+        if h.owned_share != 1:
+            est = f"{est} ({h.owned_share:.0%})"
         print(f"    {h.name[:38]:<38} {est:>10} {net:<18} {src} [{h.status}]")
         # Booked at the floor, so say out loud what the other branches are
         # worth. Hiding them makes the floor look like a valuation.

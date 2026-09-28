@@ -269,18 +269,24 @@ def main(argv: list[str] | None = None) -> int:
 
         led_path = args.ledger or DEFAULT_LEDGER
         before = load_ledger(led_path)
-        graded = set((yaml.safe_load(Path(led_path).read_text()).get("settings") or {})
-                     .get("graded_product_ids") or [])
+        st = yaml.safe_load(Path(led_path).read_text()).get("settings") or {}
+        graded = set(st.get("graded_product_ids") or [])
         try:
-            res = import_into(Path(led_path), args.import_collection, graded=graded)
+            res = import_into(Path(led_path), args.import_collection, graded=graded,
+                              ownership=st.get("ownership") or {},
+                              tags=st.get("collection_tags") or {})
         except (CollectionError, OSError) as exc:
             print(f"{exc}", file=sys.stderr)
             return 2
 
         after = load_ledger(led_path)
         m_ = lambda v: ("-$" if v < 0 else "$") + f"{abs(v):,.2f}"
-        print(f"Imported {res['lines']} lines / {res['copies']} copies "
-              f"= {m_(res['value'])} at app market.\n")
+        print(f"{res['product_line']}: {res['lines']} lines / {res['copies']} copies "
+              f"= {m_(res['value'])} at app market.")
+        if res["shared"]:
+            print(f"  {len(res['shared'])} line(s) are part-owned — "
+                  f"{m_(res['mine'])} of that is actually yours.")
+        print()
         for r in res["skipped"]:
             print(f"  kept manual: {r.number or r.name} — app says {m_(r.value)} raw, "
                   f"ledger keeps the graded value")

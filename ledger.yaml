@@ -23,7 +23,34 @@ settings:
   # whenever the collection is re-synced. The dashboard and the reminder job
   # both read it, because a stale collection understates the position exactly
   # as badly as a stale expense list overstates it.
-  collection_synced: 2026-09-27
+  collection_synced:
+    one-piece-card-game: 2026-09-28
+    pokemon: 2026-09-28
+    yugioh: 2026-09-28
+
+  # Which tag each product line's holdings roll up under. One Piece is left
+  # blank so it keeps its per-set tags (op17, st32, ...) and its own P/L.
+  collection_tags:
+    Pokemon: pokemon
+    Pokemon Japan: pokemon
+    YuGiOh: yugioh
+
+  # WHO ACTUALLY OWNS IT. Most of the Pokemon collection is 50/50 with Carter's
+  # brother, so only half of it may reach the position -- otherwise the ledger
+  # claims money that is not his to claim. The cards stay at full market value
+  # and `owned_share` carries the split, because discounting the card instead
+  # would misstate what the card is worth.
+  #
+  # The 30th anniversary product is his alone; he bought it himself. Yu-Gi-Oh
+  # and One Piece are wholly his and need no rule.
+  ownership:
+    Pokemon:
+      share: 0.5
+      full_share_sets:
+        - "ME: 30th Celebration"        # prefix, so it also covers
+                                        # "ME: 30th Celebration Classic Collection"
+    Pokemon Japan:
+      share: 0.5
 
   # Product ids that must NEVER be imported from the app export. Carter tracks
   # his slabs in the app next to everything else, but the app prices the RAW
@@ -521,14 +548,1387 @@ holdings:
     status: owned
     note: "The app list is Carter's ~51 best cards; he confirmed a lot was left out. This covers the OP-16 and OP-17 commons/uncommons, the 4th Anniversary Rainbow Luffy Leader, and the small hits. Unpriced on purpose rather than valued at zero — the report flags it so the position is known to be understated, not silently wrong."
 
+  # <<COLLECTION:pokemon START>>
+  # GENERATED from the TCGplayer app export. Do not hand-edit: the next
+  # --import-collection run overwrites everything between these markers.
+  # Anything that must survive a re-import belongs ABOVE the start marker.
+  #
+  # Export Pokémon_092826_101217.csv -- 99 lines, 101 copies, $1,760.85 at app market.
+  # Carter's stake is $902.40; the rest belongs to someone else and is
+  # carried as owned_share below rather than by discounting the card.
+  # `estimate` here is the app's market price at export time; the twice-daily
+  # price job re-quotes it from the same product id and takes over from there.
+
+  - id: 97-99-90743
+    name: "97/99 Zekrom EX (97 Full Art)"
+    status: owned
+    tcgplayer_id: 90743
+    estimate: 269.98
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Next Destinies · Ultra Rare · Holofoil · Near Mint"
+
+  - id: sl10-88629
+    name: "SL10 Rayquaza (Shiny)"
+    status: owned
+    tcgplayer_id: 88629
+    estimate: 269.56
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Damaged"
+    tag: "pokemon"
+    source: "Call of Legends · Shiny Holo Rare · Holofoil · Damaged"
+
+  - id: sl5-86127
+    name: "SL5 Ho-Oh (Shiny)"
+    status: owned
+    tcgplayer_id: 86127
+    estimate: 266.66
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Lightly Played"
+    tag: "pokemon"
+    source: "Call of Legends · Shiny Holo Rare · Holofoil · Lightly Played"
+
+  - id: 001-110-83496
+    name: "001/110 Alakazam"
+    status: owned
+    tcgplayer_id: 83496
+    estimate: 165.00
+    owned_share: 0.5
+    printing: "Reverse Holofoil"
+    condition: "Damaged"
+    tag: "pokemon"
+    source: "Legendary Collection · Holo Rare · Reverse Holofoil · Damaged"
+
+  - id: ar4-83595
+    name: "AR4 Arceus (AR4)"
+    status: owned
+    tcgplayer_id: 83595
+    estimate: 53.98
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Arceus · Holo Rare · Holofoil · Near Mint"
+
+  - id: ar9-83600
+    name: "AR9 Arceus (AR9)"
+    status: owned
+    tcgplayer_id: 83600
+    estimate: 45.42
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Arceus · Holo Rare · Holofoil · Near Mint"
+
+  - id: 042-102-107039
+    name: "042/102 Wartortle"
+    status: owned
+    tcgplayer_id: 107039
+    estimate: 37.76
+    owned_share: 0.5
+    printing: "Unlimited"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Base Set (Shadowless) · Uncommon · Unlimited · Near Mint"
+
+  - id: 010-123-213011
+    name: "010/123 Raichu - 10/123 (Cracked Ice Holo)"
+    status: owned
+    tcgplayer_id: 213011
+    estimate: 36.77
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Deck Exclusives · Holo Rare · Holofoil · Near Mint"
+
+  - id: 12-127-87917
+    name: "12/127 Palkia G"
+    status: owned
+    tcgplayer_id: 87917
+    estimate: 32.61
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Platinum · Holo Rare · Holofoil · Near Mint"
+
+  - id: 54-99-87429
+    name: "54/99 Mewtwo EX"
+    status: owned
+    tcgplayer_id: 87429
+    estimate: 31.52
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Next Destinies · Ultra Rare · Holofoil · Near Mint"
+
+  - id: 020-123-153258
+    name: "020/123 Feraligatr - 20/123 (Cracked Ice Holo)"
+    status: owned
+    tcgplayer_id: 153258
+    estimate: 29.08
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Deck Exclusives · Holo Rare · Holofoil · Near Mint"
+
+  - id: 100-102-716200
+    name: "100/102 Darkrai & Cresselia Legend (Bottom)"
+    status: owned
+    tcgplayer_id: 716200
+    estimate: 27.55
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "ME: 30th Celebration Classic Collection · Classic Collection · Holofoil · Near Mint"
+
+  - id: 05-64-45131
+    name: "05/64 Kangaskhan (5)"
+    status: owned
+    tcgplayer_id: 45131
+    estimate: 23.98
+    owned_share: 0.5
+    printing: "Unlimited Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Jungle · Holo Rare · Unlimited Holofoil · Near Mint"
+
+  - id: 45-82-84665
+    name: "45/82 Dark Vaporeon"
+    status: owned
+    tcgplayer_id: 84665
+    estimate: 23.14
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Team Rocket · Uncommon · 1st Edition · Near Mint"
+
+  - id: 056-088-576191
+    name: "056/088 Kabuto"
+    status: owned
+    tcgplayer_id: 576191
+    estimate: 20.32
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint - Japanese"
+    tag: "pokemon"
+    source: "Split Earth · Common · 1st Edition · Near Mint - Japanese"
+
+  - id: 033-165-83500
+    name: "033/165 Alakazam (33)"
+    status: owned
+    tcgplayer_id: 83500
+    estimate: 19.23
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Expedition · Rare · Normal · Near Mint"
+
+  - id: 069-132-85298
+    name: "069/132 Erika's Jigglypuff"
+    status: owned
+    tcgplayer_id: 85298
+    estimate: 17.52
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Challenge · Common · 1st Edition · Near Mint"
+
+  - id: 104-132-89896
+    name: "104/132 The Rocket's Training Gym"
+    status: owned
+    tcgplayer_id: 89896
+    estimate: 16.77
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Heroes · Rare · 1st Edition · Near Mint"
+
+  - id: 098-130-220665
+    name: "098/130 Shinx - 98/130 [Diamond & Pearl]"
+    status: owned
+    tcgplayer_id: 220665
+    estimate: 16.51
+    owned_share: 0.5
+    printing: "Reverse Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Burger King Promos · Promo · Reverse Holofoil · Near Mint"
+
+  - id: 026-132-86513
+    name: "026/132 Koga's Muk"
+    status: owned
+    tcgplayer_id: 86513
+    estimate: 16.48
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Challenge · Rare · 1st Edition · Near Mint"
+
+  - id: 50-62-44452
+    name: "50/62 Kabuto"
+    status: owned
+    tcgplayer_id: 44452
+    estimate: 15.20
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Fossil · Common · 1st Edition · Near Mint"
+
+  - id: 038-105-84642
+    name: "038/105 Dark Pupitar"
+    status: owned
+    tcgplayer_id: 84642
+    estimate: 15.12
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Neo Destiny · Uncommon · 1st Edition · Near Mint"
+
+  - id: 057-132-87551
+    name: "057/132 Misty's Tentacool (57)"
+    status: owned
+    tcgplayer_id: 87551
+    estimate: 14.27
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Heroes · Uncommon · 1st Edition · Near Mint"
+
+  - id: 094-132-88865
+    name: "094/132 Sabrina's Abra (94)"
+    status: owned
+    tcgplayer_id: 88865
+    estimate: 13.78
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Challenge · Common · 1st Edition · Near Mint"
+
+  - id: 101-165-84353
+    name: "101/165 Clefairy"
+    status: owned
+    tcgplayer_id: 84353
+    estimate: 11.43
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Expedition · Common · Normal · Near Mint"
+
+  - id: 057-105-90201
+    name: "057/105 Unown [C]"
+    status: owned
+    tcgplayer_id: 90201
+    estimate: 11.33
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Neo Destiny · Uncommon · 1st Edition · Near Mint"
+
+  - id: 054-132-87539
+    name: "054/132 Misty's Psyduck"
+    status: owned
+    tcgplayer_id: 87539
+    estimate: 11.28
+    owned_share: 0.5
+    printing: "Unlimited"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Heroes · Uncommon · Unlimited · Near Mint"
+
+  - id: 084-132-86860
+    name: "084/132 Lt. Surge's Pikachu"
+    status: owned
+    tcgplayer_id: 86860
+    estimate: 11.09
+    owned_share: 0.5
+    printing: "Unlimited"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Challenge · Common · Unlimited · Near Mint"
+
+  - id: 45-64-45148
+    name: "45/64 Rhydon"
+    status: owned
+    tcgplayer_id: 45148
+    estimate: 10.96
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Jungle · Uncommon · 1st Edition · Near Mint"
+
+  - id: 080-132-86517
+    name: "080/132 Koga's Pidgey (80)"
+    status: owned
+    tcgplayer_id: 86517
+    estimate: 9.60
+    qty: 2
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Challenge · Common · 1st Edition · Near Mint"
+
+  - id: 32-82-84574
+    name: "32/82 Dark Charmeleon"
+    status: owned
+    tcgplayer_id: 84574
+    estimate: 9.56
+    owned_share: 0.5
+    printing: "Unlimited"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Team Rocket · Uncommon · Unlimited · Near Mint"
+
+  - id: 063-132-83877
+    name: "063/132 Blaine's Ponyta"
+    status: owned
+    tcgplayer_id: 83877
+    estimate: 9.05
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Heroes · Common · 1st Edition · Near Mint"
+
+  - id: 135-128-716223
+    name: "135/128 Morpeko - 135/128"
+    status: owned
+    tcgplayer_id: 716223
+    estimate: 9.04
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "ME: 30th Celebration · Illustration Rare · Holofoil · Near Mint"
+
+  - id: 101-107-477864
+    name: "101/107 Manectric ex - 2006 (Jason Klaczynski)"
+    status: owned
+    tcgplayer_id: 477864
+    estimate: 9.04
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "World Championship Decks · Ultra Rare · Normal · Near Mint"
+
+  - id: 41-99-90721
+    name: "41/99 Zapdos"
+    status: owned
+    tcgplayer_id: 90721
+    estimate: 9.00
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Next Destinies · Holo Rare · Holofoil · Near Mint"
+
+  - id: bw63-90590
+    name: "BW63 White Kyurem EX - BW63"
+    status: owned
+    tcgplayer_id: 90590
+    estimate: 8.03
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Black and White Promos · Promo · Holofoil · Near Mint"
+
+  - id: 48-64-45151
+    name: "48/64 Weepinbell"
+    status: owned
+    tcgplayer_id: 45151
+    estimate: 7.34
+    qty: 2
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Jungle · Uncommon · 1st Edition · Near Mint"
+
+  - id: 121-165-87315
+    name: "121/165 Meowth"
+    status: owned
+    tcgplayer_id: 87315
+    estimate: 7.10
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Expedition · Common · Normal · Near Mint"
+
+  - id: 109-132-85300
+    name: "109/132 Erika's Maids"
+    status: owned
+    tcgplayer_id: 85300
+    estimate: 6.74
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Heroes · Uncommon · 1st Edition · Near Mint"
+
+  - id: 47-64-45150
+    name: "47/64 Tauros"
+    status: owned
+    tcgplayer_id: 45150
+    estimate: 6.31
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Jungle · Uncommon · 1st Edition · Near Mint"
+
+  - id: 098-132-88885
+    name: "098/132 Sabrina's Porygon"
+    status: owned
+    tcgplayer_id: 88885
+    estimate: 6.06
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Challenge · Common · 1st Edition · Near Mint"
+
+  - id: 068-105-85952
+    name: "068/105 Growlithe"
+    status: owned
+    tcgplayer_id: 85952
+    estimate: 5.92
+    owned_share: 0.5
+    printing: "Unlimited"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Neo Destiny · Common · Unlimited · Near Mint"
+
+  - id: 89-124-85601
+    name: "89/124 Gabite (89)"
+    status: owned
+    tcgplayer_id: 85601
+    estimate: 5.75
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Dragons Exalted · Uncommon · Normal · Near Mint"
+
+  - id: 95-135-83854
+    name: "95/135 Black Kyurem EX"
+    status: owned
+    tcgplayer_id: 83854
+    estimate: 5.60
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Plasma Storm · Ultra Rare · Holofoil · Near Mint"
+
+  - id: 56-64-45159
+    name: "56/64 Meowth"
+    status: owned
+    tcgplayer_id: 45159
+    estimate: 5.50
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Jungle · Common · 1st Edition · Near Mint"
+
+  - id: 42-82-84639
+    name: "42/82 Dark Persian"
+    status: owned
+    tcgplayer_id: 84639
+    estimate: 5.16
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Team Rocket · Uncommon · 1st Edition · Near Mint"
+
+  - id: 44-107-477892
+    name: "44/107 Plusle - 2006 (Hiroki Yano)"
+    status: owned
+    tcgplayer_id: 477892
+    estimate: 5.02
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "World Championship Decks · Uncommon · Normal · Near Mint"
+
+  - id: 74-101-86591
+    name: "74/101 Landorus"
+    status: owned
+    tcgplayer_id: 86591
+    estimate: 4.98
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Noble Victories · Holo Rare · Holofoil · Near Mint"
+
+  - id: 042-102-42385
+    name: "042/102 Wartortle"
+    status: owned
+    tcgplayer_id: 42385
+    estimate: 4.76
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Base Set · Uncommon · Normal · Near Mint"
+
+  - id: 137-128-716224
+    name: "137/128 Chandelure - 137/128"
+    status: owned
+    tcgplayer_id: 716224
+    estimate: 4.63
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "ME: 30th Celebration · Illustration Rare · Holofoil · Near Mint"
+
+  - id: 034-132-83968
+    name: "034/132 Brock's Graveler"
+    status: owned
+    tcgplayer_id: 83968
+    estimate: 4.62
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Challenge · Uncommon · 1st Edition · Near Mint"
+
+  - id: 55-64-89411
+    name: "55/64 Snubbull"
+    status: owned
+    tcgplayer_id: 89411
+    estimate: 4.38
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Neo Revelation · Common · 1st Edition · Near Mint"
+
+  - id: 119-165-87196
+    name: "119/165 Mareep"
+    status: owned
+    tcgplayer_id: 87196
+    estimate: 4.08
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Expedition · Common · Normal · Near Mint"
+
+  - id: 088-105-90234
+    name: "088/105 Unown [T]"
+    status: owned
+    tcgplayer_id: 90234
+    estimate: 3.73
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Neo Destiny · Common · 1st Edition · Near Mint"
+
+  - id: 036-102-42378
+    name: "036/102 Magmar"
+    status: owned
+    tcgplayer_id: 42378
+    estimate: 3.45
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Base Set · Uncommon · Normal · Near Mint"
+
+  - id: 63-95-89832
+    name: "63/95 Team Magma's Houndour - 63/95"
+    status: owned
+    tcgplayer_id: 89832
+    estimate: 3.35
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "EX Team Magma vs Team Aqua · Common · Normal · Near Mint"
+
+  - id: 26-160-95918
+    name: "26/160 Torchic (Omega)"
+    status: owned
+    tcgplayer_id: 95918
+    estimate: 3.28
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "XY - Primal Clash · Uncommon · Normal · Near Mint"
+
+  - id: 98-123-88220
+    name: "98/123 Pokemon Communication"
+    status: owned
+    tcgplayer_id: 88220
+    estimate: 3.16
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "HeartGold SoulSilver · Uncommon · Normal · Near Mint"
+
+  - id: 077-132-85293
+    name: "077/132 Erika's Exeggcute (77)"
+    status: owned
+    tcgplayer_id: 85293
+    estimate: 3.13
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Heroes · Common · 1st Edition · Near Mint"
+
+  - id: 037-102-42379
+    name: "037/102 Nidorino"
+    status: owned
+    tcgplayer_id: 42379
+    estimate: 3.06
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Base Set · Uncommon · Normal · Near Mint"
+
+  - id: 038-111-86603
+    name: "038/111 Lanturn"
+    status: owned
+    tcgplayer_id: 86603
+    estimate: 2.83
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Neo Genesis · Uncommon · 1st Edition · Near Mint"
+
+  - id: 117-165-86991
+    name: "117/165 Machop"
+    status: owned
+    tcgplayer_id: 86991
+    estimate: 2.81
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Expedition · Common · Normal · Near Mint"
+
+  - id: 61-64-45164
+    name: "61/64 Rhyhorn"
+    status: owned
+    tcgplayer_id: 45164
+    estimate: 2.68
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Jungle · Common · 1st Edition · Near Mint"
+
+  - id: 082-132-86865
+    name: "082/132 Lt. Surge's Rattata"
+    status: owned
+    tcgplayer_id: 86865
+    estimate: 2.66
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Heroes · Common · 1st Edition · Near Mint"
+
+  - id: 076-132-85285
+    name: "076/132 Erika's Bellsprout (76)"
+    status: owned
+    tcgplayer_id: 85285
+    estimate: 2.55
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Gym Heroes · Common · 1st Edition · Near Mint"
+
+  - id: 94-135-84982
+    name: "94/135 Druddigon (Team Plasma)"
+    status: owned
+    tcgplayer_id: 84982
+    estimate: 2.37
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Plasma Storm · Rare · Normal · Near Mint"
+
+  - id: 53-110-89102
+    name: "53/110 Sharpedo (Delta Species)"
+    status: owned
+    tcgplayer_id: 89102
+    estimate: 2.37
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "EX Holon Phantoms · Uncommon · Normal · Near Mint"
+
+  - id: 57-64-45160
+    name: "57/64 Nidoran F"
+    status: owned
+    tcgplayer_id: 45160
+    estimate: 2.31
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Jungle · Common · 1st Edition · Near Mint"
+
+  - id: 82-116-84904
+    name: "82/116 Dragonair"
+    status: owned
+    tcgplayer_id: 84904
+    estimate: 2.07
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Plasma Freeze · Uncommon · Normal · Near Mint"
+
+  - id: 51-82-84649
+    name: "51/82 Dark Raticate"
+    status: owned
+    tcgplayer_id: 84649
+    estimate: 2.04
+    owned_share: 0.5
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Team Rocket · Common · 1st Edition · Near Mint"
+
+  - id: 062-098-173098
+    name: "062/098 Krookodile - 62/98 (BW Emerging Powers)"
+    status: owned
+    tcgplayer_id: 173098
+    estimate: 1.93
+    owned_share: 0.5
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Deck Exclusives · Holo Rare · Holofoil · Near Mint"
+
+  - id: 117-160-96015
+    name: "117/160 Bidoof (Alpha)"
+    status: owned
+    tcgplayer_id: 96015
+    estimate: 1.87
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "XY - Primal Clash · Uncommon · Normal · Near Mint"
+
+  - id: 57-101-87731
+    name: "57/101 Nidoran M (Delta Species)"
+    status: owned
+    tcgplayer_id: 87731
+    estimate: 1.37
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "EX Dragon Frontiers · Common · Normal · Near Mint"
+
+  - id: 58-75-87192
+    name: "58/75 Mareep"
+    status: owned
+    tcgplayer_id: 87192
+    estimate: 1.30
+    owned_share: 0.5
+    printing: "Unlimited"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Neo Discovery · Common · Unlimited · Near Mint"
+
+  - id: 048-102-42391
+    name: "048/102 Doduo"
+    status: owned
+    tcgplayer_id: 42391
+    estimate: 1.12
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Base Set · Common · Normal · Near Mint"
+
+  - id: 50-99-90735
+    name: "50/99 Zekrom"
+    status: owned
+    tcgplayer_id: 90735
+    estimate: 1.09
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Next Destinies · Rare · Normal · Near Mint"
+
+  - id: 114-130-106359
+    name: "114/130 Pokemon Center"
+    status: owned
+    tcgplayer_id: 106359
+    estimate: 1.05
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Base Set 2 · Uncommon · Normal · Near Mint"
+
+  - id: 065-128-716464
+    name: "065/128 Mew"
+    status: owned
+    tcgplayer_id: 716464
+    estimate: 1.00
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "ME: 30th Celebration · Rare · Holofoil · Near Mint"
+
+  - id: 064-128-716463
+    name: "064/128 Mewtwo ex - 064/128"
+    status: owned
+    tcgplayer_id: 716463
+    estimate: 0.96
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "ME: 30th Celebration · Double Rare · Holofoil · Near Mint"
+
+  - id: 21-99-88707
+    name: "21/99 Reshiram"
+    status: owned
+    tcgplayer_id: 88707
+    estimate: 0.96
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Next Destinies · Rare · Normal · Near Mint"
+
+  - id: 147-165-88353
+    name: "147/165 Power Charge"
+    status: owned
+    tcgplayer_id: 88353
+    estimate: 0.94
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Expedition · Uncommon · Normal · Near Mint"
+
+  - id: 090-130-42541
+    name: "090/130 Rhyhorn"
+    status: owned
+    tcgplayer_id: 42541
+    estimate: 0.86
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Base Set 2 · Common · Normal · Near Mint"
+
+  - id: 068-102-42413
+    name: "068/102 Vulpix"
+    status: owned
+    tcgplayer_id: 42413
+    estimate: 0.85
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Base Set · Common · Normal · Near Mint"
+
+  - id: 59-101-88456
+    name: "59/101 Pupitar (Delta Species)"
+    status: owned
+    tcgplayer_id: 88456
+    estimate: 0.66
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "EX Dragon Frontiers · Common · Normal · Near Mint"
+
+  - id: 22-39-89418
+    name: "22/39 Snubbull"
+    status: owned
+    tcgplayer_id: 89418
+    estimate: 0.60
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Kalos Starter Set · Common · Normal · Near Mint"
+
+  - id: 109-128-716502
+    name: "109/128 Salamence ex - 109/128"
+    status: owned
+    tcgplayer_id: 716502
+    estimate: 0.56
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "ME: 30th Celebration · Double Rare · Holofoil · Near Mint"
+
+  - id: 20-39-83847
+    name: "20/39 Bisharp"
+    status: owned
+    tcgplayer_id: 83847
+    estimate: 0.56
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Kalos Starter Set · Common · Normal · Near Mint"
+
+  - id: 67-99-86387
+    name: "67/99 Kabuto"
+    status: owned
+    tcgplayer_id: 86387
+    estimate: 0.53
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Arceus · Common · Normal · Near Mint"
+
+  - id: 86-99-84316
+    name: "86/99 Cilan"
+    status: owned
+    tcgplayer_id: 84316
+    estimate: 0.37
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Next Destinies · Uncommon · Normal · Near Mint"
+
+  - id: 090-102-42434
+    name: "090/102 Super Potion"
+    status: owned
+    tcgplayer_id: 42434
+    estimate: 0.35
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Base Set · Uncommon · Normal · Near Mint"
+
+  - id: 37-102-86583
+    name: "37/102 Lairon"
+    status: owned
+    tcgplayer_id: 86583
+    estimate: 0.33
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Triumphant · Uncommon · Normal · Near Mint"
+
+  - id: 91-108-84249
+    name: "91/108 Cheren"
+    status: owned
+    tcgplayer_id: 84249
+    estimate: 0.32
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Dark Explorers · Uncommon · Normal · Near Mint"
+
+  - id: 113-130-88764
+    name: "113/130 Rival"
+    status: owned
+    tcgplayer_id: 88764
+    estimate: 0.32
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Diamond and Pearl · Uncommon · Normal · Near Mint"
+
+  - id: 45-101-85834
+    name: "45/101 Golett"
+    status: owned
+    tcgplayer_id: 85834
+    estimate: 0.28
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Plasma Blast · Common · Normal · Near Mint"
+
+  - id: 80-101-85231
+    name: "80/101 Energy Retrieval"
+    status: owned
+    tcgplayer_id: 85231
+    estimate: 0.27
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Plasma Blast · Uncommon · Normal · Near Mint"
+
+  - id: 34-39-84507
+    name: "34/39 Crushing Hammer"
+    status: owned
+    tcgplayer_id: 84507
+    estimate: 0.26
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "Kalos Starter Set · Common · Normal · Near Mint"
+
+  - id: 17-108-124030
+    name: "17/108 Growlithe"
+    status: owned
+    tcgplayer_id: 124030
+    estimate: 0.26
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "XY - Evolutions · Common · Normal · Near Mint"
+
+  - id: grass-energy-2014-andrew-estrada-480873
+    name: "Grass Energy - 2014 (Andrew Estrada)"
+    status: owned
+    tcgplayer_id: 480873
+    estimate: 0.25
+    owned_share: 0.5
+    printing: "Normal"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "World Championship Decks · Common · Normal · Near Mint"
+
+  - id: 056-128-716456
+    name: "056/128 Zekrom"
+    status: owned
+    tcgplayer_id: 716456
+    estimate: 0.21
+    printing: "Holofoil"
+    condition: "Near Mint"
+    tag: "pokemon"
+    source: "ME: 30th Celebration · Rare · Holofoil · Near Mint"
+
+  # <<COLLECTION:pokemon END>>
+
+  # <<COLLECTION:yugioh START>>
+  # GENERATED from the TCGplayer app export. Do not hand-edit: the next
+  # --import-collection run overwrites everything between these markers.
+  # Anything that must survive a re-import belongs ABOVE the start marker.
+  #
+  # Export Yu-Gio_092826_101245.csv -- 26 lines, 27 copies, $179.45 at app market.
+  # Wholly his.
+  #
+  # `estimate` here is the app's market price at export time; the twice-daily
+  # price job re-quotes it from the same product id and takes over from there.
+
+  - id: jmps-en003-136643
+    name: "JMPS-EN003 Dark Magician (JMPS-EN003)"
+    status: owned
+    tcgplayer_id: 136643
+    estimate: 142.51
+    printing: "Limited"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Shonen Jump Magazine Promos · Ultra Rare · Limited · Near Mint"
+
+  - id: mamo-en008-714716
+    name: "MAMO-EN008 Starjunk Synchron (Extended Art)"
+    status: owned
+    tcgplayer_id: 714716
+    estimate: 24.42
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en007-714713
+    name: "MAMO-EN007 Stardust Dragon - Victim Sanctuary"
+    status: owned
+    tcgplayer_id: 714713
+    estimate: 2.00
+    qty: 2
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en028-714636
+    name: "MAMO-EN028 W:P Fancy Ball (Secret Rare)"
+    status: owned
+    tcgplayer_id: 714636
+    estimate: 1.52
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Secret Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en004-714707
+    name: "MAMO-EN004 Favorite HERO Shining Flare Wingman"
+    status: owned
+    tcgplayer_id: 714707
+    estimate: 1.11
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en122-714650
+    name: "MAMO-EN122 Nightmare-Eyes Restrict"
+    status: owned
+    tcgplayer_id: 714650
+    estimate: 0.97
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Secret Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en093-714811
+    name: "MAMO-EN093 Delinquent Duo"
+    status: owned
+    tcgplayer_id: 714811
+    estimate: 0.92
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en028-714746
+    name: "MAMO-EN028 W:P Fancy Ball"
+    status: owned
+    tcgplayer_id: 714746
+    estimate: 0.83
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en039-714647
+    name: "MAMO-EN039 Sky Striker Mobilize - Engage! (Secret Rare)"
+    status: owned
+    tcgplayer_id: 714647
+    estimate: 0.63
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Secret Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en063-714781
+    name: "MAMO-EN063 Medius the Pure"
+    status: owned
+    tcgplayer_id: 714781
+    estimate: 0.49
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en099-714817
+    name: "MAMO-EN099 Sinful Spoils of the White Forest"
+    status: owned
+    tcgplayer_id: 714817
+    estimate: 0.47
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en035-714753
+    name: "MAMO-EN035 Divine Arsenal AA-ZEUS - Sky Thunder"
+    status: owned
+    tcgplayer_id: 714753
+    estimate: 0.40
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en046-714764
+    name: "MAMO-EN046 Thunder King, the Lightningstrike Kaiju"
+    status: owned
+    tcgplayer_id: 714764
+    estimate: 0.29
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en052-714770
+    name: "MAMO-EN052 Elzette of the White Forest"
+    status: owned
+    tcgplayer_id: 714770
+    estimate: 0.28
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en083-714801
+    name: "MAMO-EN083 Ghostrick Alucard"
+    status: owned
+    tcgplayer_id: 714801
+    estimate: 0.25
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en022-714630
+    name: "MAMO-EN022 Orichalcos Sword of Sealing (Secret Rare)"
+    status: owned
+    tcgplayer_id: 714630
+    estimate: 0.25
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Secret Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en022-714740
+    name: "MAMO-EN022 Orichalcos Sword of Sealing"
+    status: owned
+    tcgplayer_id: 714740
+    estimate: 0.25
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en103-714821
+    name: "MAMO-EN103 Solfachord Happiness"
+    status: owned
+    tcgplayer_id: 714821
+    estimate: 0.25
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en125-714653
+    name: "MAMO-EN125 Wind Unicorn Parallel, the Dracoslayer"
+    status: owned
+    tcgplayer_id: 714653
+    estimate: 0.24
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Secret Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en094-714812
+    name: "MAMO-EN094 Neos Fusion"
+    status: owned
+    tcgplayer_id: 714812
+    estimate: 0.24
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en077-714795
+    name: "MAMO-EN077 Saint Azamina"
+    status: owned
+    tcgplayer_id: 714795
+    estimate: 0.21
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en102-714820
+    name: "MAMO-EN102 Radiant Typhoon Manifestation"
+    status: owned
+    tcgplayer_id: 714820
+    estimate: 0.21
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en021-714739
+    name: "MAMO-EN021 Underworld Circle"
+    status: owned
+    tcgplayer_id: 714739
+    estimate: 0.20
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en114-714832
+    name: "MAMO-EN114 Treacherous Trap Hole"
+    status: owned
+    tcgplayer_id: 714832
+    estimate: 0.17
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en025-714743
+    name: "MAMO-EN025 Malefic Paradigm Shift"
+    status: owned
+    tcgplayer_id: 714743
+    estimate: 0.17
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  - id: mamo-en033-714751
+    name: "MAMO-EN033 Visas Samsara"
+    status: owned
+    tcgplayer_id: 714751
+    estimate: 0.17
+    printing: "1st Edition"
+    condition: "Near Mint"
+    tag: "yugioh"
+    source: "Magnificent Monsters · Ultra Rare · 1st Edition · Near Mint"
+
+  # <<COLLECTION:yugioh END>>
+
   # <<ADD_HOLDINGS_HERE>>
 
-  # <<TCG_COLLECTION_START>>
+  # <<COLLECTION:one-piece-card-game START>>
   # GENERATED from the TCGplayer app export. Do not hand-edit: the next
   # --import-collection run overwrites everything between these markers.
   # Anything that must survive a re-import belongs ABOVE the start marker.
   #
   # Export OP-TCG_092726_172152.csv -- 42 lines, 60 copies, $1,357.91 at app market.
+  # Wholly his.
+  #
   # `estimate` here is the app's market price at export time; the twice-daily
   # price job re-quotes it from the same product id and takes over from there.
 
@@ -537,6 +1937,8 @@ holdings:
     status: owned
     tcgplayer_id: 712091
     estimate: 217.00
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -545,6 +1947,8 @@ holdings:
     status: owned
     tcgplayer_id: 707128
     estimate: 209.62
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "st27"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -553,6 +1957,8 @@ holdings:
     status: owned
     tcgplayer_id: 712123
     estimate: 145.60
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "st32"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -562,6 +1968,8 @@ holdings:
     tcgplayer_id: 705923
     estimate: 102.32
     qty: 2
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
 
@@ -571,6 +1979,8 @@ holdings:
     tcgplayer_id: 707121
     estimate: 69.98
     qty: 2
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -580,6 +1990,8 @@ holdings:
     tcgplayer_id: 710585
     estimate: 67.88
     qty: 2
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Secret Rare · Foil · Near Mint"
 
@@ -588,6 +2000,8 @@ holdings:
     status: owned
     tcgplayer_id: 710591
     estimate: 67.52
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
 
@@ -596,6 +2010,8 @@ holdings:
     status: owned
     tcgplayer_id: 707124
     estimate: 52.10
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
 
@@ -605,6 +2021,8 @@ holdings:
     tcgplayer_id: 712116
     estimate: 51.93
     qty: 3
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Rare · Foil · Near Mint"
 
@@ -613,6 +2031,8 @@ holdings:
     status: owned
     tcgplayer_id: 696007
     estimate: 33.36
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op16"
     source: "The Time of Battle · Leader · Foil · Near Mint"
 
@@ -621,6 +2041,8 @@ holdings:
     status: owned
     tcgplayer_id: 707118
     estimate: 31.83
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
 
@@ -629,6 +2051,8 @@ holdings:
     status: owned
     tcgplayer_id: 710539
     estimate: 31.03
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Rare · Foil · Near Mint"
 
@@ -637,6 +2061,8 @@ holdings:
     status: owned
     tcgplayer_id: 710540
     estimate: 27.05
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Rare · Foil · Near Mint"
 
@@ -645,6 +2071,8 @@ holdings:
     status: owned
     tcgplayer_id: 694933
     estimate: 26.67
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op16"
     source: "The Time of Battle · Secret Rare · Foil · Near Mint"
 
@@ -653,6 +2081,8 @@ holdings:
     status: owned
     tcgplayer_id: 712085
     estimate: 19.60
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Rare · Foil · Near Mint"
 
@@ -662,6 +2092,8 @@ holdings:
     tcgplayer_id: 712092
     estimate: 18.58
     qty: 2
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -670,6 +2102,8 @@ holdings:
     status: owned
     tcgplayer_id: 705924
     estimate: 17.07
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
 
@@ -678,6 +2112,8 @@ holdings:
     status: owned
     tcgplayer_id: 708077
     estimate: 16.74
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -686,6 +2122,8 @@ holdings:
     status: owned
     tcgplayer_id: 711427
     estimate: 16.04
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -694,6 +2132,8 @@ holdings:
     status: owned
     tcgplayer_id: 707139
     estimate: 14.35
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Leader · Foil · Near Mint"
 
@@ -703,6 +2143,8 @@ holdings:
     tcgplayer_id: 714352
     estimate: 13.86
     qty: 2
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "p"
     source: "One Piece Promotion Cards · Promo · Foil · Near Mint"
 
@@ -711,6 +2153,8 @@ holdings:
     status: owned
     tcgplayer_id: 711423
     estimate: 13.86
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -719,6 +2163,8 @@ holdings:
     status: owned
     tcgplayer_id: 712742
     estimate: 12.58
+    printing: "Normal"
+    condition: "Near Mint"
     tag: "p"
     source: "One Piece Promotion Cards · Promo · Normal · Near Mint"
 
@@ -727,6 +2173,8 @@ holdings:
     status: owned
     tcgplayer_id: 712745
     estimate: 11.83
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "promo"
     source: "One Piece Promotion Cards · DON!! · Foil · Near Mint"
 
@@ -735,6 +2183,8 @@ holdings:
     status: owned
     tcgplayer_id: 712744
     estimate: 11.19
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "promo"
     source: "One Piece Promotion Cards · DON!! · Foil · Near Mint"
 
@@ -744,6 +2194,8 @@ holdings:
     tcgplayer_id: 696051
     estimate: 8.06
     qty: 2
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op16"
     source: "The Time of Battle · Rare · Foil · Near Mint"
 
@@ -753,6 +2205,8 @@ holdings:
     tcgplayer_id: 711325
     estimate: 7.98
     qty: 2
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -762,6 +2216,8 @@ holdings:
     tcgplayer_id: 710861
     estimate: 6.50
     qty: 2
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -771,6 +2227,8 @@ holdings:
     tcgplayer_id: 711499
     estimate: 5.76
     qty: 4
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -780,6 +2238,8 @@ holdings:
     tcgplayer_id: 711426
     estimate: 5.76
     qty: 3
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -788,6 +2248,8 @@ holdings:
     status: owned
     tcgplayer_id: 712655
     estimate: 4.65
+    printing: "Normal"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Uncommon · Normal · Near Mint"
 
@@ -796,6 +2258,8 @@ holdings:
     status: owned
     tcgplayer_id: 707120
     estimate: 3.81
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -805,6 +2269,8 @@ holdings:
     tcgplayer_id: 710542
     estimate: 2.67
     qty: 3
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -813,6 +2279,8 @@ holdings:
     status: owned
     tcgplayer_id: 710541
     estimate: 2.60
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -821,6 +2289,8 @@ holdings:
     status: owned
     tcgplayer_id: 712593
     estimate: 2.14
+    printing: "Normal"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Common · Normal · Near Mint"
 
@@ -829,6 +2299,8 @@ holdings:
     status: owned
     tcgplayer_id: 693824
     estimate: 1.95
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op16"
     source: "The Time of Battle · Super Rare · Foil · Near Mint"
 
@@ -837,6 +2309,8 @@ holdings:
     status: owned
     tcgplayer_id: 714351
     estimate: 1.49
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op14"
     source: "One Piece Promotion Cards · Rare · Foil · Near Mint"
 
@@ -845,6 +2319,8 @@ holdings:
     status: owned
     tcgplayer_id: 714349
     estimate: 1.27
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "eb04"
     source: "One Piece Promotion Cards · Rare · Foil · Near Mint"
 
@@ -853,6 +2329,8 @@ holdings:
     status: owned
     tcgplayer_id: 714353
     estimate: 1.24
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "p"
     source: "One Piece Promotion Cards · Promo · Foil · Near Mint"
 
@@ -861,6 +2339,8 @@ holdings:
     status: owned
     tcgplayer_id: 707133
     estimate: 0.86
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -870,6 +2350,8 @@ holdings:
     tcgplayer_id: 710578
     estimate: 0.80
     qty: 2
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "op17"
     source: "The World's Strongest Warriors · Super Rare · Foil · Near Mint"
 
@@ -878,10 +2360,12 @@ holdings:
     status: owned
     tcgplayer_id: 714355
     estimate: 0.78
+    printing: "Foil"
+    condition: "Near Mint"
     tag: "st20"
     source: "One Piece Promotion Cards · Super Rare · Foil · Near Mint"
 
-  # <<TCG_COLLECTION_END>>
+  # <<COLLECTION:one-piece-card-game END>>
 
   # <<ADD_HOLDINGS_HERE>>
 

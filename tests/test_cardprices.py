@@ -44,7 +44,7 @@ def _ledger(estimate, qty=1, pid=999):
 
 
 def test_quantity_multiplies_the_unit_price(monkeypatch):
-    monkeypatch.setattr(cardprices, "quote", lambda pid, s=None: q(foil_market=4.43))
+    monkeypatch.setattr(cardprices, "quote", lambda pid, s=None, printing='': q(foil_market=4.43))
     result = cardprices.refresh(_ledger(23.22, qty=3), verbose=False)
     assert result.cards["h"]["value"] == 13.29     # 4.43 x 3, not 4.43
     assert result.applied == 1
@@ -52,7 +52,7 @@ def test_quantity_multiplies_the_unit_price(monkeypatch):
 
 def test_wild_swing_on_an_expensive_card_is_rejected(monkeypatch):
     # A 10x move on a $340 card is a mis-pinned product id, not the market.
-    monkeypatch.setattr(cardprices, "quote", lambda pid, s=None: q(foil_market=3400.0))
+    monkeypatch.setattr(cardprices, "quote", lambda pid, s=None, printing='': q(foil_market=3400.0))
     result = cardprices.refresh(_ledger(341.25), verbose=False)
     assert result.applied == 0 and result.rejected
 
@@ -60,7 +60,7 @@ def test_wild_swing_on_an_expensive_card_is_rejected(monkeypatch):
 def test_wild_swing_on_a_cheap_card_is_allowed(monkeypatch):
     # $6.72 -> $1.65 is 4.07x and also exactly what a $7 single does when a set
     # leaves presale. The ratio alone would veto it; the dollar floor saves it.
-    monkeypatch.setattr(cardprices, "quote", lambda pid, s=None: q(foil_market=1.65))
+    monkeypatch.setattr(cardprices, "quote", lambda pid, s=None, printing='': q(foil_market=1.65))
     result = cardprices.refresh(_ledger(6.72), verbose=False)
     assert result.applied == 1 and not result.rejected
 
@@ -100,3 +100,36 @@ def test_liquid_holdings_pay_no_selling_fee():
     led = Ledger(holdings=[cash, card])
     assert led.net_of(cash) == 11.52
     assert led.net_of(card) < 11.52
+
+
+def test_the_printing_you_own_is_the_one_quoted():
+    # Carter's Clefairy 101/165 is a Normal at $11.43; the Foil of the SAME
+    # product is $79.69. Foil-first overstated it sevenfold.
+    both = q(foil_market=79.69, normal_market=11.43, wanted="Normal")
+    assert both.price == 11.43
+    assert q(foil_market=79.69, normal_market=11.43, wanted="Foil").price == 79.69
+    # No stated printing keeps the old foil-first behaviour, right for One Piece.
+    assert q(foil_market=79.69, normal_market=11.43).price == 79.69
+
+
+def test_app_printing_labels_map_to_the_two_the_endpoint_offers():
+    from tracker.cardprices import wanted_printing
+
+    for label in ("Holofoil", "Reverse Holofoil", "Unlimited Holofoil", "Foil"):
+        assert wanted_printing(label) == "Foil"
+    for label in ("Normal", "1st Edition", "Unlimited", ""):
+        assert wanted_printing(label) == "Normal"
+
+
+def test_non_near_mint_cards_keep_their_exported_price(monkeypatch):
+    # The endpoint quotes Near Mint. A Damaged vintage holo is a fraction of
+    # that, so refreshing it from an NM quote inflates the position.
+    from tracker.portfolio import Holding, Ledger
+
+    monkeypatch.setattr(cardprices, "quote",
+                        lambda pid, s=None, printing='': q(foil_market=750.0))
+    dmg = Holding(id="d", name="Rayquaza", status="owned", estimate=269.56,
+                  tcgplayer_id=9, condition="Damaged")
+    res = cardprices.refresh(Ledger(holdings=[dmg]), verbose=False)
+    assert res.applied == 0
+    assert res.held_by_condition == ["Rayquaza (Damaged)"]
