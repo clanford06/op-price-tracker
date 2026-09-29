@@ -446,9 +446,9 @@ holdings:
     # counted: the card is booked at the floor above until PSA says otherwise.
     scenarios:
       - label: "PSA 10"
-        estimate: 1150.00
+        estimate: 805.00
         share: 0.9324
-        note: "455 of 488 graded copies. Roughly double raw -- the outcome that justified submitting."
+        note: "455 of 488 graded copies. REPRICED 2026-09-29 from $1,150: only TWO PSA 10 OP14-084 SP asks exist on eBay, $509.99 and $1,099.99, so $805 is their midpoint. The old figure was the top of a two-listing market."
       - label: "PSA 9"
         estimate: 500.00
         share: 0.0451
@@ -482,6 +482,31 @@ holdings:
     # Kept here because it is the right number for deciding whether grading was
     # worth it. It is the wrong number for a ledger line, which has to survive
     # being wrong about one specific card.
+    #
+    # ------------------------------------------------------------------
+    # RECHECKED 2026-09-29 against live eBay asks for the EXACT printing.
+    # OP14-084 is three different cards -- a base Super Rare, an Alternate Art
+    # and this SP -- and a naive search blends them: PSA 10 "OP14-084" shows a
+    # $199.97 median only because Alt Art copies at $140-150 dominate it, and
+    # the base SR is a $2 card. Filtered to the SP, English only:
+    #
+    #     PSA 10, SP   n=2    $509.99 and $1,099.99
+    #     RAW,    SP   n=85   25th $503.69   MEDIAN $648.00
+    #
+    # Two things follow, neither comfortable.
+    #
+    # The PSA 10 market for this card is TWO LISTINGS. Any number taken from
+    # it has error bars wider than the number itself.
+    #
+    # The RAW median ($648) sits ABOVE the cheaper PSA 10 ask ($510). If that
+    # $510 is real, the slab is worth less than the card was raw and grading
+    # destroyed value rather than adding it -- consistent with PSA 10s falling
+    # ~48% since June while raw fell only ~20%.
+    #
+    # Break-even maths as of today: to bring the One Piece tag to exactly zero,
+    # selling the OP-17 leader lot as well, this card has to fetch $1,030.95.
+    # That is above the higher of the two asks that exist.
+    # ------------------------------------------------------------------
     #
     # A 10 is the strong base case: 93.2% gem, 96.5% come back 9 or better.
     # Call it 90-95% allowing for the one thing the images cannot settle --
