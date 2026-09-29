@@ -43,6 +43,22 @@ settings:
   #
   # The 30th anniversary product is his alone; he bought it himself. Yu-Gi-Oh
   # and One Piece are wholly his and need no rule.
+  # Selling. `single_floor` is the point below which a card is worth more in a
+  # bulk lot than as its own listing: a $2 card nets $1.33 after the 13.25% fee
+  # and the $0.40 per-order charge, before an envelope, a sleeve and a trip to
+  # the post office. `committed` is copies already promised to a LIVE listing,
+  # subtracted so the same card is never offered twice.
+  selling:
+    single_floor: 10.00
+    op_tags: [op17, op16, op15, op14, st32, st27, st20, eb04, p, promo, op-promo, courtyard, msallsunday]
+    committed:
+      707124: 1      # Monkey.D.Luffy OP17-079 Alt  -- in the 6-card leader lot
+      705923: 1      # Shanks OP17-020 Alt          -- in the lot (he owns 2)
+      710591: 1      # Rocks.D.Xebec OP17-039 Alt   -- in the lot
+      705924: 1      # Edward.Newgate OP17-001 Alt  -- in the lot
+      707118: 1      # Kaido OP17-058 Alt           -- in the lot
+      707139: 1      # Charlotte Linlin OP17-099 Alt-- in the lot
+
   ownership:
     Pokemon:
       share: 0.5

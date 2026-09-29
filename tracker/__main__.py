@@ -101,6 +101,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
              "(Collection tab → ⋯ → Send via Email).",
     )
     p.add_argument(
+        "--listings",
+        action="store_true",
+        help="Generate priced eBay listing drafts from holdings. Writes docs/listings.md.",
+    )
+    p.add_argument(
         "--remind",
         action="store_true",
         help="Push a phone reminder if the ledger has gone stale. Silent when it is current.",
@@ -294,6 +299,42 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  held     {m_(before.unrealised_net)} -> {m_(after.unrealised_net)}")
         print(f"  position {m_(before.position_net)} -> {m_(after.position_net)}\n")
         report(after)
+        return 0
+
+    if args.listings:
+        import yaml
+
+        from .config import DEFAULT_LEDGER
+        from .listings import DEFAULT_SINGLE_FLOOR, build, render
+        from .portfolio import load_ledger
+
+        led_path = args.ledger or DEFAULT_LEDGER
+        led = load_ledger(led_path)
+        st = (yaml.safe_load(Path(led_path).read_text()).get("settings") or {})
+        sell = st.get("selling") or {}
+        floor = float(sell.get("single_floor", DEFAULT_SINGLE_FLOOR))
+        drafts, bulk, blocked = build(
+            led, tags=set(sell.get("op_tags") or []), single_floor=floor,
+            committed={int(k): int(v) for k, v in (sell.get("committed") or {}).items()})
+        out = Path("docs/listings.md")
+        out.write_text(render(drafts, bulk, blocked, led, floor), encoding="utf-8")
+
+        m_ = lambda v: f"${v:,.2f}"
+        print(f"{len(drafts)} individual listings, {sum(d.qty for d in drafts)} copies\n")
+        print(f"{'ask':>10}{'net':>10}{'market':>10}  card")
+        for d in drafts:
+            q = f" x{d.qty}" if d.qty > 1 else ""
+            print(f"{m_(d.ask):>10}{m_(d.net_at_ask):>10}{m_(d.market):>10}  {d.title[:46]}{q}")
+        ta = sum(d.ask * d.qty for d in drafts)
+        tn = sum(d.net_at_ask * d.qty for d in drafts)
+        print(f"\n  asking {m_(ta)} -> net {m_(tn)} if everything sells at ask")
+        if bulk:
+            bv = sum(u * a for _, a, u in bulk)
+            print(f"  plus {len(bulk)} lines ({sum(a for _,a,_ in bulk)} copies) under "
+                  f"{m_(floor)} each, {m_(bv)} at market — bulk them, do not list singly")
+        for h, why in blocked:
+            print(f"  skipped: {h.name[:44]} ({why})")
+        print(f"\nWrote {out}")
         return 0
 
     if args.remind:
