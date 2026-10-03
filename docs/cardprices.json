@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "updated_at": "2026-10-03T16:18:47+00:00",
+  "updated_at": "2026-10-03T16:31:35+00:00",
   "source": "tcgplayer price points",
   "basis": "foil market price, or normal where the card has no foil printing",
-  "applied": 164,
-  "failed": 0,
+  "applied": 163,
+  "failed": 1,
   "rejected": [],
   "held_by_condition": [
     "SL10 Rayquaza (Shiny) (Damaged)",
@@ -449,9 +449,9 @@
     },
     "135-128-716223": {
       "tcgplayer_id": 716223,
-      "price": 6.44,
+      "price": 6.41,
       "printing": "foil",
-      "foil_market": 6.44,
+      "foil_market": 6.41,
       "normal_market": null,
       "listed_median": 8.12,
       "url": "https://www.tcgplayer.com/product/716223",
@@ -459,7 +459,7 @@
       "name": "135/128 Morpeko - 135/128",
       "qty": 1,
       "previous_estimate": 9.04,
-      "value": 6.44,
+      "value": 6.41,
       "applied": true
     },
     "101-107-477864": {
@@ -704,9 +704,9 @@
     },
     "137-128-716224": {
       "tcgplayer_id": 716224,
-      "price": 3.36,
+      "price": 3.26,
       "printing": "foil",
-      "foil_market": 3.36,
+      "foil_market": 3.26,
       "normal_market": null,
       "listed_median": 4.0,
       "url": "https://www.tcgplayer.com/product/716224",
@@ -714,7 +714,7 @@
       "name": "137/128 Chandelure - 137/128",
       "qty": 1,
       "previous_estimate": 4.63,
-      "value": 3.36,
+      "value": 3.26,
       "applied": true
     },
     "034-132-83968": {
@@ -1484,17 +1484,17 @@
     },
     "mamo-en007-714713": {
       "tcgplayer_id": 714713,
-      "price": 1.25,
+      "price": 1.19,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 1.25,
+      "normal_market": 1.19,
       "listed_median": 1.29,
       "url": "https://www.tcgplayer.com/product/714713",
       "error": "",
       "name": "MAMO-EN007 Stardust Dragon - Victim Sanctuary",
       "qty": 2,
       "previous_estimate": 2.0,
-      "value": 2.5,
+      "value": 2.38,
       "applied": true
     },
     "mamo-en028-714636": {
@@ -1664,18 +1664,18 @@
     },
     "mamo-en083-714801": {
       "tcgplayer_id": 714801,
-      "price": 0.19,
-      "printing": "normal",
+      "price": null,
+      "printing": "",
       "foil_market": null,
-      "normal_market": 0.19,
-      "listed_median": 0.25,
+      "normal_market": null,
+      "listed_median": null,
       "url": "https://www.tcgplayer.com/product/714801",
-      "error": "",
+      "error": "HTTP 502",
       "name": "MAMO-EN083 Ghostrick Alucard",
       "qty": 1,
       "previous_estimate": 0.25,
-      "value": 0.19,
-      "applied": true
+      "value": null,
+      "applied": false
     },
     "mamo-en022-714630": {
       "tcgplayer_id": 714630,
@@ -2204,9 +2204,9 @@
     },
     "don-card-world-united-zoro-712744": {
       "tcgplayer_id": 712744,
-      "price": 13.18,
+      "price": 13.13,
       "printing": "foil",
-      "foil_market": 13.18,
+      "foil_market": 13.13,
       "normal_market": null,
       "listed_median": 15.99,
       "url": "https://www.tcgplayer.com/product/712744",
@@ -2214,7 +2214,7 @@
       "name": "DON!! Card (World United) (Zoro)",
       "qty": 1,
       "previous_estimate": 11.19,
-      "value": 13.18,
+      "value": 13.13,
       "applied": true
     },
     "op16-063-696051": {
@@ -2309,9 +2309,9 @@
     },
     "op17-022-707120": {
       "tcgplayer_id": 707120,
-      "price": 2.91,
+      "price": 2.94,
       "printing": "foil",
-      "foil_market": 2.91,
+      "foil_market": 2.94,
       "normal_market": null,
       "listed_median": 4.68,
       "url": "https://www.tcgplayer.com/product/707120",
@@ -2319,7 +2319,7 @@
       "name": "OP17-022 Shanks (022)",
       "qty": 1,
       "previous_estimate": 3.81,
-      "value": 2.91,
+      "value": 2.94,
       "applied": true
     },
     "op17-048-710542": {
@@ -2399,9 +2399,9 @@
     },
     "eb04-030-714349": {
       "tcgplayer_id": 714349,
-      "price": 1.3,
+      "price": 1.29,
       "printing": "foil",
-      "foil_market": 1.3,
+      "foil_market": 1.29,
       "normal_market": null,
       "listed_median": 1.99,
       "url": "https://www.tcgplayer.com/product/714349",
@@ -2409,14 +2409,14 @@
       "name": "EB04-030 Kaido (4th Anniversary Treasure Campaign Pack)",
       "qty": 1,
       "previous_estimate": 1.27,
-      "value": 1.3,
+      "value": 1.29,
       "applied": true
     },
     "p-100-714353": {
       "tcgplayer_id": 714353,
-      "price": 1.37,
+      "price": 1.35,
       "printing": "foil",
-      "foil_market": 1.37,
+      "foil_market": 1.35,
       "normal_market": null,
       "listed_median": 1.84,
       "url": "https://www.tcgplayer.com/product/714353",
@@ -2424,7 +2424,7 @@
       "name": "P-100 Marshall.D.Teach (4th Anniversary Treasure Campaign Pack)",
       "qty": 1,
       "previous_estimate": 1.24,
-      "value": 1.37,
+      "value": 1.35,
       "applied": true
     },
     "op17-062-707133": {
@@ -2459,9 +2459,9 @@
     },
     "st20-005-714355": {
       "tcgplayer_id": 714355,
-      "price": 0.87,
+      "price": 0.88,
       "printing": "foil",
-      "foil_market": 0.87,
+      "foil_market": 0.88,
       "normal_market": null,
       "listed_median": 1.5,
       "url": "https://www.tcgplayer.com/product/714355",
@@ -2469,7 +2469,7 @@
       "name": "ST20-005 Charlotte Linlin (4th Anniversary Treasure Campaign Pack)",
       "qty": 1,
       "previous_estimate": 0.78,
-      "value": 0.87,
+      "value": 0.88,
       "applied": true
     }
   }
