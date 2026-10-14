@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-10-14T18:39:38+00:00",
+  "updated_at": "2026-10-14T23:15:06+00:00",
   "products": {
     "op17": {
       "history": [
@@ -911,6 +911,10 @@
         {
           "t": "2026-10-14T18:39:16+00:00",
           "price": 299.99
+        },
+        {
+          "t": "2026-10-14T23:14:58+00:00",
+          "price": 299.99
         }
       ],
       "name": "OP-17 The World's Strongest Warriors",
@@ -968,7 +972,7 @@
               "name": "Price plausibility",
               "earned": 12,
               "possible": 12,
-              "detail": "in line with the $356.03 median",
+              "detail": "in line with the $352.11 median",
               "good": true
             },
             {
@@ -1016,14 +1020,14 @@
           ]
         },
         "purchase": {
-          "score": 68,
+          "score": 67,
           "dud_chance": 0.88,
           "cost_per_pack": 12.5,
-          "baseline_cost_per_pack": 14.83,
+          "baseline_cost_per_pack": 14.67,
           "ev_per_pack": 4.83,
           "verdict": "GOOD",
           "notes": [
-            "$12.50/pack is 16% below the $14.83/pack baseline",
+            "$12.50/pack is 15% below the $14.67/pack baseline",
             "estimated $4.83/pack in singles vs $12.50 paid (39% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 39 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
             "top chase $6,100.00 (Rocks.D.Xebec) \u2014 20.3x this box; 6 of 8 chases would cover it"
@@ -1038,8 +1042,8 @@
           }
         }
       },
-      "considered": 36,
-      "relevant": 23,
+      "considered": 38,
+      "relevant": 24,
       "verified": 8,
       "kept": 1,
       "rejected": [
@@ -1099,7 +1103,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $356.03 median",
+                "detail": "in line with the $352.11 median",
                 "good": true
               },
               {
@@ -1153,7 +1157,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:39:16+00:00",
+      "checked_at": "2026-10-14T23:14:58+00:00",
       "all_time_low": 299.99,
       "all_time_high": 549.0
     },
@@ -2802,21 +2806,25 @@
         {
           "t": "2026-10-14T18:39:08+00:00",
           "price": 244.69
+        },
+        {
+          "t": "2026-10-14T23:14:55+00:00",
+          "price": 234.98
         }
       ],
       "name": "OP-16 The Time of Battle",
       "current": {
-        "title": "Bandai One Piece Card Game OP-16 Time of Battle English Booster Box 288 6+",
-        "url": "https://www.ebay.com/itm/198422381418?_skw=One+Piece+Card+Game+OP-16+Booster+Box&hash=item2e32e5436a:g:EC4AAeSwp91qLLa-",
-        "price": 229.69,
-        "shipping": 15.0,
-        "total": 244.69,
-        "seller": "ilikeawesomethingstoo",
-        "seller_score": 303,
+        "title": "Bandai One Piece Card Game OP-16 The Time of Battle Booster Box English",
+        "url": "https://www.ebay.com/itm/137844634943?_skw=One+Piece+Card+Game+OP-16+Booster+Box&hash=item20182e353f:g:~ygAAeSwG4Jq0ABz",
+        "price": 229.99,
+        "shipping": 4.99,
+        "total": 234.98,
+        "seller": "ravenseyegaming",
+        "seller_score": 1961,
         "seller_pct": 100.0,
-        "top_rated": false,
+        "top_rated": true,
         "trust": {
-          "score": 77,
+          "score": 100,
           "vetoes": [],
           "verified": true,
           "signals": [
@@ -2829,9 +2837,9 @@
             },
             {
               "name": "Seller volume",
-              "earned": 8.7,
+              "earned": 11.5,
               "possible": 14,
-              "detail": "303 completed sales",
+              "detail": "1,961 completed sales",
               "good": true
             },
             {
@@ -2843,23 +2851,23 @@
             },
             {
               "name": "Returns",
-              "earned": 0,
+              "earned": 12.0,
               "possible": 12,
-              "detail": "not accepted",
-              "good": false
+              "detail": "accepted (30 days)",
+              "good": true
             },
             {
               "name": "Top Rated Seller",
-              "earned": 0,
+              "earned": 10,
               "possible": 10,
-              "detail": "not Top Rated (bonus only)",
-              "good": false
+              "detail": "eBay Top Rated",
+              "good": true
             },
             {
               "name": "Price plausibility",
               "earned": 12,
               "possible": 12,
-              "detail": "in line with the $262.50 median",
+              "detail": "in line with the $259.99 median",
               "good": true
             },
             {
@@ -2880,7 +2888,7 @@
               "name": "Stock level",
               "earned": 3,
               "possible": 3,
-              "detail": "2 in stock",
+              "detail": "1 in stock",
               "good": true
             },
             {
@@ -2907,20 +2915,20 @@
           ]
         },
         "purchase": {
-          "score": 61,
+          "score": 70,
           "dud_chance": 0.88,
-          "cost_per_pack": 10.2,
-          "baseline_cost_per_pack": 10.94,
+          "cost_per_pack": 9.79,
+          "baseline_cost_per_pack": 10.83,
           "ev_per_pack": 4.83,
-          "verdict": "FAIR",
+          "verdict": "GOOD",
           "notes": [
-            "$10.20/pack is 7% below the $10.94/pack baseline",
-            "estimated $4.83/pack in singles vs $10.20 paid (47% cover) \u2014 estimate, not a measurement",
-            "Opening this is negative EV: you would expect back about 47 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
-            "top chase $1,111.83 (Sakazuki) \u2014 4.5x this box; 3 of 8 chases would cover it"
+            "$9.79/pack is 10% below the $10.83/pack baseline",
+            "estimated $4.83/pack in singles vs $9.79 paid (49% cover) \u2014 estimate, not a measurement",
+            "Opening this is negative EV: you would expect back about 49 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
+            "top chase $1,111.83 (Sakazuki) \u2014 4.7x this box; 3 of 8 chases would cover it"
           ],
           "profit": {
-            "upside": 4.5,
+            "upside": 4.7,
             "chases_above": 3,
             "chase_count": 8,
             "top_chase": 1111.83,
@@ -2929,8 +2937,8 @@
           }
         }
       },
-      "considered": 51,
-      "relevant": 14,
+      "considered": 52,
+      "relevant": 15,
       "verified": 8,
       "kept": 1,
       "rejected": [
@@ -2941,7 +2949,7 @@
           "shipping": 0.0,
           "total": 115.88,
           "seller": "dcfonew",
-          "seller_score": 5109,
+          "seller_score": 5111,
           "seller_pct": 99.7,
           "top_rated": false,
           "trust": {
@@ -2962,7 +2970,7 @@
                 "name": "Seller volume",
                 "earned": 13.0,
                 "possible": 14,
-                "detail": "5,109 completed sales",
+                "detail": "5,111 completed sales",
                 "good": true
               },
               {
@@ -2990,7 +2998,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$115.88 is 56% under the $262.50 median",
+                "detail": "$115.88 is 55% under the $259.99 median",
                 "good": false
               },
               {
@@ -3048,7 +3056,7 @@
           "shipping": 0.0,
           "total": 115.95,
           "seller": "dcfonew",
-          "seller_score": 5109,
+          "seller_score": 5111,
           "seller_pct": 99.7,
           "top_rated": false,
           "trust": {
@@ -3069,7 +3077,7 @@
                 "name": "Seller volume",
                 "earned": 13.0,
                 "possible": 14,
-                "detail": "5,109 completed sales",
+                "detail": "5,111 completed sales",
                 "good": true
               },
               {
@@ -3097,7 +3105,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$115.95 is 56% under the $262.50 median",
+                "detail": "$115.95 is 55% under the $259.99 median",
                 "good": false
               },
               {
@@ -3204,7 +3212,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$115.98 is 56% under the $262.50 median",
+                "detail": "$115.98 is 55% under the $259.99 median",
                 "good": false
               },
               {
@@ -3312,7 +3320,7 @@
                 "name": "Price plausibility",
                 "earned": 6,
                 "possible": 12,
-                "detail": "$170.15 is well under the $262.50 median \u2014 verify carefully",
+                "detail": "$170.15 is well under the $259.99 median \u2014 verify carefully",
                 "good": false
               },
               {
@@ -3420,7 +3428,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $262.50 median",
+                "detail": "in line with the $259.99 median",
                 "good": true
               },
               {
@@ -3527,7 +3535,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $262.50 median",
+                "detail": "in line with the $259.99 median",
                 "good": true
               },
               {
@@ -3577,116 +3585,11 @@
           "why": [
             "seller has 37 sales, below the 100 minimum"
           ]
-        },
-        {
-          "title": "One Piece Card Game The Time Of Battle Op 16 Booster Box",
-          "url": "https://www.ebay.com/itm/298432034069?_skw=One+Piece+Card+Game+OP-16+Booster+Box&hash=item457bef7515:g:htYAAeSw6tJqNWTr",
-          "price": 250.0,
-          "shipping": 15.0,
-          "total": 265.0,
-          "seller": "lamchopps1",
-          "seller_score": 2978,
-          "seller_pct": 100.0,
-          "top_rated": false,
-          "trust": {
-            "score": 65,
-            "vetoes": [],
-            "verified": true,
-            "signals": [
-              {
-                "name": "Language verified",
-                "earned": 4,
-                "possible": 18,
-                "detail": "seller did not state a language",
-                "good": false
-              },
-              {
-                "name": "Seller volume",
-                "earned": 12.2,
-                "possible": 14,
-                "detail": "2,978 completed sales",
-                "good": true
-              },
-              {
-                "name": "Seller rating",
-                "earned": 14.0,
-                "possible": 14,
-                "detail": "100.0% positive",
-                "good": true
-              },
-              {
-                "name": "Returns",
-                "earned": 0,
-                "possible": 12,
-                "detail": "not accepted",
-                "good": false
-              },
-              {
-                "name": "Top Rated Seller",
-                "earned": 0,
-                "possible": 10,
-                "detail": "not Top Rated (bonus only)",
-                "good": false
-              },
-              {
-                "name": "Price plausibility",
-                "earned": 12,
-                "possible": 12,
-                "detail": "in line with the $262.50 median",
-                "good": true
-              },
-              {
-                "name": "Item specifics",
-                "earned": 4.0,
-                "possible": 8,
-                "detail": "set matches",
-                "good": true
-              },
-              {
-                "name": "eBay category",
-                "earned": 6,
-                "possible": 6,
-                "detail": "listed under trading cards",
-                "good": true
-              },
-              {
-                "name": "Stock level",
-                "earned": 3,
-                "possible": 3,
-                "detail": "1 in stock",
-                "good": true
-              },
-              {
-                "name": "eBay programmes",
-                "earned": 0,
-                "possible": 5,
-                "detail": "none (bonus only)",
-                "good": false
-              },
-              {
-                "name": "Description",
-                "earned": 4,
-                "possible": 4,
-                "detail": "no warning phrases",
-                "good": true
-              },
-              {
-                "name": "Your trusted list",
-                "earned": 0,
-                "possible": 8,
-                "detail": "not on your trusted list (bonus only)",
-                "good": false
-              }
-            ]
-          },
-          "why": [
-            "trust score 65 below 70"
-          ]
         }
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:39:08+00:00",
+      "checked_at": "2026-10-14T23:14:55+00:00",
       "all_time_low": 208.76,
       "all_time_high": 244.69
     },
@@ -5327,6 +5230,10 @@
         {
           "t": "2026-10-14T18:38:58+00:00",
           "price": 290.0
+        },
+        {
+          "t": "2026-10-14T23:14:51+00:00",
+          "price": 290.0
         }
       ],
       "name": "OP-14 The Azure Sea's Seven",
@@ -5462,17 +5369,17 @@
         {
           "title": "One Piece Card Game The Seven Heroes Blue Sea Booster Box OP14 24 Packs",
           "url": "https://www.ebay.com/itm/267803330390?_skw=One+Piece+Card+Game+OP-14+Booster+Box&hash=item3e5a528756:g:ymIAAeSwt~tqwmow",
-          "price": 125.09,
+          "price": 135.26,
           "shipping": 0.0,
-          "total": 125.09,
+          "total": 135.26,
           "seller": "baby-i-love-u",
-          "seller_score": 82553,
+          "seller_score": 82563,
           "seller_pct": 99.6,
           "top_rated": false,
           "trust": {
             "score": 79,
             "vetoes": [
-              "$125.09 is below the $178.00 floor for a genuine sealed box",
+              "$135.26 is below the $178.00 floor for a genuine sealed box",
               "item specifics list more than one language (English, Japanese) \u2014 cannot tell which printing you would receive"
             ],
             "verified": true,
@@ -5488,7 +5395,7 @@
                 "name": "Seller volume",
                 "earned": 14.0,
                 "possible": 14,
-                "detail": "82,553 completed sales",
+                "detail": "82,563 completed sales",
                 "good": true
               },
               {
@@ -5516,7 +5423,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$125.09 is 60% under the $309.98 median",
+                "detail": "$135.26 is 56% under the $309.98 median",
                 "good": false
               },
               {
@@ -5564,7 +5471,7 @@
             ]
           },
           "why": [
-            "$125.09 is below the $178.00 floor for a genuine sealed box",
+            "$135.26 is below the $178.00 floor for a genuine sealed box",
             "item specifics list more than one language (English, Japanese) \u2014 cannot tell which printing you would receive"
           ]
         },
@@ -5678,7 +5585,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:58+00:00",
+      "checked_at": "2026-10-14T23:14:51+00:00",
       "all_time_low": 202.78,
       "all_time_high": 290.0
     },
@@ -5693,7 +5600,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:37:58+00:00"
+      "checked_at": "2026-10-14T23:14:30+00:00"
     },
     "op02": {
       "history": [
@@ -6824,6 +6731,10 @@
         {
           "t": "2026-10-14T18:38:01+00:00",
           "price": 664.85
+        },
+        {
+          "t": "2026-10-14T23:14:32+00:00",
+          "price": 664.85
         }
       ],
       "name": "OP-02 Paramount War",
@@ -6881,7 +6792,7 @@
               "name": "Price plausibility",
               "earned": 12,
               "possible": 12,
-              "detail": "in line with the $664.85 median",
+              "detail": "in line with the $600.00 median",
               "good": true
             },
             {
@@ -6929,14 +6840,14 @@
           ]
         },
         "purchase": {
-          "score": 47,
+          "score": 39,
           "dud_chance": 0.88,
           "cost_per_pack": 27.7,
-          "baseline_cost_per_pack": 27.7,
+          "baseline_cost_per_pack": 25.0,
           "ev_per_pack": 4.83,
           "verdict": "POOR",
           "notes": [
-            "$27.70/pack, in line with the market",
+            "$27.70/pack is 11% above the $25.00/pack baseline for this set",
             "estimated $4.83/pack in singles vs $27.70 paid (17% cover) \u2014 estimate, not a measurement",
             "Opening this is negative EV: you would expect back about 17 cents of singles per dollar spent. Buy it to open for fun, not to profit.",
             "top chase $1,700.00 (Portgas.D.Ace) \u2014 2.6x this box; 1 of 8 chases would cover it"
@@ -6951,9 +6862,9 @@
           }
         }
       },
-      "considered": 15,
-      "relevant": 3,
-      "verified": 3,
+      "considered": 16,
+      "relevant": 4,
+      "verified": 4,
       "kept": 1,
       "rejected": [
         {
@@ -6963,14 +6874,14 @@
           "shipping": 0.0,
           "total": 145.0,
           "seller": "fede-3489",
-          "seller_score": 63,
-          "seller_pct": 97.0,
+          "seller_score": 66,
+          "seller_pct": 97.1,
           "top_rated": false,
           "trust": {
             "score": 39,
             "vetoes": [
-              "seller has 63 sales, below the 100 minimum",
-              "seller rated 97.0%, below the 98.0% minimum",
+              "seller has 66 sales, below the 100 minimum",
+              "seller rated 97.1%, below the 98.0% minimum",
               "item specifics say Language: Japanese"
             ],
             "verified": true,
@@ -6984,16 +6895,16 @@
               },
               {
                 "name": "Seller volume",
-                "earned": 6.3,
+                "earned": 6.4,
                 "possible": 14,
-                "detail": "63 completed sales",
+                "detail": "66 completed sales",
                 "good": true
               },
               {
                 "name": "Seller rating",
                 "earned": 0.0,
                 "possible": 14,
-                "detail": "97.0% positive",
+                "detail": "97.1% positive",
                 "good": true
               },
               {
@@ -7014,7 +6925,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$145.00 is 78% under the $664.85 median",
+                "detail": "$145.00 is 76% under the $600.00 median",
                 "good": false
               },
               {
@@ -7062,9 +6973,116 @@
             ]
           },
           "why": [
-            "seller has 63 sales, below the 100 minimum",
-            "seller rated 97.0%, below the 98.0% minimum",
+            "seller has 66 sales, below the 100 minimum",
+            "seller rated 97.1%, below the 98.0% minimum",
             "item specifics say Language: Japanese"
+          ]
+        },
+        {
+          "title": "Bandai One Piece Card Game Paramount War OP-02 Booster Box 24 Packs English 2022",
+          "url": "https://www.ebay.com/itm/206627406949?_skw=One+Piece+Card+Game+OP-02+Booster+Box&hash=item301bf40465:g:hTAAAeSwXbZqz9Im",
+          "price": 525.0,
+          "shipping": 10.15,
+          "total": 535.15,
+          "seller": "9j2xd-79",
+          "seller_score": 4,
+          "seller_pct": 100.0,
+          "top_rated": false,
+          "trust": {
+            "score": 70,
+            "vetoes": [
+              "seller has 4 sales, below the 100 minimum"
+            ],
+            "verified": true,
+            "signals": [
+              {
+                "name": "Language verified",
+                "earned": 18,
+                "possible": 18,
+                "detail": "item specifics: English",
+                "good": true
+              },
+              {
+                "name": "Seller volume",
+                "earned": 2.4,
+                "possible": 14,
+                "detail": "4 completed sales",
+                "good": true
+              },
+              {
+                "name": "Seller rating",
+                "earned": 14.0,
+                "possible": 14,
+                "detail": "100.0% positive",
+                "good": true
+              },
+              {
+                "name": "Returns",
+                "earned": 0,
+                "possible": 12,
+                "detail": "not accepted",
+                "good": false
+              },
+              {
+                "name": "Top Rated Seller",
+                "earned": 0,
+                "possible": 10,
+                "detail": "not Top Rated (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Price plausibility",
+                "earned": 12,
+                "possible": 12,
+                "detail": "in line with the $600.00 median",
+                "good": true
+              },
+              {
+                "name": "Item specifics",
+                "earned": 4.0,
+                "possible": 8,
+                "detail": "set matches",
+                "good": true
+              },
+              {
+                "name": "eBay category",
+                "earned": 6,
+                "possible": 6,
+                "detail": "listed under trading cards",
+                "good": true
+              },
+              {
+                "name": "Stock level",
+                "earned": 3,
+                "possible": 3,
+                "detail": "1 in stock",
+                "good": true
+              },
+              {
+                "name": "eBay programmes",
+                "earned": 0,
+                "possible": 5,
+                "detail": "none (bonus only)",
+                "good": false
+              },
+              {
+                "name": "Description",
+                "earned": 4,
+                "possible": 4,
+                "detail": "no warning phrases",
+                "good": true
+              },
+              {
+                "name": "Your trusted list",
+                "earned": 0,
+                "possible": 8,
+                "detail": "not on your trusted list (bonus only)",
+                "good": false
+              }
+            ]
+          },
+          "why": [
+            "seller has 4 sales, below the 100 minimum"
           ]
         },
         {
@@ -7123,7 +7141,7 @@
                 "name": "Price plausibility",
                 "earned": 12,
                 "possible": 12,
-                "detail": "in line with the $664.85 median",
+                "detail": "in line with the $600.00 median",
                 "good": true
               },
               {
@@ -7177,7 +7195,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:01+00:00",
+      "checked_at": "2026-10-14T23:14:32+00:00",
       "all_time_low": 499.99,
       "all_time_high": 664.85
     },
@@ -8240,18 +8258,20 @@
       "kept": 0,
       "rejected": [
         {
-          "title": "One Piece Card Game Pillars of Strength OP-03 English Booster Box (Sealed)",
-          "url": "https://www.ebay.com/itm/198715402871?_skw=One+Piece+Card+Game+OP-03+Booster+Box&hash=item2e445c6a77:g:AKwAAeSwDWBqz6ko",
-          "price": 450.0,
-          "shipping": 0.0,
-          "total": 450.0,
-          "seller": "pirate.king.luffy",
-          "seller_score": 260,
+          "title": "Bandai One Piece Card Game Pillars of Strength OP-03 English Booster Box",
+          "url": "https://www.ebay.com/itm/206627411718?_skw=One+Piece+Card+Game+OP-03+Booster+Box&hash=item301bf41706:g:06QAAeSw-Z1qz9No",
+          "price": 490.0,
+          "shipping": 10.15,
+          "total": 500.15,
+          "seller": "9j2xd-79",
+          "seller_score": 4,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
-            "score": 65,
-            "vetoes": [],
+            "score": 63,
+            "vetoes": [
+              "seller has 4 sales, below the 100 minimum"
+            ],
             "verified": true,
             "signals": [
               {
@@ -8263,9 +8283,9 @@
               },
               {
                 "name": "Seller volume",
-                "earned": 8.5,
+                "earned": 2.4,
                 "possible": 14,
-                "detail": "260 completed sales",
+                "detail": "4 completed sales",
                 "good": true
               },
               {
@@ -8326,10 +8346,10 @@
               },
               {
                 "name": "Description",
-                "earned": 0,
+                "earned": 4,
                 "possible": 4,
-                "detail": "contains: no returns, as is",
-                "good": false
+                "detail": "no warning phrases",
+                "good": true
               },
               {
                 "name": "Your trusted list",
@@ -8341,13 +8361,13 @@
             ]
           },
           "why": [
-            "trust score 65 below 70"
+            "seller has 4 sales, below the 100 minimum"
           ]
         }
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:03+00:00",
+      "checked_at": "2026-10-14T23:14:33+00:00",
       "all_time_low": 531.99,
       "all_time_high": 606.79
     },
@@ -9936,6 +9956,10 @@
         {
           "t": "2026-10-14T18:38:08+00:00",
           "price": 499.0
+        },
+        {
+          "t": "2026-10-14T23:14:35+00:00",
+          "price": 499.0
         }
       ],
       "name": "OP-04 Kingdoms of Intrigue",
@@ -10075,13 +10099,13 @@
           "shipping": 0.0,
           "total": 600.0,
           "seller": "brambletin",
-          "seller_score": 64,
+          "seller_score": 65,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
             "score": 87,
             "vetoes": [
-              "seller has 64 sales, below the 100 minimum"
+              "seller has 65 sales, below the 100 minimum"
             ],
             "verified": true,
             "signals": [
@@ -10094,9 +10118,9 @@
               },
               {
                 "name": "Seller volume",
-                "earned": 6.3,
+                "earned": 6.4,
                 "possible": 14,
-                "detail": "64 completed sales",
+                "detail": "65 completed sales",
                 "good": true
               },
               {
@@ -10172,7 +10196,7 @@
             ]
           },
           "why": [
-            "seller has 64 sales, below the 100 minimum"
+            "seller has 65 sales, below the 100 minimum"
           ]
         },
         {
@@ -10285,7 +10309,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:08+00:00",
+      "checked_at": "2026-10-14T23:14:35+00:00",
       "all_time_low": 446.03,
       "all_time_high": 510.0
     },
@@ -10597,7 +10621,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:10+00:00",
+      "checked_at": "2026-10-14T23:14:35+00:00",
       "all_time_low": 425.98,
       "all_time_high": 435.91
     },
@@ -12186,6 +12210,10 @@
         {
           "t": "2026-10-14T18:38:17+00:00",
           "price": 425.14
+        },
+        {
+          "t": "2026-10-14T23:14:38+00:00",
+          "price": 425.14
         }
       ],
       "name": "OP-06 Wings of the Captain",
@@ -12325,13 +12353,13 @@
           "shipping": 10.15,
           "total": 390.15,
           "seller": "p90.collects",
-          "seller_score": 9,
+          "seller_score": 10,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
             "score": 71,
             "vetoes": [
-              "seller has 9 sales, below the 100 minimum"
+              "seller has 10 sales, below the 100 minimum"
             ],
             "verified": true,
             "signals": [
@@ -12344,9 +12372,9 @@
               },
               {
                 "name": "Seller volume",
-                "earned": 3.5,
+                "earned": 3.6,
                 "possible": 14,
-                "detail": "9 completed sales",
+                "detail": "10 completed sales",
                 "good": true
               },
               {
@@ -12422,7 +12450,7 @@
             ]
           },
           "why": [
-            "seller has 9 sales, below the 100 minimum"
+            "seller has 10 sales, below the 100 minimum"
           ]
         },
         {
@@ -12640,7 +12668,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:17+00:00",
+      "checked_at": "2026-10-14T23:14:38+00:00",
       "all_time_low": 375.43,
       "all_time_high": 499.99
     },
@@ -14229,6 +14257,10 @@
         {
           "t": "2026-10-14T18:38:23+00:00",
           "price": 499.99
+        },
+        {
+          "t": "2026-10-14T23:14:39+00:00",
+          "price": 499.99
         }
       ],
       "name": "OP-07 500 Years Into the Future",
@@ -14469,7 +14501,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:23+00:00",
+      "checked_at": "2026-10-14T23:14:39+00:00",
       "all_time_low": 330.0,
       "all_time_high": 499.99
     },
@@ -16058,6 +16090,10 @@
         {
           "t": "2026-10-14T18:38:29+00:00",
           "price": 299.0
+        },
+        {
+          "t": "2026-10-14T23:14:41+00:00",
+          "price": 299.0
         }
       ],
       "name": "OP-08 Two Legends",
@@ -16405,7 +16441,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:29+00:00",
+      "checked_at": "2026-10-14T23:14:41+00:00",
       "all_time_low": 253.99,
       "all_time_high": 306.98
     },
@@ -16420,7 +16456,7 @@
       "rejected": [],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:30+00:00"
+      "checked_at": "2026-10-14T23:14:41+00:00"
     },
     "op10": {
       "history": [
@@ -18007,6 +18043,10 @@
         {
           "t": "2026-10-14T18:38:37+00:00",
           "price": 299.0
+        },
+        {
+          "t": "2026-10-14T23:14:44+00:00",
+          "price": 299.0
         }
       ],
       "name": "OP-10 Royal Blood",
@@ -18146,7 +18186,7 @@
           "shipping": 0.0,
           "total": 161.69,
           "seller": "amped_97",
-          "seller_score": 26542,
+          "seller_score": 26550,
           "seller_pct": 99.1,
           "top_rated": false,
           "trust": {
@@ -18165,7 +18205,7 @@
                 "name": "Seller volume",
                 "earned": 14.0,
                 "possible": 14,
-                "detail": "26,542 completed sales",
+                "detail": "26,550 completed sales",
                 "good": true
               },
               {
@@ -18459,7 +18499,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:37+00:00",
+      "checked_at": "2026-10-14T23:14:44+00:00",
       "all_time_low": 231.99,
       "all_time_high": 299.0
     },
@@ -18668,6 +18708,10 @@
         {
           "t": "2026-10-14T18:38:40+00:00",
           "price": 539.99
+        },
+        {
+          "t": "2026-10-14T23:14:45+00:00",
+          "price": 539.99
         }
       ],
       "name": "OP-11 A Fist of Divine Speed",
@@ -18795,7 +18839,7 @@
           }
         }
       },
-      "considered": 25,
+      "considered": 26,
       "relevant": 3,
       "verified": 3,
       "kept": 1,
@@ -18807,13 +18851,13 @@
           "shipping": 0.0,
           "total": 160.0,
           "seller": "flume.b32",
-          "seller_score": 93,
-          "seller_pct": 98.9,
+          "seller_score": 94,
+          "seller_pct": 99.0,
           "top_rated": false,
           "trust": {
-            "score": 33,
+            "score": 34,
             "vetoes": [
-              "seller has 93 sales, below the 100 minimum",
+              "seller has 94 sales, below the 100 minimum",
               "item specifics say Language: Japanese"
             ],
             "verified": true,
@@ -18829,14 +18873,14 @@
                 "name": "Seller volume",
                 "earned": 6.9,
                 "possible": 14,
-                "detail": "93 completed sales",
+                "detail": "94 completed sales",
                 "good": true
               },
               {
                 "name": "Seller rating",
-                "earned": 6.3,
+                "earned": 7.0,
                 "possible": 14,
-                "detail": "98.9% positive",
+                "detail": "99.0% positive",
                 "good": true
               },
               {
@@ -18905,7 +18949,7 @@
             ]
           },
           "why": [
-            "seller has 93 sales, below the 100 minimum",
+            "seller has 94 sales, below the 100 minimum",
             "item specifics say Language: Japanese"
           ]
         },
@@ -19021,7 +19065,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:40+00:00",
+      "checked_at": "2026-10-14T23:14:45+00:00",
       "all_time_low": 539.99,
       "all_time_high": 606.99
     },
@@ -20610,6 +20654,10 @@
         {
           "t": "2026-10-14T18:38:44+00:00",
           "price": 305.0
+        },
+        {
+          "t": "2026-10-14T23:14:47+00:00",
+          "price": 305.0
         }
       ],
       "name": "OP-12 Legacy of the Master",
@@ -20852,7 +20900,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:44+00:00",
+      "checked_at": "2026-10-14T23:14:47+00:00",
       "all_time_low": 275.92,
       "all_time_high": 499.99
     },
@@ -22217,6 +22265,10 @@
         {
           "t": "2026-10-14T18:38:51+00:00",
           "price": 435.15
+        },
+        {
+          "t": "2026-10-14T23:14:49+00:00",
+          "price": 435.15
         }
       ],
       "name": "OP-13 Carrying On His Will",
@@ -22356,7 +22408,7 @@
           "shipping": 8.0,
           "total": 87.99,
           "seller": "coolcollectionllc",
-          "seller_score": 129,
+          "seller_score": 130,
           "seller_pct": 98.5,
           "top_rated": false,
           "trust": {
@@ -22377,7 +22429,7 @@
                 "name": "Seller volume",
                 "earned": 7.4,
                 "possible": 14,
-                "detail": "129 completed sales",
+                "detail": "130 completed sales",
                 "good": true
               },
               {
@@ -22566,7 +22618,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:38:51+00:00",
+      "checked_at": "2026-10-14T23:14:49+00:00",
       "all_time_low": 430.15,
       "all_time_high": 568.0
     },
@@ -24155,6 +24207,10 @@
         {
           "t": "2026-10-14T18:39:01+00:00",
           "price": 394.98
+        },
+        {
+          "t": "2026-10-14T23:14:52+00:00",
+          "price": 394.98
         }
       ],
       "name": "OP-15 The Adventure on God's Island",
@@ -24165,7 +24221,7 @@
         "shipping": 4.99,
         "total": 394.98,
         "seller": "ravenseyegaming",
-        "seller_score": 1960,
+        "seller_score": 1961,
         "seller_pct": 100.0,
         "top_rated": true,
         "trust": {
@@ -24184,7 +24240,7 @@
               "name": "Seller volume",
               "earned": 11.5,
               "possible": 14,
-              "detail": "1,960 completed sales",
+              "detail": "1,961 completed sales",
               "good": true
             },
             {
@@ -24294,7 +24350,7 @@
           "shipping": 6.5,
           "total": 114.49,
           "seller": "goods-seller",
-          "seller_score": 474952,
+          "seller_score": 474959,
           "seller_pct": 100.0,
           "top_rated": false,
           "trust": {
@@ -24313,7 +24369,7 @@
                 "name": "Seller volume",
                 "earned": 14.0,
                 "possible": 14,
-                "detail": "474,952 completed sales",
+                "detail": "474,959 completed sales",
                 "good": true
               },
               {
@@ -24395,7 +24451,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:39:01+00:00",
+      "checked_at": "2026-10-14T23:14:52+00:00",
       "all_time_low": 146.49,
       "all_time_high": 399.99
     },
@@ -25226,7 +25282,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:39:19+00:00",
+      "checked_at": "2026-10-14T23:14:59+00:00",
       "all_time_low": 390.0,
       "all_time_high": 403.0
     },
@@ -25777,7 +25833,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:39:25+00:00"
+      "checked_at": "2026-10-14T23:15:02+00:00"
     },
     "eb03": {
       "history": [
@@ -26776,6 +26832,10 @@
         {
           "t": "2026-10-14T18:39:29+00:00",
           "price": 384.09
+        },
+        {
+          "t": "2026-10-14T23:15:03+00:00",
+          "price": 384.09
         }
       ],
       "name": "EB-03 Heroines Edition",
@@ -27234,7 +27294,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:39:29+00:00",
+      "checked_at": "2026-10-14T23:15:03+00:00",
       "all_time_low": 300.0,
       "all_time_high": 384.09
     },
@@ -27357,7 +27417,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:39:31+00:00"
+      "checked_at": "2026-10-14T23:15:04+00:00"
     },
     "prb02": {
       "history": [
@@ -28888,6 +28948,10 @@
         {
           "t": "2026-10-14T18:39:37+00:00",
           "price": 399.95
+        },
+        {
+          "t": "2026-10-14T23:15:06+00:00",
+          "price": 399.95
         }
       ],
       "name": "PRB-02 One Piece Card The Best Vol.2",
@@ -28898,7 +28962,7 @@
         "shipping": 0.0,
         "total": 399.95,
         "seller": "card-colosseum",
-        "seller_score": 5179,
+        "seller_score": 5183,
         "seller_pct": 99.8,
         "top_rated": false,
         "trust": {
@@ -28917,7 +28981,7 @@
               "name": "Seller volume",
               "earned": 13.0,
               "possible": 14,
-              "detail": "5,179 completed sales",
+              "detail": "5,183 completed sales",
               "good": true
             },
             {
@@ -29134,7 +29198,7 @@
           "shipping": 0.0,
           "total": 67.99,
           "seller": "dcfonew",
-          "seller_score": 5109,
+          "seller_score": 5111,
           "seller_pct": 99.7,
           "top_rated": false,
           "trust": {
@@ -29155,7 +29219,7 @@
                 "name": "Seller volume",
                 "earned": 13.0,
                 "possible": 14,
-                "detail": "5,109 completed sales",
+                "detail": "5,111 completed sales",
                 "good": true
               },
               {
@@ -29237,11 +29301,11 @@
         {
           "title": "One Piece Card Game The Best Vol.2 PRB02 Booster Box 10 Packs",
           "url": "https://www.ebay.com/itm/267803325984?_skw=One+Piece+Card+Game+PRB-02+Booster+Box&hash=item3e5a527620:g:F5kAAeSwp7tqwmgp",
-          "price": 114.05,
+          "price": 114.15,
           "shipping": 0.0,
-          "total": 114.05,
+          "total": 114.15,
           "seller": "baby-i-love-u",
-          "seller_score": 82553,
+          "seller_score": 82563,
           "seller_pct": 99.6,
           "top_rated": false,
           "trust": {
@@ -29260,7 +29324,7 @@
                 "name": "Seller volume",
                 "earned": 14.0,
                 "possible": 14,
-                "detail": "82,553 completed sales",
+                "detail": "82,563 completed sales",
                 "good": true
               },
               {
@@ -29288,7 +29352,7 @@
                 "name": "Price plausibility",
                 "earned": 0,
                 "possible": 12,
-                "detail": "$114.05 is 71% under the $399.95 median",
+                "detail": "$114.15 is 71% under the $399.95 median",
                 "good": false
               },
               {
@@ -29449,7 +29513,7 @@
       ],
       "min_trust_score": 70,
       "error": null,
-      "checked_at": "2026-10-14T18:39:37+00:00",
+      "checked_at": "2026-10-14T23:15:06+00:00",
       "all_time_low": 345.0,
       "all_time_high": 399.95
     }
@@ -29459,12 +29523,12 @@
     "planned": 99.98,
     "committed": 2425.86,
     "realised": 78.35,
-    "unrealised_gross": 2995.53,
-    "unrealised_gross_all": 3971.69,
-    "unrealised_net": 2549.41,
-    "position_gross": 748.0,
-    "position_net": 301.88,
-    "roi_pct": 13.0,
+    "unrealised_gross": 2982.91,
+    "unrealised_gross_all": 3958.99,
+    "unrealised_net": 2538.46,
+    "position_gross": 735.38,
+    "position_net": 290.93,
+    "roi_pct": 12.5,
     "fee_pct": 13.25,
     "by_category": {
       "sealed": 1399.65,
@@ -29488,8 +29552,8 @@
         "spent": 465.04,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 57.66,
-        "net": -407.38
+        "held": 57.62,
+        "net": -407.42
       },
       "other-tcg": {
         "spent": 90.69,
@@ -29530,8 +29594,8 @@
         "spent": 647.84,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 598.88,
-        "net": -48.96
+        "held": 589.47,
+        "net": -58.37
       },
       "starter": {
         "spent": 28.06,
@@ -29544,8 +29608,8 @@
         "spent": 0.0,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 0.29,
-        "net": 0.29
+        "held": 0.27,
+        "net": 0.27
       },
       "eb04": {
         "spent": 0.0,
@@ -29565,15 +29629,15 @@
         "spent": 0.0,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 19.24,
-        "net": 19.24
+        "held": 18.94,
+        "net": 18.94
       },
       "promo": {
         "spent": 0.0,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 21.41,
-        "net": 21.41
+        "held": 20.95,
+        "net": 20.95
       },
       "op15": {
         "spent": 39.39,
@@ -29593,8 +29657,8 @@
         "spent": 0.0,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 142.34,
-        "net": 142.34
+        "held": 142.5,
+        "net": 142.5
       },
       "st27": {
         "spent": 0.0,
@@ -29614,12 +29678,12 @@
         "spent": 32.4,
         "planned": 0.0,
         "realised": 0.0,
-        "held": 851.31,
-        "net": 818.91
+        "held": 850.43,
+        "net": 818.03
       }
     },
-    "card_prices_applied": 162,
-    "card_prices_at": "2026-10-14T18:37:55+00:00",
+    "card_prices_applied": 164,
+    "card_prices_at": "2026-10-14T23:14:29+00:00",
     "last_expense_date": "2026-09-24",
     "expenses_stale_days": 20,
     "collection_synced": "2026-09-28,2026-09-28,2026-09-28",
@@ -29647,7 +29711,7 @@
             "share": 0.9324,
             "note": "455 of 488 graded copies. REPRICED 2026-09-29 from $1,150: only TWO PSA 10 OP14-084 SP asks exist on eBay, $509.99 and $1,099.99, so $805 is their midpoint. The old figure was the top of a two-listing market.",
             "net_if_sold": 697.94,
-            "position_net": 566.47
+            "position_net": 555.52
           },
           {
             "label": "PSA 9",
@@ -29655,7 +29719,7 @@
             "share": 0.0451,
             "note": "Only one on record: $760 on 2026-07-05 when 10s were $1,725, i.e. 44% of a 10. At or below raw.",
             "net_if_sold": 433.35,
-            "position_net": 301.88
+            "position_net": 290.93
           },
           {
             "label": "PSA 8 or lower",
@@ -29663,7 +29727,7 @@
             "share": 0.0225,
             "note": "One sold 2026-08-02 at $510, under what raw was fetching that week.",
             "net_if_sold": 442.02,
-            "position_net": 310.55
+            "position_net": 299.6
           }
         ]
       },
@@ -29875,8 +29939,8 @@
         "id": "op17-020-705923",
         "name": "OP17-020 Shanks (020) (Alternate Art)",
         "status": "owned",
-        "estimate": 57.76,
-        "net_if_sold": 49.71,
+        "estimate": 57.2,
+        "net_if_sold": 49.22,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Leader \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -29926,8 +29990,8 @@
         "id": "op17-119-710585",
         "name": "OP17-119 Loki",
         "status": "owned",
-        "estimate": 47.66,
-        "net_if_sold": 40.95,
+        "estimate": 46.36,
+        "net_if_sold": 39.82,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Secret Rare \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -29943,8 +30007,8 @@
         "id": "ar9-83600",
         "name": "AR9 Arceus (AR9)",
         "status": "owned",
-        "estimate": 45.73,
-        "net_if_sold": 19.64,
+        "estimate": 45.58,
+        "net_if_sold": 19.57,
         "liquid": false,
         "source": "Arceus \u00b7 Holo Rare \u00b7 Holofoil \u00b7 Near Mint",
         "note": "",
@@ -29977,8 +30041,8 @@
         "id": "op17-039-710591",
         "name": "OP17-039 Rocks.D.Xebec (039) (Alternate Art)",
         "status": "owned",
-        "estimate": 37.79,
-        "net_if_sold": 32.38,
+        "estimate": 37.82,
+        "net_if_sold": 32.41,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Leader \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -30113,8 +30177,8 @@
         "id": "084-132-86860",
         "name": "084/132 Lt. Surge's Pikachu",
         "status": "owned",
-        "estimate": 27.57,
-        "net_if_sold": 11.76,
+        "estimate": 27.62,
+        "net_if_sold": 11.78,
         "liquid": false,
         "source": "Gym Challenge \u00b7 Common \u00b7 Unlimited \u00b7 Near Mint",
         "note": "",
@@ -30130,8 +30194,8 @@
         "id": "op17-058-707118",
         "name": "OP17-058 Kaido (058) (Alternate Art)",
         "status": "owned",
-        "estimate": 27.45,
-        "net_if_sold": 23.41,
+        "estimate": 27.01,
+        "net_if_sold": 23.03,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Leader \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -30141,23 +30205,6 @@
         "estimate_manual": 31.83,
         "tcgplayer_id": 707118,
         "tcgplayer_url": "https://www.tcgplayer.com/product/707118",
-        "scenarios": []
-      },
-      {
-        "id": "op17-049-710540",
-        "name": "OP17-049 Charlotte Linlin (049) (Alternate Art)",
-        "status": "owned",
-        "estimate": 27.05,
-        "net_if_sold": 23.07,
-        "liquid": false,
-        "source": "The World's Strongest Warriors \u00b7 Rare \u00b7 Foil \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "manual",
-        "estimate_manual": null,
-        "tcgplayer_id": 710540,
-        "tcgplayer_url": "",
         "scenarios": []
       },
       {
@@ -30232,8 +30279,8 @@
         "id": "op17-054-710539",
         "name": "OP17-054 Miss Buckingham Stussy (Alternate Art)",
         "status": "owned",
-        "estimate": 21.11,
-        "net_if_sold": 17.91,
+        "estimate": 20.91,
+        "net_if_sold": 17.74,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Rare \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -30243,23 +30290,6 @@
         "estimate_manual": 31.03,
         "tcgplayer_id": 710539,
         "tcgplayer_url": "https://www.tcgplayer.com/product/710539",
-        "scenarios": []
-      },
-      {
-        "id": "100-102-716200",
-        "name": "100/102 Darkrai & Cresselia Legend (Bottom)",
-        "status": "owned",
-        "estimate": 20.64,
-        "net_if_sold": 17.51,
-        "liquid": false,
-        "source": "ME: 30th Celebration Classic Collection \u00b7 Classic Collection \u00b7 Holofoil \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 27.55,
-        "tcgplayer_id": 716200,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/716200",
         "scenarios": []
       },
       {
@@ -30280,6 +30310,23 @@
         "scenarios": []
       },
       {
+        "id": "100-102-716200",
+        "name": "100/102 Darkrai & Cresselia Legend (Bottom)",
+        "status": "owned",
+        "estimate": 20.49,
+        "net_if_sold": 17.38,
+        "liquid": false,
+        "source": "ME: 30th Celebration Classic Collection \u00b7 Classic Collection \u00b7 Holofoil \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 27.55,
+        "tcgplayer_id": 716200,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/716200",
+        "scenarios": []
+      },
+      {
         "id": "056-088-576191",
         "name": "056/088 Kabuto",
         "status": "owned",
@@ -30294,6 +30341,23 @@
         "estimate_manual": 20.32,
         "tcgplayer_id": 576191,
         "tcgplayer_url": "https://www.tcgplayer.com/product/576191",
+        "scenarios": []
+      },
+      {
+        "id": "op17-049-710540",
+        "name": "OP17-049 Charlotte Linlin (049) (Alternate Art)",
+        "status": "owned",
+        "estimate": 20.03,
+        "net_if_sold": 16.98,
+        "liquid": false,
+        "source": "The World's Strongest Warriors \u00b7 Rare \u00b7 Foil \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 27.05,
+        "tcgplayer_id": 710540,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/710540",
         "scenarios": []
       },
       {
@@ -30334,8 +30398,8 @@
         "id": "op17-063-712092",
         "name": "OP17-063 Kaido (063) (Alternate Art)",
         "status": "owned",
-        "estimate": 17.2,
-        "net_if_sold": 14.52,
+        "estimate": 17.12,
+        "net_if_sold": 14.45,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -30436,8 +30500,8 @@
         "id": "op17-099-707139",
         "name": "OP17-099 Charlotte Linlin (099) (Alternate Art)",
         "status": "owned",
-        "estimate": 15.15,
-        "net_if_sold": 12.74,
+        "estimate": 15.14,
+        "net_if_sold": 12.73,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Leader \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -30484,28 +30548,11 @@
         "scenarios": []
       },
       {
-        "id": "don-card-world-united-luffy-712745",
-        "name": "DON!! Card (World United) (Luffy)",
-        "status": "owned",
-        "estimate": 13.94,
-        "net_if_sold": 11.69,
-        "liquid": false,
-        "source": "One Piece Promotion Cards \u00b7 DON!! \u00b7 Foil \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 11.83,
-        "tcgplayer_id": 712745,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/712745",
-        "scenarios": []
-      },
-      {
         "id": "op17-005-708077",
         "name": "OP17-005 Edward.Newgate (005) (Alternate Art)",
         "status": "owned",
-        "estimate": 13.86,
-        "net_if_sold": 11.62,
+        "estimate": 13.85,
+        "net_if_sold": 11.61,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -30518,20 +30565,20 @@
         "scenarios": []
       },
       {
-        "id": "op17-001-705924",
-        "name": "OP17-001 Edward.Newgate (001) (Alternate Art)",
+        "id": "don-card-world-united-luffy-712745",
+        "name": "DON!! Card (World United) (Luffy)",
         "status": "owned",
-        "estimate": 12.83,
-        "net_if_sold": 10.73,
+        "estimate": 13.49,
+        "net_if_sold": 11.3,
         "liquid": false,
-        "source": "The World's Strongest Warriors \u00b7 Leader \u00b7 Foil \u00b7 Near Mint",
+        "source": "One Piece Promotion Cards \u00b7 DON!! \u00b7 Foil \u00b7 Near Mint",
         "note": "",
         "qty": 1,
         "owned_share": 1.0,
         "estimate_source": "tcgplayer",
-        "estimate_manual": 17.07,
-        "tcgplayer_id": 705924,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/705924",
+        "estimate_manual": 11.83,
+        "tcgplayer_id": 712745,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/712745",
         "scenarios": []
       },
       {
@@ -30552,20 +30599,20 @@
         "scenarios": []
       },
       {
-        "id": "don-card-world-united-zoro-712744",
-        "name": "DON!! Card (World United) (Zoro)",
+        "id": "op17-001-705924",
+        "name": "OP17-001 Edward.Newgate (001) (Alternate Art)",
         "status": "owned",
-        "estimate": 11.67,
-        "net_if_sold": 9.72,
+        "estimate": 12.33,
+        "net_if_sold": 10.3,
         "liquid": false,
-        "source": "One Piece Promotion Cards \u00b7 DON!! \u00b7 Foil \u00b7 Near Mint",
+        "source": "The World's Strongest Warriors \u00b7 Leader \u00b7 Foil \u00b7 Near Mint",
         "note": "",
         "qty": 1,
         "owned_share": 1.0,
         "estimate_source": "tcgplayer",
-        "estimate_manual": 11.19,
-        "tcgplayer_id": 712744,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/712744",
+        "estimate_manual": 17.07,
+        "tcgplayer_id": 705924,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/705924",
         "scenarios": []
       },
       {
@@ -30583,6 +30630,23 @@
         "estimate_manual": 11.33,
         "tcgplayer_id": 90201,
         "tcgplayer_url": "https://www.tcgplayer.com/product/90201",
+        "scenarios": []
+      },
+      {
+        "id": "don-card-world-united-zoro-712744",
+        "name": "DON!! Card (World United) (Zoro)",
+        "status": "owned",
+        "estimate": 11.58,
+        "net_if_sold": 9.65,
+        "liquid": false,
+        "source": "One Piece Promotion Cards \u00b7 DON!! \u00b7 Foil \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 11.19,
+        "tcgplayer_id": 712744,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/712744",
         "scenarios": []
       },
       {
@@ -30671,23 +30735,6 @@
         "scenarios": []
       },
       {
-        "id": "p-110-712742",
-        "name": "P-110 Monkey.D.Luffy (4th Anniversary)",
-        "status": "owned",
-        "estimate": 9.73,
-        "net_if_sold": 8.04,
-        "liquid": false,
-        "source": "One Piece Promotion Cards \u00b7 Promo \u00b7 Normal \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 12.58,
-        "tcgplayer_id": 712742,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/712742",
-        "scenarios": []
-      },
-      {
         "id": "101-107-477864",
         "name": "101/107 Manectric ex - 2006 (Jason Klaczynski)",
         "status": "owned",
@@ -30702,6 +30749,23 @@
         "estimate_manual": 9.04,
         "tcgplayer_id": 477864,
         "tcgplayer_url": "https://www.tcgplayer.com/product/477864",
+        "scenarios": []
+      },
+      {
+        "id": "p-110-712742",
+        "name": "P-110 Monkey.D.Luffy (4th Anniversary)",
+        "status": "owned",
+        "estimate": 9.39,
+        "net_if_sold": 7.75,
+        "liquid": false,
+        "source": "One Piece Promotion Cards \u00b7 Promo \u00b7 Normal \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 12.58,
+        "tcgplayer_id": 712742,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/712742",
         "scenarios": []
       },
       {
@@ -30776,8 +30840,8 @@
         "id": "121-165-87315",
         "name": "121/165 Meowth",
         "status": "owned",
-        "estimate": 7.15,
-        "net_if_sold": 2.9,
+        "estimate": 7.12,
+        "net_if_sold": 2.89,
         "liquid": false,
         "source": "Expedition \u00b7 Common \u00b7 Normal \u00b7 Near Mint",
         "note": "",
@@ -30793,8 +30857,8 @@
         "id": "48-64-45151",
         "name": "48/64 Weepinbell",
         "status": "owned",
-        "estimate": 7.04,
-        "net_if_sold": 2.85,
+        "estimate": 7.1,
+        "net_if_sold": 2.88,
         "liquid": false,
         "source": "Jungle \u00b7 Uncommon \u00b7 1st Edition \u00b7 Near Mint",
         "note": "",
@@ -30810,8 +30874,8 @@
         "id": "op17-112-711325",
         "name": "OP17-112 Charlotte Linlin (112)",
         "status": "owned",
-        "estimate": 6.68,
-        "net_if_sold": 5.39,
+        "estimate": 6.86,
+        "net_if_sold": 5.55,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -30878,8 +30942,8 @@
         "id": "042-102-42385",
         "name": "042/102 Wartortle",
         "status": "owned",
-        "estimate": 5.66,
-        "net_if_sold": 2.25,
+        "estimate": 5.68,
+        "net_if_sold": 2.27,
         "liquid": false,
         "source": "Base Set \u00b7 Uncommon \u00b7 Normal \u00b7 Near Mint",
         "note": "",
@@ -30889,23 +30953,6 @@
         "estimate_manual": 4.76,
         "tcgplayer_id": 42385,
         "tcgplayer_url": "https://www.tcgplayer.com/product/42385",
-        "scenarios": []
-      },
-      {
-        "id": "op17-093-710861",
-        "name": "OP17-093 Monkey.D.Luffy (093)",
-        "status": "owned",
-        "estimate": 5.46,
-        "net_if_sold": 4.34,
-        "liquid": false,
-        "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
-        "note": "",
-        "qty": 2,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 6.5,
-        "tcgplayer_id": 710861,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/710861",
         "scenarios": []
       },
       {
@@ -30960,6 +31007,23 @@
         "scenarios": []
       },
       {
+        "id": "op17-093-710861",
+        "name": "OP17-093 Monkey.D.Luffy (093)",
+        "status": "owned",
+        "estimate": 5.06,
+        "net_if_sold": 3.99,
+        "liquid": false,
+        "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
+        "note": "",
+        "qty": 2,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 6.5,
+        "tcgplayer_id": 710861,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/710861",
+        "scenarios": []
+      },
+      {
         "id": "42-82-84639",
         "name": "42/82 Dark Persian",
         "status": "owned",
@@ -30994,28 +31058,11 @@
         "scenarios": []
       },
       {
-        "id": "135-128-716223",
-        "name": "135/128 Morpeko - 135/128",
-        "status": "owned",
-        "estimate": 4.95,
-        "net_if_sold": 3.89,
-        "liquid": false,
-        "source": "ME: 30th Celebration \u00b7 Illustration Rare \u00b7 Holofoil \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 9.04,
-        "tcgplayer_id": 716223,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/716223",
-        "scenarios": []
-      },
-      {
         "id": "op17-080-711426",
         "name": "OP17-080 Usopp",
         "status": "owned",
-        "estimate": 4.83,
-        "net_if_sold": 3.79,
+        "estimate": 4.74,
+        "net_if_sold": 3.71,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -31042,6 +31089,23 @@
         "estimate_manual": 4.98,
         "tcgplayer_id": 86591,
         "tcgplayer_url": "https://www.tcgplayer.com/product/86591",
+        "scenarios": []
+      },
+      {
+        "id": "135-128-716223",
+        "name": "135/128 Morpeko - 135/128",
+        "status": "owned",
+        "estimate": 4.58,
+        "net_if_sold": 3.57,
+        "liquid": false,
+        "source": "ME: 30th Celebration \u00b7 Illustration Rare \u00b7 Holofoil \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 9.04,
+        "tcgplayer_id": 716223,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/716223",
         "scenarios": []
       },
       {
@@ -31082,8 +31146,8 @@
         "id": "op17-005-711499",
         "name": "OP17-005 Edward.Newgate (005)",
         "status": "owned",
-        "estimate": 4.4,
-        "net_if_sold": 3.42,
+        "estimate": 4.32,
+        "net_if_sold": 3.35,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -31099,8 +31163,8 @@
         "id": "037-102-42379",
         "name": "037/102 Nidorino",
         "status": "owned",
-        "estimate": 4.24,
-        "net_if_sold": 1.64,
+        "estimate": 4.29,
+        "net_if_sold": 1.66,
         "liquid": false,
         "source": "Base Set \u00b7 Uncommon \u00b7 Normal \u00b7 Near Mint",
         "note": "",
@@ -31320,8 +31384,8 @@
         "id": "117-165-86991",
         "name": "117/165 Machop",
         "status": "owned",
-        "estimate": 2.78,
-        "net_if_sold": 1.0,
+        "estimate": 2.8,
+        "net_if_sold": 1.01,
         "liquid": false,
         "source": "Expedition \u00b7 Common \u00b7 Normal \u00b7 Near Mint",
         "note": "",
@@ -31371,8 +31435,8 @@
         "id": "op17-048-710542",
         "name": "OP17-048 Shiki (048)",
         "status": "owned",
-        "estimate": 2.61,
-        "net_if_sold": 1.86,
+        "estimate": 2.46,
+        "net_if_sold": 1.73,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -31402,23 +31466,6 @@
         "scenarios": []
       },
       {
-        "id": "op17-046-710541",
-        "name": "OP17-046 Gloriosa",
-        "status": "owned",
-        "estimate": 2.33,
-        "net_if_sold": 1.62,
-        "liquid": false,
-        "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 2.6,
-        "tcgplayer_id": 710541,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/710541",
-        "scenarios": []
-      },
-      {
         "id": "94-135-84982",
         "name": "94/135 Druddigon (Team Plasma)",
         "status": "owned",
@@ -31433,6 +31480,23 @@
         "estimate_manual": 2.37,
         "tcgplayer_id": 84982,
         "tcgplayer_url": "https://www.tcgplayer.com/product/84982",
+        "scenarios": []
+      },
+      {
+        "id": "op17-046-710541",
+        "name": "OP17-046 Gloriosa",
+        "status": "owned",
+        "estimate": 2.23,
+        "net_if_sold": 1.53,
+        "liquid": false,
+        "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 2.6,
+        "tcgplayer_id": 710541,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/710541",
         "scenarios": []
       },
       {
@@ -31453,20 +31517,20 @@
         "scenarios": []
       },
       {
-        "id": "137-128-716224",
-        "name": "137/128 Chandelure - 137/128",
+        "id": "mamo-en007-714713",
+        "name": "MAMO-EN007 Stardust Dragon - Victim Sanctuary",
         "status": "owned",
-        "estimate": 2.11,
-        "net_if_sold": 1.43,
+        "estimate": 2.14,
+        "net_if_sold": 1.46,
         "liquid": false,
-        "source": "ME: 30th Celebration \u00b7 Illustration Rare \u00b7 Holofoil \u00b7 Near Mint",
+        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
         "note": "",
-        "qty": 1,
+        "qty": 2,
         "owned_share": 1.0,
         "estimate_source": "tcgplayer",
-        "estimate_manual": 4.63,
-        "tcgplayer_id": 716224,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/716224",
+        "estimate_manual": 2.0,
+        "tcgplayer_id": 714713,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/714713",
         "scenarios": []
       },
       {
@@ -31484,23 +31548,6 @@
         "estimate_manual": 2.07,
         "tcgplayer_id": 84904,
         "tcgplayer_url": "https://www.tcgplayer.com/product/84904",
-        "scenarios": []
-      },
-      {
-        "id": "mamo-en007-714713",
-        "name": "MAMO-EN007 Stardust Dragon - Victim Sanctuary",
-        "status": "owned",
-        "estimate": 2.04,
-        "net_if_sold": 1.37,
-        "liquid": false,
-        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
-        "note": "",
-        "qty": 2,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 2.0,
-        "tcgplayer_id": 714713,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/714713",
         "scenarios": []
       },
       {
@@ -31555,6 +31602,23 @@
         "scenarios": []
       },
       {
+        "id": "137-128-716224",
+        "name": "137/128 Chandelure - 137/128",
+        "status": "owned",
+        "estimate": 1.83,
+        "net_if_sold": 1.19,
+        "liquid": false,
+        "source": "ME: 30th Celebration \u00b7 Illustration Rare \u00b7 Holofoil \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 4.63,
+        "tcgplayer_id": 716224,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/716224",
+        "scenarios": []
+      },
+      {
         "id": "51-82-84649",
         "name": "51/82 Dark Raticate",
         "status": "owned",
@@ -31575,8 +31639,8 @@
         "id": "op16-003-693824",
         "name": "OP16-003 Edward.Newgate",
         "status": "owned",
-        "estimate": 1.62,
-        "net_if_sold": 1.01,
+        "estimate": 1.58,
+        "net_if_sold": 0.97,
         "liquid": false,
         "source": "The Time of Battle \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -31609,8 +31673,8 @@
         "id": "mamo-en028-714636",
         "name": "MAMO-EN028 W:P Fancy Ball (Secret Rare)",
         "status": "owned",
-        "estimate": 1.27,
-        "net_if_sold": 0.7,
+        "estimate": 1.26,
+        "net_if_sold": 0.69,
         "liquid": false,
         "source": "Magnificent Monsters \u00b7 Secret Rare \u00b7 1st Edition \u00b7 Near Mint",
         "note": "",
@@ -31677,8 +31741,8 @@
         "id": "p-100-714353",
         "name": "P-100 Marshall.D.Teach (4th Anniversary Treasure Campaign Pack)",
         "status": "owned",
-        "estimate": 1.13,
-        "net_if_sold": 0.58,
+        "estimate": 1.12,
+        "net_if_sold": 0.57,
         "liquid": false,
         "source": "One Piece Promotion Cards \u00b7 Promo \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -31742,28 +31806,11 @@
         "scenarios": []
       },
       {
-        "id": "mamo-en093-714811",
-        "name": "MAMO-EN093 Delinquent Duo",
-        "status": "owned",
-        "estimate": 0.98,
-        "net_if_sold": 0.45,
-        "liquid": false,
-        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 0.92,
-        "tcgplayer_id": 714811,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/714811",
-        "scenarios": []
-      },
-      {
         "id": "mamo-en004-714707",
         "name": "MAMO-EN004 Favorite HERO Shining Flare Wingman",
         "status": "owned",
-        "estimate": 0.96,
-        "net_if_sold": 0.43,
+        "estimate": 1.03,
+        "net_if_sold": 0.49,
         "liquid": false,
         "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
         "note": "",
@@ -31793,23 +31840,6 @@
         "scenarios": []
       },
       {
-        "id": "op17-063-710578",
-        "name": "OP17-063 Kaido (063)",
-        "status": "owned",
-        "estimate": 0.94,
-        "net_if_sold": 0.42,
-        "liquid": false,
-        "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
-        "note": "",
-        "qty": 2,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 0.8,
-        "tcgplayer_id": 710578,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/710578",
-        "scenarios": []
-      },
-      {
         "id": "068-102-42413",
         "name": "068/102 Vulpix",
         "status": "owned",
@@ -31827,28 +31857,45 @@
         "scenarios": []
       },
       {
-        "id": "064-128-716463",
-        "name": "064/128 Mewtwo ex - 064/128",
+        "id": "mamo-en093-714811",
+        "name": "MAMO-EN093 Delinquent Duo",
         "status": "owned",
-        "estimate": 0.91,
-        "net_if_sold": 0.39,
+        "estimate": 0.89,
+        "net_if_sold": 0.37,
         "liquid": false,
-        "source": "ME: 30th Celebration \u00b7 Double Rare \u00b7 Holofoil \u00b7 Near Mint",
+        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
         "note": "",
         "qty": 1,
         "owned_share": 1.0,
         "estimate_source": "tcgplayer",
-        "estimate_manual": 0.96,
-        "tcgplayer_id": 716463,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/716463",
+        "estimate_manual": 0.92,
+        "tcgplayer_id": 714811,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/714811",
+        "scenarios": []
+      },
+      {
+        "id": "op17-063-710578",
+        "name": "OP17-063 Kaido (063)",
+        "status": "owned",
+        "estimate": 0.88,
+        "net_if_sold": 0.36,
+        "liquid": false,
+        "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
+        "note": "",
+        "qty": 2,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 0.8,
+        "tcgplayer_id": 710578,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/710578",
         "scenarios": []
       },
       {
         "id": "op17-062-707133",
         "name": "OP17-062 Kaido (062)",
         "status": "owned",
-        "estimate": 0.9,
-        "net_if_sold": 0.38,
+        "estimate": 0.85,
+        "net_if_sold": 0.34,
         "liquid": false,
         "source": "The World's Strongest Warriors \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
         "note": "",
@@ -31878,20 +31925,20 @@
         "scenarios": []
       },
       {
-        "id": "st20-005-714355",
-        "name": "ST20-005 Charlotte Linlin (4th Anniversary Treasure Campaign Pack)",
+        "id": "064-128-716463",
+        "name": "064/128 Mewtwo ex - 064/128",
         "status": "owned",
-        "estimate": 0.79,
-        "net_if_sold": 0.29,
+        "estimate": 0.77,
+        "net_if_sold": 0.27,
         "liquid": false,
-        "source": "One Piece Promotion Cards \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
+        "source": "ME: 30th Celebration \u00b7 Double Rare \u00b7 Holofoil \u00b7 Near Mint",
         "note": "",
         "qty": 1,
         "owned_share": 1.0,
         "estimate_source": "tcgplayer",
-        "estimate_manual": 0.78,
-        "tcgplayer_id": 714355,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/714355",
+        "estimate_manual": 0.96,
+        "tcgplayer_id": 716463,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/716463",
         "scenarios": []
       },
       {
@@ -31912,11 +31959,28 @@
         "scenarios": []
       },
       {
+        "id": "st20-005-714355",
+        "name": "ST20-005 Charlotte Linlin (4th Anniversary Treasure Campaign Pack)",
+        "status": "owned",
+        "estimate": 0.77,
+        "net_if_sold": 0.27,
+        "liquid": false,
+        "source": "One Piece Promotion Cards \u00b7 Super Rare \u00b7 Foil \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 0.78,
+        "tcgplayer_id": 714355,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/714355",
+        "scenarios": []
+      },
+      {
         "id": "mamo-en122-714650",
         "name": "MAMO-EN122 Nightmare-Eyes Restrict",
         "status": "owned",
-        "estimate": 0.66,
-        "net_if_sold": 0.17,
+        "estimate": 0.76,
+        "net_if_sold": 0.26,
         "liquid": false,
         "source": "Magnificent Monsters \u00b7 Secret Rare \u00b7 1st Edition \u00b7 Near Mint",
         "note": "",
@@ -31932,8 +31996,8 @@
         "id": "mamo-en028-714746",
         "name": "MAMO-EN028 W:P Fancy Ball",
         "status": "owned",
-        "estimate": 0.66,
-        "net_if_sold": 0.17,
+        "estimate": 0.67,
+        "net_if_sold": 0.18,
         "liquid": false,
         "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
         "note": "",
@@ -32014,23 +32078,6 @@
         "scenarios": []
       },
       {
-        "id": "grass-energy-2014-andrew-estrada-480873",
-        "name": "Grass Energy - 2014 (Andrew Estrada)",
-        "status": "owned",
-        "estimate": 0.52,
-        "net_if_sold": 0.03,
-        "liquid": false,
-        "source": "World Championship Decks \u00b7 Common \u00b7 Normal \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 0.5,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 0.25,
-        "tcgplayer_id": 480873,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/480873",
-        "scenarios": []
-      },
-      {
         "id": "090-102-42434",
         "name": "090/102 Super Potion",
         "status": "owned",
@@ -32051,8 +32098,8 @@
         "id": "065-128-716464",
         "name": "065/128 Mew",
         "status": "owned",
-        "estimate": 0.4,
-        "net_if_sold": -0.05,
+        "estimate": 0.43,
+        "net_if_sold": -0.03,
         "liquid": false,
         "source": "ME: 30th Celebration \u00b7 Rare \u00b7 Holofoil \u00b7 Near Mint",
         "note": "",
@@ -32062,23 +32109,6 @@
         "estimate_manual": 1.0,
         "tcgplayer_id": 716464,
         "tcgplayer_url": "https://www.tcgplayer.com/product/716464",
-        "scenarios": []
-      },
-      {
-        "id": "109-128-716502",
-        "name": "109/128 Salamence ex - 109/128",
-        "status": "owned",
-        "estimate": 0.4,
-        "net_if_sold": -0.05,
-        "liquid": false,
-        "source": "ME: 30th Celebration \u00b7 Double Rare \u00b7 Holofoil \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 0.56,
-        "tcgplayer_id": 716502,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/716502",
         "scenarios": []
       },
       {
@@ -32116,6 +32146,23 @@
         "scenarios": []
       },
       {
+        "id": "109-128-716502",
+        "name": "109/128 Salamence ex - 109/128",
+        "status": "owned",
+        "estimate": 0.38,
+        "net_if_sold": -0.07,
+        "liquid": false,
+        "source": "ME: 30th Celebration \u00b7 Double Rare \u00b7 Holofoil \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 0.56,
+        "tcgplayer_id": 716502,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/716502",
+        "scenarios": []
+      },
+      {
         "id": "86-99-84316",
         "name": "86/99 Cilan",
         "status": "owned",
@@ -32133,20 +32180,20 @@
         "scenarios": []
       },
       {
-        "id": "mamo-en035-714753",
-        "name": "MAMO-EN035 Divine Arsenal AA-ZEUS - Sky Thunder",
+        "id": "mamo-en022-714630",
+        "name": "MAMO-EN022 Orichalcos Sword of Sealing (Secret Rare)",
         "status": "owned",
-        "estimate": 0.34,
-        "net_if_sold": -0.11,
+        "estimate": 0.35,
+        "net_if_sold": -0.1,
         "liquid": false,
-        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
+        "source": "Magnificent Monsters \u00b7 Secret Rare \u00b7 1st Edition \u00b7 Near Mint",
         "note": "",
         "qty": 1,
         "owned_share": 1.0,
         "estimate_source": "tcgplayer",
-        "estimate_manual": 0.4,
-        "tcgplayer_id": 714753,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/714753",
+        "estimate_manual": 0.25,
+        "tcgplayer_id": 714630,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/714630",
         "scenarios": []
       },
       {
@@ -32167,6 +32214,40 @@
         "scenarios": []
       },
       {
+        "id": "grass-energy-2014-andrew-estrada-480873",
+        "name": "Grass Energy - 2014 (Andrew Estrada)",
+        "status": "owned",
+        "estimate": 0.33,
+        "net_if_sold": -0.06,
+        "liquid": false,
+        "source": "World Championship Decks \u00b7 Common \u00b7 Normal \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 0.5,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 0.25,
+        "tcgplayer_id": 480873,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/480873",
+        "scenarios": []
+      },
+      {
+        "id": "mamo-en035-714753",
+        "name": "MAMO-EN035 Divine Arsenal AA-ZEUS - Sky Thunder",
+        "status": "owned",
+        "estimate": 0.33,
+        "net_if_sold": -0.11,
+        "liquid": false,
+        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 0.4,
+        "tcgplayer_id": 714753,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/714753",
+        "scenarios": []
+      },
+      {
         "id": "91-108-84249",
         "name": "91/108 Cheren",
         "status": "owned",
@@ -32181,23 +32262,6 @@
         "estimate_manual": 0.32,
         "tcgplayer_id": 84249,
         "tcgplayer_url": "https://www.tcgplayer.com/product/84249",
-        "scenarios": []
-      },
-      {
-        "id": "mamo-en022-714630",
-        "name": "MAMO-EN022 Orichalcos Sword of Sealing (Secret Rare)",
-        "status": "owned",
-        "estimate": 0.32,
-        "net_if_sold": -0.12,
-        "liquid": false,
-        "source": "Magnificent Monsters \u00b7 Secret Rare \u00b7 1st Edition \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 0.25,
-        "tcgplayer_id": 714630,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/714630",
         "scenarios": []
       },
       {
@@ -32272,8 +32336,8 @@
         "id": "mamo-en094-714812",
         "name": "MAMO-EN094 Neos Fusion",
         "status": "owned",
-        "estimate": 0.27,
-        "net_if_sold": -0.17,
+        "estimate": 0.28,
+        "net_if_sold": -0.16,
         "liquid": false,
         "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
         "note": "",
@@ -32323,8 +32387,8 @@
         "id": "mamo-en052-714770",
         "name": "MAMO-EN052 Elzette of the White Forest",
         "status": "owned",
-        "estimate": 0.23,
-        "net_if_sold": -0.2,
+        "estimate": 0.24,
+        "net_if_sold": -0.19,
         "liquid": false,
         "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
         "note": "",
@@ -32334,6 +32398,23 @@
         "estimate_manual": 0.28,
         "tcgplayer_id": 714770,
         "tcgplayer_url": "https://www.tcgplayer.com/product/714770",
+        "scenarios": []
+      },
+      {
+        "id": "mamo-en083-714801",
+        "name": "MAMO-EN083 Ghostrick Alucard",
+        "status": "owned",
+        "estimate": 0.21,
+        "net_if_sold": -0.22,
+        "liquid": false,
+        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 0.25,
+        "tcgplayer_id": 714801,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/714801",
         "scenarios": []
       },
       {
@@ -32388,27 +32469,10 @@
         "scenarios": []
       },
       {
-        "id": "mamo-en083-714801",
-        "name": "MAMO-EN083 Ghostrick Alucard",
-        "status": "owned",
-        "estimate": 0.2,
-        "net_if_sold": -0.23,
-        "liquid": false,
-        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 0.25,
-        "tcgplayer_id": 714801,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/714801",
-        "scenarios": []
-      },
-      {
         "id": "056-128-716456",
         "name": "056/128 Zekrom",
         "status": "owned",
-        "estimate": 0.18,
+        "estimate": 0.19,
         "net_if_sold": -0.24,
         "liquid": false,
         "source": "ME: 30th Celebration \u00b7 Rare \u00b7 Holofoil \u00b7 Near Mint",
@@ -32419,6 +32483,23 @@
         "estimate_manual": 0.21,
         "tcgplayer_id": 716456,
         "tcgplayer_url": "https://www.tcgplayer.com/product/716456",
+        "scenarios": []
+      },
+      {
+        "id": "mamo-en022-714740",
+        "name": "MAMO-EN022 Orichalcos Sword of Sealing",
+        "status": "owned",
+        "estimate": 0.18,
+        "net_if_sold": -0.24,
+        "liquid": false,
+        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 0.25,
+        "tcgplayer_id": 714740,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/714740",
         "scenarios": []
       },
       {
@@ -32436,40 +32517,6 @@
         "estimate_manual": 0.21,
         "tcgplayer_id": 714795,
         "tcgplayer_url": "https://www.tcgplayer.com/product/714795",
-        "scenarios": []
-      },
-      {
-        "id": "mamo-en022-714740",
-        "name": "MAMO-EN022 Orichalcos Sword of Sealing",
-        "status": "owned",
-        "estimate": 0.17,
-        "net_if_sold": -0.25,
-        "liquid": false,
-        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "tcgplayer",
-        "estimate_manual": 0.25,
-        "tcgplayer_id": 714740,
-        "tcgplayer_url": "https://www.tcgplayer.com/product/714740",
-        "scenarios": []
-      },
-      {
-        "id": "mamo-en033-714751",
-        "name": "MAMO-EN033 Visas Samsara",
-        "status": "owned",
-        "estimate": 0.17,
-        "net_if_sold": -0.25,
-        "liquid": false,
-        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
-        "note": "",
-        "qty": 1,
-        "owned_share": 1.0,
-        "estimate_source": "manual",
-        "estimate_manual": null,
-        "tcgplayer_id": 714751,
-        "tcgplayer_url": "",
         "scenarios": []
       },
       {
@@ -32507,11 +32554,28 @@
         "scenarios": []
       },
       {
+        "id": "mamo-en033-714751",
+        "name": "MAMO-EN033 Visas Samsara",
+        "status": "owned",
+        "estimate": 0.12,
+        "net_if_sold": -0.3,
+        "liquid": false,
+        "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
+        "note": "",
+        "qty": 1,
+        "owned_share": 1.0,
+        "estimate_source": "tcgplayer",
+        "estimate_manual": 0.17,
+        "tcgplayer_id": 714751,
+        "tcgplayer_url": "https://www.tcgplayer.com/product/714751",
+        "scenarios": []
+      },
+      {
         "id": "mamo-en114-714832",
         "name": "MAMO-EN114 Treacherous Trap Hole",
         "status": "owned",
-        "estimate": 0.11,
-        "net_if_sold": -0.3,
+        "estimate": 0.1,
+        "net_if_sold": -0.31,
         "liquid": false,
         "source": "Magnificent Monsters \u00b7 Ultra Rare \u00b7 1st Edition \u00b7 Near Mint",
         "note": "",
