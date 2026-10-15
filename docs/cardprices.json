@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "updated_at": "2026-10-15T17:00:38+00:00",
+  "updated_at": "2026-10-15T17:11:22+00:00",
   "source": "tcgplayer price points",
   "basis": "foil market price, or normal where the card has no foil printing",
-  "applied": 164,
-  "failed": 0,
+  "applied": 163,
+  "failed": 1,
   "rejected": [],
   "held_by_condition": [
     "SL10 Rayquaza (Shiny) (Damaged)",
@@ -524,18 +524,18 @@
     },
     "121-165-87315": {
       "tcgplayer_id": 87315,
-      "price": 7.2,
-      "printing": "normal",
-      "foil_market": 94.18,
-      "normal_market": 7.2,
-      "listed_median": 7.48,
+      "price": null,
+      "printing": "",
+      "foil_market": null,
+      "normal_market": null,
+      "listed_median": null,
       "url": "https://www.tcgplayer.com/product/87315",
-      "error": "",
+      "error": "HTTPSConnectionPool(host='mpapi.tcgplayer.com', port=443): Read timed out. (read timeout=25)",
       "name": "121/165 Meowth",
       "qty": 1,
       "previous_estimate": 7.1,
-      "value": 7.2,
-      "applied": true
+      "value": null,
+      "applied": false
     },
     "109-132-85300": {
       "tcgplayer_id": 85300,
@@ -704,9 +704,9 @@
     },
     "137-128-716224": {
       "tcgplayer_id": 716224,
-      "price": 1.87,
+      "price": 1.85,
       "printing": "foil",
-      "foil_market": 1.87,
+      "foil_market": 1.85,
       "normal_market": null,
       "listed_median": 2.75,
       "url": "https://www.tcgplayer.com/product/716224",
@@ -714,7 +714,7 @@
       "name": "137/128 Chandelure - 137/128",
       "qty": 1,
       "previous_estimate": 4.63,
-      "value": 1.87,
+      "value": 1.85,
       "applied": true
     },
     "034-132-83968": {
@@ -1559,17 +1559,17 @@
     },
     "mamo-en028-714746": {
       "tcgplayer_id": 714746,
-      "price": 0.7,
+      "price": 0.69,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 0.7,
+      "normal_market": 0.69,
       "listed_median": 1.0,
       "url": "https://www.tcgplayer.com/product/714746",
       "error": "",
       "name": "MAMO-EN028 W:P Fancy Ball",
       "qty": 1,
       "previous_estimate": 0.83,
-      "value": 0.7,
+      "value": 0.69,
       "applied": true
     },
     "mamo-en039-714647": {
@@ -1919,9 +1919,9 @@
     },
     "op17-119-710585": {
       "tcgplayer_id": 710585,
-      "price": 22.56,
+      "price": 22.48,
       "printing": "foil",
-      "foil_market": 22.56,
+      "foil_market": 22.48,
       "normal_market": null,
       "listed_median": 28.0,
       "url": "https://www.tcgplayer.com/product/710585",
@@ -1929,7 +1929,7 @@
       "name": "OP17-119 Loki",
       "qty": 2,
       "previous_estimate": 67.88,
-      "value": 45.12,
+      "value": 44.96,
       "applied": true
     },
     "op17-039-710591": {
@@ -2054,9 +2054,9 @@
     },
     "op17-027-712085": {
       "tcgplayer_id": 712085,
-      "price": 8.94,
+      "price": 8.86,
       "printing": "foil",
-      "foil_market": 8.94,
+      "foil_market": 8.86,
       "normal_market": null,
       "listed_median": 11.49,
       "url": "https://www.tcgplayer.com/product/712085",
@@ -2064,7 +2064,7 @@
       "name": "OP17-027 Benn.Beckman (Alternate Art)",
       "qty": 1,
       "previous_estimate": 19.6,
-      "value": 8.94,
+      "value": 8.86,
       "applied": true
     },
     "op17-063-712092": {
@@ -2309,9 +2309,9 @@
     },
     "op17-022-707120": {
       "tcgplayer_id": 707120,
-      "price": 3.69,
+      "price": 3.65,
       "printing": "foil",
-      "foil_market": 3.69,
+      "foil_market": 3.65,
       "normal_market": null,
       "listed_median": 4.2,
       "url": "https://www.tcgplayer.com/product/707120",
@@ -2319,7 +2319,7 @@
       "name": "OP17-022 Shanks (022)",
       "qty": 1,
       "previous_estimate": 3.81,
-      "value": 3.69,
+      "value": 3.65,
       "applied": true
     },
     "op17-048-710542": {
