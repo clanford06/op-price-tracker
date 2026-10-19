@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "updated_at": "2026-10-19T04:41:25+00:00",
+  "updated_at": "2026-10-19T04:55:12+00:00",
   "source": "tcgplayer price points",
   "basis": "foil market price, or normal where the card has no foil printing",
-  "applied": 163,
-  "failed": 1,
+  "applied": 164,
+  "failed": 0,
   "rejected": [],
   "held_by_condition": [
     "SL10 Rayquaza (Shiny) (Damaged)",
@@ -164,18 +164,18 @@
     },
     "45-82-84665": {
       "tcgplayer_id": 84665,
-      "price": null,
-      "printing": "",
+      "price": 27.85,
+      "printing": "normal",
       "foil_market": null,
-      "normal_market": null,
+      "normal_market": 27.85,
       "listed_median": null,
       "url": "https://www.tcgplayer.com/product/84665",
-      "error": "HTTPSConnectionPool(host='mpapi.tcgplayer.com', port=443): Read timed out. (read timeout=25)",
+      "error": "",
       "name": "45/82 Dark Vaporeon",
       "qty": 1,
       "previous_estimate": 23.14,
-      "value": null,
-      "applied": false
+      "value": 27.85,
+      "applied": true
     },
     "056-088-576191": {
       "tcgplayer_id": 576191,
@@ -449,9 +449,9 @@
     },
     "135-128-716223": {
       "tcgplayer_id": 716223,
-      "price": 4.91,
+      "price": 4.93,
       "printing": "foil",
-      "foil_market": 4.91,
+      "foil_market": 4.93,
       "normal_market": null,
       "listed_median": 5.89,
       "url": "https://www.tcgplayer.com/product/716223",
@@ -459,7 +459,7 @@
       "name": "135/128 Morpeko - 135/128",
       "qty": 1,
       "previous_estimate": 9.04,
-      "value": 4.91,
+      "value": 4.93,
       "applied": true
     },
     "101-107-477864": {
@@ -704,9 +704,9 @@
     },
     "137-128-716224": {
       "tcgplayer_id": 716224,
-      "price": 1.68,
+      "price": 1.67,
       "printing": "foil",
-      "foil_market": 1.68,
+      "foil_market": 1.67,
       "normal_market": null,
       "listed_median": 2.5,
       "url": "https://www.tcgplayer.com/product/716224",
@@ -714,7 +714,7 @@
       "name": "137/128 Chandelure - 137/128",
       "qty": 1,
       "previous_estimate": 4.63,
-      "value": 1.68,
+      "value": 1.67,
       "applied": true
     },
     "034-132-83968": {
@@ -1079,17 +1079,17 @@
     },
     "048-102-42391": {
       "tcgplayer_id": 42391,
-      "price": 1.01,
+      "price": 1.04,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 1.01,
+      "normal_market": 1.04,
       "listed_median": 0.95,
       "url": "https://www.tcgplayer.com/product/42391",
       "error": "",
       "name": "048/102 Doduo",
       "qty": 1,
       "previous_estimate": 1.12,
-      "value": 1.01,
+      "value": 1.04,
       "applied": true
     },
     "50-99-90735": {
@@ -1139,9 +1139,9 @@
     },
     "064-128-716463": {
       "tcgplayer_id": 716463,
-      "price": 0.86,
+      "price": 0.85,
       "printing": "foil",
-      "foil_market": 0.86,
+      "foil_market": 0.85,
       "normal_market": null,
       "listed_median": 0.98,
       "url": "https://www.tcgplayer.com/product/716463",
@@ -1149,7 +1149,7 @@
       "name": "064/128 Mewtwo ex - 064/128",
       "qty": 1,
       "previous_estimate": 0.96,
-      "value": 0.86,
+      "value": 0.85,
       "applied": true
     },
     "21-99-88707": {
@@ -1244,9 +1244,9 @@
     },
     "109-128-716502": {
       "tcgplayer_id": 716502,
-      "price": 0.49,
+      "price": 0.5,
       "printing": "foil",
-      "foil_market": 0.49,
+      "foil_market": 0.5,
       "normal_market": null,
       "listed_median": 0.55,
       "url": "https://www.tcgplayer.com/product/716502",
@@ -1254,7 +1254,7 @@
       "name": "109/128 Salamence ex - 109/128",
       "qty": 1,
       "previous_estimate": 0.56,
-      "value": 0.49,
+      "value": 0.5,
       "applied": true
     },
     "20-39-83847": {
@@ -1484,47 +1484,47 @@
     },
     "mamo-en007-714713": {
       "tcgplayer_id": 714713,
-      "price": 1.08,
+      "price": 1.09,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 1.08,
+      "normal_market": 1.09,
       "listed_median": 1.4,
       "url": "https://www.tcgplayer.com/product/714713",
       "error": "",
       "name": "MAMO-EN007 Stardust Dragon - Victim Sanctuary",
       "qty": 2,
       "previous_estimate": 2.0,
-      "value": 2.16,
+      "value": 2.18,
       "applied": true
     },
     "mamo-en028-714636": {
       "tcgplayer_id": 714636,
-      "price": 1.58,
+      "price": 1.55,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 1.58,
+      "normal_market": 1.55,
       "listed_median": 1.99,
       "url": "https://www.tcgplayer.com/product/714636",
       "error": "",
       "name": "MAMO-EN028 W:P Fancy Ball (Secret Rare)",
       "qty": 1,
       "previous_estimate": 1.52,
-      "value": 1.58,
+      "value": 1.55,
       "applied": true
     },
     "mamo-en004-714707": {
       "tcgplayer_id": 714707,
-      "price": 1.14,
+      "price": 1.15,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 1.14,
+      "normal_market": 1.15,
       "listed_median": 1.12,
       "url": "https://www.tcgplayer.com/product/714707",
       "error": "",
       "name": "MAMO-EN004 Favorite HERO Shining Flare Wingman",
       "qty": 1,
       "previous_estimate": 1.11,
-      "value": 1.14,
+      "value": 1.15,
       "applied": true
     },
     "mamo-en122-714650": {
@@ -1889,9 +1889,9 @@
     },
     "op17-020-705923": {
       "tcgplayer_id": 705923,
-      "price": 25.61,
+      "price": 25.52,
       "printing": "foil",
-      "foil_market": 25.61,
+      "foil_market": 25.52,
       "normal_market": null,
       "listed_median": 31.69,
       "url": "https://www.tcgplayer.com/product/705923",
@@ -1899,7 +1899,7 @@
       "name": "OP17-020 Shanks (020) (Alternate Art)",
       "qty": 2,
       "previous_estimate": 102.32,
-      "value": 51.22,
+      "value": 51.04,
       "applied": true
     },
     "op17-022-707121": {
@@ -1919,9 +1919,9 @@
     },
     "op17-119-710585": {
       "tcgplayer_id": 710585,
-      "price": 24.43,
+      "price": 24.48,
       "printing": "foil",
-      "foil_market": 24.43,
+      "foil_market": 24.48,
       "normal_market": null,
       "listed_median": 27.95,
       "url": "https://www.tcgplayer.com/product/710585",
@@ -1929,7 +1929,7 @@
       "name": "OP17-119 Loki",
       "qty": 2,
       "previous_estimate": 67.88,
-      "value": 48.86,
+      "value": 48.96,
       "applied": true
     },
     "op17-039-710591": {
@@ -1949,9 +1949,9 @@
     },
     "op17-079-707124": {
       "tcgplayer_id": 707124,
-      "price": 42.16,
+      "price": 41.99,
       "printing": "foil",
-      "foil_market": 42.16,
+      "foil_market": 41.99,
       "normal_market": null,
       "listed_median": 50.99,
       "url": "https://www.tcgplayer.com/product/707124",
@@ -1959,7 +1959,7 @@
       "name": "OP17-079 Monkey.D.Luffy (079) (Alternate Art)",
       "qty": 1,
       "previous_estimate": 52.1,
-      "value": 42.16,
+      "value": 41.99,
       "applied": true
     },
     "op17-114-712116": {
@@ -2084,9 +2084,9 @@
     },
     "op17-001-705924": {
       "tcgplayer_id": 705924,
-      "price": 11.09,
+      "price": 11.16,
       "printing": "foil",
-      "foil_market": 11.09,
+      "foil_market": 11.16,
       "normal_market": null,
       "listed_median": 16.85,
       "url": "https://www.tcgplayer.com/product/705924",
@@ -2094,7 +2094,7 @@
       "name": "OP17-001 Edward.Newgate (001) (Alternate Art)",
       "qty": 1,
       "previous_estimate": 17.07,
-      "value": 11.09,
+      "value": 11.16,
       "applied": true
     },
     "op17-005-708077": {
@@ -2189,9 +2189,9 @@
     },
     "don-card-world-united-luffy-712745": {
       "tcgplayer_id": 712745,
-      "price": 12.95,
+      "price": 12.91,
       "printing": "foil",
-      "foil_market": 12.95,
+      "foil_market": 12.91,
       "normal_market": null,
       "listed_median": 14.98,
       "url": "https://www.tcgplayer.com/product/712745",
@@ -2199,14 +2199,14 @@
       "name": "DON!! Card (World United) (Luffy)",
       "qty": 1,
       "previous_estimate": 11.83,
-      "value": 12.95,
+      "value": 12.91,
       "applied": true
     },
     "don-card-world-united-zoro-712744": {
       "tcgplayer_id": 712744,
-      "price": 11.46,
+      "price": 11.45,
       "printing": "foil",
-      "foil_market": 11.46,
+      "foil_market": 11.45,
       "normal_market": null,
       "listed_median": 13.0,
       "url": "https://www.tcgplayer.com/product/712744",
@@ -2214,7 +2214,7 @@
       "name": "DON!! Card (World United) (Zoro)",
       "qty": 1,
       "previous_estimate": 11.19,
-      "value": 11.46,
+      "value": 11.45,
       "applied": true
     },
     "op16-063-696051": {
@@ -2249,9 +2249,9 @@
     },
     "op17-093-710861": {
       "tcgplayer_id": 710861,
-      "price": 2.34,
+      "price": 2.4,
       "printing": "foil",
-      "foil_market": 2.34,
+      "foil_market": 2.4,
       "normal_market": null,
       "listed_median": 3.4,
       "url": "https://www.tcgplayer.com/product/710861",
@@ -2259,7 +2259,7 @@
       "name": "OP17-093 Monkey.D.Luffy (093)",
       "qty": 2,
       "previous_estimate": 6.5,
-      "value": 4.68,
+      "value": 4.8,
       "applied": true
     },
     "op17-005-711499": {
@@ -2279,9 +2279,9 @@
     },
     "op17-080-711426": {
       "tcgplayer_id": 711426,
-      "price": 1.24,
+      "price": 1.26,
       "printing": "foil",
-      "foil_market": 1.24,
+      "foil_market": 1.26,
       "normal_market": null,
       "listed_median": 1.76,
       "url": "https://www.tcgplayer.com/product/711426",
@@ -2289,7 +2289,7 @@
       "name": "OP17-080 Usopp",
       "qty": 3,
       "previous_estimate": 5.76,
-      "value": 3.72,
+      "value": 3.78,
       "applied": true
     },
     "op17-107-712655": {
@@ -2444,9 +2444,9 @@
     },
     "op17-063-710578": {
       "tcgplayer_id": 710578,
-      "price": 0.47,
+      "price": 0.48,
       "printing": "foil",
-      "foil_market": 0.47,
+      "foil_market": 0.48,
       "normal_market": null,
       "listed_median": 0.6,
       "url": "https://www.tcgplayer.com/product/710578",
@@ -2454,7 +2454,7 @@
       "name": "OP17-063 Kaido (063)",
       "qty": 2,
       "previous_estimate": 0.8,
-      "value": 0.94,
+      "value": 0.96,
       "applied": true
     },
     "st20-005-714355": {
