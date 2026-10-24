@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "updated_at": "2026-10-24T15:57:08+00:00",
+  "updated_at": "2026-10-24T16:04:59+00:00",
   "source": "tcgplayer price points",
   "basis": "foil market price, or normal where the card has no foil printing",
-  "applied": 163,
-  "failed": 1,
+  "applied": 164,
+  "failed": 0,
   "rejected": [],
   "held_by_condition": [
     "SL10 Rayquaza (Shiny) (Damaged)",
@@ -449,18 +449,18 @@
     },
     "135-128-716223": {
       "tcgplayer_id": 716223,
-      "price": null,
-      "printing": "",
-      "foil_market": null,
+      "price": 4.97,
+      "printing": "foil",
+      "foil_market": 4.97,
       "normal_market": null,
-      "listed_median": null,
+      "listed_median": 5.5,
       "url": "https://www.tcgplayer.com/product/716223",
-      "error": "HTTPSConnectionPool(host='mpapi.tcgplayer.com', port=443): Read timed out. (read timeout=25)",
+      "error": "",
       "name": "135/128 Morpeko - 135/128",
       "qty": 1,
       "previous_estimate": 9.04,
-      "value": null,
-      "applied": false
+      "value": 4.97,
+      "applied": true
     },
     "101-107-477864": {
       "tcgplayer_id": 477864,
@@ -1724,17 +1724,17 @@
     },
     "mamo-en125-714653": {
       "tcgplayer_id": 714653,
-      "price": 0.29,
+      "price": 0.28,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 0.29,
+      "normal_market": 0.28,
       "listed_median": 0.29,
       "url": "https://www.tcgplayer.com/product/714653",
       "error": "",
       "name": "MAMO-EN125 Wind Unicorn Parallel, the Dracoslayer",
       "qty": 1,
       "previous_estimate": 0.24,
-      "value": 0.29,
+      "value": 0.28,
       "applied": true
     },
     "mamo-en094-714812": {
