@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-01T17:59:06+00:00",
+  "updated_at": "2026-11-01T18:56:20+00:00",
   "source": "tcgplayer price points",
   "basis": "foil market price, or normal where the card has no foil printing",
-  "applied": 161,
-  "failed": 3,
+  "applied": 164,
+  "failed": 0,
   "rejected": [],
   "held_by_condition": [
     "SL10 Rayquaza (Shiny) (Damaged)",
@@ -134,9 +134,9 @@
     },
     "100-102-716200": {
       "tcgplayer_id": 716200,
-      "price": 19.5,
+      "price": 19.51,
       "printing": "foil",
-      "foil_market": 19.5,
+      "foil_market": 19.51,
       "normal_market": null,
       "listed_median": 22.0,
       "url": "https://www.tcgplayer.com/product/716200",
@@ -144,7 +144,7 @@
       "name": "100/102 Darkrai & Cresselia Legend (Bottom)",
       "qty": 1,
       "previous_estimate": 27.55,
-      "value": 19.5,
+      "value": 19.51,
       "applied": true
     },
     "05-64-45131": {
@@ -449,9 +449,9 @@
     },
     "135-128-716223": {
       "tcgplayer_id": 716223,
-      "price": 3.82,
+      "price": 3.8,
       "printing": "foil",
-      "foil_market": 3.82,
+      "foil_market": 3.8,
       "normal_market": null,
       "listed_median": 5.0,
       "url": "https://www.tcgplayer.com/product/716223",
@@ -459,7 +459,7 @@
       "name": "135/128 Morpeko - 135/128",
       "qty": 1,
       "previous_estimate": 9.04,
-      "value": 3.82,
+      "value": 3.8,
       "applied": true
     },
     "101-107-477864": {
@@ -704,9 +704,9 @@
     },
     "137-128-716224": {
       "tcgplayer_id": 716224,
-      "price": 1.59,
+      "price": 1.62,
       "printing": "foil",
-      "foil_market": 1.59,
+      "foil_market": 1.62,
       "normal_market": null,
       "listed_median": 2.0,
       "url": "https://www.tcgplayer.com/product/716224",
@@ -714,7 +714,7 @@
       "name": "137/128 Chandelure - 137/128",
       "qty": 1,
       "previous_estimate": 4.63,
-      "value": 1.59,
+      "value": 1.62,
       "applied": true
     },
     "034-132-83968": {
@@ -1124,9 +1124,9 @@
     },
     "065-128-716464": {
       "tcgplayer_id": 716464,
-      "price": 0.35,
+      "price": 0.39,
       "printing": "foil",
-      "foil_market": 0.35,
+      "foil_market": 0.39,
       "normal_market": null,
       "listed_median": 0.43,
       "url": "https://www.tcgplayer.com/product/716464",
@@ -1134,14 +1134,14 @@
       "name": "065/128 Mew",
       "qty": 1,
       "previous_estimate": 1.0,
-      "value": 0.35,
+      "value": 0.39,
       "applied": true
     },
     "064-128-716463": {
       "tcgplayer_id": 716463,
-      "price": 0.79,
+      "price": 0.76,
       "printing": "foil",
-      "foil_market": 0.79,
+      "foil_market": 0.76,
       "normal_market": null,
       "listed_median": 0.95,
       "url": "https://www.tcgplayer.com/product/716463",
@@ -1149,7 +1149,7 @@
       "name": "064/128 Mewtwo ex - 064/128",
       "qty": 1,
       "previous_estimate": 0.96,
-      "value": 0.79,
+      "value": 0.76,
       "applied": true
     },
     "21-99-88707": {
@@ -1229,24 +1229,24 @@
     },
     "22-39-89418": {
       "tcgplayer_id": 89418,
-      "price": null,
-      "printing": "",
+      "price": 0.59,
+      "printing": "normal",
       "foil_market": null,
-      "normal_market": null,
-      "listed_median": null,
+      "normal_market": 0.59,
+      "listed_median": 0.52,
       "url": "https://www.tcgplayer.com/product/89418",
-      "error": "HTTP 502",
+      "error": "",
       "name": "22/39 Snubbull",
       "qty": 1,
       "previous_estimate": 0.6,
-      "value": null,
-      "applied": false
+      "value": 0.59,
+      "applied": true
     },
     "109-128-716502": {
       "tcgplayer_id": 716502,
-      "price": 0.41,
+      "price": 0.48,
       "printing": "foil",
-      "foil_market": 0.41,
+      "foil_market": 0.48,
       "normal_market": null,
       "listed_median": 0.53,
       "url": "https://www.tcgplayer.com/product/716502",
@@ -1254,7 +1254,7 @@
       "name": "109/128 Salamence ex - 109/128",
       "qty": 1,
       "previous_estimate": 0.56,
-      "value": 0.41,
+      "value": 0.48,
       "applied": true
     },
     "20-39-83847": {
@@ -1409,18 +1409,18 @@
     },
     "17-108-124030": {
       "tcgplayer_id": 124030,
-      "price": null,
-      "printing": "",
-      "foil_market": null,
-      "normal_market": null,
-      "listed_median": null,
+      "price": 0.3,
+      "printing": "normal",
+      "foil_market": 1.0,
+      "normal_market": 0.3,
+      "listed_median": 0.28,
       "url": "https://www.tcgplayer.com/product/124030",
-      "error": "HTTP 502",
+      "error": "",
       "name": "17/108 Growlithe",
       "qty": 1,
       "previous_estimate": 0.26,
-      "value": null,
-      "applied": false
+      "value": 0.3,
+      "applied": true
     },
     "grass-energy-2014-andrew-estrada-480873": {
       "tcgplayer_id": 480873,
@@ -1484,17 +1484,17 @@
     },
     "mamo-en007-714713": {
       "tcgplayer_id": 714713,
-      "price": 1.63,
+      "price": 1.59,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 1.63,
+      "normal_market": 1.59,
       "listed_median": 1.68,
       "url": "https://www.tcgplayer.com/product/714713",
       "error": "",
       "name": "MAMO-EN007 Stardust Dragon - Victim Sanctuary",
       "qty": 2,
       "previous_estimate": 2.0,
-      "value": 3.26,
+      "value": 3.18,
       "applied": true
     },
     "mamo-en028-714636": {
@@ -1514,17 +1514,17 @@
     },
     "mamo-en004-714707": {
       "tcgplayer_id": 714707,
-      "price": 1.63,
+      "price": 1.6,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 1.63,
+      "normal_market": 1.6,
       "listed_median": 1.44,
       "url": "https://www.tcgplayer.com/product/714707",
       "error": "",
       "name": "MAMO-EN004 Favorite HERO Shining Flare Wingman",
       "qty": 1,
       "previous_estimate": 1.11,
-      "value": 1.63,
+      "value": 1.6,
       "applied": true
     },
     "mamo-en122-714650": {
@@ -1634,17 +1634,17 @@
     },
     "mamo-en046-714764": {
       "tcgplayer_id": 714764,
-      "price": 0.3,
+      "price": 0.31,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 0.3,
+      "normal_market": 0.31,
       "listed_median": 0.31,
       "url": "https://www.tcgplayer.com/product/714764",
       "error": "",
       "name": "MAMO-EN046 Thunder King, the Lightningstrike Kaiju",
       "qty": 1,
       "previous_estimate": 0.29,
-      "value": 0.3,
+      "value": 0.31,
       "applied": true
     },
     "mamo-en052-714770": {
@@ -1844,9 +1844,9 @@
     },
     "op17-062-712091": {
       "tcgplayer_id": 712091,
-      "price": 161.57,
+      "price": 160.62,
       "printing": "foil",
-      "foil_market": 161.57,
+      "foil_market": 160.62,
       "normal_market": null,
       "listed_median": 179.89,
       "url": "https://www.tcgplayer.com/product/712091",
@@ -1854,7 +1854,7 @@
       "name": "OP17-062 Kaido (062) (Super Alternate Art)",
       "qty": 1,
       "previous_estimate": 217.0,
-      "value": 161.57,
+      "value": 160.62,
       "applied": true
     },
     "st27-005-707128": {
@@ -1889,9 +1889,9 @@
     },
     "op17-020-705923": {
       "tcgplayer_id": 705923,
-      "price": 18.48,
+      "price": 18.51,
       "printing": "foil",
-      "foil_market": 18.48,
+      "foil_market": 18.51,
       "normal_market": null,
       "listed_median": 27.0,
       "url": "https://www.tcgplayer.com/product/705923",
@@ -1899,7 +1899,7 @@
       "name": "OP17-020 Shanks (020) (Alternate Art)",
       "qty": 2,
       "previous_estimate": 102.32,
-      "value": 36.96,
+      "value": 37.02,
       "applied": true
     },
     "op17-022-707121": {
@@ -1934,9 +1934,9 @@
     },
     "op17-039-710591": {
       "tcgplayer_id": 710591,
-      "price": 33.23,
+      "price": 33.14,
       "printing": "foil",
-      "foil_market": 33.23,
+      "foil_market": 33.14,
       "normal_market": null,
       "listed_median": 37.23,
       "url": "https://www.tcgplayer.com/product/710591",
@@ -1944,7 +1944,7 @@
       "name": "OP17-039 Rocks.D.Xebec (039) (Alternate Art)",
       "qty": 1,
       "previous_estimate": 67.52,
-      "value": 33.23,
+      "value": 33.14,
       "applied": true
     },
     "op17-079-707124": {
@@ -1964,18 +1964,18 @@
     },
     "op17-114-712116": {
       "tcgplayer_id": 712116,
-      "price": null,
-      "printing": "",
-      "foil_market": null,
+      "price": 15.73,
+      "printing": "foil",
+      "foil_market": 15.73,
       "normal_market": null,
-      "listed_median": null,
+      "listed_median": 18.03,
       "url": "https://www.tcgplayer.com/product/712116",
-      "error": "HTTP 504",
+      "error": "",
       "name": "OP17-114 Sweet 3 Generals (Alternate Art)",
       "qty": 3,
       "previous_estimate": 51.93,
-      "value": null,
-      "applied": false
+      "value": 47.19,
+      "applied": true
     },
     "op16-022-696007": {
       "tcgplayer_id": 696007,
@@ -1994,9 +1994,9 @@
     },
     "op17-058-707118": {
       "tcgplayer_id": 707118,
-      "price": 19.11,
+      "price": 19.1,
       "printing": "foil",
-      "foil_market": 19.11,
+      "foil_market": 19.1,
       "normal_market": null,
       "listed_median": 26.86,
       "url": "https://www.tcgplayer.com/product/707118",
@@ -2004,14 +2004,14 @@
       "name": "OP17-058 Kaido (058) (Alternate Art)",
       "qty": 1,
       "previous_estimate": 31.83,
-      "value": 19.11,
+      "value": 19.1,
       "applied": true
     },
     "op17-054-710539": {
       "tcgplayer_id": 710539,
-      "price": 15.42,
+      "price": 15.36,
       "printing": "foil",
-      "foil_market": 15.42,
+      "foil_market": 15.36,
       "normal_market": null,
       "listed_median": 19.35,
       "url": "https://www.tcgplayer.com/product/710539",
@@ -2019,14 +2019,14 @@
       "name": "OP17-054 Miss Buckingham Stussy (Alternate Art)",
       "qty": 1,
       "previous_estimate": 31.03,
-      "value": 15.42,
+      "value": 15.36,
       "applied": true
     },
     "op17-049-710540": {
       "tcgplayer_id": 710540,
-      "price": 14.31,
+      "price": 14.33,
       "printing": "foil",
-      "foil_market": 14.31,
+      "foil_market": 14.33,
       "normal_market": null,
       "listed_median": 18.89,
       "url": "https://www.tcgplayer.com/product/710540",
@@ -2034,7 +2034,7 @@
       "name": "OP17-049 Charlotte Linlin (049) (Alternate Art)",
       "qty": 1,
       "previous_estimate": 27.05,
-      "value": 14.31,
+      "value": 14.33,
       "applied": true
     },
     "op16-118-694933": {
@@ -2069,9 +2069,9 @@
     },
     "op17-063-712092": {
       "tcgplayer_id": 712092,
-      "price": 6.53,
+      "price": 6.46,
       "printing": "foil",
-      "foil_market": 6.53,
+      "foil_market": 6.46,
       "normal_market": null,
       "listed_median": 8.5,
       "url": "https://www.tcgplayer.com/product/712092",
@@ -2079,7 +2079,7 @@
       "name": "OP17-063 Kaido (063) (Alternate Art)",
       "qty": 2,
       "previous_estimate": 18.58,
-      "value": 13.06,
+      "value": 12.92,
       "applied": true
     },
     "op17-001-705924": {
@@ -2174,17 +2174,17 @@
     },
     "p-110-712742": {
       "tcgplayer_id": 712742,
-      "price": 7.58,
+      "price": 7.67,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 7.58,
+      "normal_market": 7.67,
       "listed_median": 12.65,
       "url": "https://www.tcgplayer.com/product/712742",
       "error": "",
       "name": "P-110 Monkey.D.Luffy (4th Anniversary)",
       "qty": 1,
       "previous_estimate": 12.58,
-      "value": 7.58,
+      "value": 7.67,
       "applied": true
     },
     "don-card-world-united-luffy-712745": {
@@ -2234,9 +2234,9 @@
     },
     "op17-112-711325": {
       "tcgplayer_id": 711325,
-      "price": 1.95,
+      "price": 1.9,
       "printing": "foil",
-      "foil_market": 1.95,
+      "foil_market": 1.9,
       "normal_market": null,
       "listed_median": 3.41,
       "url": "https://www.tcgplayer.com/product/711325",
@@ -2244,7 +2244,7 @@
       "name": "OP17-112 Charlotte Linlin (112)",
       "qty": 2,
       "previous_estimate": 7.98,
-      "value": 3.9,
+      "value": 3.8,
       "applied": true
     },
     "op17-093-710861": {
@@ -2309,9 +2309,9 @@
     },
     "op17-022-707120": {
       "tcgplayer_id": 707120,
-      "price": 3.08,
+      "price": 3.01,
       "printing": "foil",
-      "foil_market": 3.08,
+      "foil_market": 3.01,
       "normal_market": null,
       "listed_median": 4.0,
       "url": "https://www.tcgplayer.com/product/707120",
@@ -2319,7 +2319,7 @@
       "name": "OP17-022 Shanks (022)",
       "qty": 1,
       "previous_estimate": 3.81,
-      "value": 3.08,
+      "value": 3.01,
       "applied": true
     },
     "op17-048-710542": {
@@ -2339,9 +2339,9 @@
     },
     "op17-046-710541": {
       "tcgplayer_id": 710541,
-      "price": 1.71,
+      "price": 1.7,
       "printing": "foil",
-      "foil_market": 1.71,
+      "foil_market": 1.7,
       "normal_market": null,
       "listed_median": 2.56,
       "url": "https://www.tcgplayer.com/product/710541",
@@ -2349,22 +2349,22 @@
       "name": "OP17-046 Gloriosa",
       "qty": 1,
       "previous_estimate": 2.6,
-      "value": 1.71,
+      "value": 1.7,
       "applied": true
     },
     "op17-006-712593": {
       "tcgplayer_id": 712593,
-      "price": 1.43,
+      "price": 1.44,
       "printing": "normal",
       "foil_market": null,
-      "normal_market": 1.43,
+      "normal_market": 1.44,
       "listed_median": 2.0,
       "url": "https://www.tcgplayer.com/product/712593",
       "error": "",
       "name": "OP17-006 Kingdew (Pandaman Art)",
       "qty": 1,
       "previous_estimate": 2.14,
-      "value": 1.43,
+      "value": 1.44,
       "applied": true
     },
     "op16-003-693824": {
